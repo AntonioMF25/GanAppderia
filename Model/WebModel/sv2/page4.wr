@@ -1,0 +1,72 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="525" gr:y="260" id="sv2#page4" name="Registro">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv2#page4#enu2" name="Nuevo Usuario" fieldOrder="sv2#page4#enu2#fld3 sv2#page4#enu2#fld5 sv2#page4#enu2#fld4" entity="User" linkOrder="sv2#page4#enu2#ln6">
+      <Field id="sv2#page4#enu2#fld3" name="userName" type="string" modifiable="true" attribute="userName">
+        <VRules>
+          <MandatoryValidationRule id="sv2#page4#enu2#fld3#mnd3" name="User-Obligatorio" errorMessage="El campo &quot;userName&quot; es obligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page4#enu2#fld4" name="password" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <PasswordStrengthValidationRule id="sv2#page4#enu2#fld4#psvr1" name="Password Strength1" securityLevel="low" errorMessage="Contrase&#241;a d&#233;bil"/>
+          <MandatoryValidationRule id="sv2#page4#enu2#fld4#mnd2" name="Pass-Obligatoria" errorMessage="El campo &quot;password&quot; es obligatorio"/>
+        </VRules>
+      </Field>
+      <Field id="sv2#page4#enu2#fld5" name="email" type="string" modifiable="true" attribute="email">
+        <VRules>
+          <EMailValidationRule id="sv2#page4#enu2#fld5#email1" name="EMail1" errorMessage="Email inv&#225;lido"/>
+          <MandatoryValidationRule id="sv2#page4#enu2#fld5#mnd1" name="Mail-Obligatorio" errorMessage="El campo &quot;email&quot; es obligatorio" predicate="neq" ignoreCase="false"/>
+        </VRules>
+      </Field>
+      <Link id="sv2#page4#enu2#ln6" name="Flow6" to="sv2#seu1" type="normal" validate="true">
+        <LinkParameter id="sv2#page4#enu2#ln6#par5" name="userName_AttCondition3" source="sv2#page4#enu2#fld3" target="sv2#seu1#su3#acond3"/>
+      </Link>
+      <Link id="sv2#page4#enu2#ln7" name="Flow7" to="sv2#cru1" type="transport" validate="true" gr:bendpoints="297,-110,-303,-95">
+        <LinkParameter id="sv2#page4#enu2#ln7#par7" name="email_email" source="sv2#page4#enu2#fld5" target="sv2#cru1.email"/>
+        <LinkParameter id="sv2#page4#enu2#ln7#par8" name="password_password" source="sv2#page4#enu2#fld4" target="sv2#cru1.password"/>
+        <LinkParameter id="sv2#page4#enu2#ln7#par9" name="userName_userName" source="sv2#page4#enu2#fld3" target="sv2#cru1.userName"/>
+        <LinkParameter id="sv2#page4#enu2#ln7#par13" name="1_Group.oid(defaultGroup)" sourceValue="1" target="sv2#cru1.User2DefaultGroup.groupOID"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit gr:x="80" gr:y="90" id="sv2#page4#mssu5" name="Error-Usuario"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page4#enu2">
+          <layout:Field field="sv2#page4#enu2#fld3"/>
+          <layout:Field field="sv2#page4#enu2#fld5"/>
+          <layout:Field field="sv2#page4#enu2#fld4"/>
+          <layout:Link link="sv2#page4#enu2#ln6"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv2#page4#mssu5"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

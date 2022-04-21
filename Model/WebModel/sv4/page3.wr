@@ -1,0 +1,6 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page3" name="Home-Admin" gr:x="200" gr:y="85">
+  <ContentUnits>
+    <MultiMessageUnit id="sv4#page3#mssu2" name="Mensaje" gr:x="0" gr:y="0">
+      <Placeholder id="sv4#page3#mssu2#ph2" name="Placeholder1"/>
+      <Message xml:space="preserve">Has llegado admin
+</Message>    </MultiMessageUnit>  </ContentUnits>  <layout:Grid containerType="grid">    <layout:Row>      <layout:Cell colspan="12">        <layout:Unit unitId="sv4#page3#mssu2"/>      </layout:Cell>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>      <layout:Cell/>    </layout:Row>  </layout:Grid></Page>
