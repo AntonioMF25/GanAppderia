@@ -1,0 +1,36 @@
+[21 abr 2022 18:01:32] Building database metadata model
+[21 abr 2022 18:01:32] Properties: {partialRefresh=true, processColumnsUsingSelect=, includePrimaryKeys=true, eventSocketClient=com.webratio.commons.net.EventSocketClient@48974631, includeTables=true, username=postgres, outputLogPath=D:\ANTONIO\webRatio-workspace\GanAppderia\.Temp~\DB.xml.log, readIndexes=null, driverClass=org.postgresql.Driver, includeSynonyms=true, metaDataProviderClass=com.webratio.commons.db.metadata.PostgreSQLMetaDataProvider, outputPath=D:\ANTONIO\webRatio-workspace\GanAppderia\.Temp~\DB.xml, schemaRegex=null, readProcedures=null, includeViews=true, derby.system.home=D:\ANTONIO\webRatio-workspace\.metadata\.plugins\com.webratio.commons.db\derby, url=jdbc:postgresql://localhost:5432/GanAppderiaDatabase, tableRegex=null, readSQLDefinitions=true, includeForeignKeys=false, retrieveAllNames=false, tablesToRefresh=public.historicoproductos, eventSocketPort=61434}
+[21 abr 2022 18:01:32] URL: jdbc:postgresql://localhost:5432/GanAppderiaDatabase
+[21 abr 2022 18:01:32] Product name: PostgreSQL
+[21 abr 2022 18:01:32] Product version: 9.6.24
+[21 abr 2022 18:01:32] Driver name: PostgreSQL Native Driver
+[21 abr 2022 18:01:32] Driver version: PostgreSQL 9.1 JDBC3g (build 903)
+[21 abr 2022 18:01:32] Driver major version: 9
+[21 abr 2022 18:01:32] Driver minor version: 1
+[21 abr 2022 18:01:32] Identifier quote string: 1
+[21 abr 2022 18:01:32] Retrieving schemas
+[21 abr 2022 18:01:32]   Found schema: information_schema
+[21 abr 2022 18:01:32]   Found schema: pg_catalog
+[21 abr 2022 18:01:32]   Found schema: public
+[21 abr 2022 18:01:32] Retrieving sequences
+[21 abr 2022 18:01:32] Retrieving [TABLE, VIEW, SYNONYM] for schema 'information_schema'
+[21 abr 2022 18:01:32] Retrieving [TABLE, VIEW, SYNONYM] for schema 'pg_catalog'
+[21 abr 2022 18:01:32] Retrieving [TABLE, VIEW, SYNONYM] for schema 'public'
+[21 abr 2022 18:01:32]   Found 'public.historicoproductos' [type = TABLE]
+[21 abr 2022 18:01:32] Retrieving columns for 'public.historicoproductos' [type = TABLE]
+[21 abr 2022 18:01:32]   Found column: oid [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 abr 2022 18:01:32]   Found column: nombreproducto [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 abr 2022 18:01:32]   Found column: descripcionproducto [type = text][SQL/XOPEN type = 12][size = 2147483647][dec. digits = 0]
+[21 abr 2022 18:01:32]   Found column: precioproducto [type = float8][SQL/XOPEN type = 8][size = 17][dec. digits = 17]
+[21 abr 2022 18:01:32]   Found column: unidadesproducto [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 abr 2022 18:01:32]   Found column: preciotraspromocion [type = float8][SQL/XOPEN type = 8][size = 17][dec. digits = 17]
+[21 abr 2022 18:01:32]   Found column: imagenproducto [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 abr 2022 18:01:32]   Found column: fechacaducidad [type = date][SQL/XOPEN type = 91][size = 13][dec. digits = 0]
+[21 abr 2022 18:01:32]   Found column: valoracionmedia [type = float8][SQL/XOPEN type = 8][size = 17][dec. digits = 17]
+[21 abr 2022 18:01:32]   Found column: urlqr [type = varchar][SQL/XOPEN type = 12][size = 255][dec. digits = 0]
+[21 abr 2022 18:01:32]   Found column: fechahistorico [type = date][SQL/XOPEN type = 91][size = 13][dec. digits = 0]
+[21 abr 2022 18:01:32]   Found column: oid_productoantiguo [type = int4][SQL/XOPEN type = 4][size = 10][dec. digits = 0]
+[21 abr 2022 18:01:32] Retrieving primary keys for 'public.historicoproductos' [type = TABLE]
+[21 abr 2022 18:01:32]   Found primary key column: oid
+[21 abr 2022 18:01:32] Database metadata retrieved (78 ms)
+[21 abr 2022 18:01:32] Database connection closed

@@ -1,0 +1,36 @@
+[21 abr 2022 17:56:32] DEBUG Executing SQL script
+[21 abr 2022 17:56:32] INFO ================================================================================
+[21 abr 2022 17:56:32] INFO onError= 'stop'
+[21 abr 2022 17:56:32] INFO autoCommit= 'false'
+[21 abr 2022 17:56:32] INFO username= 'postgres'
+[21 abr 2022 17:56:32] INFO outputPath= 'D:\ANTONIO\webRatio-workspace\GanAppderia\.Temp~\RollbackSQL.xml'
+[21 abr 2022 17:56:32] INFO outputLogPath= 'D:\ANTONIO\webRatio-workspace\GanAppderia\.Temp~\RollbackSQL.xml.log'
+[21 abr 2022 17:56:32] INFO encoding= ''
+[21 abr 2022 17:56:32] INFO driverClass= 'org.postgresql.Driver'
+[21 abr 2022 17:56:32] INFO sqlScript= 'D:\ANTONIO\webRatio-workspace\GanAppderia\.Temp~\RollbackSQL.sql'
+[21 abr 2022 17:56:32] INFO eventSocketPort= '64297'
+[21 abr 2022 17:56:32] INFO statementSeparator= ';'
+[21 abr 2022 17:56:32] INFO derby.system.home= 'D:\ANTONIO\webRatio-workspace\.metadata\.plugins\com.webratio.commons.db\derby'
+[21 abr 2022 17:56:32] INFO password= 'admin'
+[21 abr 2022 17:56:32] INFO url= 'jdbc:postgresql://localhost:5432/GanAppderiaDatabase'
+[21 abr 2022 17:56:32] INFO ================================================================================
+[21 abr 2022 17:56:32] INFO Connecting to the Database...
+[21 abr 2022 17:56:32] INFO Database connection estabilished
+[21 abr 2022 17:56:32] INFO transaction isolation: 2
+[21 abr 2022 17:56:32] DEBUG ================================================================================
+[21 abr 2022 17:56:32] DEBUG Executing SQL script file: D:\ANTONIO\webRatio-workspace\GanAppderia\.Temp~\RollbackSQL.sql
+[21 abr 2022 17:56:32] DEBUG Executing statement:  drop table "public"."productos"
+[21 abr 2022 17:56:32] ERROR Could not execute statement:  drop table "public"."productos"
+org.postgresql.util.PSQLException: ERROR: no existe la tabla «productos»
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2101)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1834)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:510)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:372)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:364)
+	at com.webratio.commons.db.utils.DBUtils.execute(DBUtils.java:523)
+	at com.webratio.commons.db.utils.DBUtils.executeScriptFiles(DBUtils.java:442)
+	at com.webratio.commons.db.utils.DBUtils.main(DBUtils.java:257)
+[21 abr 2022 17:56:32] ERROR SQL SCRIPT EXECUTION FAILED
+[21 abr 2022 17:56:32] INFO Database connection closed
+[21 abr 2022 17:56:32] DEBUG Total time: 218 milliseconds
