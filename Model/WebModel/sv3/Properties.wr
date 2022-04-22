@@ -1,5 +1,87 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Home-Usuario" protected="true" localized="true" homePage="sv3#page2" landmarks="sv3#lou1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Home-Usuario" protected="true" localized="true" homePage="sv3#page2" landmarks="sv3#lou1 sv3#page6 sv3#page8">
   <OperationUnits>
     <LogoutUnit gr:x="310" gr:y="330" id="sv3#lou1" name="Logout" siteView="sv2" landmark="true"/>
+    <SelectorUnit gr:x="1090" gr:y="385" id="sv3#seu4" name="Verificar-Existencia-Producto" entity="ent4">
+      <Selector id="sv3#seu4#su2" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#seu4#su2#acond1" name="AttCondition1" predicate="eq" booleanOperator="and" implied="false" attributes="ent4#att3" ignoreCase="true"/>
+        <AttributesCondition id="sv3#seu4#su2#acond2" name="AttCondition2" predicate="eq" booleanOperator="and" implied="false" attributes="rel6#role12.userOID"/>
+      </Selector>
+      <OKLink id="sv3#seu4#oln5" name="OKFlow5" to="sv3#inn2">
+        <LinkParameter id="sv3#seu4#oln5#par29" name="nombreProducto_Input" source="ent4#att3Array" target="sv3#inn2.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <CreateUnit gr:x="900" gr:y="505" id="sv3#cru2" name="Crear-Anuncio" entity="ent4">
+      <OKLink id="sv3#cru2#oln6" name="OKFlow6" to="sv3#page7#dau1" automaticCoupling="true"/>
+    </CreateUnit>
+    <IsNotNullUnit gr:x="1160" gr:y="535" id="sv3#inn2" name="Is Not Null2">
+      <KOLink id="sv3#inn2#kln2" name="KOFlow2" to="sv3#cru2" automaticCoupling="true"/>
+      <OKLink id="sv3#inn2#oln7" name="OKFlow7" to="sv3#page6#mssu3" gr:bendpoints="189,-53,44,177">
+        <LinkParameter id="sv3#inn2#oln7#par30" name="Has publicado un anuncio con el mismo nombre. Prueba a editarlo_Shown Messages" sourceValue="Has publicado un anuncio con el mismo nombre. Prueba a editarlo" target="sv3#page6#mssu3.shownMessages"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <GetUnit id="sv3#gtu4" name="Get-User-Oid" gr:x="685" gr:y="390" contextParameters="UserCtxParam" linkOrder="sv3#gtu4#ln13 sv3#gtu4#ln14">
+      <Link id="sv3#gtu4#ln13" name="Flow13" to="sv3#cru2" type="transport" validate="true">
+        <LinkParameter id="sv3#gtu4#ln13#par31" name="UserCtxParam.oid_User.oid(ProductosToUser)" source="sv3#gtu4.UserCtxParam" target="sv3#cru2.rel6#role12.userOID"/>
+      </Link>
+      <Link id="sv3#gtu4#ln14" name="Flow14" to="sv3#seu4" type="transport" validate="true">
+        <LinkParameter id="sv3#gtu4#ln14#par32" name="UserCtxParam.oid_AttCondition2" source="sv3#gtu4.UserCtxParam" target="sv3#seu4#su2#acond2"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit gr:x="690" gr:y="635" id="sv3#seu5" name="Seleccionar-Producto-Modificar" entity="ent4" linkOrder="sv3#seu5#ln24">
+      <Selector id="sv3#seu5#su6" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#seu5#su6#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#seu5#oln8" name="OKFlow8" to="sv3#page11#enu4" automaticCoupling="true"/>
+      <Link id="sv3#seu5#ln24" name="Flow24" to="sv3#mfu1" type="transport" validate="true">
+        <LinkParameter id="sv3#seu5#ln24#par57" name="oid_KeyCondition5 [oid]" source="ent4#att2Array" target="sv3#mfu1#su7#kcond5.ent4#att2"/>
+        <LinkParameter id="sv3#seu5#ln24#par58" name="ProductosToUser.oid_User.oid(ProductosToUser)" source="rel6#role12_userOIDArray" target="sv3#mfu1.rel6#role12.userOID"/>
+        <LinkParameter id="sv3#seu5#ln24#par59" name="valoracionMedia_valoracionMedia" source="ent4#att28Array" target="sv3#mfu1.ent4#att28"/>
+      </Link>
+    </SelectorUnit>
+    <ModifyUnit gr:x="760" gr:y="860" id="sv3#mfu1" name="Actualizar-Producto" entity="ent4">
+      <Selector id="sv3#mfu1#su7" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#mfu1#su7#kcond5" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#mfu1#oln9" name="OKFlow9" to="sv3#page8#page10#mssu6">
+        <LinkParameter id="sv3#mfu1#oln9#par60" name="Se ha modificado correctamente el anuncio_Shown Messages" sourceValue="Se ha modificado correctamente el anuncio" target="sv3#page8#page10#mssu6.shownMessages"/>
+      </OKLink>
+    </ModifyUnit>
+    <DeleteUnit gr:x="-115" gr:y="795" id="sv3#dlu1" name="Eliminar-Producto" entity="ent4">
+      <Selector id="sv3#dlu1#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#dlu1#su8#kcond6" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#dlu1#oln14" name="OKFlow14" to="sv3#page8#page10#mssu6" gr:bendpoints="321,-62,-314,38">
+        <LinkParameter id="sv3#dlu1#oln14#par75" name="Se ha eliminado satisfactoriamente el producto_Shown Messages" sourceValue="Se ha eliminado satisfactoriamente el producto" target="sv3#page8#page10#mssu6.shownMessages"/>
+      </OKLink>
+    </DeleteUnit>
+    <CreateUnit gr:x="-120" gr:y="460" id="sv3#cru3" name="Crear-Historico-Producto" entity="ent12">
+      <OKLink id="sv3#cru3#oln13" name="OKFlow13" to="sv3#dlu1">
+        <LinkParameter id="sv3#cru3#oln13#par74" name="oid_ProductoAntiguo_KeyCondition6 [oid]" source="ent12#att81Array" target="sv3#dlu1#su8#kcond6.ent4#att2"/>
+      </OKLink>
+    </CreateUnit>
+    <SelectorUnit gr:x="30" gr:y="680" id="sv3#seu10" name="Seleccionar-Producto-Eliminar" entity="ent4" linkOrder="sv3#seu10#ln29">
+      <Selector id="sv3#seu10#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#seu10#su9#kcond7" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#seu10#oln11" name="OKFlow11" to="sv3#tmu2" automaticCoupling="true"/>
+      <Link id="sv3#seu10#ln29" name="Flow29" to="sv3#cru3" type="transport" validate="true">
+        <LinkParameter id="sv3#seu10#ln29#par62" name="descripcionProducto_descripcionProducto" source="ent4#att4Array" target="sv3#cru3.ent12#att62"/>
+        <LinkParameter id="sv3#seu10#ln29#par63" name="fechaCaducidad_fechaCaducidad" source="ent4#att24Array" target="sv3#cru3.ent12#att77"/>
+        <LinkParameter id="sv3#seu10#ln29#par64" name="imagenProducto_imagenProducto" source="ent4#att19Array" target="sv3#cru3.ent12#att76"/>
+        <LinkParameter id="sv3#seu10#ln29#par65" name="nombreProducto_imagenProducto [file name]" source="ent4#att3Array" target="sv3#cru3.ent12#att76_name"/>
+        <LinkParameter id="sv3#seu10#ln29#par66" name="nombreProducto_nombreProducto" source="ent4#att3Array" target="sv3#cru3.ent12#att18"/>
+        <LinkParameter id="sv3#seu10#ln29#par67" name="oid_oid_ProductoAntiguo" source="ent4#att2Array" target="sv3#cru3.ent12#att81"/>
+        <LinkParameter id="sv3#seu10#ln29#par68" name="precioProducto_precioProducto" source="ent4#att5Array" target="sv3#cru3.ent12#att64"/>
+        <LinkParameter id="sv3#seu10#ln29#par69" name="precioTrasPromocion_precioTrasPromocion" source="ent4#att7Array" target="sv3#cru3.ent12#att75"/>
+        <LinkParameter id="sv3#seu10#ln29#par70" name="unidadesProducto_unidadesProducto" source="ent4#att6Array" target="sv3#cru3.ent12#att72"/>
+        <LinkParameter id="sv3#seu10#ln29#par71" name="urlQR_urlQR" source="ent4#att40Array" target="sv3#cru3.ent12#att79"/>
+        <LinkParameter id="sv3#seu10#ln29#par72" name="valoracionMedia_valoracionMedia" source="ent4#att28Array" target="sv3#cru3.ent12#att78"/>
+      </Link>
+    </SelectorUnit>
+    <TimeUnit gr:x="90" gr:y="555" id="sv3#tmu2" name="Fecha-Historico-Producto">
+      <OKLink id="sv3#tmu2#oln12" name="OKFlow12" to="sv3#cru3">
+        <LinkParameter id="sv3#tmu2#oln12#par73" name="Current/Input Date_fechaHistorico" source="currentDate" target="sv3#cru3.ent12#att80"/>
+      </OKLink>
+    </TimeUnit>
   </OperationUnits>
 </SiteView>

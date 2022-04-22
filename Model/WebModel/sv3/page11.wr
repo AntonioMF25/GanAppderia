@@ -1,0 +1,81 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1030" gr:y="715" id="sv3#page11" name="Actualizar-Producto">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="0" id="sv3#page11#enu4" name="Actualizar-Producto" entity="ent4" fieldOrder="sv3#page11#enu4#fld15 sv3#page11#enu4#fld16 sv3#page11#enu4#fld17 sv3#page11#enu4#fld18 sv3#page11#enu4#fld19 sv3#page11#enu4#fld20 sv3#page11#enu4#fld22 sv3#page11#enu4#sfld5 sv3#page11#enu4#sfld6 sv3#page11#enu4#sfld4" linkOrder="sv3#page11#enu4#ln20 sv3#page11#enu4#ln25">
+      <Field id="sv3#page11#enu4#fld15" name="Nombre" type="string" modifiable="true" attribute="ent4#att3" preloaded="true"/>
+      <Field id="sv3#page11#enu4#fld16" name="Descripci&#243;n" type="text" modifiable="true" attribute="ent4#att4" preloaded="true"/>
+      <Field id="sv3#page11#enu4#fld17" name="Precio" type="float" modifiable="true" attribute="ent4#att5" preloaded="true"/>
+      <Field id="sv3#page11#enu4#fld18" name="Unidades" type="integer" modifiable="true" attribute="ent4#att6" preloaded="true"/>
+      <Field id="sv3#page11#enu4#fld19" name="Imagen" type="blob" modifiable="true" attribute="ent4#att19" preloaded="true"/>
+      <Field id="sv3#page11#enu4#fld20" name="Fecha de Caducidad" type="date" modifiable="true" attribute="ent4#att24" preloaded="true"/>
+      <Field id="sv3#page11#enu4#fld22" name="URL Qr" type="url" modifiable="true" attribute="ent4#att40" preloaded="true"/>
+      <Link id="sv3#page11#enu4#ln20" name="Actualizar" to="sv3#mfu1" type="normal" validate="true" gr:bendpoints="-189,119,96,-1">
+        <LinkParameter id="sv3#page11#enu4#ln20#par46" name="Key [oid]_KeyCondition5 [oid]" source="key.ent4#att2" target="sv3#mfu1#su7#kcond5.ent4#att2"/>
+        <LinkParameter id="sv3#page11#enu4#ln20#par47" name="Descripci&#243;n_descripcionProducto" source="sv3#page11#enu4#fld16" target="sv3#mfu1.ent4#att4"/>
+        <LinkParameter id="sv3#page11#enu4#ln20#par48" name="Fecha de Caducidad_fechaCaducidad" source="sv3#page11#enu4#fld20" target="sv3#mfu1.ent4#att24"/>
+        <LinkParameter id="sv3#page11#enu4#ln20#par49" name="Imagen_imagenProducto" source="sv3#page11#enu4#fld19" target="sv3#mfu1.ent4#att19"/>
+        <LinkParameter id="sv3#page11#enu4#ln20#par50" name="Nombre_imagenProducto [file name]" source="sv3#page11#enu4#fld15" target="sv3#mfu1.ent4#att19_name"/>
+        <LinkParameter id="sv3#page11#enu4#ln20#par51" name="Nombre_nombreProducto" source="sv3#page11#enu4#fld15" target="sv3#mfu1.ent4#att3"/>
+        <LinkParameter id="sv3#page11#enu4#ln20#par52" name="Precio_precioProducto" source="sv3#page11#enu4#fld17" target="sv3#mfu1.ent4#att5"/>
+        <LinkParameter id="sv3#page11#enu4#ln20#par53" name="Promoci&#243;n_Promociones.oid(ProductosToPromociones)" source="sv3#page11#enu4#sfld5" target="sv3#mfu1.rel3#role5.ent5#att8"/>
+        <LinkParameter id="sv3#page11#enu4#ln20#par54" name="Ubicacion_Ubicacion.oid(ProductosToUbicacion)" source="sv3#page11#enu4#sfld4" target="sv3#mfu1.rel9#role17.ent2#att41"/>
+        <LinkParameter id="sv3#page11#enu4#ln20#par55" name="Unidades_unidadesProducto" source="sv3#page11#enu4#fld18" target="sv3#mfu1.ent4#att6"/>
+        <LinkParameter id="sv3#page11#enu4#ln20#par56" name="URL Qr_urlQR" source="sv3#page11#enu4#fld22" target="sv3#mfu1.ent4#att40"/>
+      </Link>
+      <SelectionField id="sv3#page11#enu4#sfld4" type="string" name="Ubicacion"/>
+      <SelectionField id="sv3#page11#enu4#sfld5" type="string" name="Promoci&#243;n"/>
+      <SelectionField id="sv3#page11#enu4#sfld6" type="string" name="Categor&#237;a"/>
+      <Link id="sv3#page11#enu4#ln25" name="Volver" to="sv3#page8#page10#mssu6" type="normal" validate="true">
+        <LinkParameter id="sv3#page11#enu4#ln25#par61" name="No se ha efectuado ning&#250;n cambio_Shown Messages" sourceValue="No se ha efectuado ning&#250;n cambio" target="sv3#page8#page10#mssu6.shownMessages"/>
+      </Link>
+    </EntryUnit>
+    <SelectorUnit id="sv3#page11#seu7" name="Selector-Promociones" gr:x="165" gr:y="0" entity="ent5">
+      <Link id="sv3#page11#seu7#ln21" name="Flow21" to="sv3#page11#enu4" type="transport" validate="true">
+        <LinkParameter id="sv3#page11#seu7#ln21#par40" name="nombrePromocion_Promoci&#243;n [label]" source="ent5#att11Array" target="sv3#page11#enu4#sfld5_label"/>
+        <LinkParameter id="sv3#page11#seu7#ln21#par41" name="oid_Promoci&#243;n [output]" source="ent5#att8Array" target="sv3#page11#enu4#sfld5_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#page11#seu8" name="Selector-Categor&#237;as" gr:x="170" gr:y="90" entity="ent8">
+      <Link id="sv3#page11#seu8#ln22" name="Flow22" to="sv3#page11#enu4" type="transport" validate="true">
+        <LinkParameter id="sv3#page11#seu8#ln22#par42" name="nombreCategoria_Categor&#237;a [label]" source="ent8#att23Array" target="sv3#page11#enu4#sfld6_label"/>
+        <LinkParameter id="sv3#page11#seu8#ln22#par43" name="oid_Categor&#237;a [output]" source="ent8#att22Array" target="sv3#page11#enu4#sfld6_output"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#page11#seu9" name="Selector-Ubicaciones" gr:x="170" gr:y="175" entity="ent2">
+      <Link id="sv3#page11#seu9#ln23" name="Flow23" to="sv3#page11#enu4" type="transport" validate="true">
+        <LinkParameter id="sv3#page11#seu9#ln23#par44" name="nombreUbicacion_Ubicacion [label]" source="ent2#att42Array" target="sv3#page11#enu4#sfld4_label"/>
+        <LinkParameter id="sv3#page11#seu9#ln23#par45" name="oid_Ubicacion [output]" source="ent2#att41Array" target="sv3#page11#enu4#sfld4_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page11#enu4">
+          <layout:Field field="sv3#page11#enu4#fld15"/>
+          <layout:Field field="sv3#page11#enu4#fld16"/>
+          <layout:Field field="sv3#page11#enu4#fld17"/>
+          <layout:Field field="sv3#page11#enu4#fld18"/>
+          <layout:Field field="sv3#page11#enu4#fld19"/>
+          <layout:Field field="sv3#page11#enu4#fld20"/>
+          <layout:Field field="sv3#page11#enu4#fld22"/>
+          <layout:Field field="sv3#page11#enu4#sfld5"/>
+          <layout:Field field="sv3#page11#enu4#sfld6"/>
+          <layout:Field field="sv3#page11#enu4#sfld4"/>
+          <layout:Link link="sv3#page11#enu4#ln20"/>
+          <layout:Link link="sv3#page11#enu4#ln25"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
