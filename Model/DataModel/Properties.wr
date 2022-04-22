@@ -48,7 +48,7 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity id="ent4" name="Productos" duration="persistent" attributeOrder="ent4#att2 ent4#att3 ent4#att4 ent4#att5 ent4#att6 ent4#att7 ent4#att19 ent4#att24 ent4#att28 ent4#att40" db:database="db1" db:table="productos" gr:x="95" gr:y="80">
+  <Entity id="ent4" name="Productos" duration="persistent" attributeOrder="ent4#att2 ent4#att3 ent4#att4 ent4#att5 ent4#att6 ent4#att7 ent4#att19 ent4#att24 ent4#att28 ent4#att40 ent4#att52" db:database="db1" db:table="productos" gr:x="95" gr:y="80">
     <Attribute id="ent4#att2" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent4#att3" name="nombreProducto" type="string" db:column="nombreproducto"/>
     <Attribute id="ent4#att4" name="descripcionProducto" type="text" db:column="descripcionproducto"/>
@@ -61,6 +61,7 @@
     <Attribute id="ent4#att24" name="fechaCaducidad" type="date" db:column="fechacaducidad"/>
     <Attribute id="ent4#att28" name="valoracionMedia" type="float" db:column="valoracionmedia"/>
     <Attribute id="ent4#att40" name="urlQR" type="url" db:column="urlqr"/>
+    <Attribute id="ent4#att52" name="categoria" type="string" derivationQuery="simpleImported::Self.rel1#role1.ent8#att23"/>
   </Entity>
   <Entity id="ent5" name="Promociones" duration="persistent" attributeOrder="ent5#att8 ent5#att9 ent5#att10 ent5#att11 ent5#att20" db:database="db1" db:table="promociones" gr:x="370" gr:y="130">
     <Attribute id="ent5#att8" name="oid" key="true" type="integer" db:column="oid"/>
@@ -197,8 +198,7 @@
     <Attribute id="ent7#att71" name="fechaHistorico" type="date" db:column="fechahistorico"/>
     <Attribute id="ent7#att74" name="oid_UsuarioAntiguo" type="integer" db:column="oid_usuarioantiguo"/>
   </Entity>
-  <db:Database id="db1" name="GanAppderiaDatabase" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/GanAppderiaDatabase" username="postgres" password="admin" schema="public">
-  </db:Database>
+  <db:Database id="db1" name="GanAppderiaDatabase" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/GanAppderiaDatabase" username="postgres" password="admin" schema="public"/>
   <Entity gr:x="85" gr:y="-215" id="ent12" name="HistoricoProductos" duration="persistent" attributeOrder="ent12#att17 ent12#att18 ent12#att62 ent12#att64 ent12#att72 ent12#att75 ent12#att76 ent12#att77 ent12#att78 ent12#att79 ent12#att80 ent12#att81" db:database="db1" db:table="historicoproductos">
     <Attribute id="ent12#att17" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent12#att18" name="nombreProducto" type="string" db:column="nombreproducto"/>

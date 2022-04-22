@@ -1,14 +1,35 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="290" gr:y="125" id="sv3#page2" name="Home-Usuario">
-  <ContentUnits>
-    <MultiMessageUnit gr:x="0" gr:y="0" id="sv3#page2#mssu1" name="Mensaje">
-      <Placeholder id="sv3#page2#mssu1#ph1" name="Placeholder1"/>
-      <Message xml:space="preserve">Has llegado aqu&#237;</Message>
-    </MultiMessageUnit>
-  </ContentUnits>
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="295" gr:y="65" id="sv3#page2" name="Home-Usuario">
+  <ContentUnits/>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page2#mssu1"/>
+        <layout:SubPage pageId="sv3#page2#page5">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv3#page2#page5#pwu1">
+                  <layout:Attribute attribute="ent4#att3"/>
+                  <layout:Attribute attribute="ent4#att5"/>
+                  <layout:Attribute attribute="ent4#att7"/>
+                  <layout:Attribute attribute="ent4#att19"/>
+                  <layout:Attribute attribute="ent4#att24"/>
+                  <layout:Link link="sv3#page2#page5#pwu1#ln2"/>
+                </layout:Unit>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
@@ -23,4 +44,11 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
+  <Page gr:x="0" gr:y="0" id="sv3#page2#page5" name="Productos" linkVisibilityPolicy="always">
+    <ContentUnits>
+      <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#page2#page5#pwu1" name="Listado-Productos" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att3 ent4#att5 ent4#att7 ent4#att19 ent4#att24" linkOrder="sv3#page2#page5#pwu1#ln2">
+        <Link id="sv3#page2#page5#pwu1#ln2" name="M&#225;s informaci&#243;n" to="sv3#page7#dau1" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="171,-84,-169,-59"/>
+      </PowerIndexUnit>
+    </ContentUnits>
+  </Page>
 </Page>
