@@ -1,0 +1,70 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov1#opm1" name="Crear-Producto">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="225" id="mov1#opm1#icu1" name="Input Port">
+      <InputCollectorParameter id="mov1#opm1#icu1#icp2" name="valoracionMedia"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp3" name="Ubicacion.oid(ProductosToUbicacion)"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp4" name="Promociones.oid(ProductosToPromociones)"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp6" name="imagenProducto"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp7" name="fechaCaducidad"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp8" name="nombreProducto"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp9" name="descripcionProducto"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp10" name="imagenProducto [file name]"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp11" name="precioProducto"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp12" name="urlQR"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp13" name="unidadesProducto"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp14" name="AttCondition1"/>
+      <InputCollectorParameter id="mov1#opm1#icu1#icp15" name="Categoria.oid(ProductosToCategoria)"/>
+      <Link id="mov1#opm1#icu1#ln22" to="mov1#opm1#cru3" type="transport" validate="true" name="Flow10">
+        <LinkParameter id="mov1#opm1#icu1#ln22#par61" source="mov1#opm1#icu1#icp7" name="Fecha de caducidad_fechaCaducidad" target="mov1#opm1#cru3.ent4#att24"/>
+        <LinkParameter id="mov1#opm1#icu1#ln22#par62" source="mov1#opm1#icu1#icp6" name="Imagen_imagenProducto" target="mov1#opm1#cru3.ent4#att19"/>
+        <LinkParameter id="mov1#opm1#icu1#ln22#par63" source="mov1#opm1#icu1#icp9" name="Descripci&#243;n_descripcionProducto" target="mov1#opm1#cru3.ent4#att4"/>
+        <LinkParameter id="mov1#opm1#icu1#ln22#par64" source="mov1#opm1#icu1#icp4" name="Promoci&#243;n_Promociones.oid(ProductosToPromociones)" target="mov1#opm1#cru3.rel3#role5.ent5#att8"/>
+        <LinkParameter id="mov1#opm1#icu1#ln22#par65" name="0_valoracionMedia" target="mov1#opm1#cru3.ent4#att28" source="mov1#opm1#icu1#icp2"/>
+        <LinkParameter id="mov1#opm1#icu1#ln22#par66" source="mov1#opm1#icu1#icp10" name="Nombre_imagenProducto [file name]" target="mov1#opm1#cru3.ent4#att19_name"/>
+        <LinkParameter id="mov1#opm1#icu1#ln22#par67" source="mov1#opm1#icu1#icp3" name="Ubicaci&#243;n_Ubicacion.oid(ProductosToUbicacion)" target="mov1#opm1#cru3.rel9#role17.ent2#att41"/>
+        <LinkParameter id="mov1#opm1#icu1#ln22#par68" source="mov1#opm1#icu1#icp13" name="Unidades_unidadesProducto" target="mov1#opm1#cru3.ent4#att6"/>
+        <LinkParameter id="mov1#opm1#icu1#ln22#par69" source="mov1#opm1#icu1#icp15" name="Categor&#237;a_Categoria.oid(ProductosToCategoria)" target="mov1#opm1#cru3.rel1#role1.ent8#att22"/>
+        <LinkParameter id="mov1#opm1#icu1#ln22#par70" source="mov1#opm1#icu1#icp12" name="URL QR_urlQR" target="mov1#opm1#cru3.ent4#att40"/>
+        <LinkParameter id="mov1#opm1#icu1#ln22#par71" source="mov1#opm1#icu1#icp11" name="Precio_precioProducto" target="mov1#opm1#cru3.ent4#att5"/>
+        <LinkParameter id="mov1#opm1#icu1#ln22#par72" source="mov1#opm1#icu1#icp8" name="Nombre_nombreProducto" target="mov1#opm1#cru3.ent4#att3"/>
+      </Link>
+      <OKLink id="mov1#opm1#icu1#oln9" to="mov1#opm1#seu5" validate="true" name="Crear">
+        <LinkParameter id="mov1#opm1#icu1#oln9#par36" source="mov1#opm1#icu1#icp14" name="Nombre_AttCondition1" target="mov1#opm1#seu5#su6#acond5"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1175" gr:y="300" id="mov1#opm1#okcu3" name="OK Port3">
+      <OutputCollectorParameter id="mov1#opm1#okcu3#ocp1" name="Has publicado un anuncio con el mismo nombre. Prueba a editarlo_Shown Messages"/>
+    </OKCollectorUnit>
+    <OKCollectorUnit gr:x="1175" gr:y="0" id="mov1#opm1#okcu2" name="OK Port2">
+      <OutputCollectorParameter id="mov1#opm1#okcu2#ocp2" name="oid"/>
+    </OKCollectorUnit>
+    <IsNotNullUnit id="mov1#opm1#inn3" name="Is Not Null2" gr:x="775" gr:y="150">
+      <KOLink id="mov1#opm1#inn3#kln3" name="KOFlow2" to="mov1#opm1#cru3" automaticCoupling="true"/>
+      <OKLink id="mov1#opm1#inn3#oln15" to="mov1#opm1#okcu3" name="OKFlow7">
+        <LinkParameter id="mov1#opm1#inn3#oln15#par73" sourceValue="Has publicado un anuncio con el mismo nombre. Prueba a editarlo" name="Has publicado un anuncio con el mismo nombre. Prueba a editarlo_Shown Messages" target="mov1#opm1#okcu3#ocp1"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <CreateUnit id="mov1#opm1#cru3" name="Crear-Anuncio" gr:x="515" gr:y="120" entity="ent4">
+      <OKLink id="mov1#opm1#cru3#oln16" to="mov1#opm1#okcu2" name="OKFlow6">
+        <LinkParameter id="mov1#opm1#cru3#oln16#par74" name="oid_KeyCondition1 [oid]" source="ent4#att2Array" target="mov1#opm1#okcu2#ocp2"/>
+      </OKLink>
+    </CreateUnit>
+    <GetUnit id="mov1#opm1#gtu1" name="Get-User-Oid" gr:x="300" gr:y="5" contextParameters="UserCtxParam">
+      <Link id="mov1#opm1#gtu1#ln20" name="Flow13" to="mov1#opm1#cru3" type="transport" validate="true">
+        <LinkParameter id="mov1#opm1#gtu1#ln20#par58" name="UserCtxParam.oid_User.oid(ProductosToUser)" source="mov1#opm1#gtu1.UserCtxParam" target="mov1#opm1#cru3.rel6#role12.userOID"/>
+      </Link>
+      <Link id="mov1#opm1#gtu1#ln21" name="Flow14" to="mov1#opm1#seu5" type="transport" validate="true">
+        <LinkParameter id="mov1#opm1#gtu1#ln21#par59" name="UserCtxParam.oid_AttCondition2" source="mov1#opm1#gtu1.UserCtxParam" target="mov1#opm1#seu5#su6#acond6"/>
+      </Link>
+    </GetUnit>
+    <SelectorUnit id="mov1#opm1#seu5" name="Verificar-Existencia-Producto" gr:x="705" gr:y="0" entity="ent4">
+      <Selector id="mov1#opm1#seu5#su6" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov1#opm1#seu5#su6#acond5" name="AttCondition1" predicate="eq" booleanOperator="and" implied="false" attributes="ent4#att3" ignoreCase="true"/>
+        <AttributesCondition id="mov1#opm1#seu5#su6#acond6" name="AttCondition2" predicate="eq" booleanOperator="and" implied="false" attributes="rel6#role12.userOID"/>
+      </Selector>
+      <OKLink id="mov1#opm1#seu5#oln14" name="OKFlow5" to="mov1#opm1#inn3">
+        <LinkParameter id="mov1#opm1#seu5#oln14#par60" name="nombreProducto_Input" source="ent4#att3Array" target="mov1#opm1#inn3.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

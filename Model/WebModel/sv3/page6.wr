@@ -10,22 +10,22 @@
       <Field id="sv3#page6#enu3#fld7" name="Descripci&#243;n" type="text" modifiable="true"/>
       <Field id="sv3#page6#enu3#fld6" name="Nombre" type="string" modifiable="true"/>
       <SelectionField id="sv3#page6#enu3#sfld2" type="string" name="Categor&#237;a"/>
-      <Link id="sv3#page6#enu3#ln9" name="Crear" to="sv3#seu4" type="normal" validate="true">
-        <LinkParameter id="sv3#page6#enu3#ln9#par17" name="Nombre_AttCondition1" source="sv3#page6#enu3#fld6" target="sv3#seu4#su2#acond1"/>
+      <Link id="sv3#page6#enu3#ln9" name="Crear" to="sv3#miu2" type="normal" validate="true">
+        <LinkParameter id="sv3#page6#enu3#ln9#par17" name="Nombre_AttCondition1" source="sv3#page6#enu3#fld6" target="sv3#miu2.mov1#opm1#icu1#icp14"/>
       </Link>
-      <Link id="sv3#page6#enu3#ln10" name="Flow10" to="sv3#cru2" type="transport" validate="true">
-        <LinkParameter id="sv3#page6#enu3#ln10#par18" name="Categor&#237;a_Categoria.oid(ProductosToCategoria)" source="sv3#page6#enu3#sfld2" target="sv3#cru2.rel1#role1.ent8#att22"/>
-        <LinkParameter id="sv3#page6#enu3#ln10#par19" name="Descripci&#243;n_descripcionProducto" source="sv3#page6#enu3#fld7" target="sv3#cru2.ent4#att4"/>
-        <LinkParameter id="sv3#page6#enu3#ln10#par20" name="Fecha de caducidad_fechaCaducidad" source="sv3#page6#enu3#fld11" target="sv3#cru2.ent4#att24"/>
-        <LinkParameter id="sv3#page6#enu3#ln10#par21" name="Imagen_imagenProducto" source="sv3#page6#enu3#fld13" target="sv3#cru2.ent4#att19"/>
-        <LinkParameter id="sv3#page6#enu3#ln10#par22" name="Nombre_imagenProducto [file name]" source="sv3#page6#enu3#fld6" target="sv3#cru2.ent4#att19_name"/>
-        <LinkParameter id="sv3#page6#enu3#ln10#par23" name="Nombre_nombreProducto" source="sv3#page6#enu3#fld6" target="sv3#cru2.ent4#att3"/>
-        <LinkParameter id="sv3#page6#enu3#ln10#par24" name="Precio_precioProducto" source="sv3#page6#enu3#fld8" target="sv3#cru2.ent4#att5"/>
-        <LinkParameter id="sv3#page6#enu3#ln10#par25" name="Promoci&#243;n_Promociones.oid(ProductosToPromociones)" source="sv3#page6#enu3#sfld1" target="sv3#cru2.rel3#role5.ent5#att8"/>
-        <LinkParameter id="sv3#page6#enu3#ln10#par26" name="Unidades_unidadesProducto" source="sv3#page6#enu3#fld9" target="sv3#cru2.ent4#att6"/>
-        <LinkParameter id="sv3#page6#enu3#ln10#par27" name="URL QR_urlQR" source="sv3#page6#enu3#fld12" target="sv3#cru2.ent4#att40"/>
-        <LinkParameter id="sv3#page6#enu3#ln10#par28" name="0_valoracionMedia" sourceValue="0" target="sv3#cru2.ent4#att28"/>
-        <LinkParameter id="sv3#page6#enu3#ln10#par39" name="Ubicaci&#243;n_Ubicacion.oid(ProductosToUbicacion)" source="sv3#page6#enu3#sfld3" target="sv3#cru2.rel9#role17.ent2#att41"/>
+      <Link id="sv3#page6#enu3#ln10" name="Flow10" to="sv3#miu2" type="transport" validate="true">
+        <LinkParameter id="sv3#page6#enu3#ln10#par18" name="Categor&#237;a_Categoria.oid(ProductosToCategoria)" source="sv3#page6#enu3#sfld2" target="sv3#miu2.mov1#opm1#icu1#icp15"/>
+        <LinkParameter id="sv3#page6#enu3#ln10#par19" name="Descripci&#243;n_descripcionProducto" source="sv3#page6#enu3#fld7" target="sv3#miu2.mov1#opm1#icu1#icp9"/>
+        <LinkParameter id="sv3#page6#enu3#ln10#par20" name="Fecha de caducidad_fechaCaducidad" source="sv3#page6#enu3#fld11" target="sv3#miu2.mov1#opm1#icu1#icp7"/>
+        <LinkParameter id="sv3#page6#enu3#ln10#par21" name="Imagen_imagenProducto" source="sv3#page6#enu3#fld13" target="sv3#miu2.mov1#opm1#icu1#icp6"/>
+        <LinkParameter id="sv3#page6#enu3#ln10#par22" name="Nombre_imagenProducto [file name]" source="sv3#page6#enu3#fld6" target="sv3#miu2.mov1#opm1#icu1#icp10"/>
+        <LinkParameter id="sv3#page6#enu3#ln10#par23" name="Nombre_nombreProducto" source="sv3#page6#enu3#fld6" target="sv3#miu2.mov1#opm1#icu1#icp8"/>
+        <LinkParameter id="sv3#page6#enu3#ln10#par24" name="Precio_precioProducto" source="sv3#page6#enu3#fld8" target="sv3#miu2.mov1#opm1#icu1#icp11"/>
+        <LinkParameter id="sv3#page6#enu3#ln10#par25" name="Promoci&#243;n_Promociones.oid(ProductosToPromociones)" source="sv3#page6#enu3#sfld1" target="sv3#miu2.mov1#opm1#icu1#icp4"/>
+        <LinkParameter id="sv3#page6#enu3#ln10#par26" name="Unidades_unidadesProducto" source="sv3#page6#enu3#fld9" target="sv3#miu2.mov1#opm1#icu1#icp13"/>
+        <LinkParameter id="sv3#page6#enu3#ln10#par27" name="URL QR_urlQR" source="sv3#page6#enu3#fld12" target="sv3#miu2.mov1#opm1#icu1#icp12"/>
+        <LinkParameter id="sv3#page6#enu3#ln10#par28" name="0_valoracionMedia" sourceValue="0" target="sv3#miu2.mov1#opm1#icu1#icp2"/>
+        <LinkParameter id="sv3#page6#enu3#ln10#par39" name="Ubicaci&#243;n_Ubicacion.oid(ProductosToUbicacion)" source="sv3#page6#enu3#sfld3" target="sv3#miu2.mov1#opm1#icu1#icp3"/>
       </Link>
       <SelectionField id="sv3#page6#enu3#sfld3" type="string" name="Ubicaci&#243;n"/>
     </EntryUnit>

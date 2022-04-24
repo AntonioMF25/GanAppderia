@@ -72,8 +72,8 @@
                   <layout:Attribute attribute="ent4#att6"/>
                   <layout:Attribute attribute="ent4#att7"/>
                   <layout:Link link="sv3#page8#page10#pwu2#ln15"/>
-                  <layout:Link link="sv3#page8#page10#pwu2#ln18"/>
                   <layout:Link link="sv3#page8#page10#pwu2#ln28"/>
+                  <layout:Link link="sv3#page8#page10#pwu2#ln68"/>
                 </layout:Unit>
               </layout:Cell>
               <layout:Cell/>
@@ -134,15 +134,19 @@
   </Page>
   <Page gr:x="115" gr:y="0" id="sv3#page8#page10" name="Productos-Usuario">
     <ContentUnits>
-      <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#page8#page10#pwu2" name="Productos-Usuario" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att3 ent4#att5 ent4#att6 ent4#att7" linkOrder="sv3#page8#page10#pwu2#ln15 sv3#page8#page10#pwu2#ln18 sv3#page8#page10#pwu2#ln28">
+      <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#page8#page10#pwu2" name="Productos-Usuario" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att3 ent4#att5 ent4#att6 ent4#att7" linkOrder="sv3#page8#page10#pwu2#ln15 sv3#page8#page10#pwu2#ln28 sv3#page8#page10#pwu2#ln68">
         <Link id="sv3#page8#page10#pwu2#ln15" name="M&#225;s detalles" to="sv3#page7#dau1" type="normal" validate="true">
           <LinkParameter id="sv3#page8#page10#pwu2#ln15#par33" name="oid_KeyCondition1 [oid]" source="data[].ent4#att2" target="sv3#page7#dau1#su1#kcond1.ent4#att2"/>
         </Link>
         <Selector id="sv3#page8#page10#pwu2#su5" defaultPolicy="fill" booleanOperator="and">
           <AttributesCondition id="sv3#page8#page10#pwu2#su5#acond4" name="AttCondition4" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role12.userOID"/>
         </Selector>
-        <Link id="sv3#page8#page10#pwu2#ln18" name="Editar" to="sv3#seu5" automaticCoupling="true" type="normal" validate="true"/>
-        <Link id="sv3#page8#page10#pwu2#ln28" name="Eliminar" to="sv3#seu10" automaticCoupling="true" type="normal" validate="true"/>
+        <Link id="sv3#page8#page10#pwu2#ln28" name="Eliminar" to="sv3#miu1" type="normal" validate="true" gr:bendpoints="-227,33,213,63">
+          <LinkParameter id="sv3#page8#page10#pwu2#ln28#par129" name="oid_oid_producto" source="data[].ent4#att2" target="sv3#miu1.mov3#opm4#icu4#icp1"/>
+        </Link>
+        <Link id="sv3#page8#page10#pwu2#ln68" name="Actualizar" to="sv3#miu5" type="normal" validate="true">
+          <LinkParameter id="sv3#page8#page10#pwu2#ln68#par320" name="oid_KeyCondition4 [oid]" source="data[].ent4#att2" target="sv3#miu5.mov5#hym4#icu8#icp5"/>
+        </Link>
       </PowerIndexUnit>
       <GetUnit id="sv3#page8#page10#gtu5" name="Get-User-Oid" gr:x="30" gr:y="135" contextParameters="UserCtxParam">
         <Link id="sv3#page8#page10#gtu5#ln16" name="Flow16" to="sv3#page8#page10#pwu2" type="transport" validate="true">
