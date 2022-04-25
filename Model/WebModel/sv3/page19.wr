@@ -1,0 +1,184 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="-175" gr:y="-350" id="sv3#page19" name="Importar-Productos">
+  <ContentUnits>
+    <EntryUnit gr:x="0" gr:y="95" id="sv3#page19#enu5" name="Seleccionar-Excel" fieldOrder="sv3#page19#enu5#fld15" linkOrder="sv3#page19#enu5#ln40">
+      <Field id="sv3#page19#enu5#fld15" name="URL fichero" type="blob" modifiable="true"/>
+      <Link id="sv3#page19#enu5#ln40" name="Cargar Excel" to="sv3#exu2" type="normal" validate="true">
+        <LinkParameter id="sv3#page19#enu5#ln40#par42" name="URL fichero_BLOB" source="sv3#page19#enu5#fld15" target="sv3#exu2.blob"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page19#enu5">
+          <layout:Field field="sv3#page19#enu5#fld15"/>
+          <layout:Link link="sv3#page19#enu5#ln40"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:SubPage pageId="sv3#page19#page20">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv3#page19#page20#mssu11"/>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv3#page19#page20#inu1">
+                  <layout:Attribute attribute="ent8#att22"/>
+                  <layout:Attribute attribute="ent8#att23"/>
+                </layout:Unit>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page19#page20#inu2">
+          <layout:Attribute attribute="ent5#att8"/>
+          <layout:Attribute attribute="ent5#att11"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page19#page20#inu3">
+          <layout:Attribute attribute="ent2#att41"/>
+          <layout:Attribute attribute="ent2#att42"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:SubPage pageId="sv3#page19#page23">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv3#page19#page23#inu5">
+                  <layout:Attribute attribute="ent3#att54"/>
+                </layout:Unit>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Page gr:x="125" gr:y="155" id="sv3#page19#page20" name="Informaci&#243;n">
+    <ContentUnits>
+      <MultiMessageUnit gr:x="0" gr:y="0" id="sv3#page19#page20#mssu11" name="Informaci&#243;n-Importante">
+        <Message xml:space="preserve">&#161;&#161;ATENCI&#211;N!!
+Es importante introducir valores adecuados en el Excel. A continuaci&#243;n, se le mostrar&#225;n los valores adecuados para:
+	- Categor&#237;as
+	- Ubicaciones
+	- Promociones vigentes 
+
+Recuerde que:
+	- Un producto solo puede pertenecer a una categor&#237;a
+	- Un producto solo puede anunciarse desde una ubicaci&#243;n
+	- Un producto puede, o no, estar, como m&#225;ximo, asociado a una promoci&#243;n</Message>
+      </MultiMessageUnit>
+      <IndexUnit gr:x="5" gr:y="70" id="sv3#page19#page20#inu1" name="Categor&#237;as" entity="ent8" displayAttributes="ent8#att22 ent8#att23"/>
+      <IndexUnit id="sv3#page19#page20#inu2" name="Categor&#237;as" gr:x="205" gr:y="70" entity="ent5" displayAttributes="ent5#att8 ent5#att11"/>
+      <IndexUnit id="sv3#page19#page20#inu3" name="Ubicaciones" gr:x="105" gr:y="70" entity="ent2" displayAttributes="ent2#att41 ent2#att42"/>
+    </ContentUnits>
+  </Page>
+  <Page gr:x="210" gr:y="0" id="sv3#page19#page23" name="Descargar-Plantilla">
+    <ContentUnits>
+      <IndexUnit gr:x="0" gr:y="0" id="sv3#page19#page23#inu5" name="Plantilla" entity="ent3" displayAttributes="ent3#att54"/>
+    </ContentUnits>
+  </Page>
+</Page>

@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Home-Usuario" protected="true" localized="true" homePage="sv3#page2" landmarks="sv3#lou1 sv3#page6 sv3#page8">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv3" name="Home-Usuario" protected="true" localized="true" landmarks="sv3#lou1 sv3#page8 sv3#page14" homePage="sv3#page2">
   <OperationUnits>
     <LogoutUnit gr:x="45" gr:y="850" id="sv3#lou1" name="Logout" siteView="sv2" landmark="true"/>
     <ModuleInstanceUnit gr:x="-180" gr:y="720" id="sv3#miu1" moduleId="mov3#opm4">
@@ -19,6 +19,9 @@
       <OKLink id="sv3#miu2#oln11" to="sv3#page6#mssu3" name="OKFlow7" codeRef="mov1#opm1#okcu3">
         <LinkParameter id="sv3#miu2#oln11#par55" name="Has publicado un anuncio con el mismo nombre. Prueba a editarlo_Shown Messages" target="sv3#page6#mssu3.shownMessages" source="mov1#opm1#okcu3#ocp1"/>
       </OKLink>
+      <KOLink id="sv3#miu2#kln6" name="KOFlow6" to="sv3#page14#page15#mssu9" gr:bendpoints="-212,-356,328,174">
+        <LinkParameter id="sv3#miu2#kln6#par104" name="KO-Port-1_Shown Messages" source="mov1#opm1#kocu1#ocp3" target="sv3#page14#page15#mssu9.shownMessages"/>
+      </KOLink>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="-20" gr:y="1020" id="sv3#miu6" moduleId="mov2#opm2">
       <OKLink id="sv3#miu6#oln31" to="sv3#lou1" name="OKFlow22"/>
@@ -28,6 +31,64 @@
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="535" gr:y="1020" id="sv3#miu4" moduleId="mov6#hym2">
       <OKLink id="sv3#miu4#oln12" to="sv3#page8" name="OKFlow21"/>
+    </ModuleInstanceUnit>
+    <ExcelUnit gr:x="-65" gr:y="140" id="sv3#exu2" name="Procesar-Excel" mode="read" format="xls" sourceType="blob">
+      <OKLink id="sv3#exu2#oln19" name="OKFlow19" to="sv3#lpu1">
+        <LinkParameter id="sv3#exu2#oln19#par43" name="oid_categoria_categorias" source="sv3#exu2#ci8Array" target="sv3#lpu1#lsa8"/>
+        <LinkParameter id="sv3#exu2#oln19#par44" name="descripcion_descripciones" source="sv3#exu2#ci2Array" target="sv3#lpu1#lsa1"/>
+        <LinkParameter id="sv3#exu2#oln19#par45" name="fech_caducidad_fechas_caducidad" source="sv3#exu2#ci6Array" target="sv3#lpu1#lsa5"/>
+        <LinkParameter id="sv3#exu2#oln19#par46" name="imagen_imagenes" source="sv3#exu2#ci7Array" target="sv3#lpu1#lsa7"/>
+        <LinkParameter id="sv3#exu2#oln19#par47" name="nombre_Input Array" source="sv3#exu2#ci1Array" target="sv3#lpu1.array"/>
+        <LinkParameter id="sv3#exu2#oln19#par84" name="precio_precios" source="sv3#exu2#ci3Array" target="sv3#lpu1#lsa2"/>
+        <LinkParameter id="sv3#exu2#oln19#par85" name="oid_promocion_promociones" source="sv3#exu2#ci5Array" target="sv3#lpu1#lsa4"/>
+        <LinkParameter id="sv3#exu2#oln19#par86" name="oid_ubicacion_ubicaciones" source="sv3#exu2#ci9Array" target="sv3#lpu1#lsa9"/>
+        <LinkParameter id="sv3#exu2#oln19#par88" name="unidades_unidades" source="sv3#exu2#ci4Array" target="sv3#lpu1#lsa3"/>
+        <LinkParameter id="sv3#exu2#oln19#par89" name="url_qr_urls_qr" source="sv3#exu2#ci10Array" target="sv3#lpu1#lsa6"/>
+      </OKLink>
+      <CellInfo id="sv3#exu2#ci1" name="nombre" type="string" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="A" rows="2:"/>
+      <CellInfo id="sv3#exu2#ci2" name="descripcion" type="string" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="B" rows="2:"/>
+      <CellInfo id="sv3#exu2#ci3" name="precio" type="float" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="C" rows="2:"/>
+      <CellInfo id="sv3#exu2#ci4" name="unidades" type="integer" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="D" rows="2:"/>
+      <CellInfo id="sv3#exu2#ci5" name="oid_promocion" type="integer" preserveCellStyle="false" autoSizeColumn="true" rows="2:" column="E" sheet="1"/>
+      <CellInfo id="sv3#exu2#ci6" name="fech_caducidad" type="date" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="F" rows="2:"/>
+      <CellInfo id="sv3#exu2#ci7" name="imagen" type="blob" preserveCellStyle="false" autoSizeColumn="true" contentType="image" sheet="1" column="G" rows="2:"/>
+      <CellInfo id="sv3#exu2#ci8" name="oid_categoria" type="integer" preserveCellStyle="false" autoSizeColumn="true" column="H" rows="2:" sheet="1"/>
+      <CellInfo id="sv3#exu2#ci9" name="oid_ubicacion" type="integer" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="I" rows="2:"/>
+      <CellInfo id="sv3#exu2#ci10" name="url_qr" type="string" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="J" rows="2:"/>
+    </ExcelUnit>
+    <LoopUnit gr:x="-60" gr:y="260" id="sv3#lpu1" name="Bucle-Carga">
+      <OKLink id="sv3#lpu1#oln20" name="OKFlow20" to="sv3#miu8" code="next">
+        <LinkParameter id="sv3#lpu1#oln20#par91" name="Next Element (categorias)_Categoria.oid(ProductosToCategoria)" source="sv3#lpu1#lsa8" target="sv3#miu8.mov1#opm1#icu1#icp15"/>
+        <LinkParameter id="sv3#lpu1#oln20#par93" name="Next Element (descripciones)_descripcionProducto" source="sv3#lpu1#lsa1" target="sv3#miu8.mov1#opm1#icu1#icp9"/>
+        <LinkParameter id="sv3#lpu1#oln20#par94" name="Next Element (fechas_caducidad)_fechaCaducidad" source="sv3#lpu1#lsa5" target="sv3#miu8.mov1#opm1#icu1#icp7"/>
+        <LinkParameter id="sv3#lpu1#oln20#par95" name="Next Element (imagenes)_imagenProducto" source="sv3#lpu1#lsa7" target="sv3#miu8.mov1#opm1#icu1#icp6"/>
+        <LinkParameter id="sv3#lpu1#oln20#par96" name="Next Element_imagenProducto [file name]" source="next" target="sv3#miu8.mov1#opm1#icu1#icp10"/>
+        <LinkParameter id="sv3#lpu1#oln20#par97" name="Next Element_nombreProducto" source="next" target="sv3#miu8.mov1#opm1#icu1#icp8"/>
+        <LinkParameter id="sv3#lpu1#oln20#par98" name="Next Element (precios)_precioProducto" source="sv3#lpu1#lsa2" target="sv3#miu8.mov1#opm1#icu1#icp11"/>
+        <LinkParameter id="sv3#lpu1#oln20#par99" name="Next Element (promociones)_Promociones.oid(ProductosToPromociones)" source="sv3#lpu1#lsa4" target="sv3#miu8.mov1#opm1#icu1#icp4"/>
+        <LinkParameter id="sv3#lpu1#oln20#par100" name="Next Element (ubicaciones)_Ubicacion.oid(ProductosToUbicacion)" source="sv3#lpu1#lsa9" target="sv3#miu8.mov1#opm1#icu1#icp3"/>
+        <LinkParameter id="sv3#lpu1#oln20#par101" name="Next Element (unidades)_unidadesProducto" source="sv3#lpu1#lsa3" target="sv3#miu8.mov1#opm1#icu1#icp13"/>
+        <LinkParameter id="sv3#lpu1#oln20#par102" name="Next Element (urls_qr)_urlQR" source="sv3#lpu1#lsa6" target="sv3#miu8.mov1#opm1#icu1#icp12"/>
+        <LinkParameter id="sv3#lpu1#oln20#par103" name="0_valoracionMedia" sourceValue="0" target="sv3#miu8.mov1#opm1#icu1#icp2"/>
+      </OKLink>
+      <SecondaryArray id="sv3#lpu1#lsa1" name="descripciones"/>
+      <SecondaryArray id="sv3#lpu1#lsa2" name="precios"/>
+      <SecondaryArray id="sv3#lpu1#lsa3" name="unidades"/>
+      <SecondaryArray id="sv3#lpu1#lsa4" name="promociones"/>
+      <SecondaryArray id="sv3#lpu1#lsa5" name="fechas_caducidad"/>
+      <SecondaryArray id="sv3#lpu1#lsa6" name="urls_qr"/>
+      <SecondaryArray id="sv3#lpu1#lsa7" name="imagenes"/>
+      <SecondaryArray id="sv3#lpu1#lsa8" name="categorias"/>
+      <SecondaryArray id="sv3#lpu1#lsa9" name="ubicaciones"/>
+    </LoopUnit>
+    <ModuleInstanceUnit id="sv3#miu8" gr:x="-105" gr:y="370" moduleId="mov1#opm1">
+      <OKLink id="sv3#miu8#oln21" name="OKFlow21" to="sv3#lpu1" automaticCoupling="true" gr:bendpoints="-97,-72,-92,43" codeRef="mov1#opm1#okcu2"/>
+      <KOLink id="sv3#miu8#kln7" name="KOFlow7" to="sv3#page14#page15#mssu9" gr:bendpoints="359,-213,-176,302">
+        <LinkParameter id="sv3#miu8#kln7#par105" name="Error en CSV_Shown Messages" sourceValue="Error en Excel" target="sv3#page14#page15#mssu9.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv3#miu8#oln22" name="OKFlow22" to="sv3#page14#page15#mssu9">
+        <LinkParameter id="sv3#miu8#oln22#par106" name="Inserciones mediante Excel correctas_Shown Messages" sourceValue="Inserciones mediante Excel correctas" target="sv3#page14#page15#mssu9.shownMessages"/>
+      </OKLink>
     </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>
