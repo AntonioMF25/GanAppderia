@@ -48,6 +48,7 @@
       <OKLink id="mov1#opm1#cru3#oln16" to="mov1#opm1#okcu2" name="OKFlow6">
         <LinkParameter id="mov1#opm1#cru3#oln16#par74" name="oid_KeyCondition1 [oid]" source="ent4#att2Array" target="mov1#opm1#okcu2#ocp2"/>
       </OKLink>
+      <KOLink id="mov1#opm1#cru3#kln4" name="KOFlow4" to="mov1#opm1#kocu1" automaticCoupling="true"/>
     </CreateUnit>
     <GetUnit id="mov1#opm1#gtu1" name="Get-User-Oid" gr:x="300" gr:y="5" contextParameters="UserCtxParam">
       <Link id="mov1#opm1#gtu1#ln20" name="Flow13" to="mov1#opm1#cru3" type="transport" validate="true">
@@ -66,5 +67,8 @@
         <LinkParameter id="mov1#opm1#seu5#oln14#par60" name="nombreProducto_Input" source="ent4#att3Array" target="mov1#opm1#inn3.isnotnull"/>
       </OKLink>
     </SelectorUnit>
+    <KOCollectorUnit gr:x="1175" gr:y="500" id="mov1#opm1#kocu1" name="KO Port1">
+      <OutputCollectorParameter id="mov1#opm1#kocu1#ocp3" name="KO-Port-1" value="Error al registrar un producto. Deshaciendo cambios..."/>
+    </KOCollectorUnit>
   </OperationUnits>
 </OperationModule>

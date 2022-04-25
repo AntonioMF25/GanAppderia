@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1030" gr:y="-35" id="sv3#page6" name="Registrar-Producto" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1030" gr:y="-35" id="sv3#page6" name="Registrar-Producto" landmark="false">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="10" id="sv3#page6#enu3" name="Registrar-Producto" fieldOrder="sv3#page6#enu3#fld6 sv3#page6#enu3#fld7 sv3#page6#enu3#fld8 sv3#page6#enu3#fld9 sv3#page6#enu3#sfld1 sv3#page6#enu3#fld11 sv3#page6#enu3#fld12 sv3#page6#enu3#fld13 sv3#page6#enu3#sfld2 sv3#page6#enu3#sfld3" linkOrder="sv3#page6#enu3#ln9">
       <Field id="sv3#page6#enu3#fld13" name="Imagen" type="blob" modifiable="true"/>
