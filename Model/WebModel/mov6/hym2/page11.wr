@@ -1,0 +1,66 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov6#hym2#page11" name="Modificar-Contrase&#241;a-Usuario" gr:x="345" gr:y="0">
+  <ContentUnits>
+    <MultiMessageUnit id="mov6#hym2#page11#mssu8" name="Aviso" gr:x="265" gr:y="20">
+      <Message xml:space="preserve">Es obligatorio introducir la contrase&#241;a vigente para realizar el cambio.</Message>
+    </MultiMessageUnit>
+    <EntryUnit id="mov6#hym2#page11#enu4" name="Modificar-Contrase&#241;a-Usuario" linkOrder="mov6#hym2#page11#enu4#ln13" gr:x="0" gr:y="0" entity="User">
+      <Field id="mov6#hym2#page11#enu4#fld10" name="newPassword" type="password" modifiable="true" attribute="password">
+        <VRules>
+          <MandatoryValidationRule id="mov6#hym2#page11#enu4#fld10#mnd4" name="Pass-Obligatoria" companionField="mov6#hym2#page11#enu4#fld10" errorMessage="campo &quot;newPassword&quot; es obligatorio"/>
+          <PasswordStrengthValidationRule id="mov6#hym2#page11#enu4#fld10#psvr2" name="Password Strength11" securityLevel="low" errorMessage="Contrase&#241;a d&#233;bil"/>
+        </VRules>
+      </Field>
+      <Field id="mov6#hym2#page11#enu4#fld14" name="oldPassword" type="password" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="mov6#hym2#page11#enu4#fld14#mnd5" name="Pass-Obligatoria" companionField="mov6#hym2#page11#enu4#fld14" errorMessage="campo &quot;oldPassword&quot; es obligatorio"/>
+          <PasswordStrengthValidationRule id="mov6#hym2#page11#enu4#fld14#psvr3" name="Password Strength12" securityLevel="low" errorMessage="Contrase&#241;a d&#233;bil"/>
+        </VRules>
+      </Field>
+      <Link id="mov6#hym2#page11#enu4#ln13" name="Cambiar contrase&#241;a" to="mov6#hym2#seu10" type="normal" validate="true">
+        <LinkParameter id="mov6#hym2#page11#enu4#ln13#par29" name="oldPassword_AttConditionContrase&#241;a" source="mov6#hym2#page11#enu4#fld14" target="mov6#hym2#seu10#su14#acond8"/>
+        <LinkParameter id="mov6#hym2#page11#enu4#ln13#par30" name="newPassword_AttConditionContrase&#241;aDiferente" source="mov6#hym2#page11#enu4#fld10" target="mov6#hym2#seu10#su14#acond13"/>
+      </Link>
+      <Link id="mov6#hym2#page11#enu4#ln14" name="Flow43" to="mov6#hym2#mfu1" type="transport" validate="true">
+        <LinkParameter id="mov6#hym2#page11#enu4#ln14#par31" name="newPassword_password" source="mov6#hym2#page11#enu4#fld10" target="mov6#hym2#mfu1.password"/>
+      </Link>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov6#hym2#page11#mssu8"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov6#hym2#page11#enu4">
+          <layout:Field field="mov6#hym2#page11#enu4#fld10"/>
+          <layout:Field field="mov6#hym2#page11#enu4#fld14"/>
+          <layout:Link link="mov6#hym2#page11#enu4#ln13"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

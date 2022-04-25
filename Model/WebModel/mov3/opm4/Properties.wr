@@ -1,0 +1,44 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="100" gr:y="130" id="mov3#opm4" name="Eliminar-Producto">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="150" id="mov3#opm4#icu4">
+      <InputCollectorParameter id="mov3#opm4#icu4#icp1" name="oid_producto"/>
+      <OKLink id="mov3#opm4#icu4#oln35" name="OKFlow35" to="mov3#opm4#seu15">
+        <LinkParameter id="mov3#opm4#icu4#oln35#par159" name="oid_producto_KeyCondition7 [oid]" source="mov3#opm4#icu4#icp1" target="mov3#opm4#seu15#su20#kcond17.ent4#att2"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <CreateUnit id="mov3#opm4#cru9" name="Crear-Historico-Producto" gr:x="590" gr:y="295" entity="ent12">
+      <OKLink id="mov3#opm4#cru9#oln32" name="OKFlow13" to="mov3#opm4#dlu6">
+        <LinkParameter id="mov3#opm4#cru9#oln32#par145" name="oid_ProductoAntiguo_KeyCondition6 [oid]" source="ent12#att81Array" target="mov3#opm4#dlu6#su19#kcond16.ent4#att2"/>
+      </OKLink>
+    </CreateUnit>
+    <DeleteUnit id="mov3#opm4#dlu6" name="Eliminar-Producto" gr:x="325" gr:y="475" entity="ent4">
+      <Selector id="mov3#opm4#dlu6#su19" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#opm4#dlu6#su19#kcond16" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+    </DeleteUnit>
+    <SelectorUnit id="mov3#opm4#seu15" name="Seleccionar-Producto-Eliminar" gr:x="265" gr:y="165" entity="ent4">
+      <Selector id="mov3#opm4#seu15#su20" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov3#opm4#seu15#su20#kcond17" name="KeyCondition7" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov3#opm4#seu15#oln33" name="OKFlow11" to="mov3#opm4#tmu7" automaticCoupling="true"/>
+      <Link id="mov3#opm4#seu15#ln34" name="Flow29" to="mov3#opm4#cru9" type="transport" validate="true">
+        <LinkParameter id="mov3#opm4#seu15#ln34#par146" name="descripcionProducto_descripcionProducto" source="ent4#att4Array" target="mov3#opm4#cru9.ent12#att62"/>
+        <LinkParameter id="mov3#opm4#seu15#ln34#par147" name="fechaCaducidad_fechaCaducidad" source="ent4#att24Array" target="mov3#opm4#cru9.ent12#att77"/>
+        <LinkParameter id="mov3#opm4#seu15#ln34#par148" name="imagenProducto_imagenProducto" source="ent4#att19Array" target="mov3#opm4#cru9.ent12#att76"/>
+        <LinkParameter id="mov3#opm4#seu15#ln34#par149" name="nombreProducto_imagenProducto [file name]" source="ent4#att3Array" target="mov3#opm4#cru9.ent12#att76_name"/>
+        <LinkParameter id="mov3#opm4#seu15#ln34#par150" name="nombreProducto_nombreProducto" source="ent4#att3Array" target="mov3#opm4#cru9.ent12#att18"/>
+        <LinkParameter id="mov3#opm4#seu15#ln34#par151" name="oid_oid_ProductoAntiguo" source="ent4#att2Array" target="mov3#opm4#cru9.ent12#att81"/>
+        <LinkParameter id="mov3#opm4#seu15#ln34#par152" name="precioProducto_precioProducto" source="ent4#att5Array" target="mov3#opm4#cru9.ent12#att64"/>
+        <LinkParameter id="mov3#opm4#seu15#ln34#par153" name="precioTrasPromocion_precioTrasPromocion" source="ent4#att7Array" target="mov3#opm4#cru9.ent12#att75"/>
+        <LinkParameter id="mov3#opm4#seu15#ln34#par154" name="unidadesProducto_unidadesProducto" source="ent4#att6Array" target="mov3#opm4#cru9.ent12#att72"/>
+        <LinkParameter id="mov3#opm4#seu15#ln34#par155" name="urlQR_urlQR" source="ent4#att40Array" target="mov3#opm4#cru9.ent12#att79"/>
+        <LinkParameter id="mov3#opm4#seu15#ln34#par156" name="valoracionMedia_valoracionMedia" source="ent4#att28Array" target="mov3#opm4#cru9.ent12#att78"/>
+      </Link>
+    </SelectorUnit>
+    <TimeUnit id="mov3#opm4#tmu7" name="Fecha-Historico-Producto" gr:x="540" gr:y="175">
+      <OKLink id="mov3#opm4#tmu7#oln34" name="OKFlow12" to="mov3#opm4#cru9">
+        <LinkParameter id="mov3#opm4#tmu7#oln34#par157" name="Current/Input Date_fechaHistorico" source="currentDate" target="mov3#opm4#cru9.ent12#att80"/>
+      </OKLink>
+    </TimeUnit>
+  </OperationUnits>
+</OperationModule>

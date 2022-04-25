@@ -1,0 +1,30 @@
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Login" localized="true" homePage="sv2#page1">
+  <OperationUnits>
+    <LoginUnit gr:x="315" gr:y="335" id="sv2#lgu1" name="Login"/>
+    <CreateUnit gr:x="1155" gr:y="280" id="sv2#cru1" name="Crear Usuario" entity="User">
+      <OKLink id="sv2#cru1#oln4" name="OKFlow4" to="sv2#lgu1" gr:bendpoints="117,220,967,175;-836,206,14,161">
+        <LinkParameter id="sv2#cru1#oln4#par11" name="userName_Username" source="userNameArray" target="sv2#lgu1.username"/>
+        <LinkParameter id="sv2#cru1#oln4#par12" name="password_Password" source="passwordArray" target="sv2#lgu1.password"/>
+      </OKLink>
+    </CreateUnit>
+    <SelectorUnit gr:x="775" gr:y="285" id="sv2#seu1" name="Existe-Usuario?" entity="User">
+      <Selector id="sv2#seu1#su3" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv2#seu1#su3#acond3" name="AttCondition3" predicate="eq" booleanOperator="or" implied="false" attributes="userName" ignoreCase="false"/>
+      </Selector>
+      <OKLink id="sv2#seu1#oln1" name="OKFlow1" to="sv2#inn1">
+        <LinkParameter id="sv2#seu1#oln1#par14" name="userName_Input" source="userNameArray" target="sv2#inn1.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="970" gr:y="350" id="sv2#inn1" name="Is Not Null1">
+      <OKLink id="sv2#inn1#oln2" name="OKFlow2" to="sv2#page4#mssu5">
+        <LinkParameter id="sv2#inn1#oln2#par6" name="Usuario existente_Shown Messages" sourceValue="Usuario existente" target="sv2#page4#mssu5.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv2#inn1#kln1" name="KOFlow1" to="sv2#tmu1" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <TimeUnit gr:x="1150" gr:y="405" id="sv2#tmu1" name="Time1">
+      <OKLink id="sv2#tmu1#oln3" name="OKFlow3" to="sv2#cru1">
+        <LinkParameter id="sv2#tmu1#oln3#par10" name="Current/Input Date_fechaAlta" source="currentDate" target="sv2#cru1.User#att46"/>
+      </OKLink>
+    </TimeUnit>
+  </OperationUnits>
+</SiteView>

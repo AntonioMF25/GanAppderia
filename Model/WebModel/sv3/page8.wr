@@ -1,0 +1,167 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="250" gr:y="455" id="sv3#page8" name="Perfil-Usuario" landmark="true">
+  <ContentUnits>
+    <MultiMessageUnit gr:x="5" gr:y="20" id="sv3#page8#mssu4" name="Bienvenida">
+      <Message xml:space="preserve">Bienvenido a tu espacio personal</Message>
+    </MultiMessageUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page8#mssu4"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:SubPage pageId="sv3#page8#page9">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv3#page8#page9#dau2">
+                  <layout:Attribute attribute="userName"/>
+                  <layout:Attribute attribute="email"/>
+                  <layout:Attribute attribute="User#att46"/>
+                  <layout:Link link="sv3#page8#page9#dau2#ln12"/>
+                  <layout:Link link="sv3#page8#page9#dau2#ln29"/>
+                  <layout:Link link="sv3#page8#page9#dau2#ln32"/>
+                </layout:Unit>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:SubPage pageId="sv3#page8#page10">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv3#page8#page10#pwu2">
+                  <layout:Attribute attribute="ent4#att3"/>
+                  <layout:Attribute attribute="ent4#att5"/>
+                  <layout:Attribute attribute="ent4#att6"/>
+                  <layout:Attribute attribute="ent4#att7"/>
+                  <layout:Link link="sv3#page8#page10#pwu2#ln15"/>
+                  <layout:Link link="sv3#page8#page10#pwu2#ln28"/>
+                  <layout:Link link="sv3#page8#page10#pwu2#ln68"/>
+                </layout:Unit>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv3#page8#page10#mssu6"/>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Page gr:x="0" gr:y="320" id="sv3#page8#page9" name="Informaci&#243;n-Usuario">
+    <ContentUnits>
+      <DataUnit gr:x="0" gr:y="0" id="sv3#page8#page9#dau2" name="Detalle-Usuario" entity="User" displayAttributes="userName email User#att46" linkOrder="sv3#page8#page9#dau2#ln12 sv3#page8#page9#dau2#ln29 sv3#page8#page9#dau2#ln32">
+        <Selector id="sv3#page8#page9#dau2#su4" defaultPolicy="fill" booleanOperator="and">
+          <KeyCondition id="sv3#page8#page9#dau2#su4#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
+        </Selector>
+        <Link id="sv3#page8#page9#dau2#ln12" name="Eliminar Cuenta" to="sv3#miu6" type="normal" validate="true">
+          <LinkParameter id="sv3#page8#page9#dau2#ln12#par54" name="oid_KeyCondition2 [oid]" source="data.userOID" target="sv3#miu6.mov2#opm2#icu2#icp16"/>
+        </Link>
+        <Link id="sv3#page8#page9#dau2#ln29" name="Modificar datos de la cuenta" to="sv3#miu3" type="normal" validate="true"/>
+        <Link id="sv3#page8#page9#dau2#ln32" name="Cambiar contrase&#241;a" to="sv3#miu4" type="normal" validate="true"/>
+      </DataUnit>
+      <GetUnit id="sv3#page8#page9#gtu2" name="Get-User-Oid" gr:x="145" gr:y="15" contextParameters="UserCtxParam">
+        <Link id="sv3#page8#page9#gtu2#ln11" name="Flow11" to="sv3#page8#page9#dau2" automaticCoupling="true" type="transport" validate="true"/>
+      </GetUnit>
+    </ContentUnits>
+  </Page>
+  <Page gr:x="115" gr:y="0" id="sv3#page8#page10" name="Productos-Usuario">
+    <ContentUnits>
+      <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#page8#page10#pwu2" name="Productos-Usuario" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att3 ent4#att5 ent4#att6 ent4#att7" linkOrder="sv3#page8#page10#pwu2#ln15 sv3#page8#page10#pwu2#ln28 sv3#page8#page10#pwu2#ln68">
+        <Link id="sv3#page8#page10#pwu2#ln15" name="M&#225;s detalles" to="sv3#page7#dau1" type="normal" validate="true">
+          <LinkParameter id="sv3#page8#page10#pwu2#ln15#par33" name="oid_KeyCondition1 [oid]" source="data[].ent4#att2" target="sv3#page7#dau1#su1#kcond1.ent4#att2"/>
+        </Link>
+        <Selector id="sv3#page8#page10#pwu2#su5" defaultPolicy="fill" booleanOperator="and">
+          <AttributesCondition id="sv3#page8#page10#pwu2#su5#acond4" name="AttCondition4" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role12.userOID"/>
+        </Selector>
+        <Link id="sv3#page8#page10#pwu2#ln28" name="Eliminar" to="sv3#miu1" type="normal" validate="true" gr:bendpoints="-227,33,213,63">
+          <LinkParameter id="sv3#page8#page10#pwu2#ln28#par129" name="oid_oid_producto" source="data[].ent4#att2" target="sv3#miu1.mov3#opm4#icu4#icp1"/>
+        </Link>
+        <Link id="sv3#page8#page10#pwu2#ln68" name="Actualizar" to="sv3#miu5" type="normal" validate="true">
+          <LinkParameter id="sv3#page8#page10#pwu2#ln68#par320" name="oid_KeyCondition4 [oid]" source="data[].ent4#att2" target="sv3#miu5.mov5#hym4#icu8#icp5"/>
+        </Link>
+      </PowerIndexUnit>
+      <GetUnit id="sv3#page8#page10#gtu5" name="Get-User-Oid" gr:x="30" gr:y="135" contextParameters="UserCtxParam">
+        <Link id="sv3#page8#page10#gtu5#ln16" name="Flow16" to="sv3#page8#page10#pwu2" type="transport" validate="true">
+          <LinkParameter id="sv3#page8#page10#gtu5#ln16#par34" name="UserCtxParam.oid_AttCondition4" source="sv3#page8#page10#gtu5.UserCtxParam" target="sv3#page8#page10#pwu2#su5#acond4"/>
+        </Link>
+      </GetUnit>
+      <MultiMessageUnit gr:x="155" gr:y="185" id="sv3#page8#page10#mssu6" name="Avisos"/>
+    </ContentUnits>
+  </Page>
+</Page>

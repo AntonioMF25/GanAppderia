@@ -1,0 +1,40 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="700" gr:y="115" id="sv4#page13" name="Detalle-Historico-Productos">
+  <ContentUnits>
+    <DataUnit gr:x="0" gr:y="0" id="sv4#page13#dau3" name="Detalle-Historico-Productos" entity="ent12" linkOrder="sv4#page13#dau3#ln31" displayAttributes="ent12#att18 ent12#att62 ent12#att64 ent12#att72 ent12#att75 ent12#att76 ent12#att77 ent12#att78 ent12#att79 ent12#att80">
+      <Selector id="sv4#page13#dau3#su10" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page13#dau3#su10#kcond8" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#page13#dau3#ln31" name="Volver" to="sv4#page3#page12#pwu3" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-205,33,185,-2"/>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page13#dau3">
+          <layout:Link link="sv4#page13#dau3#ln31"/>
+          <layout:Attribute attribute="ent12#att18"/>
+          <layout:Attribute attribute="ent12#att62"/>
+          <layout:Attribute attribute="ent12#att64"/>
+          <layout:Attribute attribute="ent12#att72"/>
+          <layout:Attribute attribute="ent12#att75"/>
+          <layout:Attribute attribute="ent12#att76"/>
+          <layout:Attribute attribute="ent12#att77"/>
+          <layout:Attribute attribute="ent12#att78"/>
+          <layout:Attribute attribute="ent12#att79"/>
+          <layout:Attribute attribute="ent12#att80"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

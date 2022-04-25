@@ -1,0 +1,59 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov2#opm2" name="Eliminar-Usuario">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="-10" gr:y="15" id="mov2#opm2#icu2" name="Input Port">
+      <InputCollectorParameter id="mov2#opm2#icu2#icp16" name="KeyCondition2 [oid]"/>
+      <OKLink id="mov2#opm2#icu2#oln29" to="mov2#opm2#seu9" validate="true" name="Eliminar Cuenta">
+        <LinkParameter id="mov2#opm2#icu2#oln29#par52" name="oid_KeyCondition2 [oid]" source="mov2#opm2#icu2#icp16" target="mov2#opm2#seu9#su12#kcond6.userOID"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1060" gr:y="15" id="mov2#opm2#okcu4" name="OK Port4"/>
+    <CreateUnit id="mov2#opm2#cru4" name="Crear-Historico-Usuario" gr:x="320" gr:y="175" entity="ent7">
+      <OKLink id="mov2#opm2#cru4#oln37" name="OKFlow27" to="mov2#opm2#seu8">
+        <LinkParameter id="mov2#opm2#cru4#oln37#par56" name="oid_UsuarioAntiguo_AttCondition5" source="ent7#att74Array" target="mov2#opm2#seu8#su11#acond2"/>
+      </OKLink>
+    </CreateUnit>
+    <LoopUnit id="mov2#opm2#lpu2" name="Bucle-Productos-Usuario" gr:x="810" gr:y="205">
+      <OKLink id="mov2#opm2#lpu2#oln38" name="OKFlow17" to="mov2#opm2#miu7" code="next">
+        <LinkParameter id="mov2#opm2#lpu2#oln38#par57" name="Next Element_oid_producto" source="next" target="mov2#opm2#miu7.mov3#opm4#icu4#icp1"/>
+      </OKLink>
+      <OKLink id="mov2#opm2#lpu2#oln39" name="OKFlow21" to="mov2#opm2#dlu3" code="end" automaticCoupling="true"/>
+    </LoopUnit>
+    <SelectorUnit id="mov2#opm2#seu8" name="Seleccionar-Productos-Usuario" gr:x="505" gr:y="335" entity="ent4">
+      <Selector id="mov2#opm2#seu8#su11" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#opm2#seu8#su11#acond2" name="AttCondition5" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role12.userOID"/>
+      </Selector>
+      <OKLink id="mov2#opm2#seu8#oln40" name="OKFlow28" to="mov2#opm2#lpu2">
+        <LinkParameter id="mov2#opm2#seu8#oln40#par75" name="oid_Input Array" source="ent4#att2Array" target="mov2#opm2#lpu2.array"/>
+      </OKLink>
+    </SelectorUnit>
+    <TimeUnit id="mov2#opm2#tmu3" name="Fecha-Historico-Usuario" gr:x="575" gr:y="105">
+      <OKLink id="mov2#opm2#tmu3#oln41" name="OKFlow26" to="mov2#opm2#cru4">
+        <LinkParameter id="mov2#opm2#tmu3#oln41#par76" name="Current/Input Date_fechaHistorico" source="currentDate" target="mov2#opm2#cru4.ent7#att71"/>
+      </OKLink>
+    </TimeUnit>
+    <ModuleInstanceUnit id="mov2#opm2#miu7" gr:x="790" gr:y="350" action="true" moduleId="mov3#opm4">
+      <OKLink id="mov2#opm2#miu7#oln42" name="OKFlow18" to="mov2#opm2#lpu2" automaticCoupling="true" gr:bendpoints="70,-94,65,91"/>
+    </ModuleInstanceUnit>
+    <SelectorUnit id="mov2#opm2#seu9" name="Seleccionar-Usuario-Borrar" gr:x="300" gr:y="10" entity="User">
+      <Selector id="mov2#opm2#seu9#su12" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm2#seu9#su12#kcond6" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="mov2#opm2#seu9#ln23" name="Flow13" to="mov2#opm2#cru4" type="transport" validate="true">
+        <LinkParameter id="mov2#opm2#seu9#ln23#par77" name="email_email" source="emailArray" target="mov2#opm2#cru4.ent7#att68"/>
+        <LinkParameter id="mov2#opm2#seu9#ln23#par78" name="fechaAlta_fechaAlta" source="User#att46Array" target="mov2#opm2#cru4.ent7#att70"/>
+        <LinkParameter id="mov2#opm2#seu9#ln23#par79" name="oid_oid_UsuarioAntiguo" source="userOIDArray" target="mov2#opm2#cru4.ent7#att74"/>
+        <LinkParameter id="mov2#opm2#seu9#ln23#par80" name="password_password" source="passwordArray" target="mov2#opm2#cru4.ent7#att67"/>
+        <LinkParameter id="mov2#opm2#seu9#ln23#par81" name="rol_rol" source="User#att45Array" target="mov2#opm2#cru4.ent7#att69"/>
+        <LinkParameter id="mov2#opm2#seu9#ln23#par82" name="userName_userName" source="userNameArray" target="mov2#opm2#cru4.ent7#att66"/>
+      </Link>
+      <Link id="mov2#opm2#seu9#ln24" name="Flow18" to="mov2#opm2#dlu3" type="transport" automaticCoupling="true" validate="true"/>
+      <OKLink id="mov2#opm2#seu9#oln43" name="OKFlow25" to="mov2#opm2#tmu3" automaticCoupling="true"/>
+    </SelectorUnit>
+    <DeleteUnit id="mov2#opm2#dlu3" name="Eliminar-Usuario" gr:x="845" gr:y="10" entity="User">
+      <Selector id="mov2#opm2#dlu3#su13" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov2#opm2#dlu3#su13#kcond7" name="KeyCondition5" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov2#opm2#dlu3#oln44" to="mov2#opm2#okcu4" name="OKFlow22"/>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationModule>
