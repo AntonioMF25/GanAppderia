@@ -1,5 +1,43 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Home-Admin" protected="true" localized="true" landmarks="sv4#lou2" homePage="sv4#page3">
   <OperationUnits>
-    <LogoutUnit id="sv4#lou2" name="Logout" landmark="true" gr:x="205" gr:y="370" siteView="sv2"/>
+    <LogoutUnit id="sv4#lou2" name="Logout" landmark="true" gr:x="0" gr:y="40" siteView="sv2"/>
+    <SelectorUnit gr:x="870" gr:y="460" id="sv4#seu11" name="Template-Actual" entity="ent3">
+      <OKLink id="sv4#seu11#oln27" name="OKFlow27" to="sv4#inn6">
+        <LinkParameter id="sv4#seu11#oln27#par109" name="oid_Input" source="ent3#att53Array" target="sv4#inn6.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit gr:x="590" gr:y="475" id="sv4#inn5" name="Actualizar-Template-Vac&#237;o" linkOrder="sv4#inn5#ln45 sv4#inn5#ln46">
+      <KOLink id="sv4#inn5#kln8" name="KOFlow8" to="sv4#page3#page22#mssu12">
+        <LinkParameter id="sv4#inn5#kln8#par108" name="Debe indicar un nuevo template_Shown Messages" sourceValue="Debe indicar un nuevo template" target="sv4#page3#page22#mssu12.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv4#inn5#oln26" name="OKFlow26" to="sv4#seu11" automaticCoupling="true"/>
+      <Link id="sv4#inn5#ln45" name="Flow45" to="sv4#mfu3" type="transport" validate="true">
+        <LinkParameter id="sv4#inn5#ln45#par111" name="Input Value_template" source="inputValue" target="sv4#mfu3.ent3#att54"/>
+        <LinkParameter id="sv4#inn5#ln45#par112" name="template_template [file name]" sourceValue="template.xlsx" target="sv4#mfu3.ent3#att54_name"/>
+      </Link>
+      <Link id="sv4#inn5#ln46" name="Flow46" to="sv4#cru5" type="transport" validate="true">
+        <LinkParameter id="sv4#inn5#ln46#par113" name="Input Value_template" source="inputValue" target="sv4#cru5.ent3#att54"/>
+        <LinkParameter id="sv4#inn5#ln46#par114" name="template_template [file name]" sourceValue="template.xlsx" target="sv4#cru5.ent3#att54_name"/>
+      </Link>
+    </IsNotNullUnit>
+    <IsNotNullUnit gr:x="1080" gr:y="475" id="sv4#inn6" name="Existe-Template-Actual?">
+      <OKLink id="sv4#inn6#oln28" name="OKFlow28" to="sv4#mfu3">
+        <LinkParameter id="sv4#inn6#oln28#par110" name="Input Value_KeyCondition4 [oid]" source="inputValue" target="sv4#mfu3#su8#kcond4.ent3#att53"/>
+      </OKLink>
+      <KOLink id="sv4#inn6#kln9" name="KOFlow9" to="sv4#cru5" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ModifyUnit gr:x="1160" gr:y="275" id="sv4#mfu3" name="Actualizar-Template" entity="ent3">
+      <Selector id="sv4#mfu3#su8" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#mfu3#su8#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#mfu3#oln36" name="Actualizaci&#243;n correcta" to="sv4#page3#page22#mssu12">
+        <LinkParameter id="sv4#mfu3#oln36#par116" name="Actualizaci&#243;n correcta del template_Shown Messages" sourceValue="Actualizaci&#243;n correcta del template" target="sv4#page3#page22#mssu12.shownMessages"/>
+      </OKLink>
+    </ModifyUnit>
+    <CreateUnit gr:x="910" gr:y="615" id="sv4#cru5" name="Crear-Template" entity="ent3">
+      <OKLink id="sv4#cru5#oln45" name="OKFlow45" to="sv4#page3#page22#mssu12" gr:bendpoints="-499,-49,61,196">
+        <LinkParameter id="sv4#cru5#oln45#par115" name="Creaci&#243;n del template correcta_Shown Messages" sourceValue="Creaci&#243;n del template correcta" target="sv4#page3#page22#mssu12.shownMessages"/>
+      </OKLink>
+    </CreateUnit>
   </OperationUnits>
 </SiteView>

@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page3" name="Home-Admin" gr:x="200" gr:y="85">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page3" name="Home-Admin" gr:x="190" gr:y="85">
   <ContentUnits>
-    <MultiMessageUnit id="sv4#page3#mssu2" name="Mensaje" gr:x="0" gr:y="0">
+    <MultiMessageUnit id="sv4#page3#mssu2" name="Mensaje" gr:x="10" gr:y="0">
       <Placeholder id="sv4#page3#mssu2#ph2" name="Placeholder1"/>
       <Message xml:space="preserve">Este es el portal de administraci&#243;n</Message>
     </MultiMessageUnit>
@@ -61,12 +61,96 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:SubPage pageId="sv4#page3#page22">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv4#page3#page22#inu4">
+                  <layout:Attribute attribute="ent3#att54"/>
+                </layout:Unit>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv4#page3#page22#enu6">
+                  <layout:Field field="sv4#page3#page22#enu6#fld16"/>
+                  <layout:Link link="sv4#page3#page22#enu6#ln44"/>
+                </layout:Unit>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+            <layout:Row>
+              <layout:Cell colspan="12">
+                <layout:Unit unitId="sv4#page3#page22#mssu12"/>
+              </layout:Cell>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
   </layout:Grid>
-  <Page gr:x="115" gr:y="35" id="sv4#page3#page12" name="Historico-Productos">
+  <Page gr:x="125" gr:y="35" id="sv4#page3#page12" name="Historico-Productos">
     <ContentUnits>
       <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#page3#page12#pwu3" name="Historico-Productos" sortable="true" checkable="false" useCountQuery="false" entity="ent12" displayAttributes="ent12#att18 ent12#att80" linkOrder="sv4#page3#page12#pwu3#ln30">
         <Link id="sv4#page3#page12#pwu3#ln30" name="M&#225;s informaci&#243;n" to="sv4#page13#dau3" automaticCoupling="true" type="normal" validate="true"/>
       </PowerIndexUnit>
+    </ContentUnits>
+  </Page>
+  <Page gr:x="0" gr:y="205" id="sv4#page3#page22" name="Gesti&#243;n-Template-Excel">
+    <ContentUnits>
+      <IndexUnit gr:x="0" gr:y="0" id="sv4#page3#page22#inu4" name="Template-Actual" entity="ent3" displayAttributes="ent3#att54"/>
+      <EntryUnit gr:x="30" gr:y="90" id="sv4#page3#page22#enu6" name="Actualizar-Template" entity="ent3" linkOrder="sv4#page3#page22#enu6#ln44">
+        <Field id="sv4#page3#page22#enu6#fld16" name="template" type="blob" modifiable="true" attribute="ent3#att54"/>
+        <Link id="sv4#page3#page22#enu6#ln44" name="Actualizar" to="sv4#inn5" type="normal" validate="true">
+          <LinkParameter id="sv4#page3#page22#enu6#ln44#par107" name="template_Input" source="sv4#page3#page22#enu6#fld16" target="sv4#inn5.isnotnull"/>
+        </Link>
+      </EntryUnit>
+      <MultiMessageUnit gr:x="150" gr:y="20" id="sv4#page3#page22#mssu12" name="Aviso"/>
     </ContentUnits>
   </Page>
 </Page>

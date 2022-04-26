@@ -1,0 +1,96 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="385" gr:y="-210" id="sv3#page14" name="Seleccionar-Forma-Registro" landmark="true">
+  <ContentUnits/>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:SubPage pageId="sv3#page14#page15">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12"/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page14#page15#mssu9">
+          <layout:Link link="sv3#page14#page15#mssu9#ln35"/>
+          <layout:Link link="sv3#page14#page15#mssu9#ln36"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Page gr:x="0" gr:y="0" id="sv3#page14#page15" name="Informaci&#243;n">
+    <ContentUnits>
+      <MultiMessageUnit id="sv3#page14#page15#mssu9" name="Mensaje-Informar-Formas de registro" gr:x="0" gr:y="0" linkOrder="sv3#page14#page15#mssu9#ln35 sv3#page14#page15#mssu9#ln36">
+        <Message xml:space="preserve">Se disponen de dos posibilidades a la hora de subir productos:
+	- Opci&#243;n A (Recomendada) - Subir un producto mediante un formulario: Es la opci&#243;n recomendada si usted va a publicar pocos anuncios. Entre sus ventaja, se encuentra el uso de una interfaz amigable.
+	- Opci&#243;n B - Subir varios productos mediante un fichero Excel: Aunque algo m&#225;s complejo, permite publicar una gran cantidad de anuncios a partir de un fichero Excel con un determinado formato.</Message>
+        <Link id="sv3#page14#page15#mssu9#ln35" name="Opci&#243;n A - Formulario" to="sv3#page6#enu3" automaticCoupling="true" type="normal" validate="true"/>
+        <Link id="sv3#page14#page15#mssu9#ln36" name="Opci&#243;n B - Plantilla Excel" to="sv3#page19" automaticCoupling="true" type="normal" validate="true"/>
+      </MultiMessageUnit>
+    </ContentUnits>
+  </Page>
+</Page>
