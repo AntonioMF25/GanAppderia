@@ -13,18 +13,26 @@
       <Selector id="mov5#hym4#seu28#su26" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov5#hym4#seu28#su26#kcond23" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="mov5#hym4#seu28#oln53" name="OKFlow8" to="mov5#hym4#page17#enu8">
-        <LinkParameter id="mov5#hym4#seu28#oln53#par333" name="oid_Key Condition [oid]" source="ent4#att2Array" target="mov5#hym4#page17#enu8.ent4#att2"/>
-        <LinkParameter id="mov5#hym4#seu28#oln53#par334" name="nombreProducto_Nombre" source="ent4#att3Array" target="mov5#hym4#page17#enu8#fld48_slot"/>
-        <LinkParameter id="mov5#hym4#seu28#oln53#par335" name="nombreProducto_Nombre-actual" source="ent4#att3Array" target="mov5#hym4#page17#enu8#fld41_slot"/>
-      </OKLink>
       <Link id="mov5#hym4#seu28#ln62" name="Flow24" to="mov5#hym4#mfu4" type="transport" validate="true">
         <LinkParameter id="mov5#hym4#seu28#ln62#par298" name="oid_KeyCondition5 [oid]" source="ent4#att2Array" target="mov5#hym4#mfu4#su27#kcond24.ent4#att2"/>
         <LinkParameter id="mov5#hym4#seu28#ln62#par299" name="ProductosToUser.oid_User.oid(ProductosToUser)" source="rel6#role12_userOIDArray" target="mov5#hym4#mfu4.rel6#role12.userOID"/>
         <LinkParameter id="mov5#hym4#seu28#ln62#par300" name="valoracionMedia_valoracionMedia" source="ent4#att28Array" target="mov5#hym4#mfu4.ent4#att28"/>
       </Link>
+      <OKLink id="mov5#hym4#seu28#oln51" name="OKFlow8" to="mov5#hym4#page17#enu8">
+        <LinkParameter id="mov5#hym4#seu28#oln51#par138" name="oid_Key Condition [oid]" source="ent4#att2Array" target="mov5#hym4#page17#enu8.ent4#att2"/>
+        <LinkParameter id="mov5#hym4#seu28#oln51#par139" name="imagenProducto_Imagen" source="ent4#att19Array" target="mov5#hym4#page17#enu8#fld45_slot"/>
+        <LinkParameter id="mov5#hym4#seu28#oln51#par140" name="fechaCaducidad_Descripci&#243;n" source="ent4#att24Array" target="mov5#hym4#page17#enu8#fld42_slot"/>
+        <LinkParameter id="mov5#hym4#seu28#oln51#par141" name="unidadesProducto_Unidades" source="ent4#att6Array" target="mov5#hym4#page17#enu8#fld44_slot"/>
+        <LinkParameter id="mov5#hym4#seu28#oln51#par142" name="fechaCaducidad_Fecha de Caducidad" source="ent4#att24Array" target="mov5#hym4#page17#enu8#fld46_slot"/>
+        <LinkParameter id="mov5#hym4#seu28#oln51#par143" name="urlQR_URL Qr" source="ent4#att40Array" target="mov5#hym4#page17#enu8#fld47_slot"/>
+        <LinkParameter id="mov5#hym4#seu28#oln51#par144" name="nombreProducto_Nombre" source="ent4#att3Array" target="mov5#hym4#page17#enu8#fld48_slot"/>
+        <LinkParameter id="mov5#hym4#seu28#oln51#par158" name="precioProducto_Precio" source="ent4#att5Array" target="mov5#hym4#page17#enu8#fld43_slot"/>
+        <LinkParameter id="mov5#hym4#seu28#oln51#par160" name="ProductosToCategoria.oid_Categor&#237;a - Preselection" source="rel1#role1_ent8#att22Array" target="mov5#hym4#page17#enu8#sfld18_presel"/>
+        <LinkParameter id="mov5#hym4#seu28#oln51#par161" name="ProductosToPromociones.oid_Promoci&#243;n - Preselection" source="rel3#role5_ent5#att8Array" target="mov5#hym4#page17#enu8#sfld17_presel"/>
+        <LinkParameter id="mov5#hym4#seu28#oln51#par162" name="ProductosToUbicacion.oid_Ubicacion - Preselection" source="rel9#role17_ent2#att41Array" target="mov5#hym4#page17#enu8#sfld16_presel"/>
+      </OKLink>
     </SelectorUnit>
-    <ModifyUnit id="mov5#hym4#mfu4" name="Actualizar-Producto" gr:x="370" gr:y="225" entity="ent4">
+    <ModifyUnit id="mov5#hym4#mfu4" name="Actualizar-Producto" gr:x="305" gr:y="265" entity="ent4">
       <Selector id="mov5#hym4#mfu4#su27" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov5#hym4#mfu4#su27#kcond24" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
@@ -33,5 +41,10 @@
       </OKLink>
     </ModifyUnit>
     <OKCollectorUnit gr:x="1080" gr:y="65" id="mov5#hym4#okcu1" name="OK Port5"/>
+    <ScaleImageUnit gr:x="440" gr:y="180" id="mov5#hym4#sim1" name="Rescalado-Imagen">
+      <OKLink id="mov5#hym4#sim1#oln46" name="OKFlow46" to="mov5#hym4#mfu4">
+        <LinkParameter id="mov5#hym4#sim1#oln46#par117" name="Scaled Image_imagenProducto" source="scaledImage" target="mov5#hym4#mfu4.ent4#att19"/>
+      </OKLink>
+    </ScaleImageUnit>
   </OperationUnits>
 </HybridModule>
