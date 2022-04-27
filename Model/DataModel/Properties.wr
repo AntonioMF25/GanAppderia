@@ -57,7 +57,7 @@
     <Attribute id="ent4#att7" name="precioTrasPromocion" type="float" derivationQuery="calculated::Self.ent4#att5 -  ( Self.ent4#att5 *  ( Self.rel3#role5(as Var1).ent5#att10 / 100 )  )" db:table="productos_preciotraspromocion" db:column="der_attr" storageType="file">
       <db:JoinColumn attribute="ent4#att2" name="oid"/>
     </Attribute>
-    <Attribute id="ent4#att19" name="imagenProducto" type="blob" db:column="imagenproducto"/>
+    <Attribute id="ent4#att19" name="imagenProducto" type="blob" db:column="imagenproducto" contentType="image"/>
     <Attribute id="ent4#att24" name="fechaCaducidad" type="date" db:column="fechacaducidad"/>
     <Attribute id="ent4#att28" name="valoracionMedia" type="float" db:column="valoracionmedia"/>
     <Attribute id="ent4#att40" name="urlQR" type="url" db:column="urlqr"/>
