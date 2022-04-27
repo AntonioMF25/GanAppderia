@@ -26,10 +26,7 @@
     <ModuleInstanceUnit gr:x="-20" gr:y="1020" id="sv3#miu6" moduleId="mov2#opm2">
       <OKLink id="sv3#miu6#oln31" to="sv3#lou1" name="OKFlow22"/>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="225" gr:y="1020" id="sv3#miu3" moduleId="mov4#hym1">
-      <OKLink id="sv3#miu3#oln7" to="sv3#page8" name="OKFlow48"/>
-    </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="535" gr:y="1020" id="sv3#miu4" moduleId="mov6#hym2">
+    <ModuleInstanceUnit gr:x="295" gr:y="1015" id="sv3#miu4" moduleId="mov6#hym2">
       <OKLink id="sv3#miu4#oln12" to="sv3#page8" name="OKFlow21"/>
     </ModuleInstanceUnit>
     <ExcelUnit gr:x="-65" gr:y="140" id="sv3#exu2" name="Procesar-Excel" mode="read" format="xls" sourceType="blob">

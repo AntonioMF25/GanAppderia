@@ -1,0 +1,73 @@
+<Job xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="wsv1#job1" name="TareaFinPromocion" gr:x="55" gr:y="25">
+  <OperationUnits>
+    <InitJobUnit id="wsv1#job1#iju1" name="Init Job" gr:x="0" gr:y="15">
+      <OKLink id="wsv1#job1#iju1#oln47" name="OKFlow12" to="wsv1#job1#seu7" automaticCoupling="true"/>
+    </InitJobUnit>
+    <SelectorUnit id="wsv1#job1#seu7" name="Seleccionar-Promociones" gr:x="130" gr:y="0" entity="ent5">
+      <OKLink id="wsv1#job1#seu7#oln48" name="OKFlow29" to="wsv1#job1#lpu3">
+        <LinkParameter id="wsv1#job1#seu7#oln48#par124" name="oid_Input Array" source="ent5#att8Array" target="wsv1#job1#lpu3.array"/>
+        <LinkParameter id="wsv1#job1#seu7#oln48#par125" name="duracionPromocion_SecondaryArrayOID" source="ent5#att55Array" target="wsv1#job1#lpu3#lsa10"/>
+      </OKLink>
+    </SelectorUnit>
+    <LoopUnit id="wsv1#job1#lpu3" name="Bucle" gr:x="195" gr:y="135">
+      <OKLink id="wsv1#job1#lpu3#oln49" name="OKFlow31" to="wsv1#job1#switch1" code="next" gr:bendpoints="36,61,36,-64">
+        <LinkParameter id="wsv1#job1#lpu3#oln49#par126" name="Next Element (SecondaryArrayOID)_Switch" source="wsv1#job1#lpu3#lsa10" target="wsv1#job1#switch1.switch"/>
+      </OKLink>
+      <SecondaryArray id="wsv1#job1#lpu3#lsa10" name="SecondaryArrayDuracion"/>
+      <Link id="wsv1#job1#lpu3#ln41" name="Flow30" to="wsv1#job1#seu12" type="transport" validate="true" gr:bendpoints="83,65,23,-200">
+        <LinkParameter id="wsv1#job1#lpu3#ln41#par161" name="Next Element_AttCondition11" source="next" target="wsv1#job1#seu12#su25#acond11"/>
+      </Link>
+      <Link id="wsv1#job1#lpu3#ln43" name="Flow31" to="wsv1#job1#mfu7" type="transport" validate="true" gr:bendpoints="-238,1,-88,-334;-238,266,-88,-69">
+        <LinkParameter id="wsv1#job1#lpu3#ln43#par144" name="Next Element_KeyCondition10 [oid]" source="next" target="wsv1#job1#mfu7#su17#kcond11.ent5#att8"/>
+      </Link>
+      <OKLink id="wsv1#job1#lpu3#oln50" name="OKFlow39" to="wsv1#job1#opu1" code="end" automaticCoupling="true"/>
+    </LoopUnit>
+    <SwitchUnit id="wsv1#job1#switch1" name="Switch2" gr:x="190" gr:y="245">
+      <Case value="1"/>
+      <OKLink id="wsv1#job1#switch1#oln56" name="OKFlow34" to="wsv1#job1#seu12" code="1" automaticCoupling="true"/>
+      <OKLink id="wsv1#job1#switch1#oln63" name="OKFlow36" to="wsv1#job1#mathu1">
+        <LinkParameter id="wsv1#job1#switch1#oln63#par141" name="Switch_DuracionActual" source="switch" target="wsv1#job1#mathu1#mathv1"/>
+      </OKLink>
+    </SwitchUnit>
+    <ModifyUnit id="wsv1#job1#mfu7" name="DecrementarDuracion" gr:x="5" gr:y="455" entity="ent5">
+      <Selector id="wsv1#job1#mfu7#su17" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="wsv1#job1#mfu7#su17#kcond11" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="wsv1#job1#mfu7#oln64" name="OKFlow41" to="wsv1#job1#lpu3" automaticCoupling="true"/>
+    </ModifyUnit>
+    <MathUnit id="wsv1#job1#mathu1" name="Restar 1" gr:x="20" gr:y="325" resultType="integer" defaultExpression="DuracionActual - 1">
+      <OKLink id="wsv1#job1#mathu1#oln66" name="OKFlow37" to="wsv1#job1#mfu7">
+        <LinkParameter id="wsv1#job1#mathu1#oln66#par158" name="Result_tiempoDiasRestantes" source="result" target="wsv1#job1#mfu7.ent5#att55"/>
+      </OKLink>
+      <MathVariable id="wsv1#job1#mathu1#mathv1" name="DuracionActual"/>
+    </MathUnit>
+    <NoOpOperationUnit id="wsv1#job1#opu1" name="Final" gr:x="50" gr:y="200"/>
+    <SelectorUnit gr:x="220" gr:y="375" id="wsv1#job1#seu12" name="Seleccionar-Promocion" entity="ent5" linkOrder="wsv1#job1#seu12#ln47 wsv1#job1#seu12#ln50">
+      <Selector id="wsv1#job1#seu12#su25" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="wsv1#job1#seu12#su25#acond11" name="AttCondition11" predicate="eq" booleanOperator="or" implied="false" attributes="ent5#att8"/>
+      </Selector>
+      <OKLink id="wsv1#job1#seu12#oln71" name="OKFlow71" to="wsv1#job1#tmu2" automaticCoupling="true"/>
+      <Link id="wsv1#job1#seu12#ln47" name="Flow47" to="wsv1#job1#cru6" type="transport" validate="true">
+        <LinkParameter id="wsv1#job1#seu12#ln47#par163" name="descripcionPromocion_descripcionPromocion" source="ent5#att20Array" target="wsv1#job1#cru6.ent1#att48"/>
+        <LinkParameter id="wsv1#job1#seu12#ln47#par164" name="nombrePromocion_nombrePromocion" source="ent5#att11Array" target="wsv1#job1#cru6.ent1#att49"/>
+        <LinkParameter id="wsv1#job1#seu12#ln47#par165" name="porcentaje_porcentaje" source="ent5#att10Array" target="wsv1#job1#cru6.ent1#att50"/>
+        <LinkParameter id="wsv1#job1#seu12#ln47#par166" name="tiempoDias_tiempoDias" source="ent5#att9Array" target="wsv1#job1#cru6.ent1#att47"/>
+      </Link>
+      <Link id="wsv1#job1#seu12#ln50" name="Flow50" to="wsv1#job1#dlu5" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="90,265,-170,0"/>
+    </SelectorUnit>
+    <CreateUnit id="wsv1#job1#cru6" name="Crear-Historico-Promocion" gr:x="465" gr:y="505" entity="ent1">
+      <OKLink id="wsv1#job1#cru6#oln69" name="OKFlow49" to="wsv1#job1#dlu5" automaticCoupling="true"/>
+    </CreateUnit>
+    <DeleteUnit id="wsv1#job1#dlu5" name="Eliminar-Promocion" gr:x="490" gr:y="640" entity="ent5">
+      <Selector id="wsv1#job1#dlu5#su29" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="wsv1#job1#dlu5#su29#kcond19" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="wsv1#job1#dlu5#oln72" name="OKFlow40" to="wsv1#job1#lpu3" automaticCoupling="true" gr:bendpoints="113,-19,453,506;109,-356,449,169"/>
+    </DeleteUnit>
+    <TimeUnit id="wsv1#job1#tmu2" name="Fecha-Historico-Promocion" gr:x="465" gr:y="395">
+      <OKLink id="wsv1#job1#tmu2#oln70" name="OKFlow48" to="wsv1#job1#cru6">
+        <LinkParameter id="wsv1#job1#tmu2#oln70#par162" name="Current/Input Date_fechaHistorico" source="currentDate" target="wsv1#job1#cru6.ent1#att51"/>
+      </OKLink>
+    </TimeUnit>
+  </OperationUnits>
+</Job>
