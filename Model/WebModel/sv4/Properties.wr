@@ -39,11 +39,6 @@
         <LinkParameter id="sv4#cru5#oln45#par115" name="Creaci&#243;n del template correcta_Shown Messages" sourceValue="Creaci&#243;n del template correcta" target="sv4#page3#page22#mssu12.shownMessages"/>
       </OKLink>
     </CreateUnit>
-    <ModifyUnit gr:x="1005" gr:y="110" id="sv4#mfu5" name="Actualizar-Promocion" entity="ent5">
-      <Selector id="sv4#mfu5#su16" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="sv4#mfu5#su16#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
-      </Selector>
-    </ModifyUnit>
     <CreateUnit gr:x="1760" gr:y="-15" id="sv4#cru2" name="Crear-Promocion" entity="ent5">
       <OKLink id="sv4#cru2#oln46" name="OKFlow46" to="sv4#page24" automaticCoupling="true"/>
     </CreateUnit>
