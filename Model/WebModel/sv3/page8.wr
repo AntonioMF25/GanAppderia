@@ -32,7 +32,6 @@
                   <layout:Attribute attribute="email"/>
                   <layout:Attribute attribute="User#att46"/>
                   <layout:Link link="sv3#page8#page9#dau2#ln12"/>
-                  <layout:Link link="sv3#page8#page9#dau2#ln29"/>
                   <layout:Link link="sv3#page8#page9#dau2#ln32"/>
                 </layout:Unit>
               </layout:Cell>
@@ -125,14 +124,13 @@
   </layout:Grid>
   <Page gr:x="0" gr:y="320" id="sv3#page8#page9" name="Informaci&#243;n-Usuario">
     <ContentUnits>
-      <DataUnit gr:x="0" gr:y="0" id="sv3#page8#page9#dau2" name="Detalle-Usuario" entity="User" displayAttributes="userName email User#att46" linkOrder="sv3#page8#page9#dau2#ln12 sv3#page8#page9#dau2#ln29 sv3#page8#page9#dau2#ln32">
+      <DataUnit gr:x="0" gr:y="0" id="sv3#page8#page9#dau2" name="Detalle-Usuario" entity="User" displayAttributes="userName email User#att46" linkOrder="sv3#page8#page9#dau2#ln12 sv3#page8#page9#dau2#ln32">
         <Selector id="sv3#page8#page9#dau2#su4" defaultPolicy="fill" booleanOperator="and">
           <KeyCondition id="sv3#page8#page9#dau2#su4#kcond3" name="KeyCondition3" predicate="in" implied="false"/>
         </Selector>
         <Link id="sv3#page8#page9#dau2#ln12" name="Eliminar Cuenta" to="sv3#miu6" type="normal" validate="true">
           <LinkParameter id="sv3#page8#page9#dau2#ln12#par54" name="oid_KeyCondition2 [oid]" source="data.userOID" target="sv3#miu6.mov2#opm2#icu2#icp16"/>
         </Link>
-        <Link id="sv3#page8#page9#dau2#ln29" name="Modificar datos de la cuenta" to="sv3#miu3" type="normal" validate="true"/>
         <Link id="sv3#page8#page9#dau2#ln32" name="Cambiar contrase&#241;a" to="sv3#miu4" type="normal" validate="true"/>
       </DataUnit>
       <GetUnit id="sv3#page8#page9#gtu2" name="Get-User-Oid" gr:x="145" gr:y="15" contextParameters="UserCtxParam">

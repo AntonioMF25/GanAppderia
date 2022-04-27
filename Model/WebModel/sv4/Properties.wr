@@ -1,6 +1,6 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Home-Admin" protected="true" localized="true" landmarks="sv4#lou2" homePage="sv4#page3">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Home-Admin" protected="true" localized="true" landmarks="sv4#lou2 sv4#page24 sv4#scju1" homePage="sv4#page3" linkVisibilityPolicy="hide">
   <OperationUnits>
-    <LogoutUnit id="sv4#lou2" name="Logout" landmark="true" gr:x="0" gr:y="40" siteView="sv2"/>
+    <LogoutUnit id="sv4#lou2" name="Logout" landmark="true" gr:x="70" gr:y="60" siteView="sv2"/>
     <SelectorUnit gr:x="870" gr:y="460" id="sv4#seu11" name="Template-Actual" entity="ent3">
       <OKLink id="sv4#seu11#oln27" name="OKFlow27" to="sv4#inn6">
         <LinkParameter id="sv4#seu11#oln27#par109" name="oid_Input" source="ent3#att53Array" target="sv4#inn6.isnotnull"/>
@@ -26,7 +26,7 @@
       </OKLink>
       <KOLink id="sv4#inn6#kln9" name="KOFlow9" to="sv4#cru5" automaticCoupling="true"/>
     </IsNotNullUnit>
-    <ModifyUnit gr:x="1160" gr:y="275" id="sv4#mfu3" name="Actualizar-Template" entity="ent3">
+    <ModifyUnit gr:x="1010" gr:y="330" id="sv4#mfu3" name="Actualizar-Template" entity="ent3">
       <Selector id="sv4#mfu3#su8" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#mfu3#su8#kcond4" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
@@ -39,5 +39,24 @@
         <LinkParameter id="sv4#cru5#oln45#par115" name="Creaci&#243;n del template correcta_Shown Messages" sourceValue="Creaci&#243;n del template correcta" target="sv4#page3#page22#mssu12.shownMessages"/>
       </OKLink>
     </CreateUnit>
+    <CreateUnit gr:x="1760" gr:y="-15" id="sv4#cru2" name="Crear-Promocion" entity="ent5">
+      <OKLink id="sv4#cru2#oln46" name="OKFlow46" to="sv4#page24" automaticCoupling="true"/>
+    </CreateUnit>
+    <ModuleInstanceUnit gr:x="1215" gr:y="250" id="sv4#miu10" moduleId="mov8#opm5">
+      <OKLink id="sv4#miu10#oln55" to="sv4#page24" name="OKFlow50"/>
+    </ModuleInstanceUnit>
+    <ModifyUnit gr:x="1700" gr:y="230" id="sv4#mfu6" name="Actualizar-Promocion" entity="ent5">
+      <Selector id="sv4#mfu6#su24" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#mfu6#su24#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv4#mfu6#oln62" name="OKFlow62" to="sv4#page24" automaticCoupling="true"/>
+    </ModifyUnit>
+    <SelectorUnit gr:x="1480" gr:y="230" id="sv4#seu16" name="Seleccionar-Promocion" entity="ent5">
+      <OKLink id="sv4#seu16#oln61" name="OKFlow61" to="sv4#page24#enu10" automaticCoupling="true"/>
+      <Selector id="sv4#seu16#su28" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#seu16#su28#kcond20" name="KeyCondition20" predicate="in" implied="false"/>
+      </Selector>
+    </SelectorUnit>
+    <ScheduleJobUnit gr:x="1480" gr:y="415" id="sv4#scju1" name="Tarea-Fin-Promocion" schedulePolicy="now" job="wsv1#job1" landmark="true"/>
   </OperationUnits>
 </SiteView>

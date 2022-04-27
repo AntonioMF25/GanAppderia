@@ -1,0 +1,151 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1210" gr:y="-50" id="sv4#page24" name="Gesti&#243;n-Promociones" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#page24#pwu5" name="Promociones" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att11 ent5#att20 ent5#att10 ent5#att9 ent5#att55" linkOrder="sv4#page24#pwu5#ln42 sv4#page24#pwu5#ln52">
+      <Link id="sv4#page24#pwu5#ln42" name="Eliminar promocion" to="sv4#miu10" type="normal" validate="true">
+        <LinkParameter id="sv4#page24#pwu5#ln42#par133" name="oid_KeyCondition12 [oid]" source="data[].ent5#att8" target="sv4#miu10.mov8#opm5#icu7#icp22"/>
+      </Link>
+      <Link id="sv4#page24#pwu5#ln52" name="Editar promocion" to="sv4#seu16" automaticCoupling="true" type="normal" validate="true"/>
+    </PowerIndexUnit>
+    <EntryUnit gr:x="160" gr:y="0" id="sv4#page24#enu7" name="Crear-Promocion" entity="ent5" linkOrder="sv4#page24#enu7#ln33" fieldOrder="sv4#page24#enu7#fld17 sv4#page24#enu7#fld18 sv4#page24#enu7#fld19 sv4#page24#enu7#fld20">
+      <Field id="sv4#page24#enu7#fld17" name="nombrePromocion" type="string" modifiable="true" attribute="ent5#att11">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page24#enu7#fld17#mnd7" name="Mandatory7" companionField="sv4#page24#enu7#fld17"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page24#enu7#fld18" name="descripcionPromocion" type="text" modifiable="true" attribute="ent5#att20">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page24#enu7#fld18#mnd6" name="Mandatory6" companionField="sv4#page24#enu7#fld18"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page24#enu7#fld19" name="porcentaje" type="integer" modifiable="true" attribute="ent5#att10">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page24#enu7#fld19#mnd8" name="Mandatory8" companionField="sv4#page24#enu7#fld19"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page24#enu7#fld20" name="tiempoDias" type="integer" modifiable="true" attribute="ent5#att9">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page24#enu7#fld20#mnd9" name="Mandatory9" companionField="sv4#page24#enu7#fld20"/>
+        </VRules>
+      </Field>
+      <Link id="sv4#page24#enu7#ln33" name="Crear promoci&#243;n" to="sv4#cru2" type="normal" validate="true">
+        <LinkParameter id="sv4#page24#enu7#ln33#par119" name="descripcionPromocion_descripcionPromocion" source="sv4#page24#enu7#fld18" target="sv4#cru2.ent5#att20"/>
+        <LinkParameter id="sv4#page24#enu7#ln33#par120" name="nombrePromocion_nombrePromocion" source="sv4#page24#enu7#fld17" target="sv4#cru2.ent5#att11"/>
+        <LinkParameter id="sv4#page24#enu7#ln33#par121" name="porcentaje_porcentaje" source="sv4#page24#enu7#fld19" target="sv4#cru2.ent5#att10"/>
+        <LinkParameter id="sv4#page24#enu7#ln33#par122" name="tiempoDias_tiempoDias" source="sv4#page24#enu7#fld20" target="sv4#cru2.ent5#att9"/>
+        <LinkParameter id="sv4#page24#enu7#ln33#par123" name="tiempoDias_tiempoDiasRestantes" source="sv4#page24#enu7#fld20" target="sv4#cru2.ent5#att55"/>
+      </Link>
+    </EntryUnit>
+    <EntryUnit gr:x="265" gr:y="110" id="sv4#page24#enu10" name="Actualizar-Promocion" entity="ent5" customDescriptor="false" linkOrder="sv4#page24#enu10#ln53" fieldOrder="sv4#page24#enu10#fld22 sv4#page24#enu10#fld21 sv4#page24#enu10#fld23 sv4#page24#enu10#fld24">
+      <Field id="sv4#page24#enu10#fld21" name="descripcionPromocion" type="text" modifiable="true" attribute="ent5#att20">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page24#enu10#fld21#mnd10" name="Mandatory6" companionField="sv4#page24#enu10#fld21"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page24#enu10#fld22" name="nombrePromocion" type="string" modifiable="false" attribute="ent5#att11">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page24#enu10#fld22#mnd11" name="Mandatory7" companionField="sv4#page24#enu10#fld22"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page24#enu10#fld23" name="porcentaje" type="integer" modifiable="true" attribute="ent5#att10">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page24#enu10#fld23#mnd12" name="Mandatory8" companionField="sv4#page24#enu10#fld23"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page24#enu10#fld24" name="tiempoDias" type="integer" modifiable="false" attribute="ent5#att9">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page24#enu10#fld24#mnd13" name="Mandatory9" companionField="sv4#page24#enu10#fld24"/>
+        </VRules>
+      </Field>
+      <Link id="sv4#page24#enu10#ln53" name="Confirmar cambios" to="sv4#mfu6" type="normal" validate="true" gr:bendpoints="200,-1,0,-141">
+        <LinkParameter id="sv4#page24#enu10#ln53#par139" name="descripcionPromocion_descripcionPromocion" source="sv4#page24#enu10#fld21" target="sv4#mfu6.ent5#att20"/>
+        <LinkParameter id="sv4#page24#enu10#ln53#par140" name="porcentaje_porcentaje" source="sv4#page24#enu10#fld23" target="sv4#mfu6.ent5#att10"/>
+        <LinkParameter id="sv4#page24#enu10#ln53#par142" name="oidPromocion_KeyCondition18 [oid]" source="sv4#page24#enu10#fld25" target="sv4#mfu6#su24#kcond18.ent5#att8"/>
+      </Link>
+      <Field id="sv4#page24#enu10#fld25" name="oidPromocion" type="integer" modifiable="true" hidden="true" attribute="ent5#att8"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page24#pwu5">
+          <layout:Attribute attribute="ent5#att11"/>
+          <layout:Attribute attribute="ent5#att20"/>
+          <layout:Attribute attribute="ent5#att10"/>
+          <layout:Attribute attribute="ent5#att9"/>
+          <layout:Attribute attribute="ent5#att55"/>
+          <layout:Link link="sv4#page24#pwu5#ln42"/>
+          <layout:Link link="sv4#page24#pwu5#ln52"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page24#enu7">
+          <layout:Field field="sv4#page24#enu7#fld17"/>
+          <layout:Field field="sv4#page24#enu7#fld18"/>
+          <layout:Field field="sv4#page24#enu7#fld19"/>
+          <layout:Field field="sv4#page24#enu7#fld20"/>
+          <layout:Link link="sv4#page24#enu7#ln33"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page24#enu10">
+          <layout:Link link="sv4#page24#enu10#ln53"/>
+          <layout:Field field="sv4#page24#enu10#fld22"/>
+          <layout:Field field="sv4#page24#enu10#fld21"/>
+          <layout:Field field="sv4#page24#enu10#fld23"/>
+          <layout:Field field="sv4#page24#enu10#fld24"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

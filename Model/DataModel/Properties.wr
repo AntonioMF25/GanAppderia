@@ -63,12 +63,13 @@
     <Attribute id="ent4#att40" name="urlQR" type="url" db:column="urlqr"/>
     <Attribute id="ent4#att52" name="categoria" type="string" derivationQuery="simpleImported::Self.rel1#role1.ent8#att23"/>
   </Entity>
-  <Entity id="ent5" name="Promociones" duration="persistent" attributeOrder="ent5#att8 ent5#att9 ent5#att10 ent5#att11 ent5#att20" db:database="db1" db:table="promociones" gr:x="370" gr:y="130">
+  <Entity id="ent5" name="Promociones" duration="persistent" attributeOrder="ent5#att8 ent5#att9 ent5#att10 ent5#att11 ent5#att20 ent5#att55" db:database="db1" db:table="promociones" gr:x="370" gr:y="130">
     <Attribute id="ent5#att8" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent5#att9" name="tiempoDias" type="integer" db:column="tiempodias"/>
     <Attribute id="ent5#att10" name="porcentaje" type="integer" db:column="porcentaje"/>
     <Attribute id="ent5#att11" name="nombrePromocion" type="string" db:column="nombrepromocion"/>
     <Attribute id="ent5#att20" name="descripcionPromocion" type="text" db:column="descripcionpromocion"/>
+    <Attribute id="ent5#att55" name="tiempoDiasRestantes" type="integer" db:column="tiempodiasrestantes"/>
   </Entity>
   <Entity id="ent6" name="Carrito" duration="volatile" attributeOrder="ent6#att12 ent6#att13 ent6#att14 ent6#att15 ent6#att16 ent6#att37" volatileStorage="database" gr:x="730" gr:y="120">
     <Attribute id="ent6#att12" name="oid" key="true" type="integer"/>

@@ -1,0 +1,38 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov8#opm5" name="Eliminar-Promocion">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="305" id="mov8#opm5#icu7" name="Input Port">
+      <InputCollectorParameter id="mov8#opm5#icu7#icp22" name="KeyCondition12 [oid]"/>
+      <OKLink id="mov8#opm5#icu7#oln51" to="mov8#opm5#seu13" validate="true" name="Eliminar promocion">
+        <LinkParameter id="mov8#opm5#icu7#oln51#par132" name="oid_KeyCondition12 [oid]" source="mov8#opm5#icu7#icp22" target="mov8#opm5#seu13#su22#kcond14.ent5#att8"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="980" gr:y="0" id="mov8#opm5#okcu9" name="OK Port9"/>
+    <CreateUnit id="mov8#opm5#cru7" name="Crear-Historico-Promocion" gr:x="580" gr:y="160" entity="ent1">
+      <OKLink id="mov8#opm5#cru7#oln57" name="OKFlow49" to="mov8#opm5#dlu2" automaticCoupling="true"/>
+    </CreateUnit>
+    <SelectorUnit id="mov8#opm5#seu13" name="Seleccionar-Promocion" gr:x="300" gr:y="0" entity="ent5">
+      <Selector id="mov8#opm5#seu13#su22" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov8#opm5#seu13#su22#kcond14" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov8#opm5#seu13#oln58" name="OKFlow47" to="mov8#opm5#tmu4" automaticCoupling="true"/>
+      <Link id="mov8#opm5#seu13#ln48" name="Flow43" to="mov8#opm5#cru7" type="transport" validate="true">
+        <LinkParameter id="mov8#opm5#seu13#ln48#par134" name="descripcionPromocion_descripcionPromocion" source="ent5#att20Array" target="mov8#opm5#cru7.ent1#att48"/>
+        <LinkParameter id="mov8#opm5#seu13#ln48#par135" name="nombrePromocion_nombrePromocion" source="ent5#att11Array" target="mov8#opm5#cru7.ent1#att49"/>
+        <LinkParameter id="mov8#opm5#seu13#ln48#par136" name="porcentaje_porcentaje" source="ent5#att10Array" target="mov8#opm5#cru7.ent1#att50"/>
+        <LinkParameter id="mov8#opm5#seu13#ln48#par137" name="tiempoDias_tiempoDias" source="ent5#att9Array" target="mov8#opm5#cru7.ent1#att47"/>
+      </Link>
+      <Link id="mov8#opm5#seu13#ln49" name="Flow47" to="mov8#opm5#dlu2" type="transport" automaticCoupling="true" validate="true"/>
+    </SelectorUnit>
+    <TimeUnit id="mov8#opm5#tmu4" name="Fecha-Historico-Promocion" gr:x="545" gr:y="25">
+      <OKLink id="mov8#opm5#tmu4#oln59" name="OKFlow48" to="mov8#opm5#cru7">
+        <LinkParameter id="mov8#opm5#tmu4#oln59#par138" name="Current/Input Date_fechaHistorico" source="currentDate" target="mov8#opm5#cru7.ent1#att51"/>
+      </OKLink>
+    </TimeUnit>
+    <DeleteUnit id="mov8#opm5#dlu2" name="Eliminar-Promocion" gr:x="455" gr:y="310" entity="ent5">
+      <Selector id="mov8#opm5#dlu2#su23" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov8#opm5#dlu2#su23#kcond15" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov8#opm5#dlu2#oln60" to="mov8#opm5#okcu9" name="OKFlow50" gr:bendpoints="328,-67,-227,248"/>
+    </DeleteUnit>
+  </OperationUnits>
+</OperationModule>
