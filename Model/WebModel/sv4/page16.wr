@@ -1,0 +1,58 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1520" gr:y="305" id="sv4#page16" name="Actualizar-Promocion">
+  <ContentUnits>
+    <EntryUnit id="sv4#page16#enu9" name="Actualizar-Promocion" linkOrder="sv4#page16#enu9#ln29 sv4#page16#enu9#ln38" customDescriptor="false" gr:x="0" gr:y="0" entity="ent5" fieldOrder="sv4#page16#enu9#fld27 sv4#page16#enu9#fld26 sv4#page16#enu9#fld28 sv4#page16#enu9#fld29">
+      <Field id="sv4#page16#enu9#fld26" name="descripcionPromocion" type="text" modifiable="true" attribute="ent5#att20">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page16#enu9#fld26#mnd10" name="Mandatory6" companionField="sv4#page16#enu9#fld26"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page16#enu9#fld27" name="nombrePromocion" type="string" modifiable="false" attribute="ent5#att11">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page16#enu9#fld27#mnd11" name="Mandatory7" companionField="sv4#page16#enu9#fld27"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page16#enu9#fld28" name="porcentaje" type="integer" modifiable="true" attribute="ent5#att10">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page16#enu9#fld28#mnd12" name="Mandatory8" companionField="sv4#page16#enu9#fld28"/>
+        </VRules>
+      </Field>
+      <Field id="sv4#page16#enu9#fld29" name="tiempoDias" type="integer" modifiable="false" attribute="ent5#att9">
+        <VRules>
+          <MandatoryValidationRule id="sv4#page16#enu9#fld29#mnd13" name="Mandatory9" companionField="sv4#page16#enu9#fld29"/>
+        </VRules>
+      </Field>
+      <Link id="sv4#page16#enu9#ln29" name="Confirmar cambios" to="sv4#mfu6" type="normal" validate="true">
+        <LinkParameter id="sv4#page16#enu9#ln29#par48" name="descripcionPromocion_descripcionPromocion" source="sv4#page16#enu9#fld26" target="sv4#mfu6.ent5#att20"/>
+        <LinkParameter id="sv4#page16#enu9#ln29#par49" name="porcentaje_porcentaje" source="sv4#page16#enu9#fld28" target="sv4#mfu6.ent5#att10"/>
+        <LinkParameter id="sv4#page16#enu9#ln29#par50" name="oidPromocion_KeyCondition18 [oid]" source="sv4#page16#enu9#fld30" target="sv4#mfu6#su24#kcond18.ent5#att8"/>
+      </Link>
+      <Field id="sv4#page16#enu9#fld30" name="oidPromocion" type="integer" modifiable="true" hidden="true" attribute="ent5#att8"/>
+      <Link id="sv4#page16#enu9#ln38" name="Volver" to="sv4#page24" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="16,-231,261,124"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page16#enu9">
+          <layout:Field field="sv4#page16#enu9#fld27"/>
+          <layout:Field field="sv4#page16#enu9#fld26"/>
+          <layout:Field field="sv4#page16#enu9#fld28"/>
+          <layout:Field field="sv4#page16#enu9#fld29"/>
+          <layout:Link link="sv4#page16#enu9#ln29"/>
+          <layout:Link link="sv4#page16#enu9#ln38"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

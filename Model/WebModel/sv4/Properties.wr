@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Home-Admin" protected="true" localized="true" landmarks="sv4#lou2 sv4#page24 sv4#scju1" homePage="sv4#page3" linkVisibilityPolicy="hide">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Home-Admin" protected="true" localized="true" landmarks="sv4#lou2 sv4#page24" homePage="sv4#page3" linkVisibilityPolicy="hide">
   <OperationUnits>
     <LogoutUnit id="sv4#lou2" name="Logout" landmark="true" gr:x="70" gr:y="60" siteView="sv2"/>
     <SelectorUnit gr:x="870" gr:y="460" id="sv4#seu11" name="Template-Actual" entity="ent3">
@@ -45,18 +45,18 @@
     <ModuleInstanceUnit gr:x="1215" gr:y="250" id="sv4#miu10" moduleId="mov8#opm5">
       <OKLink id="sv4#miu10#oln55" to="sv4#page24" name="OKFlow50"/>
     </ModuleInstanceUnit>
-    <ModifyUnit gr:x="1700" gr:y="230" id="sv4#mfu6" name="Actualizar-Promocion" entity="ent5">
+    <ModifyUnit gr:x="1700" gr:y="140" id="sv4#mfu6" name="Actualizar-Promocion" entity="ent5">
       <Selector id="sv4#mfu6#su24" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#mfu6#su24#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="sv4#mfu6#oln62" name="OKFlow62" to="sv4#page24" automaticCoupling="true"/>
     </ModifyUnit>
-    <SelectorUnit gr:x="1480" gr:y="230" id="sv4#seu16" name="Seleccionar-Promocion" entity="ent5">
-      <OKLink id="sv4#seu16#oln61" name="OKFlow61" to="sv4#page24#enu10" automaticCoupling="true"/>
+    <SelectorUnit gr:x="1445" gr:y="140" id="sv4#seu16" name="Seleccionar-Promocion" entity="ent5">
       <Selector id="sv4#seu16#su28" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#seu16#su28#kcond20" name="KeyCondition20" predicate="in" implied="false"/>
       </Selector>
+      <OKLink id="sv4#seu16#oln6" name="OKFlow61" to="sv4#page16#enu9" automaticCoupling="true"/>
     </SelectorUnit>
-    <ScheduleJobUnit gr:x="1480" gr:y="415" id="sv4#scju1" name="Tarea-Fin-Promocion" schedulePolicy="now" job="wsv1#job1" landmark="true"/>
+    <ScheduleJobUnit gr:x="1310" gr:y="385" id="sv4#scju1" name="Tarea-Fin-Promocion" schedulePolicy="everyDay" job="wsv1#job1" landmark="false"/>
   </OperationUnits>
 </SiteView>
