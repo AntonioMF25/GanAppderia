@@ -1,0 +1,102 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov7#hym3#page50" name="Editar-Categor&#237;a" linkOrder="mov7#hym3#page50#ln132" gr:x="1225" gr:y="265">
+  <ContentUnits>
+    <EntryUnit id="mov7#hym3#page50#enu22" name="Editar-Categor&#237;a" linkOrder="mov7#hym3#page50#enu22#ln130" gr:x="5" gr:y="135" entity="ent8">
+      <Field id="mov7#hym3#page50#enu22#fld57" name="Nombre" type="string" modifiable="true" attribute="ent8#att23">
+        <VRules>
+          <MandatoryValidationRule id="mov7#hym3#page50#enu22#fld57#mnd24" name="Mandatory7" errorMessage="Este campo es obligatorio."/>
+        </VRules>
+      </Field>
+      <Field id="mov7#hym3#page50#enu22#fld58" name="oidSeleccionado" type="integer" modifiable="true" attribute="ent8#att22" hidden="true"/>
+      <SelectionField id="mov7#hym3#page50#enu22#sfld8" name="Subcategor&#237;a de" type="string" attribute="ent8#att23"/>
+      <Link id="mov7#hym3#page50#enu22#ln128" name="Flow50" to="mov7#hym3#page50#seu38" type="transport" validate="true" gr:bendpoints="35,-58,-10,72">
+        <LinkParameter id="mov7#hym3#page50#enu22#ln128#par251" name="oidSeleccionado_AttCondition10" source="mov7#hym3#page50#enu22#fld58" target="mov7#hym3#page50#seu38#su61#acond32"/>
+      </Link>
+      <Link id="mov7#hym3#page50#enu22#ln129" name="Flow41" to="mov7#hym3#mfu10" type="transport" validate="true">
+        <LinkParameter id="mov7#hym3#page50#enu22#ln129#par252" name="Subcategor&#237;a de_Categoria.oid(SubcategoriaToCategoria)" source="mov7#hym3#page50#enu22#sfld8" target="mov7#hym3#mfu10.rel2#role3.ent8#att22"/>
+        <LinkParameter id="mov7#hym3#page50#enu22#ln129#par253" name="oidSeleccionado_KeyCondition10 [oid]" source="mov7#hym3#page50#enu22#fld58" target="mov7#hym3#mfu10#su63#kcond37.ent8#att22"/>
+        <LinkParameter id="mov7#hym3#page50#enu22#ln129#par254" name="Nombre_nombreCategoria" source="mov7#hym3#page50#enu22#fld57" target="mov7#hym3#mfu10.ent8#att23"/>
+      </Link>
+      <Link id="mov7#hym3#page50#enu22#ln130" name="Editar categor&#237;a" to="mov7#hym3#seu36" type="normal" validate="true">
+        <LinkParameter id="mov7#hym3#page50#enu22#ln130#par255" name="oidSeleccionado_AttCondition11" source="mov7#hym3#page50#enu22#fld58" target="mov7#hym3#seu36#su58#acond30"/>
+        <LinkParameter id="mov7#hym3#page50#enu22#ln130#par256" name="Nombre_AttCondition14" source="mov7#hym3#page50#enu22#fld57" target="mov7#hym3#seu36#su58#acond29"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit id="mov7#hym3#page50#mssu25" name="Mensaje-Editar" gr:x="180" gr:y="165"/>
+    <SelectorUnit id="mov7#hym3#page50#seu38" name="Categor&#237;as-Actual" gr:x="0" gr:y="0" entity="ent8" distinctAttributes="ent8#att23">
+      <Link id="mov7#hym3#page50#seu38#ln131" name="Flow26" to="mov7#hym3#page50#enu22" type="transport" validate="true">
+        <LinkParameter id="mov7#hym3#page50#seu38#ln131#par257" name="nombreCategoria_Subcategor&#237;a de: [label]" source="ent8#att23Array" target="mov7#hym3#page50#enu22#sfld8_label"/>
+        <LinkParameter id="mov7#hym3#page50#seu38#ln131#par258" name="oid_Subcategor&#237;a de: [output]" source="ent8#att22Array" target="mov7#hym3#page50#enu22#sfld8_output"/>
+      </Link>
+      <Selector id="mov7#hym3#page50#seu38#su61" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov7#hym3#page50#seu38#su61#acond32" name="AttCondition10" predicate="neq" booleanOperator="and" implied="false" attributes="ent8#att22" ignoreCase="false"/>
+      </Selector>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov7#hym3#page50#mssu25"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov7#hym3#page50#enu22">
+          <layout:Field field="mov7#hym3#page50#enu22#fld57"/>
+          <layout:Field field="mov7#hym3#page50#enu22#sfld8"/>
+          <layout:Link link="mov7#hym3#page50#enu22#ln130"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov7#hym3#page50#ln132" name="Volver" to="mov7#hym3#page51" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

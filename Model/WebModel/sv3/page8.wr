@@ -64,6 +64,57 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
+        <layout:SubPage pageId="sv3#page8#page43">
+          <layout:Grid containerType="grid">
+            <layout:Row>
+              <layout:Cell colspan="12"/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+              <layout:Cell/>
+            </layout:Row>
+          </layout:Grid>
+        </layout:SubPage>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page8#page43#mssu21">
+          <layout:Link link="sv3#page8#page43#mssu21#ln103"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
         <layout:SubPage pageId="sv3#page8#page10">
           <layout:Grid containerType="grid">
             <layout:Row>
@@ -121,6 +172,48 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
   </layout:Grid>
   <Page gr:x="0" gr:y="320" id="sv3#page8#page9" name="Informaci&#243;n-Usuario">
     <ContentUnits>
@@ -160,6 +253,14 @@
         </Link>
       </GetUnit>
       <MultiMessageUnit gr:x="155" gr:y="185" id="sv3#page8#page10#mssu6" name="Avisos"/>
+    </ContentUnits>
+  </Page>
+  <Page gr:x="375" gr:y="425" id="sv3#page8#page43" name="Gestionar-Ubicaci&#243;n">
+    <ContentUnits>
+      <MultiMessageUnit id="sv3#page8#page43#mssu21" name="Gestiona tus ubicaciones" gr:x="0" gr:y="0" linkOrder="sv3#page8#page43#mssu21#ln103">
+        <Message xml:space="preserve">Crea, modifica y borra las ubicaciones que desees para vender tus productos.</Message>
+        <Link id="sv3#page8#page43#mssu21#ln103" name="Gestiona tus ubicaciones" to="sv3#miu3" type="normal" validate="true"/>
+      </MultiMessageUnit>
     </ContentUnits>
   </Page>
 </Page>

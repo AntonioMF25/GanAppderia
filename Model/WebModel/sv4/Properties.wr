@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Home-Admin" protected="true" localized="true" landmarks="sv4#lou2 sv4#page24" homePage="sv4#page3" linkVisibilityPolicy="hide">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Home-Admin" protected="true" localized="true" landmarks="sv4#lou2 sv4#page24 sv4#miu9" homePage="sv4#page3" linkVisibilityPolicy="hide">
   <OperationUnits>
     <LogoutUnit id="sv4#lou2" name="Logout" landmark="true" gr:x="70" gr:y="60" siteView="sv2"/>
     <SelectorUnit gr:x="870" gr:y="460" id="sv4#seu11" name="Template-Actual" entity="ent3">
@@ -58,5 +58,8 @@
       <OKLink id="sv4#seu16#oln6" name="OKFlow61" to="sv4#page16#enu9" automaticCoupling="true"/>
     </SelectorUnit>
     <ScheduleJobUnit gr:x="1310" gr:y="385" id="sv4#scju1" name="Tarea-Fin-Promocion" schedulePolicy="everyDay" job="wsv1#job1" landmark="false"/>
+    <ModuleInstanceUnit gr:x="655" gr:y="755" id="sv4#miu9" moduleId="mov7#hym3" landmark="true">
+      <OKLink id="sv4#miu9#oln103" to="sv4#page3" validate="true" name="Volver"/>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>
