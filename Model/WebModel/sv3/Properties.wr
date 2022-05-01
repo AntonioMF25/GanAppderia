@@ -6,11 +6,11 @@
         <LinkParameter id="sv3#miu1#oln30#par130" name="Eliminaci&#243;n OK_Shown Messages" sourceValue="Eliminaci&#243;n OK" target="sv3#page8#page10#mssu6.shownMessages"/>
       </OKLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="880" gr:y="670" id="sv3#miu5" moduleId="mov5#hym4" action="false">
-      <Link id="sv3#miu5#ln70" name="Flow70" to="sv3#page8#page10#mssu6" type="transport" validate="true" gr:bendpoints="-77,95,328,55">
-        <LinkParameter id="sv3#miu5#ln70#par322" name="OK Port6.Se ha modificado correctamente el anuncio_Shown Messages_Shown Messages" source="mov5#hym4#okcu8#ocp23" target="sv3#page8#page10#mssu6.shownMessages"/>
-      </Link>
-      <OKLink id="sv3#miu5#oln8" name="OKFlow8" to="sv3#page8" automaticCoupling="true" gr:bendpoints="-38,123,497,113"/>
+    <ModuleInstanceUnit gr:x="880" gr:y="670" id="sv3#miu5" action="false" moduleId="mov5#hym4">
+      <OKLink id="sv3#miu5#oln8" name="OKFlow8" to="sv3#page8#page10#mssu6" gr:bendpoints="-38,123,497,113">
+        <LinkParameter id="sv3#miu5#oln8#par294" name="Se ha modificado correctamente el anuncio_Shown Messages_Shown Messages" source="mov5#hym4#okcu8#ocp23" target="sv3#page8#page10#mssu6.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv3#miu5#kln11" name="Flow56" to="sv3#page8" gr:bendpoints="-55,52,385,7" automaticCoupling="true" codeRef="mov5#hym4#kocu3"/>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="970" gr:y="385" id="sv3#miu2" moduleId="mov1#opm1">
       <OKLink id="sv3#miu2#oln10" to="sv3#page7#dau1" name="OKFlow6" codeRef="mov1#opm1#okcu2">

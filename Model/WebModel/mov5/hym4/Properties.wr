@@ -1,27 +1,29 @@
 <HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov5#hym4" name="Actualizar-Producto" gr:x="140" gr:y="170">
   <OperationUnits>
-    <InputCollectorUnit id="mov5#hym4#icu8" gr:x="0" gr:y="262">
+    <InputCollectorUnit id="mov5#hym4#icu8" gr:x="0" gr:y="262" linkOrder="mov5#hym4#icu8#ln58">
       <InputCollectorParameter id="mov5#hym4#icu8#icp5" name="KeyCondition4 [oid]"/>
       <OKLink id="mov5#hym4#icu8#oln52" name="Editar" to="mov5#hym4#seu28">
         <LinkParameter id="mov5#hym4#icu8#oln52#par297" name="oid_KeyCondition4 [oid]" source="mov5#hym4#icu8#icp5" target="mov5#hym4#seu28#su26#kcond23.ent4#att2"/>
       </OKLink>
+      <Link id="mov5#hym4#icu8#ln58" name="Flow58" to="mov5#hym4#mfu4" type="transport" validate="true">
+        <LinkParameter id="mov5#hym4#icu8#ln58#par177" name="KeyCondition4 [oid]_KeyCondition5 [oid]" source="mov5#hym4#icu8#icp5" target="mov5#hym4#mfu4#su27#kcond24.ent4#att2"/>
+      </Link>
     </InputCollectorUnit>
-    <OKCollectorUnit id="mov5#hym4#okcu8" name="OK Port6" gr:x="1040" gr:y="300">
-      <OutputCollectorParameter id="mov5#hym4#okcu8#ocp23" name="Se ha modificado correctamente el anuncio_Shown Messages"/>
+    <OKCollectorUnit id="mov5#hym4#okcu8" name="OK Port6" gr:x="1325" gr:y="300">
+      <OutputCollectorParameter id="mov5#hym4#okcu8#ocp23" name="Se ha modificado correctamente el anuncio_Shown Messages" value="Se ha modificado correctamente el anuncio"/>
     </OKCollectorUnit>
-    <SelectorUnit id="mov5#hym4#seu28" name="Seleccionar-Producto-Modificar" gr:x="260" gr:y="45" entity="ent4">
+    <SelectorUnit id="mov5#hym4#seu28" name="Seleccionar-Producto-Modificar" gr:x="280" gr:y="255" entity="ent4">
       <Selector id="mov5#hym4#seu28#su26" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov5#hym4#seu28#su26#kcond23" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
       <Link id="mov5#hym4#seu28#ln62" name="Flow24" to="mov5#hym4#mfu4" type="transport" validate="true">
-        <LinkParameter id="mov5#hym4#seu28#ln62#par298" name="oid_KeyCondition5 [oid]" source="ent4#att2Array" target="mov5#hym4#mfu4#su27#kcond24.ent4#att2"/>
         <LinkParameter id="mov5#hym4#seu28#ln62#par299" name="ProductosToUser.oid_User.oid(ProductosToUser)" source="rel6#role12_userOIDArray" target="mov5#hym4#mfu4.rel6#role12.userOID"/>
         <LinkParameter id="mov5#hym4#seu28#ln62#par300" name="valoracionMedia_valoracionMedia" source="ent4#att28Array" target="mov5#hym4#mfu4.ent4#att28"/>
       </Link>
       <OKLink id="mov5#hym4#seu28#oln51" name="OKFlow8" to="mov5#hym4#page17#enu8">
         <LinkParameter id="mov5#hym4#seu28#oln51#par138" name="oid_Key Condition [oid]" source="ent4#att2Array" target="mov5#hym4#page17#enu8.ent4#att2"/>
         <LinkParameter id="mov5#hym4#seu28#oln51#par139" name="imagenProducto_Imagen" source="ent4#att19Array" target="mov5#hym4#page17#enu8#fld45_slot"/>
-        <LinkParameter id="mov5#hym4#seu28#oln51#par140" name="fechaCaducidad_Descripci&#243;n" source="ent4#att24Array" target="mov5#hym4#page17#enu8#fld42_slot"/>
+        <LinkParameter id="mov5#hym4#seu28#oln51#par140" name="fechaCaducidad_Descripci&#243;n" source="ent4#att4Array" target="mov5#hym4#page17#enu8#fld42_slot"/>
         <LinkParameter id="mov5#hym4#seu28#oln51#par141" name="unidadesProducto_Unidades" source="ent4#att6Array" target="mov5#hym4#page17#enu8#fld44_slot"/>
         <LinkParameter id="mov5#hym4#seu28#oln51#par142" name="fechaCaducidad_Fecha de Caducidad" source="ent4#att24Array" target="mov5#hym4#page17#enu8#fld46_slot"/>
         <LinkParameter id="mov5#hym4#seu28#oln51#par143" name="urlQR_URL Qr" source="ent4#att40Array" target="mov5#hym4#page17#enu8#fld47_slot"/>
@@ -30,21 +32,122 @@
         <LinkParameter id="mov5#hym4#seu28#oln51#par160" name="ProductosToCategoria.oid_Categor&#237;a - Preselection" source="rel1#role1_ent8#att22Array" target="mov5#hym4#page17#enu8#sfld18_presel"/>
         <LinkParameter id="mov5#hym4#seu28#oln51#par161" name="ProductosToPromociones.oid_Promoci&#243;n - Preselection" source="rel3#role5_ent5#att8Array" target="mov5#hym4#page17#enu8#sfld17_presel"/>
         <LinkParameter id="mov5#hym4#seu28#oln51#par162" name="ProductosToUbicacion.oid_Ubicacion - Preselection" source="rel9#role17_ent2#att41Array" target="mov5#hym4#page17#enu8#sfld16_presel"/>
+        <LinkParameter id="mov5#hym4#seu28#oln51#par128" name="oid_oid_modificado" source="ent4#att2Array" target="mov5#hym4#page17#enu8#fld21_slot"/>
       </OKLink>
     </SelectorUnit>
-    <ModifyUnit id="mov5#hym4#mfu4" name="Actualizar-Producto" gr:x="305" gr:y="265" entity="ent4">
+    <ModifyUnit id="mov5#hym4#mfu4" name="Actualizar-Producto" gr:x="325" gr:y="475" entity="ent4">
       <Selector id="mov5#hym4#mfu4#su27" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov5#hym4#mfu4#su27#kcond24" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="mov5#hym4#mfu4#oln54" name="OKFlow9" to="mov5#hym4#okcu8" gr:bendpoints="138,113,-637,48">
-        <LinkParameter id="mov5#hym4#mfu4#oln54#par301" name="Se ha modificado correctamente el anuncio_Shown Messages" target="mov5#hym4#okcu8#ocp23" sourceValue="Se ha modificado correctamente el anuncio"/>
-      </OKLink>
+      <OKLink id="mov5#hym4#mfu4#oln54" name="OKFlow9" to="mov5#hym4#dlu1" gr:bendpoints="28,91,-147,11"/>
     </ModifyUnit>
-    <OKCollectorUnit gr:x="1080" gr:y="65" id="mov5#hym4#okcu1" name="OK Port5"/>
-    <ScaleImageUnit gr:x="440" gr:y="180" id="mov5#hym4#sim1" name="Rescalado-Imagen">
-      <OKLink id="mov5#hym4#sim1#oln46" name="OKFlow46" to="mov5#hym4#mfu4">
-        <LinkParameter id="mov5#hym4#sim1#oln46#par117" name="Scaled Image_imagenProducto" source="scaledImage" target="mov5#hym4#mfu4.ent4#att19"/>
+    <ScaleImageUnit gr:x="380" gr:y="130" id="mov5#hym4#sim1" name="Rescalado-Imagen">
+      <OKLink id="mov5#hym4#sim1#oln86" name="OKFlow86" to="mov5#hym4#cru8">
+        <LinkParameter id="mov5#hym4#sim1#oln86#par289" name="Scaled Image_imagenProducto" source="scaledImage" target="mov5#hym4#cru8.ent14#att73"/>
       </OKLink>
     </ScaleImageUnit>
+    <SelectorUnit gr:x="350" gr:y="-170" id="mov5#hym4#seu4" name="Seleccionar-Producto-Usuario-Nombre" entity="ent4">
+      <Selector id="mov5#hym4#seu4#su7" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov5#hym4#seu4#su7#acond9" name="Obtener-Producto-Nombre" predicate="eq" booleanOperator="and" implied="false" attributes="ent4#att3"/>
+        <AttributesCondition id="mov5#hym4#seu4#su7#acond10" name="Es-De-Usuario" predicate="eq" booleanOperator="and" implied="false" attributes="rel6#role12.userOID"/>
+      </Selector>
+      <Link id="mov5#hym4#seu4#ln59" name="OKFlow61" to="mov5#hym4#mathu3" type="transport" gr:bendpoints="186,-31,-204,-51">
+        <LinkParameter id="mov5#hym4#seu4#ln59#par178" name="oid_oid_recuperado" source="ent4#att2Array" target="mov5#hym4#mathu3#mathv4"/>
+      </Link>
+      <OKLink id="mov5#hym4#seu4#oln76" name="OKFlow76" to="mov5#hym4#inn4">
+        <LinkParameter id="mov5#hym4#seu4#oln76#par179" name="oid_Input" source="ent4#att2Array" target="mov5#hym4#inn4.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <GetUnit gr:x="195" gr:y="-165" id="mov5#hym4#gtu4" name="Usuario-Log" contextParameters="UserCtxParam">
+      <Link id="mov5#hym4#gtu4#ln51" name="Flow51" to="mov5#hym4#seu4" type="transport" validate="true">
+        <LinkParameter id="mov5#hym4#gtu4#ln51#par167" name="UserCtxParam.oid_Es-De-Usuario" source="mov5#hym4#gtu4.UserCtxParam" target="mov5#hym4#seu4#su7#acond10"/>
+      </Link>
+    </GetUnit>
+    <MathUnit gr:x="785" gr:y="-145" id="mov5#hym4#mathu3" name="Es-Mismo-OID" resultType="integer" defaultExpression="oid_modificado - oid_recuperado">
+      <MathVariable id="mov5#hym4#mathu3#mathv3" name="oid_modificado"/>
+      <MathVariable id="mov5#hym4#mathu3#mathv4" name="oid_recuperado"/>
+      <OKLink id="mov5#hym4#mathu3#oln65" name="OKFlow65" to="mov5#hym4#switch2">
+        <LinkParameter id="mov5#hym4#mathu3#oln65#par171" name="Result_Switch" source="result" target="mov5#hym4#switch2.switch"/>
+      </OKLink>
+    </MathUnit>
+    <SwitchUnit gr:x="1045" gr:y="-110" id="mov5#hym4#switch2" name="Es-Mismo-OID?">
+      <Case value="0"/>
+      <OKLink id="mov5#hym4#switch2#oln80" name="OKFlow80" to="mov5#hym4#seu20" gr:bendpoints="-452,139,153,-161" code="0">
+        <LinkParameter id="mov5#hym4#switch2#oln80#par273" name="1_Max Results" sourceValue="1" target="mov5#hym4#seu20.maxResults"/>
+      </OKLink>
+      <OKLink id="mov5#hym4#switch2#oln90" name="OKFlow90" to="mov5#hym4#dlu4" automaticCoupling="true"/>
+    </SwitchUnit>
+    <KOCollectorUnit gr:x="1400" gr:y="105" id="mov5#hym4#kocu3" name="Volver Port"/>
+    <IsNotNullUnit gr:x="640" gr:y="-110" id="mov5#hym4#inn4" name="Existe-Nombre">
+      <OKLink id="mov5#hym4#inn4#oln78" name="OKFlow78" to="mov5#hym4#mathu3" automaticCoupling="true"/>
+      <KOLink id="mov5#hym4#inn4#kln12" name="KOFlow12" to="mov5#hym4#seu20" gr:bendpoints="-201,83,-6,-217"/>
+    </IsNotNullUnit>
+    <CreateUnit gr:x="280" gr:y="-20" id="mov5#hym4#cru8" name="Crear-Tmp" entity="ent14" linkOrder="mov5#hym4#cru8#ln80 mov5#hym4#cru8#ln83 mov5#hym4#cru8#ln88">
+      <OKLink id="mov5#hym4#cru8#oln81" name="OKFlow81" to="mov5#hym4#seu4">
+        <LinkParameter id="mov5#hym4#cru8#oln81#par209" name="nombreProducto_Obtener-Producto-Nombre" source="ent14#att58Array" target="mov5#hym4#seu4#su7#acond9"/>
+      </OKLink>
+      <Link id="mov5#hym4#cru8#ln80" name="Flow80" to="mov5#hym4#seu20" type="transport" validate="true">
+        <LinkParameter id="mov5#hym4#cru8#ln80#par274" name="oid_KeyCondition12 [oid]" source="ent14#att57Array" target="mov5#hym4#seu20#su32#kcond12.ent14#att57"/>
+      </Link>
+      <Link id="mov5#hym4#cru8#ln82" name="Flow53" to="mov5#hym4#mathu3" type="transport" validate="true" gr:bendpoints="262,2,-283,127">
+        <LinkParameter id="mov5#hym4#cru8#ln82#par229" name="oid_modificado_oid_modificado" source="ent14#att86Array" target="mov5#hym4#mathu3#mathv3"/>
+      </Link>
+      <Link id="mov5#hym4#cru8#ln83" name="Flow83" to="mov5#hym4#dlu1" automaticCoupling="true" type="transport" validate="true" gr:bendpoints="-270,387,-505,-198;-183,583,-418,-2"/>
+      <Link id="mov5#hym4#cru8#ln86" name="Flow83" to="mov5#hym4#dlu4" type="transport" automaticCoupling="true" validate="true" gr:bendpoints="565,-5,-335,35;640,-4,-260,36"/>
+      <Link id="mov5#hym4#cru8#ln88" name="Flow88" to="mov5#hym4#seu21" type="transport" validate="true" gr:bendpoints="355,-14,-260,-99">
+        <LinkParameter id="mov5#hym4#cru8#ln88#par296" name="oid_producto_KeyCondition22 [oid]" source="ent14#att86Array" target="mov5#hym4#seu21#su35#kcond22.ent4#att2"/>
+      </Link>
+    </CreateUnit>
+    <SelectorUnit gr:x="660" gr:y="60" id="mov5#hym4#seu20" name="Seleccionar-Tmp" entity="ent14">
+      <OKLink id="mov5#hym4#seu20#oln82" name="OKFlow82" to="mov5#hym4#mfu4" gr:bendpoints="-109,383,216,-32">
+        <LinkParameter id="mov5#hym4#seu20#oln82#par277" name="oid_categoria_Categoria.oid(ProductosToCategoria)" source="ent14#att88Array" target="mov5#hym4#mfu4.rel1#role1.ent8#att22"/>
+        <LinkParameter id="mov5#hym4#seu20#oln82#par278" name="descripcionProducto_descripcionProducto" source="ent14#att59Array" target="mov5#hym4#mfu4.ent4#att4"/>
+        <LinkParameter id="mov5#hym4#seu20#oln82#par279" name="fechaCaducidad_fechaCaducidad" source="ent14#att82Array" target="mov5#hym4#mfu4.ent4#att24"/>
+        <LinkParameter id="mov5#hym4#seu20#oln82#par280" name="imagenProducto_imagenProducto" source="ent14#att73Array" target="mov5#hym4#mfu4.ent4#att19"/>
+        <LinkParameter id="mov5#hym4#seu20#oln82#par281" name="oid_producto_KeyCondition5 [oid]" source="ent14#att86Array" target="mov5#hym4#mfu4#su27#kcond24.ent4#att2"/>
+        <LinkParameter id="mov5#hym4#seu20#oln82#par282" name="nombreProducto_nombreProducto" source="ent14#att58Array" target="mov5#hym4#mfu4.ent4#att3"/>
+        <LinkParameter id="mov5#hym4#seu20#oln82#par283" name="precioProducto_precioProducto" source="ent14#att60Array" target="mov5#hym4#mfu4.ent4#att5"/>
+        <LinkParameter id="mov5#hym4#seu20#oln82#par284" name="oid_promocion_Promociones.oid(ProductosToPromociones)" source="ent14#att87Array" target="mov5#hym4#mfu4.rel3#role5.ent5#att8"/>
+        <LinkParameter id="mov5#hym4#seu20#oln82#par285" name="oid_ubicacion_Ubicacion.oid(ProductosToUbicacion)" source="ent14#att89Array" target="mov5#hym4#mfu4.rel9#role17.ent2#att41"/>
+        <LinkParameter id="mov5#hym4#seu20#oln82#par286" name="unidadesProducto_unidadesProducto" source="ent14#att61Array" target="mov5#hym4#mfu4.ent4#att6"/>
+        <LinkParameter id="mov5#hym4#seu20#oln82#par287" name="urlQR_urlQR" source="ent14#att84Array" target="mov5#hym4#mfu4.ent4#att40"/>
+      </OKLink>
+      <Selector id="mov5#hym4#seu20#su32" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov5#hym4#seu20#su32#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+    </SelectorUnit>
+    <DeleteUnit gr:x="515" gr:y="555" id="mov5#hym4#dlu1" name="Eliminar-Tmp" entity="ent14">
+      <Selector id="mov5#hym4#dlu1#su31" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov5#hym4#dlu1#su31#kcond10" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov5#hym4#dlu1#oln84" name="OKFlow84" to="mov5#hym4#okcu8" automaticCoupling="true" gr:bendpoints="648,76,-282,341"/>
+    </DeleteUnit>
+    <DeleteUnit id="mov5#hym4#dlu4" name="Eliminar-Tmp" gr:x="1270" gr:y="-40" entity="ent14" linkOrder="mov5#hym4#dlu4#ln89">
+      <Selector id="mov5#hym4#dlu4#su34" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov5#hym4#dlu4#su34#kcond21" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov5#hym4#dlu4#oln102" name="OKFlow102" to="mov5#hym4#seu21" automaticCoupling="true"/>
+      <Link id="mov5#hym4#dlu4#ln89" name="Flow89" to="mov5#hym4#page17#mssu10" type="transport" validate="true">
+        <LinkParameter id="mov5#hym4#dlu4#ln89#par298" name="No se ha podido modificar el anuncio por que el nombre coincide con alguno creado anteriormente_Shown Messages" sourceValue="No se ha podido modificar el anuncio por que el nombre coincide con alguno creado anteriormente" target="mov5#hym4#page17#mssu10.shownMessages"/>
+      </Link>
+    </DeleteUnit>
+    <SelectorUnit gr:x="810" gr:y="70" id="mov5#hym4#seu21" name="Seleccionar-Producto-Modificar" entity="ent4">
+      <Selector id="mov5#hym4#seu21#su35" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov5#hym4#seu21#su35#kcond22" name="KeyCondition22" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov5#hym4#seu21#oln113" name="OKFlow113" to="mov5#hym4#page17#enu8">
+        <LinkParameter id="mov5#hym4#seu21#oln113#par301" name="ProductosToCategoria.oid_Categor&#237;a - Preselection" source="rel1#role1_ent8#att22Array" target="mov5#hym4#page17#enu8#sfld18_presel"/>
+        <LinkParameter id="mov5#hym4#seu21#oln113#par302" name="descripcionProducto_Descripci&#243;n" source="ent4#att4Array" target="mov5#hym4#page17#enu8#fld42_slot"/>
+        <LinkParameter id="mov5#hym4#seu21#oln113#par303" name="fechaCaducidad_Fecha de Caducidad" source="ent4#att24Array" target="mov5#hym4#page17#enu8#fld46_slot"/>
+        <LinkParameter id="mov5#hym4#seu21#oln113#par304" name="imagenProducto_Imagen" source="ent4#att19Array" target="mov5#hym4#page17#enu8#fld45_slot"/>
+        <LinkParameter id="mov5#hym4#seu21#oln113#par305" name="nombreProducto_Nombre" source="ent4#att3Array" target="mov5#hym4#page17#enu8#fld48_slot"/>
+        <LinkParameter id="mov5#hym4#seu21#oln113#par306" name="oid_oid_modificado" source="ent4#att2Array" target="mov5#hym4#page17#enu8#fld21_slot"/>
+        <LinkParameter id="mov5#hym4#seu21#oln113#par307" name="precioProducto_Precio" source="ent4#att5Array" target="mov5#hym4#page17#enu8#fld43_slot"/>
+        <LinkParameter id="mov5#hym4#seu21#oln113#par308" name="ProductosToPromociones.oid_Promoci&#243;n - Preselection" source="rel3#role5_ent5#att8Array" target="mov5#hym4#page17#enu8#sfld17_presel"/>
+        <LinkParameter id="mov5#hym4#seu21#oln113#par309" name="ProductosToUbicacion.oid_Ubicacion - Preselection" source="rel9#role17_ent2#att41Array" target="mov5#hym4#page17#enu8#sfld16_presel"/>
+        <LinkParameter id="mov5#hym4#seu21#oln113#par310" name="unidadesProducto_Unidades" source="ent4#att6Array" target="mov5#hym4#page17#enu8#fld44_slot"/>
+        <LinkParameter id="mov5#hym4#seu21#oln113#par311" name="urlQR_URL Qr" source="ent4#att40Array" target="mov5#hym4#page17#enu8#fld47_slot"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </HybridModule>

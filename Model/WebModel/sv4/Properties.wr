@@ -61,5 +61,7 @@
     <ModuleInstanceUnit gr:x="655" gr:y="755" id="sv4#miu9" moduleId="mov7#hym3" landmark="true">
       <OKLink id="sv4#miu9#oln103" to="sv4#page3" validate="true" name="Volver"/>
     </ModuleInstanceUnit>
+    <ScheduleJobUnit id="sv4#scju2" name="Tarea-Fin-Promocion" landmark="false" gr:x="0" gr:y="0" schedulePolicy="everyDay" job="wsv1#job1"/>
+    <ScheduleJobUnit id="sv4#scju3" name="Tarea-Eliminar-Producto-Caducado" landmark="false" gr:x="1170" gr:y="625" schedulePolicy="everyDay" job="wsv2#job2"/>
   </OperationUnits>
 </SiteView>

@@ -252,7 +252,7 @@
           <LinkParameter id="sv3#page8#page10#gtu5#ln16#par34" name="UserCtxParam.oid_AttCondition4" source="sv3#page8#page10#gtu5.UserCtxParam" target="sv3#page8#page10#pwu2#su5#acond4"/>
         </Link>
       </GetUnit>
-      <MultiMessageUnit gr:x="155" gr:y="185" id="sv3#page8#page10#mssu6" name="Avisos"/>
+      <MultiMessageUnit gr:x="205" gr:y="205" id="sv3#page8#page10#mssu6" name="Avisos"/>
     </ContentUnits>
   </Page>
   <Page gr:x="375" gr:y="425" id="sv3#page8#page43" name="Gestionar-Ubicaci&#243;n">
