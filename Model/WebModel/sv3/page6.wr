@@ -1,14 +1,45 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1030" gr:y="-35" id="sv3#page6" name="Registrar-Producto" landmark="false">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="10" id="sv3#page6#enu3" name="Registrar-Producto" fieldOrder="sv3#page6#enu3#fld6 sv3#page6#enu3#fld7 sv3#page6#enu3#fld8 sv3#page6#enu3#fld9 sv3#page6#enu3#sfld1 sv3#page6#enu3#fld11 sv3#page6#enu3#fld12 sv3#page6#enu3#fld13 sv3#page6#enu3#sfld2 sv3#page6#enu3#sfld3" linkOrder="sv3#page6#enu3#ln9">
-      <Field id="sv3#page6#enu3#fld13" name="Imagen" type="blob" modifiable="true"/>
-      <Field id="sv3#page6#enu3#fld12" name="URL QR" type="url" modifiable="true"/>
-      <Field id="sv3#page6#enu3#fld11" name="Fecha de caducidad" type="date" modifiable="true"/>
+      <Field id="sv3#page6#enu3#fld13" name="Imagen" type="blob" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page6#enu3#fld13#mnd17" name="Mandatory17"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page6#enu3#fld12" name="URL QR" type="url" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page6#enu3#fld12#mnd20" name="Mandatory20"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page6#enu3#fld11" name="Fecha de caducidad" type="date" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page6#enu3#fld11#mnd16" name="Mandatory16"/>
+          <CompareValidationRule id="sv3#page6#enu3#fld11#cmp3" name="Compare3" predicate="gt" value="today()" errorMessage="La fecha de caducidad ha de ser posterior al d&#237;a de hoy"/>
+        </VRules>
+      </Field>
       <SelectionField id="sv3#page6#enu3#sfld1" name="Promoci&#243;n" type="string" modifiable="true"/>
-      <Field id="sv3#page6#enu3#fld9" name="Unidades" type="integer" modifiable="true"/>
-      <Field id="sv3#page6#enu3#fld8" name="Precio" type="float" modifiable="true"/>
-      <Field id="sv3#page6#enu3#fld7" name="Descripci&#243;n" type="text" modifiable="true"/>
-      <Field id="sv3#page6#enu3#fld6" name="Nombre" type="string" modifiable="true"/>
+      <Field id="sv3#page6#enu3#fld9" name="Unidades" type="integer" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page6#enu3#fld9#mnd19" name="Mandatory19"/>
+          <CompareValidationRule id="sv3#page6#enu3#fld9#cmp2" name="Compare1" predicate="gt" value="0" errorMessage="El n&#250;mero de unidades ha de ser mayor que 0"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page6#enu3#fld8" name="Precio" type="float" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page6#enu3#fld8#mnd18" name="Mandatory18"/>
+          <CompareValidationRule id="sv3#page6#enu3#fld8#cmp1" name="Compare1" predicate="gt" value="0" errorMessage="El precio ha de ser mayor que 0"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page6#enu3#fld7" name="Descripci&#243;n" type="text" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page6#enu3#fld7#mnd15" name="Mandatory15"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page6#enu3#fld6" name="Nombre" type="string" modifiable="true">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page6#enu3#fld6#mnd14" name="Mandatory14"/>
+        </VRules>
+      </Field>
       <SelectionField id="sv3#page6#enu3#sfld2" type="string" name="Categor&#237;a"/>
       <Link id="sv3#page6#enu3#ln9" name="Crear" to="sv3#miu2" type="normal" validate="true">
         <LinkParameter id="sv3#page6#enu3#ln9#par17" name="Nombre_AttCondition1" source="sv3#page6#enu3#fld6" target="sv3#miu2.mov1#opm1#icu1#icp14"/>
@@ -27,7 +58,11 @@
         <LinkParameter id="sv3#page6#enu3#ln10#par28" name="0_valoracionMedia" sourceValue="0" target="sv3#miu2.mov1#opm1#icu1#icp2"/>
         <LinkParameter id="sv3#page6#enu3#ln10#par39" name="Ubicaci&#243;n_Ubicacion.oid(ProductosToUbicacion)" source="sv3#page6#enu3#sfld3" target="sv3#miu2.mov1#opm1#icu1#icp3"/>
       </Link>
-      <SelectionField id="sv3#page6#enu3#sfld3" type="string" name="Ubicaci&#243;n"/>
+      <SelectionField id="sv3#page6#enu3#sfld3" type="string" name="Ubicaci&#243;n">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page6#enu3#sfld3#mnd34" name="Mandatory34"/>
+        </VRules>
+      </SelectionField>
     </EntryUnit>
     <SelectorUnit gr:x="250" gr:y="0" id="sv3#page6#seu2" name="Selector-Promociones" entity="ent5">
       <Link id="sv3#page6#seu2#ln5" name="Flow5" to="sv3#page6#enu3" type="transport" validate="true">
