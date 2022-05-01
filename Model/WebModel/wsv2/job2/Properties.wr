@@ -5,7 +5,7 @@
     </InitJobUnit>
     <SelectorUnit gr:x="285" gr:y="5" id="wsv2#job2#seu17" name="Seleccionar-Productos-Existentes" entity="ent4">
       <Selector id="wsv2#job2#seu17#su2" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="wsv2#job2#seu17#su2#acond1" name="AttCondition1" predicate="eq" booleanOperator="or" implied="false" attributes="ent4#att24"/>
+        <AttributesCondition id="wsv2#job2#seu17#su2#acond1" name="AttCondition1" predicate="lteq" booleanOperator="or" implied="false" attributes="ent4#att24"/>
       </Selector>
       <OKLink id="wsv2#job2#seu17#oln17" name="OKFlow17" to="wsv2#job2#lpu4">
         <LinkParameter id="wsv2#job2#seu17#oln17#par92" name="oid_Input Array" source="ent4#att2Array" target="wsv2#job2#lpu4.array"/>
@@ -21,7 +21,7 @@
     </ModuleInstanceUnit>
     <LoopUnit gr:x="330" gr:y="155" id="wsv2#job2#lpu4" name="Bucle-Eliminar">
       <OKLink id="wsv2#job2#lpu4#oln18" name="OKFlow18" to="wsv2#job2#miu11" code="next">
-        <LinkParameter id="wsv2#job2#lpu4#oln18#par127" name="Index_oid_producto" source="index" target="wsv2#job2#miu11.mov3#opm4#icu4#icp1"/>
+        <LinkParameter id="wsv2#job2#lpu4#oln18#par127" name="Index_oid_producto" source="next" target="wsv2#job2#miu11.mov3#opm4#icu4#icp1"/>
       </OKLink>
     </LoopUnit>
   </OperationUnits>
