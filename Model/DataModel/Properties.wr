@@ -59,7 +59,9 @@
     </Attribute>
     <Attribute id="ent4#att19" name="imagenProducto" type="blob" db:column="imagenproducto" contentType="image"/>
     <Attribute id="ent4#att24" name="fechaCaducidad" type="date" db:column="fechacaducidad"/>
-    <Attribute id="ent4#att28" name="valoracionMedia" type="float" db:column="valoracionmedia"/>
+    <Attribute id="ent4#att28" name="valoracionMedia" type="float" derivationQuery="calculated::avg(Self.rel5#role9(as Var1).ent9#att27)" db:table="productos_valoracionmedia_view" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="ent4#att2" name="oid"/>
+    </Attribute>
     <Attribute id="ent4#att40" name="urlQR" type="url" db:column="urlqr"/>
     <Attribute id="ent4#att52" name="categoria" type="string" derivationQuery="simpleImported::Self.rel1#role1.ent8#att23"/>
   </Entity>
@@ -199,7 +201,8 @@
     <Attribute id="ent7#att71" name="fechaHistorico" type="date" db:column="fechahistorico"/>
     <Attribute id="ent7#att74" name="oid_UsuarioAntiguo" type="integer" db:column="oid_usuarioantiguo"/>
   </Entity>
-  <db:Database id="db1" name="GanAppderiaDatabase" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/GanAppderiaDatabase" username="postgres" password="admin" schema="public"/>
+  <db:Database id="db1" name="GanAppderiaDatabase" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/GanAppderiaDatabase" username="postgres" password="admin" schema="public">
+  </db:Database>
   <Entity gr:x="85" gr:y="-215" id="ent12" name="HistoricoProductos" duration="persistent" attributeOrder="ent12#att17 ent12#att18 ent12#att62 ent12#att64 ent12#att72 ent12#att75 ent12#att76 ent12#att77 ent12#att78 ent12#att79 ent12#att80 ent12#att81" db:database="db1" db:table="historicoproductos">
     <Attribute id="ent12#att17" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent12#att18" name="nombreProducto" type="string" db:column="nombreproducto"/>

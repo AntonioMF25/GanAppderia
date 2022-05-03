@@ -1,0 +1,27 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov11#opm3" name="Action 3">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="230" id="mov11#opm3#icu9" name="Input Port">
+      <InputCollectorParameter id="mov11#opm3#icu9#icp17" name="KeyCondition13 [oid]"/>
+      <OKLink id="mov11#opm3#icu9#oln79" to="mov11#opm3#seu19" validate="true" name="Eliminar Valoracion">
+        <LinkParameter id="mov11#opm3#icu9#oln79#par194" name="oid_KeyCondition13 [oid]" source="mov11#opm3#icu9#icp17" target="mov11#opm3#seu19#su18#kcond25.ent9#att25"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="710" gr:y="0" id="mov11#opm3#okcu1" name="OK Port1">
+      <OutputCollectorParameter id="mov11#opm3#okcu1#ocp4" name="Valoracion eliminada correctamente_Shown Messages"/>
+    </OKCollectorUnit>
+    <DeleteUnit id="mov11#opm3#dlu8" name="Eliminar-Valoracion" gr:x="310" gr:y="160" entity="ent9">
+      <Selector id="mov11#opm3#dlu8#su16" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov11#opm3#dlu8#su16#kcond2" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov11#opm3#dlu8#oln126" to="mov11#opm3#okcu1" name="OKFlow88">
+        <LinkParameter id="mov11#opm3#dlu8#oln126#par313" sourceValue="Valoracion eliminada correctamente" name="Valoracion eliminada correctamente_Shown Messages" target="mov11#opm3#okcu1#ocp4"/>
+      </OKLink>
+    </DeleteUnit>
+    <SelectorUnit id="mov11#opm3#seu19" name="SeleccionarValoracion" gr:x="300" gr:y="0" entity="ent9">
+      <Selector id="mov11#opm3#seu19#su18" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov11#opm3#seu19#su18#kcond25" name="KeyCondition13" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov11#opm3#seu19#oln125" name="OKFlow59" to="mov11#opm3#dlu8" automaticCoupling="true"/>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>

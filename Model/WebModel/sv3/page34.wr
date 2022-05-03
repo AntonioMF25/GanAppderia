@@ -1,0 +1,79 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page34" name="Registrar-Valoracion" gr:x="2015" gr:y="1100">
+  <ContentUnits>
+    <EntryUnit id="sv3#page34#enu15" name="Registrar-Valoracion" linkOrder="sv3#page34#enu15#ln91" gr:x="0" gr:y="0">
+      <Field id="sv3#page34#enu15#fld63" name="puntuacion" type="integer" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="sv3#page34#enu15#fld63#cmp15" name="IgualOmenorQue5" predicate="lteq" value="5" errorMessage="La puntuacion asignada ha de ser un entero de 1 a 5"/>
+          <CompareValidationRule id="sv3#page34#enu15#fld63#cmp16" name="IgualOmayorQue0" predicate="gteq" value="0" errorMessage="La puntuacion asignada ha de ser un entero de 1 a 5"/>
+          <TypeValidationRule id="sv3#page34#enu15#fld63#tvr5" name="UnEntero" type="integer" errorMessage="La puntuacion asignada ha de ser un entero de 1 a 5"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page34#enu15#fld64" name="Comentario" type="text" modifiable="true"/>
+      <Link id="sv3#page34#enu15#ln91" name="A&#241;adir Valoracion" to="sv3#miu14" type="normal" validate="true">
+        <LinkParameter id="sv3#page34#enu15#ln91#par223" name="oid_PASSING_productoOID" sourceLinkParameter="sv3#page32#inu6#ln97#par292" target="sv3#miu14.mov9#opm6#icu11#icp21"/>
+      </Link>
+      <Field id="sv3#page34#enu15#fld65" name="oidProducto" type="integer" modifiable="true" hidden="true"/>
+      <Link id="sv3#page34#enu15#ln92" name="Flow69" to="sv3#miu14" type="transport" validate="true">
+        <LinkParameter id="sv3#page34#enu15#ln92#par224" name="oid_PASSING_KeyCondition9 [oid]" sourceLinkParameter="sv3#page32#inu6#ln97#par292" target="sv3#miu14.mov9#opm6#icu11#icp24"/>
+      </Link>
+      <Link id="sv3#page34#enu15#ln93" name="Flow71" to="sv3#miu14" type="transport" validate="true">
+        <LinkParameter id="sv3#page34#enu15#ln93#par225" name="Comentario_comentario" source="sv3#page34#enu15#fld64" target="sv3#miu14.mov9#opm6#icu11#icp19"/>
+        <LinkParameter id="sv3#page34#enu15#ln93#par226" name="oid_PASSING_Productos.oid(ValoracionToProductos)" sourceLinkParameter="sv3#page32#inu6#ln97#par292" target="sv3#miu14.mov9#opm6#icu11#icp23"/>
+        <LinkParameter id="sv3#page34#enu15#ln93#par227" name="puntuacion_puntuacion" source="sv3#page34#enu15#fld63" target="sv3#miu14.mov9#opm6#icu11#icp20"/>
+      </Link>
+    </EntryUnit>
+    <MultiMessageUnit id="sv3#page34#mssu18" name="Avisos" gr:x="280" gr:y="40"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page34#enu15">
+          <layout:Field field="sv3#page34#enu15#fld63"/>
+          <layout:Field field="sv3#page34#enu15#fld64"/>
+          <layout:Link link="sv3#page34#enu15#ln91"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page34#mssu18"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
