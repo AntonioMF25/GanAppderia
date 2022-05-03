@@ -57,11 +57,11 @@
       </Selector>
       <OKLink id="sv4#seu16#oln6" name="OKFlow61" to="sv4#page16#enu9" automaticCoupling="true"/>
     </SelectorUnit>
-    <ScheduleJobUnit gr:x="1310" gr:y="385" id="sv4#scju1" name="Tarea-Fin-Promocion" schedulePolicy="everyDay" job="wsv1#job1" landmark="false"/>
+    <ScheduleJobUnit gr:x="1320" gr:y="460" id="sv4#scju1" name="Tarea-Fin-Promocion" schedulePolicy="everyDay" job="wsv1#job1" landmark="false"/>
     <ModuleInstanceUnit gr:x="655" gr:y="755" id="sv4#miu9" moduleId="mov7#hym3" landmark="true">
       <OKLink id="sv4#miu9#oln103" to="sv4#page3" validate="true" name="Volver"/>
     </ModuleInstanceUnit>
-    <ScheduleJobUnit id="sv4#scju2" name="Tarea-Fin-Promocion" landmark="false" gr:x="0" gr:y="0" schedulePolicy="everyDay" job="wsv1#job1"/>
-    <ScheduleJobUnit id="sv4#scju3" name="Tarea-Eliminar-Producto-Caducado" landmark="false" gr:x="1170" gr:y="625" schedulePolicy="everyDay" job="wsv2#job2"/>
+    <ScheduleJobUnit id="sv4#scju3" name="Tarea-Eliminar-Producto-Caducado" landmark="false" gr:x="1390" gr:y="640" schedulePolicy="everyDay" job="wsv2#job2"/>
+    <ScheduleJobUnit gr:x="1540" gr:y="505" id="sv4#scju4" name="Tarea-Promocion-Fin-Stock" schedulePolicy="everyDay" job="wsv3#job3" landmark="false"/>
   </OperationUnits>
 </SiteView>

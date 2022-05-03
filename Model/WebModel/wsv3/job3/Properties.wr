@@ -1,0 +1,53 @@
+<Job xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="wsv3#job3" name="TareaPromocionFinStock" gr:x="55" gr:y="30">
+  <OperationUnits>
+    <InitJobUnit id="wsv3#job3#iju3" name="Init Job" gr:x="0" gr:y="15">
+      <OKLink id="wsv3#job3#iju3#oln61" name="OKFlow12" to="wsv3#job3#seu14">
+        <LinkParameter id="wsv3#job3#iju3#oln61#par182" name="5_AttConditionStockMinimo" sourceValue="5" target="wsv3#job3#seu14#su30#acond14"/>
+      </OKLink>
+    </InitJobUnit>
+    <SelectorUnit id="wsv3#job3#seu14" name="Seleccionar-Promociones" gr:x="130" gr:y="0" entity="ent4">
+      <OKLink id="wsv3#job3#seu14#oln67" name="OKFlow29" to="wsv3#job3#lpu5">
+        <LinkParameter id="wsv3#job3#seu14#oln67#par83" name="oid_Input Array" source="ent4#att2Array" target="wsv3#job3#lpu5.array"/>
+        <LinkParameter id="wsv3#job3#seu14#oln67#par117" name="duracionPromocion_SecondaryArrayOID" source="ent4#att3Array" target="wsv3#job3#lpu5#lsa11"/>
+      </OKLink>
+      <Selector id="wsv3#job3#seu14#su30" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="wsv3#job3#seu14#su30#acond14" name="AttConditionStockMinimo" predicate="lteq" booleanOperator="or" implied="false" attributes="ent4#att6"/>
+      </Selector>
+    </SelectorUnit>
+    <LoopUnit id="wsv3#job3#lpu5" name="Bucle" gr:x="195" gr:y="135" linkOrder="wsv3#job3#lpu5#ln55">
+      <SecondaryArray id="wsv3#job3#lpu5#lsa11" name="SecondaryArrayNombreProducto"/>
+      <OKLink id="wsv3#job3#lpu5#oln73" name="OKFlow39" to="wsv3#job3#opu2" code="end" automaticCoupling="true"/>
+      <OKLink id="wsv3#job3#lpu5#oln114" name="OKFlow114" to="wsv3#job3#sfu1" code="next">
+        <LinkParameter id="wsv3#job3#lpu5#oln114#par183" name=" _Separator" sourceValue=" " blank="true" target="wsv3#job3#sfu1.separator"/>
+        <LinkParameter id="wsv3#job3#lpu5#oln114#par184" name="Promoci&#243;n_String1" sourceValue="Promoci&#243;n" target="wsv3#job3#sfu1#str1"/>
+        <LinkParameter id="wsv3#job3#lpu5#oln114#par185" name="Next Element (SecondaryArrayDuracion)_String2" source="wsv3#job3#lpu5#lsa11" target="wsv3#job3#sfu1#str2"/>
+      </OKLink>
+      <Link id="wsv3#job3#lpu5#ln55" name="Flow55" to="wsv3#job3#mfu5" type="transport" validate="true" gr:bendpoints="125,80,-110,-180">
+        <LinkParameter id="wsv3#job3#lpu5#ln55#par191" name="Next Element_KeyCondition26 [oid]" source="next" target="wsv3#job3#mfu5#su36#kcond26.ent4#att2"/>
+      </Link>
+    </LoopUnit>
+    <NoOpOperationUnit id="wsv3#job3#opu2" name="Final" gr:x="5" gr:y="135"/>
+    <StringsFunctionUnit gr:x="115" gr:y="255" id="wsv3#job3#sfu1" name="ConcatenarNombrePromocion" mode="concatStrings" substringType="byIndex" substringMode="afterSeparator" encryptAlgorithm="com.webratio.rtx.core.DES3UnicodeCryptImplementation">
+      <String id="wsv3#job3#sfu1#str1" name="String1"/>
+      <String id="wsv3#job3#sfu1#str2" name="String2"/>
+      <OKLink id="wsv3#job3#sfu1#oln115" name="OKFlow115" to="wsv3#job3#cru11">
+        <LinkParameter id="wsv3#job3#sfu1#oln115#par186" name="Promoci&#243;n creada autom&#225;ticamente para vender las &#250;ltimas unidades del producto_descripcionPromocion" sourceValue="Promoci&#243;n creada autom&#225;ticamente para vender las &#250;ltimas unidades del producto" target="wsv3#job3#cru11.ent5#att20"/>
+        <LinkParameter id="wsv3#job3#sfu1#oln115#par187" name="Result String_nombrePromocion" source="resultString" target="wsv3#job3#cru11.ent5#att11"/>
+        <LinkParameter id="wsv3#job3#sfu1#oln115#par188" name="50_porcentaje" sourceValue="50" target="wsv3#job3#cru11.ent5#att10"/>
+        <LinkParameter id="wsv3#job3#sfu1#oln115#par189" name="10_tiempoDias" sourceValue="10" target="wsv3#job3#cru11.ent5#att9"/>
+        <LinkParameter id="wsv3#job3#sfu1#oln115#par190" name="10_tiempoDiasRestantes" sourceValue="10" target="wsv3#job3#cru11.ent5#att55"/>
+      </OKLink>
+    </StringsFunctionUnit>
+    <CreateUnit gr:x="165" gr:y="380" id="wsv3#job3#cru11" name="CrearPromocion" entity="ent5">
+      <OKLink id="wsv3#job3#cru11#oln116" name="OKFlow116" to="wsv3#job3#mfu5">
+        <LinkParameter id="wsv3#job3#cru11#oln116#par192" name="oid_Promociones.oid(ProductosToPromociones)" source="ent5#att8Array" target="wsv3#job3#mfu5.rel3#role5.ent5#att8"/>
+      </OKLink>
+    </CreateUnit>
+    <ModifyUnit gr:x="390" gr:y="375" id="wsv3#job3#mfu5" name="ActualizarProducto" entity="ent4">
+      <Selector id="wsv3#job3#mfu5#su36" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="wsv3#job3#mfu5#su36#kcond26" name="KeyCondition26" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="wsv3#job3#mfu5#oln117" name="OKFlow117" to="wsv3#job3#lpu5" automaticCoupling="true" gr:bendpoints="0,-260,235,0"/>
+    </ModifyUnit>
+  </OperationUnits>
+</Job>

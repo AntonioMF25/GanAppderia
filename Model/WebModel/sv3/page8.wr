@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="250" gr:y="455" id="sv3#page8" name="Perfil-Usuario" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="255" gr:y="455" id="sv3#page8" name="Perfil-Usuario" landmark="true">
   <ContentUnits>
-    <MultiMessageUnit gr:x="5" gr:y="20" id="sv3#page8#mssu4" name="Bienvenida">
+    <MultiMessageUnit gr:x="0" gr:y="20" id="sv3#page8#mssu4" name="Bienvenida">
       <Message xml:space="preserve">Bienvenido a tu espacio personal</Message>
     </MultiMessageUnit>
   </ContentUnits>
@@ -215,7 +215,7 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Page gr:x="0" gr:y="320" id="sv3#page8#page9" name="Informaci&#243;n-Usuario">
+  <Page gr:x="5" gr:y="340" id="sv3#page8#page9" name="Informaci&#243;n-Usuario">
     <ContentUnits>
       <DataUnit gr:x="0" gr:y="0" id="sv3#page8#page9#dau2" name="Detalle-Usuario" entity="User" displayAttributes="userName email User#att46" linkOrder="sv3#page8#page9#dau2#ln12 sv3#page8#page9#dau2#ln32">
         <Selector id="sv3#page8#page9#dau2#su4" defaultPolicy="fill" booleanOperator="and">
@@ -231,7 +231,7 @@
       </GetUnit>
     </ContentUnits>
   </Page>
-  <Page gr:x="115" gr:y="0" id="sv3#page8#page10" name="Productos-Usuario">
+  <Page gr:x="110" gr:y="0" id="sv3#page8#page10" name="Productos-Usuario">
     <ContentUnits>
       <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#page8#page10#pwu2" name="Productos-Usuario" sortable="true" checkable="false" useCountQuery="false" entity="ent4" displayAttributes="ent4#att3 ent4#att5 ent4#att6 ent4#att7" linkOrder="sv3#page8#page10#pwu2#ln15 sv3#page8#page10#pwu2#ln28 sv3#page8#page10#pwu2#ln68">
         <Link id="sv3#page8#page10#pwu2#ln15" name="M&#225;s detalles" to="sv3#page7#dau1" type="normal" validate="true">
@@ -255,7 +255,7 @@
       <MultiMessageUnit gr:x="205" gr:y="205" id="sv3#page8#page10#mssu6" name="Avisos"/>
     </ContentUnits>
   </Page>
-  <Page gr:x="375" gr:y="425" id="sv3#page8#page43" name="Gestionar-Ubicaci&#243;n">
+  <Page gr:x="370" gr:y="425" id="sv3#page8#page43" name="Gestionar-Ubicaci&#243;n">
     <ContentUnits>
       <MultiMessageUnit id="sv3#page8#page43#mssu21" name="Gestiona tus ubicaciones" gr:x="0" gr:y="0" linkOrder="sv3#page8#page43#mssu21#ln103">
         <Message xml:space="preserve">Crea, modifica y borra las ubicaciones que desees para vender tus productos.</Message>

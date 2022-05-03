@@ -2,7 +2,7 @@
   <OperationUnits>
     <LoginUnit gr:x="315" gr:y="335" id="sv2#lgu1" name="Login"/>
     <CreateUnit gr:x="1155" gr:y="280" id="sv2#cru1" name="Crear Usuario" entity="User">
-      <OKLink id="sv2#cru1#oln4" name="OKFlow4" to="sv2#lgu1" gr:bendpoints="117,220,967,175;-836,206,14,161">
+      <OKLink id="sv2#cru1#oln4" name="Crear cuenta" to="sv2#lgu1" gr:bendpoints="117,220,967,175;-836,206,14,161">
         <LinkParameter id="sv2#cru1#oln4#par11" name="userName_Username" source="userNameArray" target="sv2#lgu1.username"/>
         <LinkParameter id="sv2#cru1#oln4#par12" name="password_Password" source="passwordArray" target="sv2#lgu1.password"/>
       </OKLink>
