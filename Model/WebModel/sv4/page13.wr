@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="695" gr:y="20" id="sv4#page13" name="Detalle-Historico-Productos">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="810" gr:y="-20" id="sv4#page13" name="Detalle-Historico-Productos">
   <ContentUnits>
     <DataUnit gr:x="0" gr:y="0" id="sv4#page13#dau3" name="Detalle-Historico-Productos" entity="ent12" linkOrder="sv4#page13#dau3#ln31" displayAttributes="ent12#att18 ent12#att62 ent12#att64 ent12#att72 ent12#att75 ent12#att76 ent12#att77 ent12#att78 ent12#att79 ent12#att80">
       <Selector id="sv4#page13#dau3#su10" defaultPolicy="fill" booleanOperator="and">

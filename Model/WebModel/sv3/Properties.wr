@@ -1,6 +1,6 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="Home-Usuario" protected="true" localized="true" landmarks="sv3#lou1 sv3#page14 sv3#page8" homePage="sv3#page2" layout:style="WebRatio">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="Home-Usuario" protected="true" localized="true" landmarks="sv3#lou1 sv3#page14 sv3#page8" layout:style="WebRatio" homePage="sv3#page32">
   <OperationUnits>
-    <LogoutUnit gr:x="45" gr:y="850" id="sv3#lou1" name="Logout" siteView="sv2" landmark="true"/>
+    <LogoutUnit gr:x="55" gr:y="1575" id="sv3#lou1" name="Logout" siteView="sv2" landmark="true"/>
     <ModuleInstanceUnit gr:x="-180" gr:y="720" id="sv3#miu1" moduleId="mov3#opm4">
       <OKLink id="sv3#miu1#oln30" name="OKFlow30" to="sv3#page8#page10#mssu6">
         <LinkParameter id="sv3#miu1#oln30#par130" name="Eliminaci&#243;n OK_Shown Messages" sourceValue="Eliminaci&#243;n OK" target="sv3#page8#page10#mssu6.shownMessages"/>
@@ -23,10 +23,10 @@
         <LinkParameter id="sv3#miu2#kln6#par104" name="KO-Port-1_Shown Messages" source="mov1#opm1#kocu1#ocp3" target="sv3#page14#page15#mssu9.shownMessages"/>
       </KOLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="-20" gr:y="1020" id="sv3#miu6" moduleId="mov2#opm2">
+    <ModuleInstanceUnit gr:x="-10" gr:y="1745" id="sv3#miu6" moduleId="mov2#opm2">
       <OKLink id="sv3#miu6#oln31" to="sv3#lou1" name="OKFlow22"/>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="300" gr:y="1075" id="sv3#miu4" moduleId="mov6#hym2">
+    <ModuleInstanceUnit gr:x="310" gr:y="1800" id="sv3#miu4" moduleId="mov6#hym2">
       <OKLink id="sv3#miu4#oln12" to="sv3#page8" name="OKFlow21"/>
     </ModuleInstanceUnit>
     <ExcelUnit gr:x="-65" gr:y="140" id="sv3#exu2" name="Procesar-Excel" mode="read" format="xls" sourceType="blob">
@@ -87,8 +87,41 @@
         <LinkParameter id="sv3#miu8#oln22#par106" name="Inserciones mediante Excel correctas_Shown Messages" sourceValue="Inserciones mediante Excel correctas" target="sv3#page14#page15#mssu9.shownMessages"/>
       </OKLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="950" gr:y="960" id="sv3#miu3" moduleId="mov4#hym1">
-      <OKLink id="sv3#miu3#oln92" to="sv3#page8" validate="true" name="Volver"/>
+    <ModuleInstanceUnit gr:x="960" gr:y="1685" id="sv3#miu3" moduleId="mov4#hym1">
+      <OKLink id="sv3#miu3#oln92" to="sv3#page8" validate="true" name="Volver" gr:bendpoints="138,-42,638,568"/>
+    </ModuleInstanceUnit>
+    <SelectorUnit id="sv3#seu27" name="Selector Productos Por Caracteristicas" gr:x="2280" gr:y="575" entity="ent4">
+      <Selector id="sv3#seu27#su48" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#seu27#su48#acond17" name="nombre que contenga" predicate="contains" booleanOperator="or" implied="true" ignoreCase="true" attributes="ent4#att3"/>
+        <AttributesCondition id="sv3#seu27#su48#acond18" name="precio maximo" predicate="lteq" booleanOperator="or" implied="true" attributes="ent4#att5"/>
+        <AttributesCondition id="sv3#seu27#su48#acond19" name="precio minimo" predicate="gteq" booleanOperator="or" implied="true" attributes="ent4#att5"/>
+        <AttributesCondition id="sv3#seu27#su48#acond20" name="fecha caducidad minima" predicate="gteq" booleanOperator="or" implied="true" attributes="ent4#att24"/>
+        <AttributesCondition id="sv3#seu27#su48#acond21" name="cantidad unidades minima" predicate="gteq" booleanOperator="or" implied="true" attributes="ent4#att6"/>
+        <AttributesCondition id="sv3#seu27#su48#acond12" name="categoria" predicate="contains" booleanOperator="or" implied="true" attributes="ent4#att52"/>
+        <AttributesCondition id="sv3#seu27#su48#acond15" name="valoracion media minima" predicate="gteq" booleanOperator="or" implied="true" attributes="ent4#att28"/>
+        <AttributesCondition id="sv3#seu27#su48#acond22" name="valoracion media maxima" predicate="lteq" booleanOperator="or" implied="true" attributes="ent4#att28"/>
+      </Selector>
+      <OKLink id="sv3#seu27#oln118" name="OKFlow118" to="sv3#page32#inu6" automaticCoupling="true"/>
+    </SelectorUnit>
+    <ModuleInstanceUnit gr:x="-80" gr:y="1200" id="sv3#miu12" moduleId="mov11#opm3" name="Eliminar-Valoracion">
+      <OKLink id="sv3#miu12#oln83" to="sv3#page8#page28#mssu16" name="OKFlow88">
+        <LinkParameter id="sv3#miu12#oln83#par196" name="Valoracion eliminada correctamente_Shown Messages" target="sv3#page8#page28#mssu16.shownMessages" source="mov11#opm3#okcu1#ocp4"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="995" gr:y="1170" id="sv3#miu13" moduleId="mov10#hym5">
+      <OKLink id="sv3#miu13#oln128" to="sv3#page8" validate="true" name="Cancelar" gr:bendpoints="133,-98,683,-3"/>
+      <OKLink id="sv3#miu13#oln129" to="sv3#page8#page28#mssu16" name="OKFlow89" gr:bendpoints="135,95,600,0">
+        <LinkParameter id="sv3#miu13#oln129#par323" name="Valoracion actualizada correctamente_Shown Messages" target="sv3#page8#page28#mssu16.shownMessages" source="mov10#hym5#okcu11#ocp5"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit gr:x="2130" gr:y="1440" id="sv3#miu14" moduleId="mov9#opm6">
+      <OKLink id="sv3#miu14#oln135" to="sv3#page34#mssu18" name="OKFlow72" codeRef="mov9#opm6#okcu13" gr:bendpoints="90,-117,-15,153">
+        <LinkParameter id="sv3#miu14#oln135#par336" name="Un mismo usuario solo puede asignar una valoracion a un mismo producto, prueba a valorar otro._Shown Messages" target="sv3#page34#mssu18.shownMessages" source="mov9#opm6#okcu13#ocp6"/>
+      </OKLink>
+      <OKLink id="sv3#miu14#oln134" to="sv3#page32#seu26" name="OKFlow123" codeRef="mov9#opm6#okcu12" gr:bendpoints="-514,-167,1,718"/>
+      <OKLink id="sv3#miu14#oln136" to="sv3#page34#mssu18" name="OKFlow73" gr:bendpoints="168,-50,63,220" codeRef="mov9#opm6#okcu14">
+        <LinkParameter id="sv3#miu14#oln136#par338" name="Un usuario no puede valorar un producto propio, prueba a valorar otro._Shown Messages" target="sv3#page34#mssu18.shownMessages" source="mov9#opm6#okcu14#ocp7"/>
+      </OKLink>
     </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

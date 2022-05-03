@@ -1,6 +1,6 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Home-Admin" protected="true" localized="true" landmarks="sv4#lou2 sv4#page24 sv4#miu9 sv4#scju4 sv4#scju3 sv4#scju1" homePage="sv4#page3" linkVisibilityPolicy="hide">
   <OperationUnits>
-    <LogoutUnit id="sv4#lou2" name="Logout" landmark="true" gr:x="70" gr:y="60" siteView="sv2"/>
+    <LogoutUnit id="sv4#lou2" name="Logout" landmark="true" gr:x="20" gr:y="20" siteView="sv2"/>
     <SelectorUnit gr:x="870" gr:y="460" id="sv4#seu11" name="Template-Actual" entity="ent3">
       <OKLink id="sv4#seu11#oln27" name="OKFlow27" to="sv4#inn6">
         <LinkParameter id="sv4#seu11#oln27#par109" name="oid_Input" source="ent3#att53Array" target="sv4#inn6.isnotnull"/>

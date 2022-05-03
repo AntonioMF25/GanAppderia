@@ -1,0 +1,48 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page33" name="RankingMejorValorados" gr:x="1595" gr:y="220">
+  <ContentUnits>
+    <IndexUnit id="sv3#page33#inu7" name="PorValoracionMediaDescendente" linkOrder="sv3#page33#inu7#ln79" gr:x="0" gr:y="0" entity="ent4" displayAttributes="rel6#role12.userName ent4#att3 ent4#att19 ent4#att5 ent4#att28">
+      <SortAttribute attribute="ent4#att28" order="descending"/>
+      <Link id="sv3#page33#inu7#ln79" name="Ver Detalle" to="sv3#page7#dau1" type="normal" automaticCoupling="true" validate="true"/>
+    </IndexUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page33#inu7">
+          <layout:Link link="sv3#page33#inu7#ln79"/>
+          <layout:Attribute attribute="rel6#role12.userName"/>
+          <layout:Attribute attribute="ent4#att3"/>
+          <layout:Attribute attribute="ent4#att19"/>
+          <layout:Attribute attribute="ent4#att5"/>
+          <layout:Attribute attribute="ent4#att28"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv3#page33#ln4" name="Volver" to="sv3#page32#seu26" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

@@ -1,0 +1,206 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page32" name="Home-Usuario" gr:x="1635" gr:y="510">
+  <ContentUnits>
+    <IndexUnit id="sv3#page32#inu6" name="Productos" linkOrder="sv3#page32#inu6#ln74 sv3#page32#inu6#ln97" gr:x="280" gr:y="90" entity="ent4" displayAttributes="rel6#role12.userName ent4#att3 ent4#att5 ent4#att28 ent4#att19">
+      <Selector id="sv3#page32#inu6#su47" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page32#inu6#su47#kcond43" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv3#page32#inu6#ln74" name="M&#225;s detalles" to="sv3#page7#dau1" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-378,117,262,77"/>
+      <Link id="sv3#page32#inu6#ln97" name="Valorar" to="sv3#page34#enu15" type="normal" validate="true">
+        <LinkParameter id="sv3#page32#inu6#ln97#par292" name="oid_PASSING" source="data[].ent4#att2" passing="true"/>
+      </Link>
+    </IndexUnit>
+    <EntryUnit id="sv3#page32#enu14" name="Filtrar Productos Por Caracter&#237;sticas y Categor&#237;as" linkOrder="sv3#page32#enu14#ln75 sv3#page32#enu14#ln78 sv3#page32#enu14#ln81" gr:x="150" gr:y="260">
+      <Field id="sv3#page32#enu14#fld39" name="nombreContieneCadena" type="string" modifiable="true"/>
+      <Field id="sv3#page32#enu14#fld40" name="precioMaximo" type="float" modifiable="true"/>
+      <Field id="sv3#page32#enu14#fld41" name="precioMinimo" type="float" modifiable="true"/>
+      <Field id="sv3#page32#enu14#fld61" name="fechaCaducidadMinima" type="date" modifiable="true"/>
+      <Field id="sv3#page32#enu14#fld62" name="cantidadUnidadesMinima" type="integer" modifiable="true"/>
+      <Link id="sv3#page32#enu14#ln75" name="MostrarTodos" to="sv3#page32#inu6" type="normal" automaticCoupling="true" validate="true"/>
+      <Link id="sv3#page32#enu14#ln78" name="Aplicar filtros" to="sv3#seu27" type="normal" validate="true">
+        <LinkParameter id="sv3#page32#enu14#ln78#par211" name="cantidadUnidadesMinima_cantidad unidades minima" source="sv3#page32#enu14#fld62" target="sv3#seu27#su48#acond21"/>
+        <LinkParameter id="sv3#page32#enu14#ln78#par212" name="fechaCaducidadMinima_fecha caducidad minima" source="sv3#page32#enu14#fld61" target="sv3#seu27#su48#acond20"/>
+        <LinkParameter id="sv3#page32#enu14#ln78#par213" name="nombreContieneCadena_nombre que contenga" source="sv3#page32#enu14#fld39" target="sv3#seu27#su48#acond17"/>
+        <LinkParameter id="sv3#page32#enu14#ln78#par214" name="precioMaximo_precio maximo" source="sv3#page32#enu14#fld40" target="sv3#seu27#su48#acond18"/>
+        <LinkParameter id="sv3#page32#enu14#ln78#par218" name="precioMinimo_precio minimo" source="sv3#page32#enu14#fld41" target="sv3#seu27#su48#acond19"/>
+        <LinkParameter id="sv3#page32#enu14#ln78#par180" name="categoria_categoria" source="sv3#page32#enu14#sfld4" target="sv3#seu27#su48#acond12"/>
+        <LinkParameter id="sv3#page32#enu14#ln78#par181" name="valoracionMediaMaxima_valoracion media maxima" source="sv3#page32#enu14#fld23" target="sv3#seu27#su48#acond22"/>
+        <LinkParameter id="sv3#page32#enu14#ln78#par193" name="valoracionMediaMinima_valoracion media minima" source="sv3#page32#enu14#fld22" target="sv3#seu27#su48#acond15"/>
+      </Link>
+      <Link id="sv3#page32#enu14#ln81" name="Ranking Mejor Valorados" to="sv3#page33#inu7" automaticCoupling="true" type="normal" validate="true"/>
+      <SelectionField id="sv3#page32#enu14#sfld4" name="Categor&#237;a" type="string"/>
+      <Field id="sv3#page32#enu14#fld22" name="valoracionMediaMinima" type="string" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="sv3#page32#enu14#fld22#cmp10" name="IgualOmenorQue5" predicate="lteq" value="5"/>
+          <CompareValidationRule id="sv3#page32#enu14#fld22#cmp11" name="IgualOmayorQue0" predicate="gteq" value="0"/>
+        </VRules>
+      </Field>
+      <Field id="sv3#page32#enu14#fld23" name="valoracionMediaMaxima" type="string" modifiable="true">
+        <VRules>
+          <CompareValidationRule id="sv3#page32#enu14#fld23#cmp8" name="IgualOmenorQue5" predicate="lteq" value="5"/>
+          <CompareValidationRule id="sv3#page32#enu14#fld23#cmp9" name="IgualOmayorQue0" predicate="gteq" value="0"/>
+        </VRules>
+      </Field>
+    </EntryUnit>
+    <SelectorUnit id="sv3#page32#seu26" name="Selector Productos" gr:x="0" gr:y="0" entity="ent4">
+      <Link id="sv3#page32#seu26#ln76" name="Flow56" to="sv3#page32#inu6" type="transport" automaticCoupling="true" validate="true"/>
+    </SelectorUnit>
+    <SelectorUnit id="sv3#page32#seu18" name="Selector-Categor&#237;as" gr:x="180" gr:y="375" entity="ent8">
+      <Link id="sv3#page32#seu18#ln17" name="Flow8" to="sv3#page32#enu14" type="transport" validate="true">
+        <LinkParameter id="sv3#page32#seu18#ln17#par174" name="nombreCategoria_categoria [label]" source="ent8#att23Array" target="sv3#page32#enu14#sfld4_label"/>
+        <LinkParameter id="sv3#page32#seu18#ln17#par175" name="oid_categoria [output]" source="ent8#att23Array" target="sv3#page32#enu14#sfld4_output"/>
+      </Link>
+    </SelectorUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page32#inu6">
+          <layout:Link link="sv3#page32#inu6#ln74"/>
+          <layout:Link link="sv3#page32#inu6#ln97"/>
+          <layout:Attribute attribute="rel6#role12.userName"/>
+          <layout:Attribute attribute="ent4#att3"/>
+          <layout:Attribute attribute="ent4#att5"/>
+          <layout:Attribute attribute="ent4#att28"/>
+          <layout:Attribute attribute="ent4#att19"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page32#enu14">
+          <layout:Link link="sv3#page32#enu14#ln75"/>
+          <layout:Link link="sv3#page32#enu14#ln78"/>
+          <layout:Link link="sv3#page32#enu14#ln81"/>
+          <layout:Field field="sv3#page32#enu14#fld39"/>
+          <layout:Field field="sv3#page32#enu14#fld40"/>
+          <layout:Field field="sv3#page32#enu14#fld41"/>
+          <layout:Field field="sv3#page32#enu14#fld61"/>
+          <layout:Field field="sv3#page32#enu14#fld62"/>
+          <layout:Field field="sv3#page32#enu14#sfld4"/>
+          <layout:Field field="sv3#page32#enu14#fld22"/>
+          <layout:Field field="sv3#page32#enu14#fld23"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
