@@ -1,0 +1,71 @@
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov7#hym3" name="CRUD-Categor&#237;a" landmarks="mov7#hym3#page51">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="502" id="mov7#hym3#icu6" name="Input Port">
+      <OKLink id="mov7#hym3#icu6#oln101" to="mov7#hym3#page51" validate="true" name="Start"/>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1955" gr:y="0" id="mov7#hym3#okcu7" name="OK Port7"/>
+    <SelectorUnit id="mov7#hym3#seu35" name="Categor&#237;as-B&#250;squeda" gr:x="785" gr:y="690" entity="ent8" distinctAttributes="ent8#att23">
+      <Selector id="mov7#hym3#seu35#su57" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov7#hym3#seu35#su57#acond28" name="Contenga" predicate="contains" booleanOperator="or" implied="false" attributes="ent8#att23" ignoreCase="true"/>
+      </Selector>
+      <OKLink id="mov7#hym3#seu35#oln104" name="OKFlow64" to="mov7#hym3#page51#page54#rtu8" automaticCoupling="true"/>
+    </SelectorUnit>
+    <SelectorUnit id="mov7#hym3#seu36" name="Verificar-Existencia-Categor&#237;a" gr:x="1165" gr:y="655" entity="ent8">
+      <Selector id="mov7#hym3#seu36#su58" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov7#hym3#seu36#su58#acond29" name="AttCondition14" predicate="eq" booleanOperator="and" implied="false" attributes="ent8#att23" ignoreCase="false"/>
+        <AttributesCondition id="mov7#hym3#seu36#su58#acond30" name="AttCondition11" predicate="neq" booleanOperator="and" implied="false" attributes="ent8#att22"/>
+      </Selector>
+      <OKLink id="mov7#hym3#seu36#oln105" name="OKFlow89" to="mov7#hym3#inn15">
+        <LinkParameter id="mov7#hym3#seu36#oln105#par248" name="oid_Input" source="ent8#att22Array" target="mov7#hym3#inn15.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <DeleteUnit id="mov7#hym3#dlu12" name="Borrar-Categor&#237;a" gr:x="1185" gr:y="0" entity="ent8">
+      <Selector id="mov7#hym3#dlu12#su59" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov7#hym3#dlu12#su59#kcond35" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov7#hym3#dlu12#oln106" name="OKFlow87" to="mov7#hym3#page51#mssu27">
+        <LinkParameter id="mov7#hym3#dlu12#oln106#par249" name="La categor&#237;a ha sido borrada._Shown Messages" target="mov7#hym3#page51#mssu27.shownMessages" sourceValue="La categoria ha sido borrada."/>
+      </OKLink>
+    </DeleteUnit>
+    <SelectorUnit id="mov7#hym3#seu37" name="Verificar-Existencia-Categor&#237;a" gr:x="300" gr:y="335" entity="ent8">
+      <Selector id="mov7#hym3#seu37#su60" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov7#hym3#seu37#su60#acond31" name="AttCondition14" predicate="eq" booleanOperator="and" implied="false" attributes="ent8#att23" ignoreCase="false"/>
+      </Selector>
+      <OKLink id="mov7#hym3#seu37#oln107" name="OKFlow46" to="mov7#hym3#inn16">
+        <LinkParameter id="mov7#hym3#seu37#oln107#par250" name="nombreCategoria_Input" source="ent8#att22Array" target="mov7#hym3#inn16.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <IsNotNullUnit id="mov7#hym3#inn15" name="Is Not Null8" gr:x="1420" gr:y="705">
+      <KOLink id="mov7#hym3#inn15#kln17" name="KOFlow12" to="mov7#hym3#mfu10" automaticCoupling="true"/>
+      <OKLink id="mov7#hym3#inn15#oln108" name="OKFlow57" to="mov7#hym3#page50#mssu25" gr:bendpoints="0,-20">
+        <LinkParameter id="mov7#hym3#inn15#oln108#par259" name="Ya existe una categor&#237;a con este nombre._Shown Messages" target="mov7#hym3#page50#mssu25.shownMessages" sourceValue="Ya existe una categoria con este nombre."/>
+      </OKLink>
+    </IsNotNullUnit>
+    <DeleteUnit id="mov7#hym3#dlu13" name="Borrar-Categor&#237;a-Cascada" gr:x="1240" gr:y="145" entity="ent8">
+      <Selector id="mov7#hym3#dlu13#su62" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov7#hym3#dlu13#su62#kcond36" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov7#hym3#dlu13#oln109" name="OKFlow48" to="mov7#hym3#page51#mssu27">
+        <LinkParameter id="mov7#hym3#dlu13#oln109#par260" name="La categor&#237;a y sus subcategor&#237;as han sido borradas._Shown Messages" target="mov7#hym3#page51#mssu27.shownMessages" sourceValue="La categoria y sus subcategorias han sido borradas."/>
+      </OKLink>
+      <CascadeDeleteRole id="mov7#hym3#dlu13#cdr3" name="Cascade Delete Role1" role="rel2#role4"/>
+    </DeleteUnit>
+    <ModifyUnit id="mov7#hym3#mfu10" name="Editar-Categor&#237;a" gr:x="1555" gr:y="685" entity="ent8">
+      <Selector id="mov7#hym3#mfu10#su63" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov7#hym3#mfu10#su63#kcond37" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov7#hym3#mfu10#oln110" name="OKFlow47" to="mov7#hym3#page51"/>
+    </ModifyUnit>
+    <CreateUnit id="mov7#hym3#cru13" name="Crear-Categor&#237;a" gr:x="355" gr:y="85" entity="ent8">
+      <OKLink id="mov7#hym3#cru13#oln111" name="OKFlow51" to="mov7#hym3#page51#mssu27">
+        <LinkParameter id="mov7#hym3#cru13#oln111#par261" name="La categor&#237;a ha sido creada._Shown Messages" target="mov7#hym3#page51#mssu27.shownMessages" sourceValue="La categoria ha sido creada."/>
+      </OKLink>
+    </CreateUnit>
+    <IsNotNullUnit id="mov7#hym3#inn16" name="Is Not Null7" gr:x="370" gr:y="240">
+      <KOLink id="mov7#hym3#inn16#kln18" name="KOFlow11" to="mov7#hym3#cru13"/>
+      <OKLink id="mov7#hym3#inn16#oln112" name="OKFlow50" to="mov7#hym3#page51#mssu27" gr:bendpoints="0,-20">
+        <LinkParameter id="mov7#hym3#inn16#oln112#par272" name="Ya existe una categor&#237;a con este nombre._Shown Messages" target="mov7#hym3#page51#mssu27.shownMessages" sourceValue="Ya existe una categoria con este nombre."/>
+      </OKLink>
+    </IsNotNullUnit>
+  </OperationUnits>
+</HybridModule>

@@ -1,10 +1,10 @@
 <WebModel xmlns:layout="http://www.webratio.com/2006/WebML/Layout" defaultLocale="lcl1" layout:style="WebRatio" layout:inheritParameters="true" control="Q291bnRyeUlTT0N0eFBhcmFtR3JvdXBDdHhQYXJhbUxhbmd1YWdlSVNPQ3R4UGFyYW1Vc2VyQ3R4UGFyYW0=" edtLvl="WebRatio Platform # 20220416" edtLvlCtrl="V2ViUmF0aW8gUGxhdGZvcm0gIyAyMDIyMDQxNkNvdW50cnlJU09DdHhQYXJhbUdyb3VwQ3R4UGFyYW1MYW5ndWFnZUlTT0N0eFBhcmFtVXNlckN0eFBhcmFt" homeSiteView="sv2">
   <Locale id="lcl1" country="US" language="en">
     <PatternConfiguration type="boolean" pattern="yes|no"/>
-    <PatternConfiguration type="decimal" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration type="decimal" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true" pattern="#,##0.###"/>
     <PatternConfiguration type="date" pattern="M/d/yy"/>
-    <PatternConfiguration type="float" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>
-    <PatternConfiguration type="integer" useNumberPattern="false" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration type="float" useNumberPattern="false" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true" pattern="#,##0.###"/>
+    <PatternConfiguration type="integer" useNumberPattern="false" minInteger="1" useThousandSeparator="true" pattern="#,##0"/>
     <PatternConfiguration type="time" pattern="h:mm:ss a"/>
     <PatternConfiguration type="timestamp" pattern="M/d/yy h:mm:ss a"/>
   </Locale>
@@ -12,4 +12,13 @@
   <ContextParameter id="GroupCtxParam" name="GroupCtxParam" entity="Group" type="entity"/>
   <ContextParameter id="LanguageISOCtxParam" name="LanguageISOCtxParam" type="string"/>
   <ContextParameter id="CountryISOCtxParam" name="CountryISOCtxParam" type="string"/>
+  <Locale id="lcl2" country="ES" language="es">
+    <PatternConfiguration type="timestamp" pattern="d/MM/yy H:mm:ss"/>
+    <PatternConfiguration type="time" pattern="H:mm:ss"/>
+    <PatternConfiguration type="integer" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration type="boolean" pattern="yes|no"/>
+    <PatternConfiguration type="date" pattern="d/MM/yy"/>
+    <PatternConfiguration type="float" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>
+    <PatternConfiguration type="decimal" maxDecimal="3" minDecimal="0" minInteger="1" useThousandSeparator="true"/>
+  </Locale>
 </WebModel>

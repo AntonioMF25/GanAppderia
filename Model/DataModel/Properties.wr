@@ -54,7 +54,7 @@
     <Attribute id="ent4#att4" name="descripcionProducto" type="text" db:column="descripcionproducto"/>
     <Attribute id="ent4#att5" name="precioProducto" type="float" db:column="precioproducto"/>
     <Attribute id="ent4#att6" name="unidadesProducto" type="integer" db:column="unidadesproducto"/>
-    <Attribute id="ent4#att7" name="precioTrasPromocion" type="float" derivationQuery="calculated::Self.ent4#att5 -  ( Self.ent4#att5 *  ( Self.rel3#role5(as Var1).ent5#att10 / 100 )  )" db:table="productos_preciotraspromocion" db:column="der_attr" storageType="file">
+    <Attribute id="ent4#att7" name="precioTrasPromocion" type="float" derivationQuery="calculated::Self.ent4#att5 -  ( Self.ent4#att5 *  ( Self.rel3#role5(as Var1).ent5#att10 * 0.01 )  ) where Self.ent4#att2 is not null" storageType="file" db:table="productos_preciotraspromocion" db:column="der_attr">
       <db:JoinColumn attribute="ent4#att2" name="oid"/>
     </Attribute>
     <Attribute id="ent4#att19" name="imagenProducto" type="blob" db:column="imagenproducto" contentType="image"/>
@@ -217,5 +217,22 @@
   <Entity gr:x="965" gr:y="340" id="ent3" name="ExcelTemplate" duration="persistent" attributeOrder="ent3#att53 ent3#att54" db:database="db1" db:table="exceltemplate">
     <Attribute id="ent3#att53" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att54" name="template" type="blob" db:column="template"/>
+  </Entity>
+  <Entity id="ent14" name="Producto-Tmp" duration="volatile" attributeOrder="ent14#att57 ent14#att58 ent14#att59 ent14#att60 ent14#att61 ent14#att63 ent14#att73 ent14#att82 ent14#att83 ent14#att84 ent14#att85 ent14#att86 ent14#att87 ent14#att88 ent14#att89" gr:x="1180" gr:y="100" volatileStorage="database">
+    <Attribute id="ent14#att57" name="oid" key="true" type="integer"/>
+    <Attribute id="ent14#att58" name="nombreProducto" type="string"/>
+    <Attribute id="ent14#att59" name="descripcionProducto" type="text"/>
+    <Attribute id="ent14#att60" name="precioProducto" type="float"/>
+    <Attribute id="ent14#att61" name="unidadesProducto" type="integer"/>
+    <Attribute id="ent14#att63" name="precioTrasPromocion" type="float"/>
+    <Attribute id="ent14#att73" name="imagenProducto" type="blob" contentType="image"/>
+    <Attribute id="ent14#att82" name="fechaCaducidad" type="date"/>
+    <Attribute id="ent14#att83" name="valoracionMedia" type="float"/>
+    <Attribute id="ent14#att84" name="urlQR" type="url"/>
+    <Attribute id="ent14#att85" name="categoria" type="string"/>
+    <Attribute id="ent14#att86" name="oid_producto" type="integer"/>
+    <Attribute id="ent14#att87" name="oid_promocion" type="integer"/>
+    <Attribute id="ent14#att88" name="oid_categoria" type="integer"/>
+    <Attribute id="ent14#att89" name="oid_ubicacion" type="integer"/>
   </Entity>
 </DataModel>

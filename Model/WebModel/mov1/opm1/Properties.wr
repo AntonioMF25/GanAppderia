@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov1#opm1" name="Crear-Producto">
   <OperationUnits>
-    <InputCollectorUnit gr:x="0" gr:y="225" id="mov1#opm1#icu1" name="Input Port">
+    <InputCollectorUnit gr:x="0" gr:y="225" id="mov1#opm1#icu1" name="Input Port" linkOrder="mov1#opm1#icu1#ln37">
       <InputCollectorParameter id="mov1#opm1#icu1#icp2" name="valoracionMedia"/>
       <InputCollectorParameter id="mov1#opm1#icu1#icp3" name="Ubicacion.oid(ProductosToUbicacion)"/>
       <InputCollectorParameter id="mov1#opm1#icu1#icp4" name="Promociones.oid(ProductosToPromociones)"/>
@@ -16,11 +16,10 @@
       <InputCollectorParameter id="mov1#opm1#icu1#icp15" name="Categoria.oid(ProductosToCategoria)"/>
       <Link id="mov1#opm1#icu1#ln22" to="mov1#opm1#cru3" type="transport" validate="true" name="Flow10">
         <LinkParameter id="mov1#opm1#icu1#ln22#par61" source="mov1#opm1#icu1#icp7" name="Fecha de caducidad_fechaCaducidad" target="mov1#opm1#cru3.ent4#att24"/>
-        <LinkParameter id="mov1#opm1#icu1#ln22#par62" source="mov1#opm1#icu1#icp6" name="Imagen_imagenProducto" target="mov1#opm1#cru3.ent4#att19"/>
         <LinkParameter id="mov1#opm1#icu1#ln22#par63" source="mov1#opm1#icu1#icp9" name="Descripci&#243;n_descripcionProducto" target="mov1#opm1#cru3.ent4#att4"/>
         <LinkParameter id="mov1#opm1#icu1#ln22#par64" source="mov1#opm1#icu1#icp4" name="Promoci&#243;n_Promociones.oid(ProductosToPromociones)" target="mov1#opm1#cru3.rel3#role5.ent5#att8"/>
         <LinkParameter id="mov1#opm1#icu1#ln22#par65" name="0_valoracionMedia" target="mov1#opm1#cru3.ent4#att28" source="mov1#opm1#icu1#icp2"/>
-        <LinkParameter id="mov1#opm1#icu1#ln22#par66" source="mov1#opm1#icu1#icp10" name="Nombre_imagenProducto [file name]" target="mov1#opm1#cru3.ent4#att19_name"/>
+        <LinkParameter id="mov1#opm1#icu1#ln22#par66" source="mov1#opm1#icu1#icp8" name="Nombre_imagenProducto [file name]" target="mov1#opm1#cru3.ent4#att19_name"/>
         <LinkParameter id="mov1#opm1#icu1#ln22#par67" source="mov1#opm1#icu1#icp3" name="Ubicaci&#243;n_Ubicacion.oid(ProductosToUbicacion)" target="mov1#opm1#cru3.rel9#role17.ent2#att41"/>
         <LinkParameter id="mov1#opm1#icu1#ln22#par68" source="mov1#opm1#icu1#icp13" name="Unidades_unidadesProducto" target="mov1#opm1#cru3.ent4#att6"/>
         <LinkParameter id="mov1#opm1#icu1#ln22#par69" source="mov1#opm1#icu1#icp15" name="Categor&#237;a_Categoria.oid(ProductosToCategoria)" target="mov1#opm1#cru3.rel1#role1.ent8#att22"/>
@@ -31,6 +30,11 @@
       <OKLink id="mov1#opm1#icu1#oln9" to="mov1#opm1#seu5" validate="true" name="Crear">
         <LinkParameter id="mov1#opm1#icu1#oln9#par36" source="mov1#opm1#icu1#icp14" name="Nombre_AttCondition1" target="mov1#opm1#seu5#su6#acond5"/>
       </OKLink>
+      <Link id="mov1#opm1#icu1#ln37" name="Flow37" to="mov1#opm1#sim2" type="transport" validate="true">
+        <LinkParameter id="mov1#opm1#icu1#ln37#par51" name="200_Height" sourceValue="200" target="mov1#opm1#sim2.height"/>
+        <LinkParameter id="mov1#opm1#icu1#ln37#par62" name="imagenProducto_Image" source="mov1#opm1#icu1#icp6" target="mov1#opm1#sim2.image"/>
+        <LinkParameter id="mov1#opm1#icu1#ln37#par87" name="200_Width" sourceValue="200" target="mov1#opm1#sim2.width"/>
+      </Link>
     </InputCollectorUnit>
     <OKCollectorUnit gr:x="1175" gr:y="300" id="mov1#opm1#okcu3" name="OK Port3">
       <OutputCollectorParameter id="mov1#opm1#okcu3#ocp1" name="Has publicado un anuncio con el mismo nombre. Prueba a editarlo_Shown Messages"/>
@@ -38,8 +42,8 @@
     <OKCollectorUnit gr:x="1175" gr:y="0" id="mov1#opm1#okcu2" name="OK Port2">
       <OutputCollectorParameter id="mov1#opm1#okcu2#ocp2" name="oid"/>
     </OKCollectorUnit>
-    <IsNotNullUnit id="mov1#opm1#inn3" name="Is Not Null2" gr:x="775" gr:y="150">
-      <KOLink id="mov1#opm1#inn3#kln3" name="KOFlow2" to="mov1#opm1#cru3" automaticCoupling="true"/>
+    <IsNotNullUnit id="mov1#opm1#inn3" name="Is Not Null2" gr:x="885" gr:y="205">
+      <KOLink id="mov1#opm1#inn3#kln3" name="KOFlow2" to="mov1#opm1#sim2" automaticCoupling="true"/>
       <OKLink id="mov1#opm1#inn3#oln15" to="mov1#opm1#okcu3" name="OKFlow7">
         <LinkParameter id="mov1#opm1#inn3#oln15#par73" sourceValue="Has publicado un anuncio con el mismo nombre. Prueba a editarlo" name="Has publicado un anuncio con el mismo nombre. Prueba a editarlo_Shown Messages" target="mov1#opm1#okcu3#ocp1"/>
       </OKLink>
@@ -70,5 +74,10 @@
     <KOCollectorUnit gr:x="1175" gr:y="500" id="mov1#opm1#kocu1" name="KO Port1">
       <OutputCollectorParameter id="mov1#opm1#kocu1#ocp3" name="KO-Port-1" value="Error al registrar un producto. Deshaciendo cambios..."/>
     </KOCollectorUnit>
+    <ScaleImageUnit id="mov1#opm1#sim2" name="Rescalado-Imagen" gr:x="553" gr:y="299">
+      <OKLink id="mov1#opm1#sim2#oln7" name="OKFlow7" to="mov1#opm1#cru3">
+        <LinkParameter id="mov1#opm1#sim2#oln7#par90" name="Scaled Image_imagenProducto" source="scaledImage" target="mov1#opm1#cru3.ent4#att19"/>
+      </OKLink>
+    </ScaleImageUnit>
   </OperationUnits>
 </OperationModule>

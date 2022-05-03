@@ -1,0 +1,28 @@
+<Job xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="wsv2#job2" name="TareaEliminarProductoCaducado" gr:x="0" gr:y="15">
+  <OperationUnits>
+    <InitJobUnit id="wsv2#job2#iju2" name="Init Job" gr:x="0" gr:y="0">
+      <OKLink id="wsv2#job2#iju2#oln77" name="OKFlow77" to="wsv2#job2#tmu6" automaticCoupling="true"/>
+    </InitJobUnit>
+    <SelectorUnit gr:x="285" gr:y="5" id="wsv2#job2#seu17" name="Seleccionar-Productos-Existentes" entity="ent4">
+      <Selector id="wsv2#job2#seu17#su2" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="wsv2#job2#seu17#su2#acond1" name="AttCondition1" predicate="lteq" booleanOperator="or" implied="false" attributes="ent4#att24"/>
+      </Selector>
+      <OKLink id="wsv2#job2#seu17#oln17" name="OKFlow17" to="wsv2#job2#lpu4">
+        <LinkParameter id="wsv2#job2#seu17#oln17#par92" name="oid_Input Array" source="ent4#att2Array" target="wsv2#job2#lpu4.array"/>
+      </OKLink>
+    </SelectorUnit>
+    <TimeUnit gr:x="130" gr:y="70" id="wsv2#job2#tmu6" name="Dia-Actual">
+      <OKLink id="wsv2#job2#tmu6#oln13" name="OKFlow13" to="wsv2#job2#seu17">
+        <LinkParameter id="wsv2#job2#tmu6#oln13#par312" name="Current/Input Date_AttCondition1" source="currentDate" target="wsv2#job2#seu17#su2#acond1"/>
+      </OKLink>
+    </TimeUnit>
+    <ModuleInstanceUnit gr:x="285" gr:y="260" id="wsv2#job2#miu11" action="true" moduleId="mov3#opm4">
+      <OKLink id="wsv2#job2#miu11#oln53" name="OKFlow53" to="wsv2#job2#lpu4" automaticCoupling="true" gr:bendpoints="84,-59,89,51"/>
+    </ModuleInstanceUnit>
+    <LoopUnit gr:x="330" gr:y="155" id="wsv2#job2#lpu4" name="Bucle-Eliminar">
+      <OKLink id="wsv2#job2#lpu4#oln18" name="OKFlow18" to="wsv2#job2#miu11" code="next">
+        <LinkParameter id="wsv2#job2#lpu4#oln18#par127" name="Index_oid_producto" source="next" target="wsv2#job2#miu11.mov3#opm4#icu4#icp1"/>
+      </OKLink>
+    </LoopUnit>
+  </OperationUnits>
+</Job>
