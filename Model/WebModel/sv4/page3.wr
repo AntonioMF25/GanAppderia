@@ -1,9 +1,12 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page3" name="Home-Admin" gr:x="170" gr:y="10">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page3" name="Home-Admin" gr:x="165" gr:y="10">
   <ContentUnits>
-    <MultiMessageUnit id="sv4#page3#mssu2" name="Mensaje" gr:x="30" gr:y="20">
+    <MultiMessageUnit id="sv4#page3#mssu2" name="Mensaje" gr:x="35" gr:y="20">
       <Placeholder id="sv4#page3#mssu2#ph2" name="Placeholder1"/>
       <Message xml:space="preserve">Este es el portal de administraci&#243;n</Message>
     </MultiMessageUnit>
+    <MultiMessageUnit gr:x="0" gr:y="790" id="sv4#page3#mssu1" name="Info-Tarea-Fin-Stock"/>
+    <MultiMessageUnit gr:x="175" gr:y="805" id="sv4#page3#mssu7" name="Info-Tarea-Caducado"/>
+    <MultiMessageUnit gr:x="365" gr:y="825" id="sv4#page3#mssu13" name="Info-Tarea-Promocion"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -242,7 +245,9 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page3#mssu1"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -256,7 +261,9 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page3#mssu7"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -270,7 +277,9 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page3#mssu13"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -354,14 +363,14 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Page gr:x="150" gr:y="0" id="sv4#page3#page12" name="Historico-Productos">
+  <Page gr:x="155" gr:y="0" id="sv4#page3#page12" name="Historico-Productos">
     <ContentUnits>
       <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#page3#page12#pwu3" name="Historico-Productos" sortable="true" checkable="false" useCountQuery="false" entity="ent12" displayAttributes="ent12#att18 ent12#att80" linkOrder="sv4#page3#page12#pwu3#ln30">
         <Link id="sv4#page3#page12#pwu3#ln30" name="M&#225;s informaci&#243;n" to="sv4#page13#dau3" automaticCoupling="true" type="normal" validate="true"/>
       </PowerIndexUnit>
     </ContentUnits>
   </Page>
-  <Page gr:x="15" gr:y="325" id="sv4#page3#page22" name="Gesti&#243;n-Template-Excel">
+  <Page gr:x="20" gr:y="325" id="sv4#page3#page22" name="Gesti&#243;n-Template-Excel">
     <ContentUnits>
       <IndexUnit gr:x="0" gr:y="0" id="sv4#page3#page22#inu4" name="Template-Actual" entity="ent3" displayAttributes="ent3#att54"/>
       <EntryUnit gr:x="30" gr:y="90" id="sv4#page3#page22#enu6" name="Actualizar-Template" entity="ent3" linkOrder="sv4#page3#page22#enu6#ln44">
@@ -373,7 +382,7 @@
       <MultiMessageUnit gr:x="150" gr:y="20" id="sv4#page3#page22#mssu12" name="Aviso"/>
     </ContentUnits>
   </Page>
-  <Page id="sv4#page3#page18" name="Historico-Promociones" gr:x="140" gr:y="150">
+  <Page id="sv4#page3#page18" name="Historico-Promociones" gr:x="145" gr:y="150">
     <ContentUnits>
       <PowerIndexUnit id="sv4#page3#page18#pwu4" name="Historico-Promociones" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att49 ent1#att51" linkOrder="sv4#page3#page18#pwu4#ln26">
         <Link id="sv4#page3#page18#pwu4#ln26" name="M&#225;s informaci&#243;n" to="sv4#page21#dau4" type="normal" validate="true">
@@ -382,7 +391,7 @@
       </PowerIndexUnit>
     </ContentUnits>
   </Page>
-  <Page gr:x="0" gr:y="620" id="sv4#page3#page36" name="Categor&#237;as">
+  <Page gr:x="5" gr:y="620" id="sv4#page3#page36" name="Categor&#237;as">
     <ContentUnits>
       <RecursiveHierarchicalIndexUnit id="sv4#page3#page36#rtu6" name="Lista de las categor&#237;as" gr:x="0" gr:y="0" showAllAsRoot="false" entity="ent8" relationship="rel2#role3" displayAttributes="ent8#att23"/>
       <MultiMessageUnit id="sv4#page3#page36#mssu17" name="Gestiona las categorias" gr:x="205" gr:y="35" linkOrder="sv4#page3#page36#mssu17#ln87">
