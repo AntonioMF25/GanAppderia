@@ -62,7 +62,7 @@
         <LinkParameter id="sv4#scju1#oln75#par170" name="Tarea &quot;TareaFinPromocion&quot; inicializada_Shown Messages" sourceValue="Tarea &quot;TareaFinPromocion&quot; inicializada" target="sv4#page3#mssu13.shownMessages"/>
       </OKLink>
     </ScheduleJobUnit>
-    <ModuleInstanceUnit gr:x="655" gr:y="755" id="sv4#miu9" moduleId="mov7#hym3" landmark="true">
+    <ModuleInstanceUnit gr:x="790" gr:y="775" id="sv4#miu9" moduleId="mov7#hym3" landmark="true">
       <OKLink id="sv4#miu9#oln103" to="sv4#page3" validate="true" name="Volver"/>
     </ModuleInstanceUnit>
     <ScheduleJobUnit id="sv4#scju3" name="Tarea-Eliminar-Producto-Caducado" landmark="true" gr:x="310" gr:y="980" schedulePolicy="everyDay" job="wsv2#job2">
@@ -75,5 +75,11 @@
         <LinkParameter id="sv4#scju4#oln68#par168" name="Tarea &quot;TareaPromocionFinStock&quot; inicializada_Shown Messages" sourceValue="Tarea &quot;TareaPromocionFinStock&quot; inicializada" target="sv4#page3#mssu1.shownMessages"/>
       </OKLink>
     </ScheduleJobUnit>
+    <SelectorUnit id="sv4#seu45" name="Categor&#237;as-B&#250;squeda" gr:x="-160" gr:y="715" entity="ent8" distinctAttributes="ent8#att23">
+      <Selector id="sv4#seu45#su41" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#seu45#su41#acond35" name="Contenga" predicate="contains" booleanOperator="or" implied="false" attributes="ent8#att23" ignoreCase="true"/>
+      </Selector>
+      <OKLink id="sv4#seu45#oln85" name="OKFlow85" to="sv4#page3#page36#rtu6" automaticCoupling="true"/>
+    </SelectorUnit>
   </OperationUnits>
 </SiteView>

@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov7#hym3#page51" name="Gesti&#243;n-Categor&#237;a" linkOrder="mov7#hym3#page51#ln143" landmark="true" gr:x="675" gr:y="110">
   <ContentUnits>
-    <MultiMessageUnit id="mov7#hym3#page51#mssu26" name="Mensaje-Titulo" gr:x="30" gr:y="310">
+    <MultiMessageUnit id="mov7#hym3#page51#mssu26" name="Mensaje-Titulo-Categor&#237;a" gr:x="0" gr:y="315">
       <Message xml:space="preserve">Este es el portal de gesti&#243;n de las categorias.</Message>
     </MultiMessageUnit>
     <SelectorUnit id="mov7#hym3#page51#seu39" name="Categor&#237;as-Actual" gr:x="15" gr:y="210" entity="ent8" distinctAttributes="ent8#att23">
@@ -10,6 +10,9 @@
       </Link>
     </SelectorUnit>
     <MultiMessageUnit id="mov7#hym3#page51#mssu27" name="Mensaje" gr:x="300" gr:y="0"/>
+    <SelectorUnit gr:x="25" gr:y="400" id="mov7#hym3#page51#seu42" name="Categor&#237;as-Lista" entity="ent8">
+      <Link id="mov7#hym3#page51#seu42#ln98" name="Flow98" to="mov7#hym3#page51#page54#rtu8" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -98,61 +101,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:SubPage pageId="mov7#hym3#page51#page53">
-          <layout:Grid containerType="grid">
-            <layout:Row>
-              <layout:Cell colspan="12"/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-            </layout:Row>
-            <layout:Row>
-              <layout:Cell colspan="12">
-                <layout:Unit unitId="mov7#hym3#page51#page53#rtu7">
-                  <layout:Attribute attribute="ent8#att23"/>
-                  <layout:Link link="mov7#hym3#page51#page53#rtu7#ln136"/>
-                  <layout:Link link="mov7#hym3#page51#page53#rtu7#ln137"/>
-                  <layout:Link link="mov7#hym3#page51#page53#rtu7#ln138"/>
-                </layout:Unit>
-              </layout:Cell>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-            </layout:Row>
-            <layout:Row>
-              <layout:Cell colspan="12"/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-            </layout:Row>
-          </layout:Grid>
-        </layout:SubPage>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -174,6 +123,7 @@
                 <layout:Unit unitId="mov7#hym3#page51#page54#enu24">
                   <layout:Field field="mov7#hym3#page51#page54#enu24#fld60"/>
                   <layout:Link link="mov7#hym3#page51#page54#enu24#ln142"/>
+                  <layout:Link link="mov7#hym3#page51#page54#enu24#ln96"/>
                 </layout:Unit>
               </layout:Cell>
               <layout:Cell/>
@@ -356,23 +306,9 @@
       </EntryUnit>
     </ContentUnits>
   </Page>
-  <Page id="mov7#hym3#page51#page53" name="Categor&#237;as" gr:x="225" gr:y="65">
+  <Page id="mov7#hym3#page51#page54" name="Buscador-Categor&#237;as" gr:x="215" gr:y="150">
     <ContentUnits>
-      <RecursiveHierarchicalIndexUnit id="mov7#hym3#page51#page53#rtu7" name="Lista de las categor&#237;as" linkOrder="mov7#hym3#page51#page53#rtu7#ln136 mov7#hym3#page51#page53#rtu7#ln137 mov7#hym3#page51#page53#rtu7#ln138" gr:x="0" gr:y="0" showAllAsRoot="false" entity="ent8" relationship="rel2#role3" displayAttributes="ent8#att23">
-        <SortAttribute attribute="ent8#att23" order="ascending"/>
-        <Link id="mov7#hym3#page51#page53#rtu7#ln136" name="Editar" to="mov7#hym3#page50#enu22" type="normal" validate="true">
-          <LinkParameter id="mov7#hym3#page51#page53#rtu7#ln136#par267" name="oid_Key Condition [oid]" source="data[].ent8#att22" target="mov7#hym3#page50#enu22.ent8#att22"/>
-          <LinkParameter id="mov7#hym3#page51#page53#rtu7#ln136#par268" name="SubcategoriaToCategoria.oid_Subcategor&#237;a de: - Preselection" source="data[].rel2#role3_ent8#att22" target="mov7#hym3#page50#enu22#sfld8_presel"/>
-        </Link>
-        <Selector id="mov7#hym3#page51#page53#rtu7#su64" booleanOperator="and"/>
-        <Link id="mov7#hym3#page51#page53#rtu7#ln137" name="Borrar (solo)" to="mov7#hym3#dlu12" type="normal" automaticCoupling="true" validate="true"/>
-        <Link id="mov7#hym3#page51#page53#rtu7#ln138" name="Borrar (cascada)" to="mov7#hym3#dlu13" type="normal" automaticCoupling="true" validate="true"/>
-      </RecursiveHierarchicalIndexUnit>
-    </ContentUnits>
-  </Page>
-  <Page id="mov7#hym3#page51#page54" name="Buscador-Categor&#237;as" gr:x="225" gr:y="230">
-    <ContentUnits>
-      <RecursiveHierarchicalIndexUnit id="mov7#hym3#page51#page54#rtu8" name="Categor&#237;as encontradas" linkOrder="mov7#hym3#page51#page54#rtu8#ln139 mov7#hym3#page51#page54#rtu8#ln140 mov7#hym3#page51#page54#rtu8#ln141" gr:x="0" gr:y="0" showAllAsRoot="false" entity="ent8" relationship="rel2#role3" displayAttributes="ent8#att23">
+      <RecursiveHierarchicalIndexUnit id="mov7#hym3#page51#page54#rtu8" name="Lista de las categor&#237;as" linkOrder="mov7#hym3#page51#page54#rtu8#ln139 mov7#hym3#page51#page54#rtu8#ln140 mov7#hym3#page51#page54#rtu8#ln141" gr:x="0" gr:y="0" showAllAsRoot="false" entity="ent8" relationship="rel2#role3" displayAttributes="ent8#att23">
         <SortAttribute attribute="ent8#att23" order="ascending"/>
         <Link id="mov7#hym3#page51#page54#rtu8#ln139" name="Editar" to="mov7#hym3#page50#enu22" type="normal" validate="true">
           <LinkParameter id="mov7#hym3#page51#page54#rtu8#ln139#par269" name="oid_Key Condition [oid]" source="data[].ent8#att22" target="mov7#hym3#page50#enu22.ent8#att22"/>
@@ -384,11 +320,12 @@
         <Link id="mov7#hym3#page51#page54#rtu8#ln140" name="Borrar (solo)" to="mov7#hym3#dlu12" type="normal" automaticCoupling="true" validate="true"/>
         <Link id="mov7#hym3#page51#page54#rtu8#ln141" name="Borrar (cascada)" to="mov7#hym3#dlu13" type="normal" automaticCoupling="true" validate="true"/>
       </RecursiveHierarchicalIndexUnit>
-      <EntryUnit id="mov7#hym3#page51#page54#enu24" name="Buscador-Categor&#237;as" linkOrder="mov7#hym3#page51#page54#enu24#ln142" gr:x="15" gr:y="140">
+      <EntryUnit id="mov7#hym3#page51#page54#enu24" name="Buscador-Categor&#237;as" linkOrder="mov7#hym3#page51#page54#enu24#ln142 mov7#hym3#page51#page54#enu24#ln96" gr:x="15" gr:y="140">
         <Field id="mov7#hym3#page51#page54#enu24#fld60" name="Nombre de la categor&#237;a" type="string" modifiable="true"/>
         <Link id="mov7#hym3#page51#page54#enu24#ln142" name="Buscar" to="mov7#hym3#seu35" type="normal" validate="true">
           <LinkParameter id="mov7#hym3#page51#page54#enu24#ln142#par271" name="Nombre_AttCondition16" source="mov7#hym3#page51#page54#enu24#fld60" target="mov7#hym3#seu35#su57#acond28"/>
         </Link>
+        <Link id="mov7#hym3#page51#page54#enu24#ln96" name="Mostrar todo" to="mov7#hym3#page51#page54#rtu8" automaticCoupling="true" type="normal" validate="true"/>
       </EntryUnit>
     </ContentUnits>
   </Page>

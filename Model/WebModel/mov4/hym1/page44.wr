@@ -1,9 +1,12 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov4#hym1#page44" name="Gesti&#243;n-Ubicaci&#243;n" linkOrder="mov4#hym1#page44#ln125" landmark="false" gr:x="695" gr:y="40">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov4#hym1#page44" name="Gesti&#243;n-Ubicaci&#243;n" linkOrder="mov4#hym1#page44#ln125" landmark="false" gr:x="710" gr:y="-50">
   <ContentUnits>
-    <MultiMessageUnit id="mov4#hym1#page44#mssu22" name="Mensaje" gr:x="215" gr:y="165"/>
-    <MultiMessageUnit id="mov4#hym1#page44#mssu23" name="Mensaje-Titulo" gr:x="30" gr:y="330">
-      <Message xml:space="preserve">Este es el portal de gesti&#243;n de las ubicaciones.</Message>
+    <MultiMessageUnit id="mov4#hym1#page44#mssu22" name="Mensaje" gr:x="100" gr:y="0"/>
+    <MultiMessageUnit id="mov4#hym1#page44#mssu23" name="Mensaje-Titulo-Ubicaci&#243;n" gr:x="250" gr:y="0">
+      <Message xml:space="preserve">Este es el portal de gesti&#243;n de tus ubicaciones.</Message>
     </MultiMessageUnit>
+    <SelectorUnit gr:x="70" gr:y="210" id="mov4#hym1#page44#seu40" name="Ubicaci&#243;n-Lista" entity="ent2">
+      <Link id="mov4#hym1#page44#seu40#ln56" name="Flow56" to="mov4#hym1#page44#page47#pwu9" automaticCoupling="true" type="transport" validate="true"/>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -79,34 +82,7 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12">
-        <layout:SubPage pageId="mov4#hym1#page44#page46">
-          <layout:Grid containerType="grid">
-            <layout:Row>
-              <layout:Cell colspan="12">
-                <layout:Unit unitId="mov4#hym1#page44#page46#pwu8">
-                  <layout:Attribute attribute="ent2#att42"/>
-                  <layout:Link link="mov4#hym1#page44#page46#pwu8#ln115"/>
-                  <layout:Link link="mov4#hym1#page44#page46#pwu8#ln116"/>
-                  <layout:Link link="mov4#hym1#page44#page46#pwu8#ln117"/>
-                  <layout:Link link="mov4#hym1#page44#page46#pwu8ent2#att42"/>
-                </layout:Unit>
-              </layout:Cell>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-              <layout:Cell/>
-            </layout:Row>
-          </layout:Grid>
-        </layout:SubPage>
-      </layout:Cell>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -124,6 +100,7 @@
         <layout:Unit unitId="mov4#hym1#page44#page47#enu20">
           <layout:Field field="mov4#hym1#page44#page47#enu20#fld52"/>
           <layout:Link link="mov4#hym1#page44#page47#enu20#ln120"/>
+          <layout:Link link="mov4#hym1#page44#page47#enu20#ln39"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>
@@ -147,6 +124,7 @@
                 <layout:Unit unitId="mov4#hym1#page44#page47#pwu9">
                   <layout:Attribute attribute="ent2#att42"/>
                   <layout:Link link="mov4#hym1#page44#page47#pwu9#ln118"/>
+                  <layout:Link link="mov4#hym1#page44#page47#pwu9#ln61"/>
                   <layout:Link link="mov4#hym1#page44#page47#pwu9#ln119"/>
                   <layout:Link link="mov4#hym1#page44#page47#pwu9ent2#att42"/>
                 </layout:Unit>
@@ -193,7 +171,7 @@
       <layout:Cell/>
     </layout:Row>
   </layout:Grid>
-  <Page id="mov4#hym1#page44#page45" name="Crear-Ubicaci&#243;n" gr:x="0" gr:y="210">
+  <Page id="mov4#hym1#page44#page45" name="Crear-Ubicaci&#243;n" gr:x="40" gr:y="90">
     <ContentUnits>
       <EntryUnit id="mov4#hym1#page44#page45#enu19" name="Crear-Ubicaci&#243;n" linkOrder="mov4#hym1#page44#page45#enu19#ln113" gr:x="0" gr:y="0">
         <Field id="mov4#hym1#page44#page45#enu19#fld49" name="Nombre" type="string" modifiable="true">
@@ -222,31 +200,23 @@
       </EntryUnit>
     </ContentUnits>
   </Page>
-  <Page id="mov4#hym1#page44#page46" name="Ubicaciones" gr:x="200" gr:y="245">
+  <Page id="mov4#hym1#page44#page47" name="Buscador-Ubicaciones" gr:x="0" gr:y="310">
     <ContentUnits>
-      <PowerIndexUnit id="mov4#hym1#page44#page46#pwu8" name="Lista de las ubicaciones" linkOrder="mov4#hym1#page44#page46#pwu8#ln115 mov4#hym1#page44#page46#pwu8#ln116 mov4#hym1#page44#page46#pwu8#ln117" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att42">
-        <Link id="mov4#hym1#page44#page46#pwu8#ln115" name="Editar" to="mov4#hym1#page49#enu21" type="normal" automaticCoupling="true" validate="true"/>
-        <Link id="mov4#hym1#page44#page46#pwu8#ln116" name="Borrar" to="mov4#hym1#dlu11" type="normal" automaticCoupling="true" validate="true"/>
-        <Link id="mov4#hym1#page44#page46#pwu8#ln117" name="M&#225;s informaci&#243;n" to="mov4#hym1#page48#dau6" type="normal" automaticCoupling="true" validate="true"/>
-        <SortAttribute attribute="ent2#att42" order="ascending"/>
-      </PowerIndexUnit>
-    </ContentUnits>
-  </Page>
-  <Page id="mov4#hym1#page44#page47" name="Buscador-Ubicaciones" gr:x="0" gr:y="0">
-    <ContentUnits>
-      <PowerIndexUnit id="mov4#hym1#page44#page47#pwu9" name="Ubicaciones encontradas" linkOrder="mov4#hym1#page44#page47#pwu9#ln118 mov4#hym1#page44#page47#pwu9#ln119" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att42">
+      <PowerIndexUnit id="mov4#hym1#page44#page47#pwu9" name="Lista de las ubicaciones" linkOrder="mov4#hym1#page44#page47#pwu9#ln118 mov4#hym1#page44#page47#pwu9#ln61 mov4#hym1#page44#page47#pwu9#ln119" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent2" displayAttributes="ent2#att42">
         <Link id="mov4#hym1#page44#page47#pwu9#ln118" name="Editar" to="mov4#hym1#page49#enu21" type="normal" automaticCoupling="true" validate="true"/>
         <Link id="mov4#hym1#page44#page47#pwu9#ln119" name="M&#225;s informaci&#243;n" to="mov4#hym1#page48#dau6" type="normal" automaticCoupling="true" validate="true"/>
         <Selector id="mov4#hym1#page44#page47#pwu9#su52" defaultPolicy="fill" booleanOperator="and">
           <KeyCondition id="mov4#hym1#page44#page47#pwu9#su52#kcond32" name="KeyCondition18" predicate="in" implied="false"/>
         </Selector>
         <SortAttribute attribute="ent2#att42" order="ascending"/>
+        <Link id="mov4#hym1#page44#page47#pwu9#ln61" name="Borrar" to="mov4#hym1#dlu11" type="normal" automaticCoupling="true" validate="true"/>
       </PowerIndexUnit>
-      <EntryUnit id="mov4#hym1#page44#page47#enu20" name="Buscador-Ubicaciones" linkOrder="mov4#hym1#page44#page47#enu20#ln120" gr:x="215" gr:y="20">
+      <EntryUnit id="mov4#hym1#page44#page47#enu20" name="Buscador-Ubicaciones" linkOrder="mov4#hym1#page44#page47#enu20#ln120 mov4#hym1#page44#page47#enu20#ln39" gr:x="215" gr:y="20">
         <Field id="mov4#hym1#page44#page47#enu20#fld52" name="Nombre de la ubicaci&#243;n" type="string" modifiable="true"/>
         <Link id="mov4#hym1#page44#page47#enu20#ln120" name="Buscar" to="mov4#hym1#seu33" type="normal" validate="true">
           <LinkParameter id="mov4#hym1#page44#page47#enu20#ln120#par236" name="Nombre de la ubicaci&#243;n_Contenga" source="mov4#hym1#page44#page47#enu20#fld52" target="mov4#hym1#seu33#su53#acond26"/>
         </Link>
+        <Link id="mov4#hym1#page44#page47#enu20#ln39" name="Mostrar todas" to="mov4#hym1#page44#page47#pwu9" automaticCoupling="true" type="normal" validate="true"/>
       </EntryUnit>
     </ContentUnits>
   </Page>

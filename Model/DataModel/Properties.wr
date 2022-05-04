@@ -73,7 +73,7 @@
     <Attribute id="ent5#att20" name="descripcionPromocion" type="text" db:column="descripcionpromocion"/>
     <Attribute id="ent5#att55" name="tiempoDiasRestantes" type="integer" db:column="tiempodiasrestantes"/>
   </Entity>
-  <Entity id="ent6" name="Carrito" duration="volatile" attributeOrder="ent6#att12 ent6#att13 ent6#att14 ent6#att15 ent6#att16 ent6#att37" volatileStorage="database" gr:x="730" gr:y="120">
+  <Entity id="ent6" name="Carrito" duration="volatile" attributeOrder="ent6#att12 ent6#att13 ent6#att14 ent6#att15 ent6#att16 ent6#att37" volatileStorage="database" gr:x="845" gr:y="70">
     <Attribute id="ent6#att12" name="oid" key="true" type="integer"/>
     <Attribute id="ent6#att13" name="nombreProducto" type="string"/>
     <Attribute id="ent6#att14" name="precioUnidadProducto" type="float"/>
@@ -217,7 +217,7 @@
     <Attribute id="ent12#att80" name="fechaHistorico" type="date" db:column="fechahistorico"/>
     <Attribute id="ent12#att81" name="oid_ProductoAntiguo" type="integer" db:column="oid_productoantiguo"/>
   </Entity>
-  <Entity gr:x="965" gr:y="340" id="ent3" name="ExcelTemplate" duration="persistent" attributeOrder="ent3#att53 ent3#att54" db:database="db1" db:table="exceltemplate">
+  <Entity gr:x="655" gr:y="410" id="ent3" name="ExcelTemplate" duration="persistent" attributeOrder="ent3#att53 ent3#att54" db:database="db1" db:table="exceltemplate">
     <Attribute id="ent3#att53" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att54" name="template" type="blob" db:column="template"/>
   </Entity>
