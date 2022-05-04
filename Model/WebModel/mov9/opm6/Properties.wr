@@ -1,0 +1,71 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov9#opm6" name="Crear-Valoracion">
+  <OperationUnits>
+    <InputCollectorUnit gr:x="0" gr:y="482" id="mov9#opm6#icu11" name="Input Port">
+      <InputCollectorParameter id="mov9#opm6#icu11#icp19" name="comentario"/>
+      <InputCollectorParameter id="mov9#opm6#icu11#icp20" name="puntuacion"/>
+      <InputCollectorParameter id="mov9#opm6#icu11#icp21" name="productoOID"/>
+      <InputCollectorParameter id="mov9#opm6#icu11#icp23" name="Productos.oid(ValoracionToProductos)"/>
+      <InputCollectorParameter id="mov9#opm6#icu11#icp24" name="KeyCondition9 [oid]"/>
+      <Link id="mov9#opm6#icu11#ln70" to="mov9#opm6#cru14" type="transport" validate="true" name="Flow71">
+        <LinkParameter id="mov9#opm6#icu11#ln70#par345" name="oid_PASSING_Productos.oid(ValoracionToProductos)" target="mov9#opm6#cru14.rel5#role10.ent4#att2" source="mov9#opm6#icu11#icp23"/>
+        <LinkParameter id="mov9#opm6#icu11#ln70#par346" source="mov9#opm6#icu11#icp19" name="Comentario_comentario" target="mov9#opm6#cru14.ent9#att26"/>
+        <LinkParameter id="mov9#opm6#icu11#ln70#par347" source="mov9#opm6#icu11#icp20" name="puntuacion_puntuacion" target="mov9#opm6#cru14.ent9#att27"/>
+      </Link>
+      <Link id="mov9#opm6#icu11#ln71" to="mov9#opm6#seu23" type="transport" validate="true" name="Flow69">
+        <LinkParameter id="mov9#opm6#icu11#ln71#par348" name="oid_PASSING_KeyCondition9 [oid]" target="mov9#opm6#seu23#su39#kcond29.ent4#att2" source="mov9#opm6#icu11#icp24"/>
+      </Link>
+      <OKLink id="mov9#opm6#icu11#oln133" to="mov9#opm6#seu24" validate="true" name="A&#241;adir Valoracion">
+        <LinkParameter id="mov9#opm6#icu11#oln133#par330" name="oid_PASSING_productoOID" target="mov9#opm6#seu24#su40#acond34" source="mov9#opm6#icu11#icp21"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <OKCollectorUnit gr:x="1190" gr:y="300" id="mov9#opm6#okcu13" name="OK Port13">
+      <OutputCollectorParameter id="mov9#opm6#okcu13#ocp6" name="Un mismo usuario solo puede asignar una valoracion a un mismo producto, prueba a valorar otro._Shown Messages"/>
+    </OKCollectorUnit>
+    <OKCollectorUnit gr:x="1190" gr:y="0" id="mov9#opm6#okcu12" name="OK Port12"/>
+    <OKCollectorUnit gr:x="1190" gr:y="600" id="mov9#opm6#okcu14" name="OK Port14">
+      <OutputCollectorParameter id="mov9#opm6#okcu14#ocp7" name="Un usuario no puede valorar un producto propio, prueba a valorar otro._Shown Messages"/>
+    </OKCollectorUnit>
+    <SelectorUnit id="mov9#opm6#seu23" name="Verificar-NoEs-Producto-Propio" gr:x="390" gr:y="355" entity="ent4">
+      <Selector id="mov9#opm6#seu23#su39" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov9#opm6#seu23#su39#kcond29" name="KeyCondition9" predicate="in" implied="false"/>
+        <AttributesCondition id="mov9#opm6#seu23#su39#acond23" name="OID-AutorProducto" predicate="eq" booleanOperator="or" implied="false" attributes="rel6#role12.userOID"/>
+      </Selector>
+      <OKLink id="mov9#opm6#seu23#oln140" name="OKFlow56" to="mov9#opm6#inn9">
+        <LinkParameter id="mov9#opm6#seu23#oln140#par341" name="oid_Input" source="ent4#att2Array" target="mov9#opm6#inn9.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <GetUnit id="mov9#opm6#gtu6" name="Get-User-Oid" gr:x="790" gr:y="350" contextParameters="UserCtxParam">
+      <Link id="mov9#opm6#gtu6#ln63" name="Flow59" to="mov9#opm6#cru14" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="mov9#opm6#gtu6#ln64" name="Flow64" to="mov9#opm6#seu24" type="transport" validate="true">
+        <LinkParameter id="mov9#opm6#gtu6#ln64#par342" name="UserCtxParam.oid_usuarioOID" source="mov9#opm6#gtu6.UserCtxParam" target="mov9#opm6#seu24#su40#acond33"/>
+      </Link>
+      <Link id="mov9#opm6#gtu6#ln69" name="Flow26" to="mov9#opm6#seu23" type="transport" validate="true">
+        <LinkParameter id="mov9#opm6#gtu6#ln69#par343" name="UserCtxParam.oid_OID-AutorProducto" source="mov9#opm6#gtu6.UserCtxParam" target="mov9#opm6#seu23#su39#acond23"/>
+      </Link>
+    </GetUnit>
+    <IsNotNullUnit id="mov9#opm6#inn9" name="Is Not Null" gr:x="460" gr:y="530">
+      <KOLink id="mov9#opm6#inn9#kln13" name="KOFlow12" to="mov9#opm6#cru14" automaticCoupling="true"/>
+      <OKLink id="mov9#opm6#inn9#oln142" to="mov9#opm6#okcu14" name="OKFlow73">
+        <LinkParameter id="mov9#opm6#inn9#oln142#par349" sourceValue="Un usuario no puede valorar un producto propio, prueba a valorar otro." name="Un usuario no puede valorar un producto propio, prueba a valorar otro._Shown Messages" target="mov9#opm6#okcu14#ocp7"/>
+      </OKLink>
+    </IsNotNullUnit>
+    <SelectorUnit id="mov9#opm6#seu24" name="Verificar-NoExiste-Valoracion-Para-Mismo-ProductoYUsuario" gr:x="300" gr:y="0" entity="ent9">
+      <Selector id="mov9#opm6#seu24#su40" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov9#opm6#seu24#su40#acond33" name="usuarioOID" predicate="eq" booleanOperator="and" implied="false" ignoreCase="false" attributes="rel4#role8.userOID"/>
+        <AttributesCondition id="mov9#opm6#seu24#su40#acond34" name="productoOID" predicate="eq" booleanOperator="and" implied="false" attributes="rel5#role10.ent4#att2" ignoreCase="false"/>
+      </Selector>
+      <OKLink id="mov9#opm6#seu24#oln141" name="OKFlow49" to="mov9#opm6#inn10">
+        <LinkParameter id="mov9#opm6#seu24#oln141#par344" name="oid_Input" source="ent9#att25Array" target="mov9#opm6#inn10.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <CreateUnit id="mov9#opm6#cru14" name="Crear Valoracion" gr:x="440" gr:y="665" entity="ent9">
+      <OKLink id="mov9#opm6#cru14#oln143" to="mov9#opm6#okcu12" name="OKFlow123"/>
+    </CreateUnit>
+    <IsNotNullUnit id="mov9#opm6#inn10" name="Is Not Null" gr:x="460" gr:y="200">
+      <KOLink id="mov9#opm6#inn10#kln14" name="KOFlow10" to="mov9#opm6#seu23" automaticCoupling="true"/>
+      <OKLink id="mov9#opm6#inn10#oln144" to="mov9#opm6#okcu13" name="OKFlow72">
+        <LinkParameter id="mov9#opm6#inn10#oln144#par350" sourceValue="Un mismo usuario solo puede asignar una valoracion a un mismo producto, prueba a valorar otro." name="Un mismo usuario solo puede asignar una valoracion a un mismo producto, prueba a valorar otro._Shown Messages" target="mov9#opm6#okcu13#ocp6"/>
+      </OKLink>
+    </IsNotNullUnit>
+  </OperationUnits>
+</OperationModule>

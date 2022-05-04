@@ -1,28 +1,63 @@
-<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov4#hym1" name="Actualizar-Datos-Usuario">
+<HybridModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov4#hym1" name="CRUD-Ubicaci&#243;n">
   <OperationUnits>
-    <InputCollectorUnit gr:x="-5" gr:y="35" id="mov4#hym1#icu3" name="Input Port">
-      <OKLink id="mov4#hym1#icu3#oln6" to="mov4#hym1#page16" validate="true" name="Modificar datos de la cuenta"/>
+    <InputCollectorUnit gr:x="0" gr:y="440" id="mov4#hym1#icu3" name="Input Port">
+      <OKLink id="mov4#hym1#icu3#oln91" to="mov4#hym1#page44" validate="true" name="Gestiona tus ubicaciones"/>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="1200" gr:y="225" id="mov4#hym1#okcu5" name="OK Port5"/>
-    <ModifyUnit id="mov4#hym1#mfu2" name="Actualizar-Usuario" gr:x="940" gr:y="220" entity="User">
-      <Selector id="mov4#hym1#mfu2#su2" defaultPolicy="fill" booleanOperator="and">
-        <KeyCondition id="mov4#hym1#mfu2#su2#kcond2" name="KeyCondition11" predicate="in" implied="false"/>
+    <OKCollectorUnit gr:x="1780" gr:y="0" id="mov4#hym1#okcu5" name="OK Port5"/>
+    <DeleteUnit id="mov4#hym1#dlu11" name="Borrar-Ubicaci&#243;n" gr:x="1200" gr:y="140" entity="ent2">
+      <Selector id="mov4#hym1#dlu11#su50" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov4#hym1#dlu11#su50#kcond31" name="KeyCondition13" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="mov4#hym1#mfu2#oln18" to="mov4#hym1#okcu5" name="OKFlow48"/>
+      <OKLink id="mov4#hym1#dlu11#oln93" name="OKFlow90" to="mov4#hym1#page44#mssu22">
+        <LinkParameter id="mov4#hym1#dlu11#oln93#par230" name="La ubicacion ha sido borrada._Shown Messages" target="mov4#hym1#page44#mssu22.shownMessages" sourceValue="La ubicacion ha sido borrada."/>
+      </OKLink>
+    </DeleteUnit>
+    <SelectorUnit id="mov4#hym1#seu32" name="Verificar-Existencia-Ubicaci&#243;n" gr:x="1105" gr:y="580" entity="ent2">
+      <Selector id="mov4#hym1#seu32#su51" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov4#hym1#seu32#su51#acond24" name="AttCondition14" predicate="eq" booleanOperator="and" implied="false" ignoreCase="false" attributes="ent2#att42"/>
+        <AttributesCondition id="mov4#hym1#seu32#su51#acond25" name="AttCondition11" predicate="neq" booleanOperator="and" implied="false" attributes="ent2#att41"/>
+      </Selector>
+      <OKLink id="mov4#hym1#seu32#oln94" name="OKFlow56" to="mov4#hym1#inn13">
+        <LinkParameter id="mov4#hym1#seu32#oln94#par231" name="oid_Input" source="ent2#att41Array" target="mov4#hym1#inn13.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <SelectorUnit id="mov4#hym1#seu33" name="Ubicaci&#243;n-B&#250;squeda" gr:x="1210" gr:y="0" entity="ent2">
+      <Selector id="mov4#hym1#seu33#su53" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov4#hym1#seu33#su53#acond26" name="Contenga" predicate="contains" booleanOperator="or" implied="false" ignoreCase="true" attributes="ent2#att42"/>
+      </Selector>
+      <OKLink id="mov4#hym1#seu33#oln95" name="OKFlow65" to="mov4#hym1#page44#page47#pwu9">
+        <LinkParameter id="mov4#hym1#seu33#oln95#par237" name="oid_KeyCondition18 [oid]" source="ent2#att41Array" target="mov4#hym1#page44#page47#pwu9#su52#kcond32.ent2#att41"/>
+      </OKLink>
+    </SelectorUnit>
+    <CreateUnit id="mov4#hym1#cru12" name="Crear-Ubicaci&#243;n" gr:x="355" gr:y="10" entity="ent2">
+      <OKLink id="mov4#hym1#cru12#oln96" name="OKFlow58" to="mov4#hym1#page44#mssu22">
+        <LinkParameter id="mov4#hym1#cru12#oln96#par238" name="La ubicaci&#243;n ha sido creada._Shown Messages" target="mov4#hym1#page44#mssu22.shownMessages" sourceValue="La ubicacion ha sido creada."/>
+      </OKLink>
+    </CreateUnit>
+    <ModifyUnit id="mov4#hym1#mfu9" name="Editar-Ubicaci&#243;n" gr:x="1380" gr:y="475" entity="ent2">
+      <Selector id="mov4#hym1#mfu9#su54" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov4#hym1#mfu9#su54#kcond33" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov4#hym1#mfu9#oln97" name="OKFlow47" to="mov4#hym1#page44" gr:bendpoints="0,-20"/>
     </ModifyUnit>
-    <IsNotNullUnit id="mov4#hym1#inn4" name="Contrase&#241;a correcta?" gr:x="690" gr:y="240">
-      <OKLink id="mov4#hym1#inn4#oln13" name="KOFlow2" to="mov4#hym1#mfu2" automaticCoupling="true"/>
-      <KOLink id="mov4#hym1#inn4#kln2" name="OKFlow47" to="mov4#hym1#page16#mssu1">
-        <LinkParameter id="mov4#hym1#inn4#kln2#par48" name="La contrase&#241;a antigua no coincide_Shown Messages" target="mov4#hym1#page16#mssu1.shownMessages" sourceValue="La contrase&#241;a vigente es incorrecta"/>
-      </KOLink>
+    <IsNotNullUnit id="mov4#hym1#inn13" name="Is Not Null8" gr:x="1260" gr:y="490">
+      <KOLink id="mov4#hym1#inn13#kln15" name="KOFlow12" to="mov4#hym1#mfu9" automaticCoupling="true"/>
+      <OKLink id="mov4#hym1#inn13#oln98" name="OKFlow57" to="mov4#hym1#page49#mssu24">
+        <LinkParameter id="mov4#hym1#inn13#oln98#par239" name="Ya existe una categor&#237;a con este nombre._Shown Messages" target="mov4#hym1#page49#mssu24.shownMessages" sourceValue="Ya existe una ubicacion con este nombre."/>
+      </OKLink>
     </IsNotNullUnit>
-    <SelectorUnit id="mov4#hym1#seu4" name="Seleccionar-Datos-Usuario" gr:x="430" gr:y="210" entity="User">
-      <Selector id="mov4#hym1#seu4#su7" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="mov4#hym1#seu4#su7#acond1" name="AttConditionOid" predicate="eq" booleanOperator="or" implied="false" attributes="userOID"/>
-        <AttributesCondition id="mov4#hym1#seu4#su7#acond9" name="AttConditionContrase&#241;a" predicate="eq" booleanOperator="or" implied="false" attributes="password"/>
+    <IsNotNullUnit id="mov4#hym1#inn14" name="Is Not Null7" gr:x="370" gr:y="165">
+      <KOLink id="mov4#hym1#inn14#kln16" name="KOFlow11" to="mov4#hym1#cru12"/>
+      <OKLink id="mov4#hym1#inn14#oln99" name="OKFlow59" to="mov4#hym1#page44#mssu22" gr:bendpoints="0,-20">
+        <LinkParameter id="mov4#hym1#inn14#oln99#par240" name="Ya existe una ubicaci&#243;n con este nombre._Shown Messages" target="mov4#hym1#page44#mssu22.shownMessages" sourceValue="Ya existe una ubicacion con este nombre."/>
+      </OKLink>
+    </IsNotNullUnit>
+    <SelectorUnit id="mov4#hym1#seu34" name="Verificar-Existencia-Ubicaci&#243;n" gr:x="300" gr:y="260" entity="ent2">
+      <Selector id="mov4#hym1#seu34#su56" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov4#hym1#seu34#su56#acond27" name="AttCondition14" predicate="eq" booleanOperator="and" implied="false" ignoreCase="false" attributes="ent2#att42"/>
       </Selector>
-      <OKLink id="mov4#hym1#seu4#oln17" name="OKFlow46" to="mov4#hym1#inn4">
-        <LinkParameter id="mov4#hym1#seu4#oln17#par92" name="userName_Input" source="userNameArray" target="mov4#hym1#inn4.isnotnull"/>
+      <OKLink id="mov4#hym1#seu34#oln100" name="OKFlow46" to="mov4#hym1#inn14">
+        <LinkParameter id="mov4#hym1#seu34#oln100#par241" name="nombreCategoria_Input" source="ent2#att41Array" target="mov4#hym1#inn14.isnotnull"/>
       </OKLink>
     </SelectorUnit>
   </OperationUnits>

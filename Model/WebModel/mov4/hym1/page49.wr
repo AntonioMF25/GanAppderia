@@ -1,0 +1,89 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov4#hym1#page49" name="Editar-Ubicaci&#243;n" linkOrder="mov4#hym1#page49#ln124" gr:x="1180" gr:y="285">
+  <ContentUnits>
+    <EntryUnit id="mov4#hym1#page49#enu21" name="Editar-Ubicaci&#243;n" linkOrder="mov4#hym1#page49#enu21#ln122" gr:x="0" gr:y="0" entity="ent2">
+      <Field id="mov4#hym1#page49#enu21#fld53" name="oidSeleccionado" type="integer" modifiable="true" hidden="true" attribute="ent2#att41"/>
+      <Link id="mov4#hym1#page49#enu21#ln122" name="Editar ubicaci&#243;n" to="mov4#hym1#seu32" type="normal" validate="true">
+        <LinkParameter id="mov4#hym1#page49#enu21#ln122#par242" name="oidSeleccionado_AttCondition11" source="mov4#hym1#page49#enu21#fld53" target="mov4#hym1#seu32#su51#acond25"/>
+        <LinkParameter id="mov4#hym1#page49#enu21#ln122#par243" name="Nombre_AttCondition14" source="mov4#hym1#page49#enu21#fld54" target="mov4#hym1#seu32#su51#acond24"/>
+      </Link>
+      <Link id="mov4#hym1#page49#enu21#ln123" name="Flow41" to="mov4#hym1#mfu9" type="transport" validate="true">
+        <LinkParameter id="mov4#hym1#page49#enu21#ln123#par244" name="Coordenadas_coordenadasUbicacion" source="mov4#hym1#page49#enu21#fld56" target="mov4#hym1#mfu9.ent2#att44"/>
+        <LinkParameter id="mov4#hym1#page49#enu21#ln123#par245" name="Descripci&#243;n_descripcionUbicacion" source="mov4#hym1#page49#enu21#fld55" target="mov4#hym1#mfu9.ent2#att43"/>
+        <LinkParameter id="mov4#hym1#page49#enu21#ln123#par246" name="oidSeleccionado_KeyCondition10 [oid]" source="mov4#hym1#page49#enu21#fld53" target="mov4#hym1#mfu9#su54#kcond33.ent2#att41"/>
+        <LinkParameter id="mov4#hym1#page49#enu21#ln123#par247" name="Nombre_nombreUbicacion" source="mov4#hym1#page49#enu21#fld54" target="mov4#hym1#mfu9.ent2#att42"/>
+      </Link>
+      <Field id="mov4#hym1#page49#enu21#fld54" name="Nombre" type="string" modifiable="true" attribute="ent2#att42"/>
+      <Field id="mov4#hym1#page49#enu21#fld55" name="Descripci&#243;n" type="text" modifiable="true" attribute="ent2#att43"/>
+      <Field id="mov4#hym1#page49#enu21#fld56" name="Coordenadas" type="string" modifiable="true" attribute="ent2#att44"/>
+    </EntryUnit>
+    <MultiMessageUnit id="mov4#hym1#page49#mssu24" name="Mensaje-Editar" gr:x="175" gr:y="15"/>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov4#hym1#page49#mssu24"/>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov4#hym1#page49#enu21">
+          <layout:Link link="mov4#hym1#page49#enu21#ln122"/>
+          <layout:Field field="mov4#hym1#page49#enu21#fld54"/>
+          <layout:Field field="mov4#hym1#page49#enu21#fld55"/>
+          <layout:Field field="mov4#hym1#page49#enu21#fld56"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov4#hym1#page49#ln124" name="Volver" to="mov4#hym1#page44" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

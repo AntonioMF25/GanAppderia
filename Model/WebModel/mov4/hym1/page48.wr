@@ -1,0 +1,32 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov4#hym1#page48" name="Detalle-Ubicaci&#243;n" linkOrder="mov4#hym1#page48#ln121" gr:x="870" gr:y="545">
+  <ContentUnits>
+    <DataUnit id="mov4#hym1#page48#dau6" name="Detalle-Ubicaci&#243;n" gr:x="0" gr:y="0" entity="ent2" displayAttributes="ent2#att42 ent2#att43 ent2#att44">
+      <Selector id="mov4#hym1#page48#dau6#su55" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov4#hym1#page48#dau6#su55#kcond34" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov4#hym1#page48#dau6">
+          <layout:Attribute attribute="ent2#att42"/>
+          <layout:Attribute attribute="ent2#att43"/>
+          <layout:Attribute attribute="ent2#att44"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="mov4#hym1#page48#ln121" name="Volver" to="mov4#hym1#page44" type="normal" automaticCoupling="true" validate="true"/>
+</Page>

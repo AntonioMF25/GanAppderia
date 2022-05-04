@@ -1,0 +1,37 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page21" name="Detalle-Historico-Promociones" gr:x="815" gr:y="165">
+  <ContentUnits>
+    <DataUnit id="sv4#page21#dau4" name="Detalle-Historico-Promociones" gr:x="0" gr:y="0" entity="ent1" linkOrder="sv4#page21#dau4#ln27" displayAttributes="ent1#att49 ent1#att48 ent1#att50 ent1#att47 ent1#att51">
+      <Selector id="sv4#page21#dau4#su9" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv4#page21#dau4#su9#kcond9" name="KeyCondition8" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="sv4#page21#dau4#ln27" name="Volver" to="sv4#page3#page18#pwu4" type="normal" validate="true" gr:bendpoints="-202,25,183,30">
+        <LinkParameter id="sv4#page21#dau4#ln27#par118" name="oid_current oid" source="data.ent1#att21" target="sv4#page3#page18#pwu4.current.ent1#att21"/>
+      </Link>
+    </DataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page21#dau4">
+          <layout:Link link="sv4#page21#dau4#ln27"/>
+          <layout:Attribute attribute="ent1#att49"/>
+          <layout:Attribute attribute="ent1#att48"/>
+          <layout:Attribute attribute="ent1#att50"/>
+          <layout:Attribute attribute="ent1#att47"/>
+          <layout:Attribute attribute="ent1#att51"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

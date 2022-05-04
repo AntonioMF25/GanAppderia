@@ -3,19 +3,19 @@
     <EntryUnit gr:x="0" gr:y="0" id="sv2#page4#enu2" name="Nuevo Usuario" fieldOrder="sv2#page4#enu2#fld3 sv2#page4#enu2#fld5 sv2#page4#enu2#fld4" entity="User" linkOrder="sv2#page4#enu2#ln6">
       <Field id="sv2#page4#enu2#fld3" name="userName" type="string" modifiable="true" attribute="userName">
         <VRules>
-          <MandatoryValidationRule id="sv2#page4#enu2#fld3#mnd3" name="User-Obligatorio" errorMessage="El campo &quot;userName&quot; es obligatorio"/>
+          <MandatoryValidationRule id="sv2#page4#enu2#fld3#mnd3" name="User-Obligatorio" errorMessage="El campo &quot;Nombre de usuario&quot; es obligatorio"/>
         </VRules>
       </Field>
       <Field id="sv2#page4#enu2#fld4" name="password" type="password" modifiable="true" attribute="password">
         <VRules>
           <PasswordStrengthValidationRule id="sv2#page4#enu2#fld4#psvr1" name="Password Strength1" securityLevel="low" errorMessage="Contrase&#241;a d&#233;bil"/>
-          <MandatoryValidationRule id="sv2#page4#enu2#fld4#mnd2" name="Pass-Obligatoria" errorMessage="El campo &quot;password&quot; es obligatorio"/>
+          <MandatoryValidationRule id="sv2#page4#enu2#fld4#mnd2" name="Pass-Obligatoria" errorMessage="El campo &quot;Contrase&#241;a&quot; es obligatorio"/>
         </VRules>
       </Field>
       <Field id="sv2#page4#enu2#fld5" name="email" type="string" modifiable="true" attribute="email">
         <VRules>
           <EMailValidationRule id="sv2#page4#enu2#fld5#email1" name="EMail1" errorMessage="Email inv&#225;lido"/>
-          <MandatoryValidationRule id="sv2#page4#enu2#fld5#mnd1" name="Mail-Obligatorio" errorMessage="El campo &quot;email&quot; es obligatorio" predicate="neq" ignoreCase="false"/>
+          <MandatoryValidationRule id="sv2#page4#enu2#fld5#mnd1" name="Mail-Obligatorio" errorMessage="El campo &quot;Email&quot; es obligatorio" predicate="neq" ignoreCase="false"/>
         </VRules>
       </Field>
       <Link id="sv2#page4#enu2#ln6" name="Crear cuenta" to="sv2#seu1" type="normal" validate="true">

@@ -1,0 +1,44 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov10#hym5#page2" name="ActualizarValoracion" gr:x="545" gr:y="130">
+  <ContentUnits>
+    <EntryUnit id="mov10#hym5#page2#enu10" name="Actualizar-Valoracion" linkOrder="mov10#hym5#page2#enu10#ln53 mov10#hym5#page2#enu10#ln54" gr:x="0" gr:y="0" entity="ent9">
+      <Field id="mov10#hym5#page2#enu10#fld24" name="puntuacion" type="integer" modifiable="true" attribute="ent9#att27">
+        <VRules>
+          <CompareValidationRule id="mov10#hym5#page2#enu10#fld24#cmp12" name="IgualOmenorQue5" predicate="lteq" value="5" errorMessage="La puntuacion asignada ha de ser un entero de 1 a 5"/>
+          <CompareValidationRule id="mov10#hym5#page2#enu10#fld24#cmp17" name="IgualOmayorQue0" predicate="gteq" value="0" errorMessage="La puntuacion asignada ha de ser un entero de 1 a 5"/>
+          <TypeValidationRule id="mov10#hym5#page2#enu10#fld24#tvr1" name="UnEntero" type="integer" errorMessage="La puntuacion asignada ha de ser un entero de 1 a 5"/>
+        </VRules>
+      </Field>
+      <Field id="mov10#hym5#page2#enu10#fld25" name="Comentario" type="text" modifiable="true" attribute="ent9#att26"/>
+      <Field id="mov10#hym5#page2#enu10#fld31" name="oidProducto" type="integer" modifiable="true" hidden="true"/>
+      <Link id="mov10#hym5#page2#enu10#ln53" name="Aplicar cambios" to="mov10#hym5#mfu2" type="normal" validate="true">
+        <LinkParameter id="mov10#hym5#page2#enu10#ln53#par326" name="Comentario_comentario" source="mov10#hym5#page2#enu10#fld25" target="mov10#hym5#mfu2.ent9#att26"/>
+        <LinkParameter id="mov10#hym5#page2#enu10#ln53#par327" name="puntuacion_puntuacion" source="mov10#hym5#page2#enu10#fld24" target="mov10#hym5#mfu2.ent9#att27"/>
+        <LinkParameter id="mov10#hym5#page2#enu10#ln53#par328" name="Key [oid]_KeyCondition18 [oid]" source="key.ent9#att25" target="mov10#hym5#mfu2#su21#kcond27.ent9#att25"/>
+      </Link>
+      <Link id="mov10#hym5#page2#enu10#ln54" to="mov10#hym5#okcu10" type="normal" validate="true" name="Cancelar"/>
+    </EntryUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="mov10#hym5#page2#enu10">
+          <layout:Field field="mov10#hym5#page2#enu10#fld24"/>
+          <layout:Field field="mov10#hym5#page2#enu10#fld25"/>
+          <layout:Link link="mov10#hym5#page2#enu10#ln53"/>
+          <layout:Link link="mov10#hym5#page2#enu10#ln54"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,17 +1,29 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="665" gr:y="70" id="sv3#page7" name="Detalle-Producto">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1205" gr:y="540" id="sv3#page7" name="Detalle-Producto">
   <ContentUnits>
-    <DataUnit gr:x="0" gr:y="0" id="sv3#page7#dau1" name="Detalle-Producto" entity="ent4" displayAttributes="ent4#att3 ent4#att4 ent4#att5 ent4#att6 ent4#att7 ent4#att19 ent4#att24 ent4#att28 ent4#att40 ent4#att52" linkOrder="sv3#page7#dau1#ln4">
+    <DataUnit gr:x="25" gr:y="0" id="sv3#page7#dau1" name="Detalle-Producto" entity="ent4" displayAttributes="ent4#att3 ent4#att4 ent4#att5 ent4#att6 ent4#att7 ent4#att19 ent4#att24 ent4#att28 ent4#att40 ent4#att52">
       <Selector id="sv3#page7#dau1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page7#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
-      <Link id="sv3#page7#dau1#ln4" name="Volver" to="sv3#page2#page5#pwu1" automaticCoupling="true" type="normal" validate="true" gr:bendpoints="-165,62,175,37"/>
+      <Link id="sv3#page7#dau1#ln90" name="Flow48" to="sv3#page7#seu41" type="transport" validate="true">
+        <LinkParameter id="sv3#page7#dau1#ln90#par219" name="oid_ValoracionesProducto" source="data.ent4#att2" target="sv3#page7#seu41#su67#acond36"/>
+      </Link>
     </DataUnit>
+    <IndexUnit id="sv3#page7#inu8" name="Valoraciones" gr:x="235" gr:y="190" entity="ent9" displayAttributes="rel4#role8.userName ent9#att26 ent9#att27">
+      <Selector id="sv3#page7#inu8#su66" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#page7#inu8#su66#kcond44" name="KeyCondition12" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
+    <SelectorUnit id="sv3#page7#seu41" name="Valoraciones-Producto" gr:x="0" gr:y="190" entity="ent9">
+      <Selector id="sv3#page7#seu41#su67" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page7#seu41#su67#acond36" name="ValoracionesProducto" predicate="eq" booleanOperator="or" implied="false" attributes="rel5#role10.ent4#att2"/>
+      </Selector>
+      <Link id="sv3#page7#seu41#ln84" name="Flow49" to="sv3#page7#inu8" type="transport" automaticCoupling="true" validate="true"/>
+    </SelectorUnit>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv3#page7#dau1">
-          <layout:Link link="sv3#page7#dau1#ln4"/>
           <layout:Attribute attribute="ent4#att3"/>
           <layout:Attribute attribute="ent4#att4"/>
           <layout:Attribute attribute="ent4#att5"/>
@@ -36,5 +48,40 @@
       <layout:Cell/>
       <layout:Cell/>
     </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page7#inu8">
+          <layout:Attribute attribute="rel4#role8.userName"/>
+          <layout:Attribute attribute="ent9#att26"/>
+          <layout:Attribute attribute="ent9#att27"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
   </layout:Grid>
+  <Link id="sv3#page7#ln94" name="Volver" to="sv3#page32#seu26" type="normal" automaticCoupling="true" validate="true"/>
 </Page>
