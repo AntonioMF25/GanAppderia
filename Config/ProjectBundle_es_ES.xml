@@ -80,7 +80,6 @@
   <Entry key="Gesti&#243;n-Categor&#237;a">Gestionar categor&#237;as</Entry>
   <Entry key="Gesti&#243;n-Promociones">Gestionar promociones</Entry>
   <Entry key="Gesti&#243;n-Template-Excel">Gestionar plantilla Excel</Entry>
-  <Entry key="Gesti&#243;n-Ubicaci&#243;n">AAAA</Entry>
   <Entry key="Historico-Productos">Registro de productos</Entry>
   <Entry key="Historico-Promociones">Registro de promociones</Entry>
   <Entry key="HistoricoPromociones">Hist&#243;rico de promociones</Entry>
@@ -129,7 +128,7 @@
   <Entry key="nombreContieneCadena">Nombre producto</Entry>
   <Entry key="nombreProducto">Nombre producto</Entry>
   <Entry key="nombrePromocion">Nombre promoci&#243;n</Entry>
-  <Entry key="nombreUbicacion">Nombre</Entry>
+  <Entry key="nombreUbicacion">Nombre ubicaci&#243;n</Entry>
   <Entry key="Nuevo Usuario">Registro nuevo usuario</Entry>
   <Entry key="oldPassword">Antigua contrase&#241;a</Entry>
   <Entry key="Opci&#243;n A - Formulario">Opci&#243;n A - Formulario</Entry>

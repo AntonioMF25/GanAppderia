@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1030" gr:y="-35" id="sv3#page6" name="Registrar-Producto" landmark="false">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="750" gr:y="-120" id="sv3#page6" name="Registrar-Producto" landmark="false">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="10" id="sv3#page6#enu3" name="Registrar-Producto" fieldOrder="sv3#page6#enu3#fld6 sv3#page6#enu3#fld7 sv3#page6#enu3#fld8 sv3#page6#enu3#fld9 sv3#page6#enu3#sfld1 sv3#page6#enu3#fld11 sv3#page6#enu3#fld12 sv3#page6#enu3#fld13 sv3#page6#enu3#sfld2 sv3#page6#enu3#sfld3" linkOrder="sv3#page6#enu3#ln9">
       <Field id="sv3#page6#enu3#fld13" name="Imagen" type="blob" modifiable="true">
@@ -7,9 +7,7 @@
         </VRules>
       </Field>
       <Field id="sv3#page6#enu3#fld12" name="URL QR" type="url" modifiable="true">
-        <VRules>
-          <MandatoryValidationRule id="sv3#page6#enu3#fld12#mnd20" name="Mandatory20"/>
-        </VRules>
+        <VRules/>
       </Field>
       <Field id="sv3#page6#enu3#fld11" name="Fecha de caducidad" type="date" modifiable="true">
         <VRules>
@@ -40,7 +38,11 @@
           <MandatoryValidationRule id="sv3#page6#enu3#fld6#mnd14" name="Mandatory14"/>
         </VRules>
       </Field>
-      <SelectionField id="sv3#page6#enu3#sfld2" type="string" name="Categor&#237;a"/>
+      <SelectionField id="sv3#page6#enu3#sfld2" type="string" name="Categor&#237;a">
+        <VRules>
+          <MandatoryValidationRule id="sv3#page6#enu3#sfld2#mnd20" name="Mandatory20"/>
+        </VRules>
+      </SelectionField>
       <Link id="sv3#page6#enu3#ln9" name="Crear" to="sv3#miu2" type="normal" validate="true">
         <LinkParameter id="sv3#page6#enu3#ln9#par17" name="Nombre_AttCondition1" source="sv3#page6#enu3#fld6" target="sv3#miu2.mov1#opm1#icu1#icp14"/>
       </Link>

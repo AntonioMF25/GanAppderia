@@ -12,7 +12,7 @@
     <OKCollectorUnit id="mov5#hym4#okcu8" name="OK Port6" gr:x="1325" gr:y="300">
       <OutputCollectorParameter id="mov5#hym4#okcu8#ocp23" name="Se ha modificado correctamente el anuncio_Shown Messages" value="Se ha modificado correctamente el anuncio"/>
     </OKCollectorUnit>
-    <SelectorUnit id="mov5#hym4#seu28" name="Seleccionar-Producto-Modificar" gr:x="280" gr:y="255" entity="ent4">
+    <SelectorUnit id="mov5#hym4#seu28" name="Seleccionar-Producto-Modificar" gr:x="280" gr:y="255" entity="ent4" linkOrder="mov5#hym4#seu28#ln87">
       <Selector id="mov5#hym4#seu28#su26" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov5#hym4#seu28#su26#kcond23" name="KeyCondition4" predicate="in" implied="false"/>
       </Selector>
@@ -34,8 +34,11 @@
         <LinkParameter id="mov5#hym4#seu28#oln51#par162" name="ProductosToUbicacion.oid_Ubicacion - Preselection" source="rel9#role17_ent2#att41Array" target="mov5#hym4#page17#enu8#sfld16_presel"/>
         <LinkParameter id="mov5#hym4#seu28#oln51#par128" name="oid_oid_modificado" source="ent4#att2Array" target="mov5#hym4#page17#enu8#fld21_slot"/>
       </OKLink>
+      <Link id="mov5#hym4#seu28#ln87" name="Flow87" to="mov5#hym4#cru8" type="transport" validate="true">
+        <LinkParameter id="mov5#hym4#seu28#ln87#par173" name="valoracionMedia_valoracionMedia" source="ent4#att28Array" target="mov5#hym4#cru8.ent14#att83"/>
+      </Link>
     </SelectorUnit>
-    <ModifyUnit id="mov5#hym4#mfu4" name="Actualizar-Producto" gr:x="325" gr:y="475" entity="ent4">
+    <ModifyUnit id="mov5#hym4#mfu4" name="Actualizar-Producto" gr:x="305" gr:y="480" entity="ent4">
       <Selector id="mov5#hym4#mfu4#su27" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov5#hym4#mfu4#su27#kcond24" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>

@@ -30,9 +30,7 @@
         </VRules>
       </Field>
       <Field id="mov5#hym4#page17#enu8#fld47" name="URL Qr" type="url" modifiable="true" attribute="ent4#att40" preloaded="true">
-        <VRules>
-          <MandatoryValidationRule id="mov5#hym4#page17#enu8#fld47#mnd31" name="Mandatory31"/>
-        </VRules>
+        <VRules/>
       </Field>
       <SelectionField id="mov5#hym4#page17#enu8#sfld16" name="Ubicacion" type="string">
         <VRules>
@@ -40,7 +38,11 @@
         </VRules>
       </SelectionField>
       <SelectionField id="mov5#hym4#page17#enu8#sfld17" name="Promoci&#243;n" type="string"/>
-      <SelectionField id="mov5#hym4#page17#enu8#sfld18" name="Categor&#237;a" type="string"/>
+      <SelectionField id="mov5#hym4#page17#enu8#sfld18" name="Categor&#237;a" type="string">
+        <VRules>
+          <MandatoryValidationRule id="mov5#hym4#page17#enu8#sfld18#mnd31" name="Mandatory31"/>
+        </VRules>
+      </SelectionField>
       <Field id="mov5#hym4#page17#enu8#fld48" name="Nombre" type="string" preloaded="true" modifiable="true">
         <VRules>
           <MandatoryValidationRule id="mov5#hym4#page17#enu8#fld48#mnd29" name="Mandatory29"/>
