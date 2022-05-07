@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1205" gr:y="540" id="sv3#page7" name="Detalle-Producto">
   <ContentUnits>
-    <DataUnit gr:x="25" gr:y="0" id="sv3#page7#dau1" name="Detalle-Producto" entity="ent4" displayAttributes="ent4#att3 ent4#att4 ent4#att5 ent4#att6 ent4#att7 ent4#att19 ent4#att24 ent4#att28 ent4#att40 ent4#att52">
+    <DataUnit gr:x="25" gr:y="0" id="sv3#page7#dau1" name="Detalle-Producto" entity="ent4" displayAttributes="ent4#att3 ent4#att4 ent4#att5 ent4#att6 ent4#att7 ent4#att19 ent4#att24 ent4#att28 ent4#att40 ent4#att52 rel9#role17.ent2#att42">
       <Selector id="sv3#page7#dau1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page7#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
@@ -34,6 +34,7 @@
           <layout:Attribute attribute="ent4#att28"/>
           <layout:Attribute attribute="ent4#att40"/>
           <layout:Attribute attribute="ent4#att52"/>
+          <layout:Attribute attribute="rel9#role17.ent2#att42"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

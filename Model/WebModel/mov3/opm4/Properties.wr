@@ -25,7 +25,6 @@
         <LinkParameter id="mov3#opm4#seu15#ln34#par146" name="descripcionProducto_descripcionProducto" source="ent4#att4Array" target="mov3#opm4#cru9.ent12#att62"/>
         <LinkParameter id="mov3#opm4#seu15#ln34#par147" name="fechaCaducidad_fechaCaducidad" source="ent4#att24Array" target="mov3#opm4#cru9.ent12#att77"/>
         <LinkParameter id="mov3#opm4#seu15#ln34#par148" name="imagenProducto_imagenProducto" source="ent4#att19Array" target="mov3#opm4#cru9.ent12#att76"/>
-        <LinkParameter id="mov3#opm4#seu15#ln34#par149" name="nombreProducto_imagenProducto [file name]" source="ent4#att3Array" target="mov3#opm4#cru9.ent12#att76_name"/>
         <LinkParameter id="mov3#opm4#seu15#ln34#par150" name="nombreProducto_nombreProducto" source="ent4#att3Array" target="mov3#opm4#cru9.ent12#att18"/>
         <LinkParameter id="mov3#opm4#seu15#ln34#par151" name="oid_oid_ProductoAntiguo" source="ent4#att2Array" target="mov3#opm4#cru9.ent12#att81"/>
         <LinkParameter id="mov3#opm4#seu15#ln34#par152" name="precioProducto_precioProducto" source="ent4#att5Array" target="mov3#opm4#cru9.ent12#att64"/>
