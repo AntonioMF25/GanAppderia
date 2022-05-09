@@ -1,0 +1,59 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov13#opm9" name="+1" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov13#opm9#icu14" gr:x="30" gr:y="60">
+      <OKLink id="mov13#opm9#icu14#oln158" name="OKFlow193" to="mov13#opm9#seu43">
+        <LinkParameter id="mov13#opm9#icu14#oln158#par95" name="Input Port Parameter_KeyCondition6 [oid]" source="mov13#opm9#icu14#icp27" target="mov13#opm9#seu43#su69#kcond49.ent6#att12"/>
+      </OKLink>
+      <InputCollectorParameter id="mov13#opm9#icu14#icp27" name="Input Port Parameter"/>
+    </InputCollectorUnit>
+    <SelectorUnit id="mov13#opm9#seu43" name="Uno mas" gr:x="450" gr:y="135" entity="ent6">
+      <Selector id="mov13#opm9#seu43#su69" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov13#opm9#seu43#su69#kcond49" name="KeyCondition6" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="mov13#opm9#seu43#ln128" name="Flow11" to="mov13#opm9#mfu12" type="transport" automaticCoupling="true" validate="true" gr:bendpoints="-7,267,-592,-3"/>
+      <OKLink id="mov13#opm9#seu43#oln159" name="OKFlow89" to="mov13#opm9#mathu7">
+        <LinkParameter id="mov13#opm9#seu43#oln159#par195" name="cantidad_CantidadActual" source="ent6#att15Array" target="mov13#opm9#mathu7#mathv8"/>
+      </OKLink>
+      <Link id="mov13#opm9#seu43#ln131" name="Flow74" to="mov13#opm9#seu46" type="transport" validate="true">
+        <LinkParameter id="mov13#opm9#seu43#ln131#par198" name="oid_Producto_KeyCondition25 [oid]" source="ent6#att16Array" target="mov13#opm9#seu46#su71#kcond51.ent4#att2"/>
+      </Link>
+    </SelectorUnit>
+    <ModifyUnit id="mov13#opm9#mfu12" name="A&#241;ado 1" gr:x="1040" gr:y="405" entity="ent6">
+      <Selector id="mov13#opm9#mfu12#su70" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov13#opm9#mfu12#su70#kcond50" name="KeyCondition3" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov13#opm9#mfu12#oln160" name="OKFlow192" to="mov13#opm9#okcu17" automaticCoupling="true"/>
+    </ModifyUnit>
+    <MathUnit id="mov13#opm9#mathu7" name="M&#225;s 1" gr:x="630" gr:y="275" resultType="integer" defaultExpression="CantidadActual + 1">
+      <MathVariable id="mov13#opm9#mathu7#mathv8" name="CantidadActual"/>
+      <Link id="mov13#opm9#mathu7#ln136" name="Flow73" to="mov13#opm9#mfu12" type="transport" validate="true">
+        <LinkParameter id="mov13#opm9#mathu7#ln136#par202" name="Result_cantidad" source="result" target="mov13#opm9#mfu12.ent6#att15"/>
+      </Link>
+      <OKLink id="mov13#opm9#mathu7#oln161" name="OKFlow114" to="mov13#opm9#seu46" automaticCoupling="true"/>
+      <Link id="mov13#opm9#mathu7#ln137" name="Flow75" to="mov13#opm9#mathu8" type="transport" validate="true" gr:bendpoints="485,-71,-185,99">
+        <LinkParameter id="mov13#opm9#mathu7#ln137#par203" name="Result_Compra" source="result" target="mov13#opm9#mathu8#mathv10"/>
+      </Link>
+    </MathUnit>
+    <OKCollectorUnit id="mov13#opm9#okcu17" name="A Carrito" gr:x="1690" gr:y="425"/>
+    <SelectorUnit id="mov13#opm9#seu46" name="Comprobar producto" gr:x="940" gr:y="95" entity="ent4">
+      <Selector id="mov13#opm9#seu46#su71" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov13#opm9#seu46#su71#kcond51" name="KeyCondition25" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov13#opm9#seu46#oln162" name="OKFlow115" to="mov13#opm9#mathu8">
+        <LinkParameter id="mov13#opm9#seu46#oln162#par210" name="unidadesProducto_Stock" source="ent4#att6Array" target="mov13#opm9#mathu8#mathv9"/>
+      </OKLink>
+    </SelectorUnit>
+    <MathUnit id="mov13#opm9#mathu8" name="Stock restante" gr:x="1305" gr:y="115" resultType="integer" defaultExpression="Stock - Compra">
+      <MathVariable id="mov13#opm9#mathu8#mathv9" name="Stock"/>
+      <MathVariable id="mov13#opm9#mathu8#mathv10" name="Compra"/>
+      <OKLink id="mov13#opm9#mathu8#oln163" name="OKFlow119" to="mov13#opm9#switch5">
+        <LinkParameter id="mov13#opm9#mathu8#oln163#par220" name="Result_Switch" source="result" target="mov13#opm9#switch5.switch"/>
+      </OKLink>
+    </MathUnit>
+    <SwitchUnit id="mov13#opm9#switch5" name="Strock restante" gr:x="1360" gr:y="280">
+      <Case value="-1"/>
+      <OKLink id="mov13#opm9#switch5#oln164" name="OKFlow118" to="mov13#opm9#okcu17" code="-1" automaticCoupling="true"/>
+      <OKLink id="mov13#opm9#switch5#oln165" name="OKFlow120" to="mov13#opm9#mfu12" automaticCoupling="true"/>
+    </SwitchUnit>
+  </OperationUnits>
+</OperationModule>

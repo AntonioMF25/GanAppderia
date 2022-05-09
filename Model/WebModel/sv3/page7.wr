@@ -1,11 +1,14 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1205" gr:y="540" id="sv3#page7" name="Detalle-Producto">
   <ContentUnits>
-    <DataUnit gr:x="25" gr:y="0" id="sv3#page7#dau1" name="Detalle-Producto" entity="ent4" displayAttributes="ent4#att3 ent4#att4 ent4#att5 ent4#att6 ent4#att7 ent4#att19 ent4#att24 ent4#att28 ent4#att40 ent4#att52 rel9#role17.ent2#att42">
+    <DataUnit gr:x="25" gr:y="0" id="sv3#page7#dau1" name="Detalle-Producto" entity="ent4" displayAttributes="ent4#att3 ent4#att4 ent4#att5 ent4#att6 ent4#att7 ent4#att19 ent4#att24 ent4#att28 ent4#att40 ent4#att52 rel9#role17.ent2#att42" linkOrder="sv3#page7#dau1#ln179">
       <Selector id="sv3#page7#dau1#su1" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv3#page7#dau1#su1#kcond1" name="KeyCondition1" predicate="in" implied="false"/>
       </Selector>
       <Link id="sv3#page7#dau1#ln90" name="Flow48" to="sv3#page7#seu41" type="transport" validate="true">
         <LinkParameter id="sv3#page7#dau1#ln90#par219" name="oid_ValoracionesProducto" source="data.ent4#att2" target="sv3#page7#seu41#su67#acond36"/>
+      </Link>
+      <Link id="sv3#page7#dau1#ln179" name="A&#241;adir al carrito" to="sv3#miu21" type="normal" validate="true">
+        <LinkParameter id="sv3#page7#dau1#ln179#par435" name="oid_Input Port Parameter OID Producto" source="data.ent4#att2" target="sv3#miu21.mov17#opm12#icu17#icp30"/>
       </Link>
     </DataUnit>
     <IndexUnit id="sv3#page7#inu8" name="Valoraciones" gr:x="235" gr:y="190" entity="ent9" displayAttributes="rel4#role8.userName ent9#att26 ent9#att27">
@@ -35,6 +38,7 @@
           <layout:Attribute attribute="ent4#att40"/>
           <layout:Attribute attribute="ent4#att52"/>
           <layout:Attribute attribute="rel9#role17.ent2#att42"/>
+          <layout:Link link="sv3#page7#dau1#ln179"/>
         </layout:Unit>
       </layout:Cell>
       <layout:Cell/>

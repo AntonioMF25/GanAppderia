@@ -1,0 +1,54 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page29" name="Facturas" landmark="true" gr:x="4315" gr:y="600">
+  <ContentUnits>
+    <IndexUnit id="sv3#page29#inu9" name="Facturas" gr:x="0" gr:y="0" entity="ent11" displayAttributes="ent11#att30 ent11#att1 ent11#att31 ent11#att32 ent11#att33 ent11#att34 ent11#att38">
+      <Selector id="sv3#page29#inu9#su83" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="sv3#page29#inu9#su83#rcond2" name="RoleCondition4" role="rel7#role13.rel8#role15" predicate="in" implied="false"/>
+      </Selector>
+    </IndexUnit>
+    <GetUnit id="sv3#page29#gtu9" name="Get2" gr:x="480" gr:y="35" contextParameters="UserCtxParam">
+      <Link id="sv3#page29#gtu9#ln178" name="Flow28" to="sv3#page29#inu9" type="transport" validate="true">
+        <LinkParameter id="sv3#page29#gtu9#ln178#par433" name="UserCtxParam.oid_RoleCondition4 [oid]" source="sv3#page29#gtu9.UserCtxParam" target="sv3#page29#inu9#su83#rcond2.userOID"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid" layout:style="BootstrapStyle" layout:frameLayout="BootstrapStyle/Panel" layout:attributeLayout="BootstrapStyle/Default" layout:fieldLayout="BootstrapStyle/EntryUnit" layout:linkLayout="BootstrapStyle/Default">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page29#inu9">
+          <layout:Attribute attribute="ent11#att30"/>
+          <layout:Attribute attribute="ent11#att1"/>
+          <layout:Attribute attribute="ent11#att31"/>
+          <layout:Attribute attribute="ent11#att32"/>
+          <layout:Attribute attribute="ent11#att33"/>
+          <layout:Attribute attribute="ent11#att34"/>
+          <layout:Attribute attribute="ent11#att38"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>
