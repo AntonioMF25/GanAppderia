@@ -44,7 +44,7 @@
       </Selector>
       <OKLink id="mov5#hym4#mfu4#oln54" name="OKFlow9" to="mov5#hym4#dlu1" gr:bendpoints="28,91,-147,11"/>
     </ModifyUnit>
-    <ScaleImageUnit gr:x="380" gr:y="130" id="mov5#hym4#sim1" name="Rescalado-Imagen">
+    <ScaleImageUnit gr:x="410" gr:y="155" id="mov5#hym4#sim1" name="Rescalado-Imagen">
       <OKLink id="mov5#hym4#sim1#oln86" name="OKFlow86" to="mov5#hym4#cru8">
         <LinkParameter id="mov5#hym4#sim1#oln86#par289" name="Scaled Image_imagenProducto" source="scaledImage" target="mov5#hym4#cru8.ent14#att73"/>
       </OKLink>
@@ -102,22 +102,26 @@
       </Link>
     </CreateUnit>
     <SelectorUnit gr:x="660" gr:y="60" id="mov5#hym4#seu20" name="Seleccionar-Tmp" entity="ent14">
-      <OKLink id="mov5#hym4#seu20#oln82" name="OKFlow82" to="mov5#hym4#mfu4" gr:bendpoints="-109,383,216,-32">
-        <LinkParameter id="mov5#hym4#seu20#oln82#par277" name="oid_categoria_Categoria.oid(ProductosToCategoria)" source="ent14#att88Array" target="mov5#hym4#mfu4.rel1#role1.ent8#att22"/>
-        <LinkParameter id="mov5#hym4#seu20#oln82#par278" name="descripcionProducto_descripcionProducto" source="ent14#att59Array" target="mov5#hym4#mfu4.ent4#att4"/>
-        <LinkParameter id="mov5#hym4#seu20#oln82#par279" name="fechaCaducidad_fechaCaducidad" source="ent14#att82Array" target="mov5#hym4#mfu4.ent4#att24"/>
-        <LinkParameter id="mov5#hym4#seu20#oln82#par280" name="imagenProducto_imagenProducto" source="ent14#att73Array" target="mov5#hym4#mfu4.ent4#att19"/>
-        <LinkParameter id="mov5#hym4#seu20#oln82#par281" name="oid_producto_KeyCondition5 [oid]" source="ent14#att86Array" target="mov5#hym4#mfu4#su27#kcond24.ent4#att2"/>
-        <LinkParameter id="mov5#hym4#seu20#oln82#par282" name="nombreProducto_nombreProducto" source="ent14#att58Array" target="mov5#hym4#mfu4.ent4#att3"/>
-        <LinkParameter id="mov5#hym4#seu20#oln82#par283" name="precioProducto_precioProducto" source="ent14#att60Array" target="mov5#hym4#mfu4.ent4#att5"/>
-        <LinkParameter id="mov5#hym4#seu20#oln82#par284" name="oid_promocion_Promociones.oid(ProductosToPromociones)" source="ent14#att87Array" target="mov5#hym4#mfu4.rel3#role5.ent5#att8"/>
-        <LinkParameter id="mov5#hym4#seu20#oln82#par285" name="oid_ubicacion_Ubicacion.oid(ProductosToUbicacion)" source="ent14#att89Array" target="mov5#hym4#mfu4.rel9#role17.ent2#att41"/>
-        <LinkParameter id="mov5#hym4#seu20#oln82#par286" name="unidadesProducto_unidadesProducto" source="ent14#att61Array" target="mov5#hym4#mfu4.ent4#att6"/>
-        <LinkParameter id="mov5#hym4#seu20#oln82#par287" name="urlQR_urlQR" source="ent14#att84Array" target="mov5#hym4#mfu4.ent4#att40"/>
-      </OKLink>
       <Selector id="mov5#hym4#seu20#su32" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov5#hym4#seu20#su32#kcond12" name="KeyCondition12" predicate="in" implied="false"/>
       </Selector>
+      <Link id="mov5#hym4#seu20#ln191" name="OKFlow82" to="mov5#hym4#mfu4" gr:bendpoints="-199,333,146,-87" type="transport">
+        <LinkParameter id="mov5#hym4#seu20#ln191#par491" name="oid_promocion_Promociones.oid(ProductosToPromociones)" source="ent14#att87Array" target="mov5#hym4#mfu4.rel3#role5.ent5#att8"/>
+        <LinkParameter id="mov5#hym4#seu20#ln191#par492" name="descripcionProducto_descripcionProducto" source="ent14#att59Array" target="mov5#hym4#mfu4.ent4#att4"/>
+        <LinkParameter id="mov5#hym4#seu20#ln191#par493" name="precioProducto_precioProducto" source="ent14#att60Array" target="mov5#hym4#mfu4.ent4#att5"/>
+        <LinkParameter id="mov5#hym4#seu20#ln191#par494" name="unidadesProducto_unidadesProducto" source="ent14#att61Array" target="mov5#hym4#mfu4.ent4#att6"/>
+        <LinkParameter id="mov5#hym4#seu20#ln191#par495" name="urlQR_urlQR" source="ent14#att84Array" target="mov5#hym4#mfu4.ent4#att40"/>
+        <LinkParameter id="mov5#hym4#seu20#ln191#par496" name="fechaCaducidad_fechaCaducidad" source="ent14#att82Array" target="mov5#hym4#mfu4.ent4#att24"/>
+        <LinkParameter id="mov5#hym4#seu20#ln191#par497" name="nombreProducto_nombreProducto" source="ent14#att58Array" target="mov5#hym4#mfu4.ent4#att3"/>
+        <LinkParameter id="mov5#hym4#seu20#ln191#par498" name="oid_categoria_Categoria.oid(ProductosToCategoria)" source="ent14#att88Array" target="mov5#hym4#mfu4.rel1#role1.ent8#att22"/>
+        <LinkParameter id="mov5#hym4#seu20#ln191#par499" name="imagenProducto_imagenProducto" source="ent14#att73Array" target="mov5#hym4#mfu4.ent4#att19"/>
+        <LinkParameter id="mov5#hym4#seu20#ln191#par500" name="oid_producto_KeyCondition5 [oid]" source="ent14#att86Array" target="mov5#hym4#mfu4#su27#kcond24.ent4#att2"/>
+        <LinkParameter id="mov5#hym4#seu20#ln191#par501" name="oid_ubicacion_Ubicacion.oid(ProductosToUbicacion)" source="ent14#att89Array" target="mov5#hym4#mfu4.rel9#role17.ent2#att41"/>
+      </Link>
+      <OKLink id="mov5#hym4#seu20#oln221" name="OKFlow221" to="mov5#hym4#qrcu2">
+        <LinkParameter id="mov5#hym4#seu20#oln221#par502" name="urlQR_QRCode Text" source="ent14#att84Array" target="mov5#hym4#qrcu2.text"/>
+        <LinkParameter id="mov5#hym4#seu20#oln221#par503" name="200_QRCode Image Size" sourceValue="200" target="mov5#hym4#qrcu2.size"/>
+      </OKLink>
     </SelectorUnit>
     <DeleteUnit gr:x="515" gr:y="555" id="mov5#hym4#dlu1" name="Eliminar-Tmp" entity="ent14">
       <Selector id="mov5#hym4#dlu1#su31" defaultPolicy="fill" booleanOperator="and">
@@ -152,5 +156,10 @@
         <LinkParameter id="mov5#hym4#seu21#oln113#par311" name="urlQR_URL Qr" source="ent4#att40Array" target="mov5#hym4#page17#enu8#fld47_slot"/>
       </OKLink>
     </SelectorUnit>
+    <QRCodeUnit gr:x="645" gr:y="390" id="mov5#hym4#qrcu2" name="QR Code Unit2">
+      <OKLink id="mov5#hym4#qrcu2#oln222" name="OKFlow222" to="mov5#hym4#mfu4">
+        <LinkParameter id="mov5#hym4#qrcu2#oln222#par504" name="QRCode BLOB_imagenQR" source="qrCode" target="mov5#hym4#mfu4.ent4#att92"/>
+      </OKLink>
+    </QRCodeUnit>
   </OperationUnits>
 </HybridModule>

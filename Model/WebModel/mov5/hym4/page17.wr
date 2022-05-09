@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov5#hym4#page17" name="Actualizar-Producto" gr:x="830" gr:y="225">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov5#hym4#page17" name="Actualizar-Producto" gr:x="795" gr:y="225">
   <ContentUnits>
     <EntryUnit id="mov5#hym4#page17#enu8" name="Actualizar-Producto" linkOrder="mov5#hym4#page17#enu8#ln57 mov5#hym4#page17#enu8#ln85" gr:x="0" gr:y="75" entity="ent4" fieldOrder="mov5#hym4#page17#enu8#fld48 mov5#hym4#page17#enu8#fld42 mov5#hym4#page17#enu8#fld43 mov5#hym4#page17#enu8#fld44 mov5#hym4#page17#enu8#fld45 mov5#hym4#page17#enu8#fld46 mov5#hym4#page17#enu8#fld47 mov5#hym4#page17#enu8#sfld17 mov5#hym4#page17#enu8#sfld18 mov5#hym4#page17#enu8#sfld16">
       <Field id="mov5#hym4#page17#enu8#fld42" name="Descripci&#243;n" type="text" modifiable="true" attribute="ent4#att4" preloaded="true">
@@ -69,30 +69,30 @@
         <LinkParameter id="mov5#hym4#page17#enu8#ln85#par291" name="200_Width" sourceValue="200" target="mov5#hym4#sim1.width"/>
       </Link>
     </EntryUnit>
-    <SelectorUnit id="mov5#hym4#page17#seu29" name="Selector-Promociones" gr:x="165" gr:y="75" entity="ent5">
+    <SelectorUnit id="mov5#hym4#page17#seu29" name="Selector-Promociones" gr:x="200" gr:y="75" entity="ent5">
       <Link id="mov5#hym4#page17#seu29#ln65" name="Flow21" to="mov5#hym4#page17#enu8" type="transport" validate="true">
         <LinkParameter id="mov5#hym4#page17#seu29#ln65#par314" name="nombrePromocion_Promoci&#243;n [label]" source="ent5#att11Array" target="mov5#hym4#page17#enu8#sfld17_label"/>
         <LinkParameter id="mov5#hym4#page17#seu29#ln65#par315" name="oid_Promoci&#243;n [output]" source="ent5#att8Array" target="mov5#hym4#page17#enu8#sfld17_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov5#hym4#page17#seu30" name="Selector-Categor&#237;as" gr:x="170" gr:y="165" entity="ent8">
+    <SelectorUnit id="mov5#hym4#page17#seu30" name="Selector-Categor&#237;as" gr:x="205" gr:y="165" entity="ent8">
       <Link id="mov5#hym4#page17#seu30#ln66" name="Flow22" to="mov5#hym4#page17#enu8" type="transport" validate="true">
         <LinkParameter id="mov5#hym4#page17#seu30#ln66#par316" name="nombreCategoria_Categor&#237;a [label]" source="ent8#att23Array" target="mov5#hym4#page17#enu8#sfld18_label"/>
         <LinkParameter id="mov5#hym4#page17#seu30#ln66#par317" name="oid_Categor&#237;a [output]" source="ent8#att22Array" target="mov5#hym4#page17#enu8#sfld18_output"/>
       </Link>
     </SelectorUnit>
-    <SelectorUnit id="mov5#hym4#page17#seu31" name="Selector-Ubicaciones" gr:x="170" gr:y="250" entity="ent2">
+    <SelectorUnit id="mov5#hym4#page17#seu31" name="Selector-Ubicaciones" gr:x="205" gr:y="250" entity="ent2">
       <Link id="mov5#hym4#page17#seu31#ln67" name="Flow23" to="mov5#hym4#page17#enu8" type="transport" validate="true">
         <LinkParameter id="mov5#hym4#page17#seu31#ln67#par318" name="nombreUbicacion_Ubicacion [label]" source="ent2#att42Array" target="mov5#hym4#page17#enu8#sfld16_label"/>
         <LinkParameter id="mov5#hym4#page17#seu31#ln67#par319" name="oid_Ubicacion [output]" source="ent2#att41Array" target="mov5#hym4#page17#enu8#sfld16_output"/>
       </Link>
     </SelectorUnit>
-    <DataUnit gr:x="30" gr:y="285" id="mov5#hym4#page17#dau5" name="TMP" entity="ent14" displayAttributes="ent14#att57 ent14#att58 ent14#att59 ent14#att60 ent14#att61 ent14#att63 ent14#att73 ent14#att82 ent14#att83 ent14#att84 ent14#att85 ent14#att86 ent14#att87 ent14#att88 ent14#att89">
+    <DataUnit gr:x="65" gr:y="285" id="mov5#hym4#page17#dau5" name="TMP" entity="ent14" displayAttributes="ent14#att57 ent14#att58 ent14#att59 ent14#att60 ent14#att61 ent14#att63 ent14#att73 ent14#att82 ent14#att83 ent14#att84 ent14#att85 ent14#att86 ent14#att87 ent14#att88 ent14#att89">
       <Selector id="mov5#hym4#page17#dau5#su33" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov5#hym4#page17#dau5#su33#kcond13" name="KeyCondition13" predicate="in" implied="false"/>
       </Selector>
     </DataUnit>
-    <MultiMessageUnit gr:x="200" gr:y="0" id="mov5#hym4#page17#mssu10" name="Avisos"/>
+    <MultiMessageUnit gr:x="235" gr:y="0" id="mov5#hym4#page17#mssu10" name="Avisos"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

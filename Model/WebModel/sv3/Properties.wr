@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="Home-Usuario" protected="true" localized="true" landmarks="sv3#lou1 sv3#page14 sv3#page8 sv3#page29" layout:style="WebRatio" homePage="sv3#page32">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="Home-Usuario" protected="true" localized="true" landmarks="sv3#page32 sv3#page8 sv3#page14 sv3#page27 sv3#lou1" layout:style="WebRatio" homePage="sv3#page32">
   <OperationUnits>
     <LogoutUnit gr:x="55" gr:y="1575" id="sv3#lou1" name="Logout" siteView="sv2" landmark="true"/>
     <ModuleInstanceUnit gr:x="-180" gr:y="720" id="sv3#miu1" moduleId="mov3#opm4">
@@ -231,11 +231,19 @@
       <OKLink id="sv3#miu18#oln205" name="OKFlow194" to="sv3#page26#pwu6" automaticCoupling="true" gr:bendpoints="-171,121,244,51"/>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit id="sv3#miu21" gr:x="3260" gr:y="100" action="true" moduleId="mov17#opm12">
-      <OKLink id="sv3#miu21#oln206" name="OKFlow172" to="sv3#page26#pwu6" automaticCoupling="true"/>
-      <KOLink id="sv3#miu21#kln32" name="KOFlow13" to="sv3#page26#mssu15" automaticCoupling="true"/>
+      <OKLink id="sv3#miu21#oln206" name="OKFlow172" to="sv3#page26#pwu6" automaticCoupling="true" codeRef="mov17#opm12#okcu20" gr:bendpoints="347,88,-368,73"/>
+      <KOLink id="sv3#miu21#kln34" name="KOFlow13" to="sv3#page26#mssu28" gr:bendpoints="206,-94,-154,-39">
+        <LinkParameter id="sv3#miu21#kln34#par417" name="No hay stock suficiente para a&#241;adirlo al carrito._Shown Messages" target="sv3#page26#mssu28.shownMessages" sourceValue="No hay stock suficiente para agregarlo al carrito."/>
+      </KOLink>
+      <OKLink id="sv3#miu21#oln189" name="OKFlow155" to="sv3#page26#mssu28" codeRef="mov17#opm12#okcu16">
+        <LinkParameter id="sv3#miu21#oln189#par420" name="No hay stock suficiente para a&#241;adirlo al carrito._Shown Messages" target="sv3#page26#mssu28.shownMessages" sourceValue="No hay stock suficiente para agregarlo al carrito."/>
+      </OKLink>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit id="sv3#miu22" gr:x="4435" gr:y="-100" action="true" moduleId="mov13#opm9">
-      <OKLink id="sv3#miu22#oln207" name="OKFlow189" to="sv3#page26#pwu6" automaticCoupling="true" gr:bendpoints="180,84,20,-181"/>
+      <OKLink id="sv3#miu22#oln207" name="OKFlow189" to="sv3#page26#pwu6" automaticCoupling="true" gr:bendpoints="-220,95,190,-120" codeRef="mov13#opm9#okcu17"/>
+      <OKLink id="sv3#miu22#oln190" name="OKFlow190" to="sv3#page26#mssu28" gr:bendpoints="-605,0,135,-150" codeRef="mov13#opm9#okcu21">
+        <LinkParameter id="sv3#miu22#oln190#par421" name="No hay stock suficiente para a&#241;adirlo al carrito._Shown Messages" sourceValue="No hay stock suficiente para agregarlo al carrito." target="sv3#page26#mssu28.shownMessages"/>
+      </OKLink>
     </ModuleInstanceUnit>
     <DeleteUnit id="sv3#dlu14" name="Eliminar del carrito" gr:x="3435" gr:y="420" entity="ent6">
       <Selector id="sv3#dlu14#su84" defaultPolicy="fill" booleanOperator="and">
@@ -243,8 +251,8 @@
       </Selector>
       <OKLink id="sv3#dlu14#oln208" name="OKFlow68" to="sv3#page26#pwu6" automaticCoupling="true" gr:bendpoints="-262,33,198,63"/>
     </DeleteUnit>
-    <ModuleInstanceUnit id="sv3#miu23" gr:x="3950" gr:y="665" action="true" moduleId="mov16#opm11">
-      <OKLink id="sv3#miu23#oln209" name="OKFlow158" to="sv3#page29#inu9" automaticCoupling="true"/>
+    <ModuleInstanceUnit id="sv3#miu23" gr:x="3940" gr:y="525" action="true" moduleId="mov16#opm11">
+      <OKLink id="sv3#miu23#oln7" name="OKFlow158" to="sv3#page27" automaticCoupling="true"/>
     </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

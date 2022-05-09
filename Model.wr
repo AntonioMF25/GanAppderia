@@ -3,4 +3,6 @@
 
 <WebProject xmlns:gr="http://www.webratio.com/2006/WebML/Graph" outputPath="${webapps_loc}/${project_name}" gr:showUnitContent="true" gr:showTooltip="true" httpPort="8080" httpsPort="8443" enableProjectDependencies="true" jobGroupName="WEBRATIO" wrTempNewProject="true" gr:useUMLStyle="true">
   <ServiceDataProviders/>
+  <ReferencedProject name="StoreComponents" natureId="com.webratio.ide.units.wrunitsnature"/>
+  <ReferencedProject name="WebRatio" natureId="com.webratio.ide.styles.wrstylenature"/>
 </WebProject>

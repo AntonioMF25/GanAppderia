@@ -52,8 +52,9 @@
     </MathUnit>
     <SwitchUnit id="mov13#opm9#switch5" name="Strock restante" gr:x="1360" gr:y="280">
       <Case value="-1"/>
-      <OKLink id="mov13#opm9#switch5#oln164" name="OKFlow118" to="mov13#opm9#okcu17" code="-1" automaticCoupling="true"/>
+      <OKLink id="mov13#opm9#switch5#oln164" name="OKFlow118" to="mov13#opm9#okcu21" code="-1" automaticCoupling="true"/>
       <OKLink id="mov13#opm9#switch5#oln165" name="OKFlow120" to="mov13#opm9#mfu12" automaticCoupling="true"/>
     </SwitchUnit>
+    <OKCollectorUnit id="mov13#opm9#okcu21" name="SinStock" gr:x="1690" gr:y="215"/>
   </OperationUnits>
 </OperationModule>

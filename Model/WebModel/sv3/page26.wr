@@ -1,6 +1,6 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page26" name="Carrito" gr:x="3665" gr:y="-20">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page26" name="Carrito" gr:x="3705" gr:y="20">
   <ContentUnits>
-    <PowerIndexUnit id="sv3#page26#pwu6" name="Carrito" linkOrder="sv3#page26#pwu6#ln174 sv3#page26#pwu6#ln175 sv3#page26#pwu6#ln176" gr:x="365" gr:y="90" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att13 ent6#att14 ent6#att15 ent6#att37">
+    <PowerIndexUnit id="sv3#page26#pwu6" name="Carrito" linkOrder="sv3#page26#pwu6#ln174 sv3#page26#pwu6#ln175 sv3#page26#pwu6#ln176" gr:x="325" gr:y="50" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att13 ent6#att14 ent6#att15 ent6#att37">
       <Link id="sv3#page26#pwu6#ln174" name="Eliminar" to="sv3#dlu14" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-249,74,236,-176"/>
       <Link id="sv3#page26#pwu6#ln175" name="+1" to="sv3#miu22" type="normal" validate="true" gr:bendpoints="-325,-84,330,116">
         <LinkParameter id="sv3#page26#pwu6#ln175#par438" name="oid_Input Port Parameter" source="data[].ent6#att12" target="sv3#miu22.mov13#opm9#icu14#icp27"/>
@@ -9,12 +9,10 @@
         <LinkParameter id="sv3#page26#pwu6#ln176#par437" name="oid_Producto_Input Port Parameter " source="data[].ent6#att12" target="sv3#miu18.mov12#opm7#icu12#icp25"/>
       </Link>
     </PowerIndexUnit>
-    <EntryUnit id="sv3#page26#enu12" name="Comfirmar Pedido" linkOrder="sv3#page26#enu12#ln177" gr:x="295" gr:y="275">
+    <EntryUnit id="sv3#page26#enu12" name="Comfirmar Pedido" linkOrder="sv3#page26#enu12#ln177" gr:x="255" gr:y="235">
       <Link id="sv3#page26#enu12#ln177" name="Confirmar pedido" to="sv3#miu23" type="normal" automaticCoupling="true" validate="true"/>
     </EntryUnit>
-    <MultiMessageUnit id="sv3#page26#mssu15" name="No hay stock" gr:x="0" gr:y="0">
-      <Message xml:space="preserve">No hay stock suficiente para a&#241;adirlo al carrito</Message>
-    </MultiMessageUnit>
+    <MultiMessageUnit id="sv3#page26#mssu28" name="Aviso" gr:x="0" gr:y="0"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -61,8 +59,22 @@
     </layout:Row>
     <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv3#page26#mssu15"/>
+        <layout:Unit unitId="sv3#page26#mssu28"/>
       </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

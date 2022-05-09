@@ -93,7 +93,7 @@
   <Entry key="HistoricoPromociones">Promotion's registry</Entry>
   <Entry key="HistoricoUser">Users' registry</Entry>
   <Entry key="Home-Admin">Administrator's main page</Entry>
-  <Entry key="Home-Usuario">User's main page</Entry>
+  <Entry key="Home-Usuario">Home</Entry>
   <Entry key="IgualOmayorQue0">The assigned value must be an integer from 0 to 5</Entry>
   <Entry key="IgualOmenorQue5">The assigned value must be an integer from 0 to 5</Entry>
   <Entry key="Imagen">Image</Entry>

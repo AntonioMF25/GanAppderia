@@ -6,14 +6,15 @@
         <LinkParameter id="mov17#opm12#icu17#oln186#par403" name="Input Port Parameter OID Producto_KeyCondition25 [oid]" source="mov17#opm12#icu17#icp30" target="mov17#opm12#seu52#su78#kcond56.ent4#att2"/>
       </OKLink>
     </InputCollectorUnit>
-    <MathUnit id="mov17#opm12#mathu12" name="Descuento" gr:x="1315" gr:y="205" resultType="float" defaultExpression="Normal - Promocion">
+    <MathUnit id="mov17#opm12#mathu12" name="Descuento" gr:x="1290" gr:y="245" resultType="float" defaultExpression="Normal - Promocion" linkOrder="mov17#opm12#mathu12#ln182">
       <MathVariable id="mov17#opm12#mathu12#mathv17" name="Normal"/>
       <MathVariable id="mov17#opm12#mathu12#mathv18" name="Promocion"/>
-      <OKLink id="mov17#opm12#mathu12#oln188" name="OKFlow61" to="mov17#opm12#cru17">
-        <LinkParameter id="mov17#opm12#mathu12#oln188#par406" name="Result_ahorroUnidadProducto" source="result" target="mov17#opm12#cru17.ent6#att37"/>
-      </OKLink>
+      <OKLink id="mov17#opm12#mathu12#oln188" name="OKFlow61" to="mov17#opm12#seu51"/>
+      <Link id="mov17#opm12#mathu12#ln182" name="Flow182" to="mov17#opm12#cru17" type="transport" validate="true" gr:bendpoints="145,-93,45,192">
+        <LinkParameter id="mov17#opm12#mathu12#ln182#par469" name="Result_ahorroUnidadProducto" source="result" target="mov17#opm12#cru17.ent6#att37"/>
+      </Link>
     </MathUnit>
-    <SelectorUnit id="mov17#opm12#seu52" name="Selecciona producto" gr:x="575" gr:y="165" entity="ent4" linkOrder="mov17#opm12#seu52#ln173">
+    <SelectorUnit id="mov17#opm12#seu52" name="Selecciona producto" gr:x="575" gr:y="165" entity="ent4" linkOrder="mov17#opm12#seu52#ln173 mov17#opm12#seu52#ln181">
       <Selector id="mov17#opm12#seu52#su78" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov17#opm12#seu52#su78#kcond56" name="KeyCondition25" predicate="in" implied="false"/>
       </Selector>
@@ -21,7 +22,7 @@
         <LinkParameter id="mov17#opm12#seu52#ln163#par407" name="1_cantidad" target="mov17#opm12#cru17.ent6#att15" sourceValue="1"/>
         <LinkParameter id="mov17#opm12#seu52#ln163#par408" name="nombreProducto_nombreProducto" source="ent4#att3Array" target="mov17#opm12#cru17.ent6#att13"/>
         <LinkParameter id="mov17#opm12#seu52#ln163#par409" name="oid_oid_Producto" source="ent4#att2Array" target="mov17#opm12#cru17.ent6#att16"/>
-        <LinkParameter id="mov17#opm12#seu52#ln163#par410" name="precioProducto_precioUnidadProducto" source="ent4#att7Array" target="mov17#opm12#cru17.ent6#att14"/>
+        <LinkParameter id="mov17#opm12#seu52#ln163#par410" name="precioProducto_precioUnidadProducto" source="ent4#att5Array" target="mov17#opm12#cru17.ent6#att14"/>
       </Link>
       <Link id="mov17#opm12#seu52#ln164" name="Flow17" to="mov17#opm12#mathu12" type="transport" validate="true">
         <LinkParameter id="mov17#opm12#seu52#ln164#par411" name="precioProducto_Normal" source="ent4#att5Array" target="mov17#opm12#mathu12#mathv17"/>
@@ -39,6 +40,9 @@
       <Link id="mov17#opm12#seu52#ln173" name="Flow173" to="mov17#opm12#mathu15" type="transport" validate="true" gr:bendpoints="288,350,-747,0">
         <LinkParameter id="mov17#opm12#seu52#ln173#par429" name="unidadesProducto_Stock" source="ent4#att6Array" target="mov17#opm12#mathu15#mathv21"/>
       </Link>
+      <Link id="mov17#opm12#seu52#ln181" name="Flow181" to="mov17#opm12#seu51" type="transport" validate="true">
+        <LinkParameter id="mov17#opm12#seu52#ln181#par468" name="oid_AttCondition41" source="ent4#att2Array" target="mov17#opm12#seu51#su82#acond41"/>
+      </Link>
     </SelectorUnit>
     <IsNotNullUnit id="mov17#opm12#inn22" name="no es nulo?" gr:x="1755" gr:y="330" emptyStringAsNull="true">
       <OKLink id="mov17#opm12#inn22#oln191" name="OKFlow127" to="mov17#opm12#mathu12" automaticCoupling="true"/>
@@ -48,8 +52,9 @@
       <Selector id="mov17#opm12#mfu15#su79" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov17#opm12#mfu15#su79#kcond57" name="KeyCondition27" predicate="in" implied="false"/>
       </Selector>
+      <OKLink id="mov17#opm12#mfu15#oln154" name="OKFlow154" to="mov17#opm12#okcu20" automaticCoupling="true"/>
     </ModifyUnit>
-    <IsNotNullUnit id="mov17#opm12#inn23" name="no es nulo?" gr:x="1205" gr:y="960" emptyStringAsNull="true">
+    <IsNotNullUnit id="mov17#opm12#inn23" name="no es nulo?" gr:x="1180" gr:y="840" emptyStringAsNull="true">
       <OKLink id="mov17#opm12#inn23#oln192" name="OKFlow74" to="mov17#opm12#mathu14" automaticCoupling="true"/>
       <KOLink id="mov17#opm12#inn23#kln29" name="KOFlow2" to="mov17#opm12#seu54" automaticCoupling="true"/>
     </IsNotNullUnit>
@@ -76,7 +81,7 @@
     </MathUnit>
     <SelectorUnit id="mov17#opm12#seu54" name="Tiene promocion?" gr:x="1045" gr:y="350" entity="ent5">
       <Selector id="mov17#opm12#seu54#su81" defaultPolicy="fill" booleanOperator="and">
-        <AttributesCondition id="mov17#opm12#seu54#su81#acond38" name="AttCondition16" predicate="gt" booleanOperator="or" implied="false" attributes="ent5#att8"/>
+        <AttributesCondition id="mov17#opm12#seu54#su81#acond38" name="AttCondition16" predicate="eq" booleanOperator="or" implied="false" attributes="ent5#att8"/>
       </Selector>
       <OKLink id="mov17#opm12#seu54#oln197" name="OKFlow120" to="mov17#opm12#inn22">
         <LinkParameter id="mov17#opm12#seu54#oln197#par426" name="oid_Input" source="ent5#att8Array" target="mov17#opm12#inn22.isnotnull"/>
@@ -85,20 +90,31 @@
     <CreateUnit id="mov17#opm12#cru17" name="Dar de alta en carrito" gr:x="1380" gr:y="-45" entity="ent6">
       <OKLink id="mov17#opm12#cru17#oln198" name="OKFlow170" to="mov17#opm12#okcu20" automaticCoupling="true"/>
     </CreateUnit>
-    <OKCollectorUnit id="mov17#opm12#okcu20" name="A Carrito" gr:x="2240" gr:y="435"/>
+    <OKCollectorUnit id="mov17#opm12#okcu20" name="A Carrito" gr:x="2215" gr:y="280"/>
     <IsNotNullUnit id="mov17#opm12#inn25" name="tiene stock?" gr:x="315" gr:y="575" emptyStringAsNull="true">
       <OKLink id="mov17#opm12#inn25#oln199" name="OKFlow88" to="mov17#opm12#seu53" automaticCoupling="true"/>
-      <KOLink id="mov17#opm12#inn25#kln31" name="KOFlow2" to="mov17#opm12#okcu20" automaticCoupling="true" gr:bendpoints="202,540,-1768,655;1631,546,-339,661"/>
+      <KOLink id="mov17#opm12#inn25#kln31" name="KOFlow2" to="mov17#opm12#okcu16" automaticCoupling="true" gr:bendpoints="202,540,-1768,655;1631,546,-339,661"/>
     </IsNotNullUnit>
-    <MathUnit gr:x="1300" gr:y="540" id="mov17#opm12#mathu15" name="queda stock?" resultType="integer" defaultExpression="Cantidad - Compra">
+    <MathUnit gr:x="1300" gr:y="540" id="mov17#opm12#mathu15" name="queda stock?" resultType="integer" defaultExpression="Stock - Compra">
       <MathVariable id="mov17#opm12#mathu15#mathv21" name="Stock"/>
       <MathVariable id="mov17#opm12#mathu15#mathv22" name="Compra"/>
-      <OKLink id="mov17#opm12#mathu15#oln202" name="OKFlow202" to="mov17#opm12#switch6" automaticCoupling="true"/>
+      <OKLink id="mov17#opm12#mathu15#oln202" name="OKFlow202" to="mov17#opm12#switch6">
+        <LinkParameter id="mov17#opm12#mathu15#oln202#par424" name="Result_Switch" source="result" target="mov17#opm12#switch6.switch"/>
+      </OKLink>
     </MathUnit>
     <SwitchUnit gr:x="1655" gr:y="530" id="mov17#opm12#switch6" name="stock">
       <Case value="-1"/>
-      <OKLink id="mov17#opm12#switch6#oln203" name="OKFlow203" to="mov17#opm12#okcu20" automaticCoupling="true" code="-1"/>
+      <OKLink id="mov17#opm12#switch6#oln203" name="OKFlow203" to="mov17#opm12#okcu16" automaticCoupling="true" code="-1"/>
       <OKLink id="mov17#opm12#switch6#oln204" name="OKFlow204" to="mov17#opm12#mfu15" automaticCoupling="true"/>
     </SwitchUnit>
+    <OKCollectorUnit id="mov17#opm12#okcu16" name="Error_Stock" gr:x="2215" gr:y="490"/>
+    <SelectorUnit gr:x="1200" gr:y="105" id="mov17#opm12#seu51" name="Seleccionar-PrecioTrasPromocion" entity="ent4">
+      <Selector id="mov17#opm12#seu51#su82" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov17#opm12#seu51#su82#acond41" name="AttCondition41" predicate="eq" booleanOperator="or" implied="false" attributes="ent4#att2"/>
+      </Selector>
+      <OKLink id="mov17#opm12#seu51#oln214" name="OKFlow214" to="mov17#opm12#cru17">
+        <LinkParameter id="mov17#opm12#seu51#oln214#par470" name="precioTrasPromocion_precioUnidadProducto" source="ent4#att7Array" target="mov17#opm12#cru17.ent6#att14"/>
+      </OKLink>
+    </SelectorUnit>
   </OperationUnits>
 </OperationModule>

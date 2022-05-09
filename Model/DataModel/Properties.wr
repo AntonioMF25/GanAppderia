@@ -64,7 +64,7 @@
     </Attribute>
     <Attribute id="ent4#att40" name="urlQR" type="url" db:column="urlqr"/>
     <Attribute id="ent4#att52" name="categoria" type="string" derivationQuery="simpleImported::Self.rel1#role1.ent8#att23"/>
-    <Attribute id="ent4#att92" name="imagenQR" type="blob" db:column="imagenqr"/>
+    <Attribute id="ent4#att92" name="imagenQR" type="blob" db:column="imagenqr" contentType="image"/>
   </Entity>
   <Entity id="ent5" name="Promociones" duration="persistent" attributeOrder="ent5#att8 ent5#att9 ent5#att10 ent5#att11 ent5#att20 ent5#att55" db:database="db1" db:table="promociones" gr:x="1080" gr:y="-215">
     <Attribute id="ent5#att8" name="oid" key="true" type="integer" db:column="oid"/>
@@ -82,7 +82,7 @@
     <Attribute id="ent6#att16" name="oid_Producto" type="integer"/>
     <Attribute id="ent6#att37" name="ahorroUnidadProducto" type="float"/>
   </Entity>
-  <Entity gr:x="520" gr:y="60" id="ent8" name="Categoria" duration="persistent" attributeOrder="ent8#att22 ent8#att23" db:database="db1" db:table="categoria">
+  <Entity gr:x="515" gr:y="135" id="ent8" name="Categoria" duration="persistent" attributeOrder="ent8#att22 ent8#att23" db:database="db1" db:table="categoria">
     <Attribute id="ent8#att22" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent8#att23" name="nombreCategoria" type="string" db:column="nombrecategoria"/>
   </Entity>
@@ -133,9 +133,13 @@
   </Relationship>
   <Entity gr:x="1395" gr:y="665" id="ent10" name="Factura" duration="persistent" attributeOrder="ent10#att29 ent10#att35 ent10#att36 ent10#att39 ent10#att93" db:database="db1" db:table="factura">
     <Attribute id="ent10#att29" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent10#att35" name="importeTotal" type="float" db:column="importetotal"/>
+    <Attribute id="ent10#att35" name="importeTotal" type="float" derivationQuery="calculated::sum(Self.rel8#role15(as Var1).ent11#att34)" db:table="factura_importetotal_view" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="ent10#att29" name="oid"/>
+    </Attribute>
     <Attribute id="ent10#att36" name="fechaCompra" type="timestamp" db:column="fechacompra"/>
-    <Attribute id="ent10#att39" name="ahorroTotal" type="float" db:column="ahorrototal"/>
+    <Attribute id="ent10#att39" name="ahorroTotal" type="float" derivationQuery="calculated::sum(Self.rel8#role15(as Var1).ent11#att38)" db:table="factura_ahorrototal_view" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="ent10#att29" name="oid"/>
+    </Attribute>
     <Attribute id="ent10#att93" name="excel" type="blob" db:column="excel"/>
   </Entity>
   <Relationship id="rel7" name="User_Factura" sourceEntity="User" targetEntity="ent10" db:database="db1" db:table="factura">
