@@ -1,6 +1,6 @@
 <OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" gr:x="0" gr:y="0" id="mov1#opm1" name="Crear-Producto">
   <OperationUnits>
-    <InputCollectorUnit gr:x="0" gr:y="225" id="mov1#opm1#icu1" name="Input Port" linkOrder="mov1#opm1#icu1#ln37">
+    <InputCollectorUnit gr:x="-515" gr:y="215" id="mov1#opm1#icu1">
       <InputCollectorParameter id="mov1#opm1#icu1#icp2" name="valoracionMedia"/>
       <InputCollectorParameter id="mov1#opm1#icu1#icp3" name="Ubicacion.oid(ProductosToUbicacion)"/>
       <InputCollectorParameter id="mov1#opm1#icu1#icp4" name="Promociones.oid(ProductosToPromociones)"/>
@@ -35,20 +35,24 @@
         <LinkParameter id="mov1#opm1#icu1#ln37#par62" name="imagenProducto_Image" source="mov1#opm1#icu1#icp6" target="mov1#opm1#sim2.image"/>
         <LinkParameter id="mov1#opm1#icu1#ln37#par87" name="200_Width" sourceValue="200" target="mov1#opm1#sim2.width"/>
       </Link>
+      <Link id="mov1#opm1#icu1#ln127" name="Flow127" to="mov1#opm1#sfu3" type="transport" validate="true" gr:bendpoints="376,270,-439,30">
+        <LinkParameter id="mov1#opm1#icu1#ln127#par86" name="urlQR_Uri" source="mov1#opm1#icu1#icp12" target="mov1#opm1#sfu3#str6"/>
+        <LinkParameter id="mov1#opm1#icu1#ln127#par88" name="nombreProducto_Oid" source="mov1#opm1#icu1#icp8" target="mov1#opm1#sfu3#str7"/>
+      </Link>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="1175" gr:y="300" id="mov1#opm1#okcu3" name="OK Port3">
+    <OKCollectorUnit gr:x="1615" gr:y="300" id="mov1#opm1#okcu3" name="OK Port3">
       <OutputCollectorParameter id="mov1#opm1#okcu3#ocp1" name="Has publicado un anuncio con el mismo nombre. Prueba a editarlo_Shown Messages"/>
     </OKCollectorUnit>
-    <OKCollectorUnit gr:x="1175" gr:y="0" id="mov1#opm1#okcu2" name="OK Port2">
+    <OKCollectorUnit gr:x="1615" gr:y="25" id="mov1#opm1#okcu2" name="OK Port2">
       <OutputCollectorParameter id="mov1#opm1#okcu2#ocp2" name="oid"/>
     </OKCollectorUnit>
-    <IsNotNullUnit id="mov1#opm1#inn3" name="Is Not Null2" gr:x="885" gr:y="205">
+    <IsNotNullUnit id="mov1#opm1#inn3" name="Is Not Null2" gr:x="1190" gr:y="65">
       <KOLink id="mov1#opm1#inn3#kln3" name="KOFlow2" to="mov1#opm1#sim2" automaticCoupling="true"/>
       <OKLink id="mov1#opm1#inn3#oln15" to="mov1#opm1#okcu3" name="OKFlow7">
         <LinkParameter id="mov1#opm1#inn3#oln15#par73" sourceValue="Has publicado un anuncio con el mismo nombre. Prueba a editarlo" name="Has publicado un anuncio con el mismo nombre. Prueba a editarlo_Shown Messages" target="mov1#opm1#okcu3#ocp1"/>
       </OKLink>
     </IsNotNullUnit>
-    <CreateUnit id="mov1#opm1#cru3" name="Crear-Anuncio" gr:x="515" gr:y="120" entity="ent4">
+    <CreateUnit id="mov1#opm1#cru3" name="Crear-Anuncio" gr:x="510" gr:y="310" entity="ent4">
       <OKLink id="mov1#opm1#cru3#oln16" to="mov1#opm1#okcu2" name="OKFlow6">
         <LinkParameter id="mov1#opm1#cru3#oln16#par74" name="oid_KeyCondition1 [oid]" source="ent4#att2Array" target="mov1#opm1#okcu2#ocp2"/>
       </OKLink>
@@ -71,13 +75,27 @@
         <LinkParameter id="mov1#opm1#seu5#oln14#par60" name="nombreProducto_Input" source="ent4#att3Array" target="mov1#opm1#inn3.isnotnull"/>
       </OKLink>
     </SelectorUnit>
-    <KOCollectorUnit gr:x="1175" gr:y="500" id="mov1#opm1#kocu1" name="KO Port1">
+    <KOCollectorUnit gr:x="1615" gr:y="500" id="mov1#opm1#kocu1" name="KO Port1">
       <OutputCollectorParameter id="mov1#opm1#kocu1#ocp3" name="KO-Port-1" value="Error al registrar un producto. Deshaciendo cambios..."/>
     </KOCollectorUnit>
-    <ScaleImageUnit id="mov1#opm1#sim2" name="Rescalado-Imagen" gr:x="553" gr:y="299">
-      <OKLink id="mov1#opm1#sim2#oln7" name="OKFlow7" to="mov1#opm1#cru3">
-        <LinkParameter id="mov1#opm1#sim2#oln7#par90" name="Scaled Image_imagenProducto" source="scaledImage" target="mov1#opm1#cru3.ent4#att19"/>
-      </OKLink>
+    <ScaleImageUnit id="mov1#opm1#sim2" name="Rescalado-Imagen" gr:x="840" gr:y="630">
+      <Link id="mov1#opm1#sim2#ln126" name="Flow126" to="mov1#opm1#cru3" type="transport" validate="true" gr:bendpoints="-209,-110,216,150">
+        <LinkParameter id="mov1#opm1#sim2#ln126#par47" name="Scaled Image_imagenProducto" source="scaledImage" target="mov1#opm1#cru3.ent4#att19"/>
+      </Link>
+      <OKLink id="mov1#opm1#sim2#oln151" name="OKFlow151" to="mov1#opm1#sfu3" automaticCoupling="true"/>
     </ScaleImageUnit>
+    <StringsFunctionUnit gr:x="475" gr:y="660" id="mov1#opm1#sfu3" name="Strings Function QR" mode="concatStrings" substringType="byIndex" substringMode="afterSeparator" encryptAlgorithm="com.webratio.rtx.core.DES3UnicodeCryptImplementation">
+      <String id="mov1#opm1#sfu3#str6" name="Uri"/>
+      <String id="mov1#opm1#sfu3#str7" name="Oid"/>
+      <OKLink id="mov1#opm1#sfu3#oln152" name="OKFlow152" to="mov1#opm1#qrcu1">
+        <LinkParameter id="mov1#opm1#sfu3#oln152#par89" name="Result String_QRCode Text" source="resultString" target="mov1#opm1#qrcu1.text"/>
+      </OKLink>
+    </StringsFunctionUnit>
+    <QRCodeUnit gr:x="235" gr:y="590" id="mov1#opm1#qrcu1" name="QR Code">
+      <OKLink id="mov1#opm1#qrcu1#oln153" name="OKFlow153" to="mov1#opm1#cru3">
+        <LinkParameter id="mov1#opm1#qrcu1#oln153#par90" name="QRCode BLOB_imagenQR" source="qrCode" target="mov1#opm1#cru3.ent4#att92"/>
+        <LinkParameter id="mov1#opm1#qrcu1#oln153#par397" name="QRCode Text_imagenQR [file name]" source="text" target="mov1#opm1#cru3.ent4#att92_name"/>
+      </OKLink>
+    </QRCodeUnit>
   </OperationUnits>
 </OperationModule>

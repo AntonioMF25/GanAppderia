@@ -1,0 +1,47 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov12#opm7" name="-1" gr:x="714" gr:y="91">
+  <OperationUnits>
+    <InputCollectorUnit id="mov12#opm7#icu12" gr:x="-395" gr:y="75">
+      <OKLink id="mov12#opm7#icu12#oln19" name="OKFlow186" to="mov12#opm7#seu25">
+        <LinkParameter id="mov12#opm7#icu12#oln19#par43" name="Input Port Parameter _KeyCondition28 [oid]" source="mov12#opm7#icu12#icp25" target="mov12#opm7#seu25#su49#kcond45.ent6#att12"/>
+      </OKLink>
+      <InputCollectorParameter id="mov12#opm7#icu12#icp25" name="Input Port Parameter "/>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov12#opm7#mfu8" name="Resta 1" gr:x="280" gr:y="10" entity="ent6">
+      <Selector id="mov12#opm7#mfu8#su44" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov12#opm7#mfu8#su44#kcond41" name="KeyCondition10" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov12#opm7#mfu8#oln22" name="OKFlow188" to="mov12#opm7#okcu15" automaticCoupling="true" gr:bendpoints="653,25,-237,-370"/>
+    </ModifyUnit>
+    <MathUnit id="mov12#opm7#mathu2" name="Menos 1" gr:x="665" gr:y="140" resultType="integer" defaultExpression="CantidadActual - 1">
+      <MathVariable id="mov12#opm7#mathu2#mathv2" name="CantidadActual"/>
+      <OKLink id="mov12#opm7#mathu2#oln87" name="OKFlow18" to="mov12#opm7#mfu8">
+        <LinkParameter id="mov12#opm7#mathu2#oln87#par44" name="Result_cantidad" source="result" target="mov12#opm7#mfu8.ent6#att15"/>
+      </OKLink>
+    </MathUnit>
+    <SwitchUnit id="mov12#opm7#switch3" name="Es el ultimo" gr:x="500" gr:y="335">
+      <Case value="1"/>
+      <OKLink id="mov12#opm7#switch3#oln122" name="OKFlow22" to="mov12#opm7#dlu7" code="1" automaticCoupling="true"/>
+      <OKLink id="mov12#opm7#switch3#oln148" name="OKFlow23" to="mov12#opm7#mathu2" automaticCoupling="true"/>
+    </SwitchUnit>
+    <DeleteUnit id="mov12#opm7#dlu7" name="Elimar del carrito" gr:x="485" gr:y="530" entity="ent6">
+      <Selector id="mov12#opm7#dlu7#su45" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov12#opm7#dlu7#su45#kcond42" name="KeyCondition11" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov12#opm7#dlu7#oln149" name="OKFlow187" to="mov12#opm7#okcu15" automaticCoupling="true"/>
+    </DeleteUnit>
+    <SelectorUnit id="mov12#opm7#seu25" name="Uno menos" gr:x="65" gr:y="225" entity="ent6">
+      <Selector id="mov12#opm7#seu25#su49" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov12#opm7#seu25#su49#kcond45" name="KeyCondition28" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov12#opm7#seu25#oln150" name="Flow15" to="mov12#opm7#switch3">
+        <LinkParameter id="mov12#opm7#seu25#oln150#par45" name="CantidadProducto_Switch" source="ent6#att15Array" target="mov12#opm7#switch3.switch"/>
+      </OKLink>
+      <Link id="mov12#opm7#seu25#ln109" name="Flow16" to="mov12#opm7#mfu8" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="mov12#opm7#seu25#ln110" name="Flow17" to="mov12#opm7#dlu7" type="transport" automaticCoupling="true" validate="true" gr:bendpoints="-200,183,395,-57"/>
+      <Link id="mov12#opm7#seu25#ln112" name="Flow70" to="mov12#opm7#mathu2" type="transport" validate="true">
+        <LinkParameter id="mov12#opm7#seu25#ln112#par46" name="cantidad_CantidadActual" source="ent6#att15Array" target="mov12#opm7#mathu2#mathv2"/>
+      </Link>
+    </SelectorUnit>
+    <OKCollectorUnit id="mov12#opm7#okcu15" name="A Carrito" gr:x="1105" gr:y="405"/>
+  </OperationUnits>
+</OperationModule>

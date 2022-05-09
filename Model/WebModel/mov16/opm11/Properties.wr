@@ -1,0 +1,129 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov16#opm11" name="Generar-Factura" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <CreateUnit id="mov16#opm11#cru10" name="Crear L&#237;nea Factura" gr:x="310" gr:y="775" entity="ent11">
+      <OKLink id="mov16#opm11#cru10#oln172" name="OKFlow155" to="mov16#opm11#miu16" automaticCoupling="true"/>
+      <Link id="mov16#opm11#cru10#ln146" name="Flow61" to="mov16#opm11#mfu14" type="transport" validate="true" gr:bendpoints="-67,-590,-672,485;-8,-1076,-613,-1">
+        <LinkParameter id="mov16#opm11#cru10#ln146#par370" name="ahorroTotalProducto_ahorroTotal" source="ent11#att38Array" target="mov16#opm11#mfu14.ent10#att39"/>
+        <LinkParameter id="mov16#opm11#cru10#ln146#par371" name="precioTotalProducto_importeTotal" source="ent11#att34Array" target="mov16#opm11#mfu14.ent10#att35"/>
+      </Link>
+    </CreateUnit>
+    <DeleteUnit id="mov16#opm11#dlu10" name="Delete3" gr:x="1250" gr:y="1005" entity="ent6">
+      <Selector id="mov16#opm11#dlu10#su74" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov16#opm11#dlu10#su74#kcond54" name="KeyCondition19" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov16#opm11#dlu10#oln173" name="OKFlow42" to="mov16#opm11#seu49" automaticCoupling="true" gr:bendpoints="-53,-318,92,302"/>
+    </DeleteUnit>
+    <SelectorUnit id="mov16#opm11#seu49" name="Consultar Pedido" gr:x="1055" gr:y="395" entity="ent6" maxResults="1">
+      <OKLink id="mov16#opm11#seu49#oln174" name="OKFlow32" to="mov16#opm11#inn21">
+        <LinkParameter id="mov16#opm11#seu49#oln174#par372" name="oid_Input" source="ent6#att16Array" target="mov16#opm11#inn21.isnotnull"/>
+      </OKLink>
+      <Link id="mov16#opm11#seu49#ln147" name="Flow34" to="mov16#opm11#cru10" type="transport" validate="true" gr:bendpoints="-548,61,187,-319">
+        <LinkParameter id="mov16#opm11#seu49#ln147#par373" name="cantidad_cantidadProducto" source="ent6#att15Array" target="mov16#opm11#cru10.ent11#att33"/>
+        <LinkParameter id="mov16#opm11#seu49#ln147#par374" name="nombreProducto_nombreProducto" source="ent6#att13Array" target="mov16#opm11#cru10.ent11#att31"/>
+        <LinkParameter id="mov16#opm11#seu49#ln147#par375" name="oid_Producto_oid_Producto" source="ent6#att16Array" target="mov16#opm11#cru10.ent11#att1"/>
+        <LinkParameter id="mov16#opm11#seu49#ln147#par376" name="precioUnidadProducto_precioProducto" source="ent6#att14Array" target="mov16#opm11#cru10.ent11#att32"/>
+      </Link>
+      <Link id="mov16#opm11#seu49#ln148" name="Flow55" to="mov16#opm11#dlu10" type="transport" validate="true" gr:bendpoints="320,102,-306,62">
+        <LinkParameter id="mov16#opm11#seu49#ln148#par377" name="oid_KeyCondition19 [oid]" source="ent10#att37Array" target="mov16#opm11#dlu10#su74#kcond54.ent10#att37"/>
+      </Link>
+      <Link id="mov16#opm11#seu49#ln149" name="Flow17" to="mov16#opm11#mathu10" type="transport" validate="true">
+        <LinkParameter id="mov16#opm11#seu49#ln149#par378" name="ahorroUnidadProducto_ahorroUnidad" source="ent6#att37Array" target="mov16#opm11#mathu10#mathv14"/>
+        <LinkParameter id="mov16#opm11#seu49#ln149#par379" name="cantidad_cantidad" source="ent6#att15Array" target="mov16#opm11#mathu10#mathv13"/>
+      </Link>
+      <Link id="mov16#opm11#seu49#ln150" name="Flow53" to="mov16#opm11#mathu11" type="transport" validate="true">
+        <LinkParameter id="mov16#opm11#seu49#ln150#par380" name="cantidad_cantidad" source="ent6#att15Array" target="mov16#opm11#mathu11#mathv15"/>
+        <LinkParameter id="mov16#opm11#seu49#ln150#par381" name="precioUnidadProducto_precioUnidad" source="ent6#att14Array" target="mov16#opm11#mathu11#mathv16"/>
+      </Link>
+    </SelectorUnit>
+    <SelectorUnit id="mov16#opm11#seu50" name="Selector" gr:x="985" gr:y="160" entity="ent11">
+      <Selector id="mov16#opm11#seu50#su75" defaultPolicy="fill" booleanOperator="and">
+        <RelationshipRoleCondition id="mov16#opm11#seu50#su75#rcond1" name="RoleCondition2" predicate="in" implied="false" role="rel8#role15"/>
+      </Selector>
+      <OKLink id="mov16#opm11#seu50#oln175" name="OKFlow54" to="mov16#opm11#exu1">
+        <LinkParameter id="mov16#opm11#seu50#oln175#par385" name="cantidad_Cantidad" source="ent11#att33Array" target="mov16#opm11#exu1.mov16#opm11#exu1#ci12"/>
+        <LinkParameter id="mov16#opm11#seu50#oln175#par386" name="precio_Precio" source="ent11#att32Array" target="mov16#opm11#exu1.mov16#opm11#exu1#ci11"/>
+        <LinkParameter id="mov16#opm11#seu50#oln175#par387" name="nombreProducto_Producto" source="ent11#att31Array" target="mov16#opm11#exu1.mov16#opm11#exu1#ci7"/>
+        <LinkParameter id="mov16#opm11#seu50#oln175#par388" name="precioTotalProducto_Precio Total" source="ent11#att34Array" target="mov16#opm11#exu1.mov16#opm11#exu1#ci13"/>
+        <LinkParameter id="mov16#opm11#seu50#oln175#par389" name="ahorroTotalProducto_Ahorro total" source="ent11#att38Array" target="mov16#opm11#exu1.mov16#opm11#exu1#ci14"/>
+      </OKLink>
+    </SelectorUnit>
+    <TimeUnit id="mov16#opm11#tmu5" name="Fecha factura" gr:x="1415" gr:y="5">
+      <Link id="mov16#opm11#tmu5#ln152" name="Flow61" to="mov16#opm11#mfu14" type="transport" validate="true">
+        <LinkParameter id="mov16#opm11#tmu5#ln152#par390" name="Current/Input Date_fechaCompra" source="currentDate" target="mov16#opm11#mfu14.ent10#att36"/>
+      </Link>
+      <OKLink id="mov16#opm11#tmu5#oln176" name="OKFlow75" to="mov16#opm11#seu50"/>
+      <Link id="mov16#opm11#tmu5#ln153" name="Flow56" to="mov16#opm11#exu1" type="transport" validate="true">
+        <LinkParameter id="mov16#opm11#tmu5#ln153#par392" name="Current/Input Timestamp_Excel File Name" source="currentTimestamp" target="mov16#opm11#exu1.excelFileName"/>
+      </Link>
+    </TimeUnit>
+    <IsNotNullUnit id="mov16#opm11#inn21" name="Is Not Null2" gr:x="1420" gr:y="690" emptyStringAsNull="true">
+      <KOLink id="mov16#opm11#inn21#kln27" name="KOFlow2" to="mov16#opm11#tmu5" automaticCoupling="true"/>
+      <OKLink id="mov16#opm11#inn21#oln177" name="OKFlow51" to="mov16#opm11#mathu10" automaticCoupling="true" gr:bendpoints="-130,17,460,-58"/>
+    </IsNotNullUnit>
+    <GetUnit id="mov16#opm11#gtu7" name="User" gr:x="1480" gr:y="-205" contextParameters="UserCtxParam">
+      <Link id="mov16#opm11#gtu7#ln154" name="Flow7" to="mov16#opm11#mfu14" type="transport" validate="true">
+        <LinkParameter id="mov16#opm11#gtu7#ln154#par393" name="UserCtxParam.oid_User.oid(FacturaToUser)" source="mov16#opm11#gtu7.UserCtxParam" target="mov16#opm11#mfu14.rel7#role14.userOID"/>
+      </Link>
+    </GetUnit>
+    <CreateUnit id="mov16#opm11#cru15" name="Factura" gr:x="445" gr:y="215" entity="ent10">
+      <OKLink id="mov16#opm11#cru15#oln178" name="OKFlow49" to="mov16#opm11#seu49" automaticCoupling="true"/>
+      <Link id="mov16#opm11#cru15#ln155" name="Flow56" to="mov16#opm11#cru10" type="transport" validate="true">
+        <LinkParameter id="mov16#opm11#cru15#ln155#par394" name="oid_Factura.oid(LineaFacturaToFactura)" source="ent11#att42Array" target="mov16#opm11#cru10.rel2#role4.ent11#att42"/>
+      </Link>
+      <Link id="mov16#opm11#cru15#ln156" name="Flow62" to="mov16#opm11#mfu14" type="transport" automaticCoupling="true" validate="true"/>
+      <Link id="mov16#opm11#cru15#ln157" name="Flow65" to="mov16#opm11#seu50" type="transport" validate="true" gr:bendpoints="-76,-94,-66,171;-76,-190,-66,75">
+        <LinkParameter id="mov16#opm11#cru15#ln157#par395" name="oid_RoleCondition2 [oid]" source="ent10#att29Array" target="mov16#opm11#seu50#su75#rcond1.ent10#att29"/>
+      </Link>
+      <Link id="mov16#opm11#cru15#ln158" name="Flow60" to="mov16#opm11#sfu2" type="transport" validate="true">
+        <LinkParameter id="mov16#opm11#cru15#ln158#par396" name="oid_OID" source="ent10#att29Array" target="mov16#opm11#sfu2#str5"/>
+      </Link>
+    </CreateUnit>
+    <ModifyUnit id="mov16#opm11#mfu14" name="Update2" gr:x="970" gr:y="-310" entity="ent10">
+      <Selector id="mov16#opm11#mfu14#su76" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov16#opm11#mfu14#su76#kcond55" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov16#opm11#mfu14#oln179" name="OKFlow146" to="mov16#opm11#okcu19" automaticCoupling="true" gr:bendpoints="831,3,-204,-743"/>
+    </ModifyUnit>
+    <ExcelUnit id="mov16#opm11#exu1" name="Factura" gr:x="935" gr:y="25" mode="write" format="xls" cellInfoOrder="mov16#opm11#exu1#ci7 mov16#opm11#exu1#ci11 mov16#opm11#exu1#ci12 mov16#opm11#exu1#ci13 mov16#opm11#exu1#ci14">
+      <CellInfo id="mov16#opm11#exu1#ci7" name="Producto" type="string" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="A" rows="1:" contentType="text/plain" useNameAsHeader="true"/>
+      <CellInfo id="mov16#opm11#exu1#ci11" name="Precio x Unidad" type="float" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="B" rows="1:" useNameAsHeader="true"/>
+      <CellInfo id="mov16#opm11#exu1#ci12" name="Cantidad" type="integer" preserveCellStyle="false" autoSizeColumn="true" rows="1:" sheet="1" column="C" useNameAsHeader="true"/>
+      <CellInfo id="mov16#opm11#exu1#ci13" name="Precio Total" type="float" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="D" rows="1:" useNameAsHeader="true"/>
+      <Link id="mov16#opm11#exu1#ln159" name="Flow64" to="mov16#opm11#mfu14" type="transport" validate="true">
+        <LinkParameter id="mov16#opm11#exu1#ln159#par402" name="Excel BLOB_excel" source="excel" target="mov16#opm11#mfu14.ent10#att93"/>
+      </Link>
+      <CellInfo id="mov16#opm11#exu1#ci14" name="Ahorro Total" type="float" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="E" rows="1:" useNameAsHeader="true"/>
+      <OKLink id="mov16#opm11#exu1#oln180" name="OKFlow83" to="mov16#opm11#sfu2" automaticCoupling="true"/>
+    </ExcelUnit>
+    <OKCollectorUnit id="mov16#opm11#okcu19" name="To Facturas" gr:x="1935" gr:y="435"/>
+    <InputCollectorUnit id="mov16#opm11#icu16" gr:x="100" gr:y="-10">
+      <OKLink id="mov16#opm11#icu16#oln181" name="OKFlow154" to="mov16#opm11#cru15" automaticCoupling="true"/>
+    </InputCollectorUnit>
+    <ModuleInstanceUnit id="mov16#opm11#miu16" gr:x="400" gr:y="1075" action="true" moduleId="mov15#opm10">
+      <OKLink id="mov16#opm11#miu16#oln182" name="OKFlow156" to="mov16#opm11#dlu10" automaticCoupling="true"/>
+    </ModuleInstanceUnit>
+    <MathUnit id="mov16#opm11#mathu10" name="AhorroTotal" gr:x="830" gr:y="765" resultType="float" defaultExpression="ahorroUnidad * cantidad">
+      <MathVariable id="mov16#opm11#mathu10#mathv13" name="cantidad"/>
+      <MathVariable id="mov16#opm11#mathu10#mathv14" name="ahorroUnidad"/>
+      <OKLink id="mov16#opm11#mathu10#oln183" name="OKFlow61" to="mov16#opm11#mathu11" automaticCoupling="true"/>
+      <Link id="mov16#opm11#mathu10#ln160" name="Flow54" to="mov16#opm11#cru10" type="transport" validate="true">
+        <LinkParameter id="mov16#opm11#mathu10#ln160#par398" name="Result_ahorroTotalProducto" source="result" target="mov16#opm11#cru10.ent11#att38"/>
+      </Link>
+    </MathUnit>
+    <MathUnit id="mov16#opm11#mathu11" name="PrecioTotal" gr:x="570" gr:y="630" resultType="float" defaultExpression="precioUnidad * cantidad">
+      <MathVariable id="mov16#opm11#mathu11#mathv15" name="cantidad"/>
+      <MathVariable id="mov16#opm11#mathu11#mathv16" name="precioUnidad"/>
+      <OKLink id="mov16#opm11#mathu11#oln184" name="OKFlow67" to="mov16#opm11#cru10">
+        <LinkParameter id="mov16#opm11#mathu11#oln184#par399" name="Result_precioTotalProducto" source="result" target="mov16#opm11#cru10.ent11#att34"/>
+      </OKLink>
+    </MathUnit>
+    <StringsFunctionUnit id="mov16#opm11#sfu2" name="Strings Function Factura" gr:x="480" gr:y="-175" mode="concatStrings" substringType="byIndex" substringMode="afterSeparator" encryptAlgorithm="com.webratio.rtx.core.DES3UnicodeCryptImplementation">
+      <String id="mov16#opm11#sfu2#str3" name="Factura" value="Factura"/>
+      <String id="mov16#opm11#sfu2#str4" name="Extension" value=".xls"/>
+      <String id="mov16#opm11#sfu2#str5" name="OID"/>
+      <OKLink id="mov16#opm11#sfu2#oln185" name="OKFlow85" to="mov16#opm11#mfu14">
+        <LinkParameter id="mov16#opm11#sfu2#oln185#par401" name="Result String_excel [file name]" source="resultString" target="mov16#opm11#mfu14.ent10#att93_name"/>
+      </OKLink>
+    </StringsFunctionUnit>
+  </OperationUnits>
+</OperationModule>
