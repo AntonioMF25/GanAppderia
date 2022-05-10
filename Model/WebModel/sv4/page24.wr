@@ -1,12 +1,12 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1210" gr:y="-50" id="sv4#page24" name="Gesti&#243;n-Promociones" landmark="true">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="1210" gr:y="-115" id="sv4#page24" name="Gesti&#243;n-Promociones" landmark="true">
   <ContentUnits>
-    <PowerIndexUnit gr:x="0" gr:y="0" id="sv4#page24#pwu5" name="Promociones" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att11 ent5#att20 ent5#att10 ent5#att9 ent5#att55" linkOrder="sv4#page24#pwu5#ln42 sv4#page24#pwu5#ln52">
+    <PowerIndexUnit gr:x="0" gr:y="65" id="sv4#page24#pwu5" name="Promociones" sortable="true" checkable="false" useCountQuery="false" entity="ent5" displayAttributes="ent5#att11 ent5#att20 ent5#att10 ent5#att9 ent5#att55" linkOrder="sv4#page24#pwu5#ln42 sv4#page24#pwu5#ln52">
       <Link id="sv4#page24#pwu5#ln42" name="Eliminar promocion" to="sv4#miu10" type="normal" validate="true">
         <LinkParameter id="sv4#page24#pwu5#ln42#par133" name="oid_KeyCondition12 [oid]" source="data[].ent5#att8" target="sv4#miu10.mov8#opm5#icu7#icp22"/>
       </Link>
       <Link id="sv4#page24#pwu5#ln52" name="Editar promocion" to="sv4#seu16" automaticCoupling="true" type="normal" validate="true"/>
     </PowerIndexUnit>
-    <EntryUnit gr:x="160" gr:y="0" id="sv4#page24#enu7" name="Crear-Promocion" entity="ent5" linkOrder="sv4#page24#enu7#ln33" fieldOrder="sv4#page24#enu7#fld17 sv4#page24#enu7#fld18 sv4#page24#enu7#fld19 sv4#page24#enu7#fld20">
+    <EntryUnit gr:x="255" gr:y="0" id="sv4#page24#enu7" name="Crear-Promocion" entity="ent5" linkOrder="sv4#page24#enu7#ln33" fieldOrder="sv4#page24#enu7#fld17 sv4#page24#enu7#fld18 sv4#page24#enu7#fld19 sv4#page24#enu7#fld20">
       <Field id="sv4#page24#enu7#fld17" name="nombrePromocion" type="string" modifiable="true" attribute="ent5#att11">
         <VRules>
           <MandatoryValidationRule id="sv4#page24#enu7#fld17#mnd7" name="Mandatory7" companionField="sv4#page24#enu7#fld17"/>
@@ -35,6 +35,7 @@
         <LinkParameter id="sv4#page24#enu7#ln33#par123" name="tiempoDias_tiempoDiasRestantes" source="sv4#page24#enu7#fld20" target="sv4#cru2.ent5#att55"/>
       </Link>
     </EntryUnit>
+    <MultiMessageUnit gr:x="165" gr:y="90" id="sv4#page24#mssu20" name="Aviso"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -84,7 +85,9 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv4#page24#mssu20"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>

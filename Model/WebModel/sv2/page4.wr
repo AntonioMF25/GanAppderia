@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="525" gr:y="260" id="sv2#page4" name="Registro">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="470" gr:y="245" id="sv2#page4" name="Registro">
   <ContentUnits>
     <EntryUnit gr:x="0" gr:y="0" id="sv2#page4#enu2" name="Nuevo Usuario" fieldOrder="sv2#page4#enu2#fld3 sv2#page4#enu2#fld5 sv2#page4#enu2#fld4" entity="User" linkOrder="sv2#page4#enu2#ln6">
       <Field id="sv2#page4#enu2#fld3" name="userName" type="string" modifiable="true" attribute="userName">
@@ -28,7 +28,7 @@
         <LinkParameter id="sv2#page4#enu2#ln7#par13" name="1_Group.oid(defaultGroup)" sourceValue="1" target="sv2#cru1.User2DefaultGroup.groupOID"/>
       </Link>
     </EntryUnit>
-    <MultiMessageUnit gr:x="80" gr:y="90" id="sv2#page4#mssu5" name="Error-Usuario"/>
+    <MultiMessageUnit id="sv2#page4#mssu19" name="Error-Usuario" gr:x="105" gr:y="110"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>
@@ -53,8 +53,22 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
       <layout:Cell colspan="12">
-        <layout:Unit unitId="sv2#page4#mssu5"/>
+        <layout:Unit unitId="sv2#page4#mssu19"/>
       </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>

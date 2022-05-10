@@ -33,6 +33,7 @@
         <KeyCondition id="mov8#opm5#dlu2#su23#kcond15" name="KeyCondition13" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov8#opm5#dlu2#oln60" to="mov8#opm5#okcu9" name="OKFlow50" gr:bendpoints="328,-67,-227,248"/>
+      <KOLink id="mov8#opm5#dlu2#kln40" name="KOFlow40" to="mov8#opm5#okcu9" automaticCoupling="true" gr:bendpoints="281,-104,-274,211"/>
     </DeleteUnit>
   </OperationUnits>
 </OperationModule>

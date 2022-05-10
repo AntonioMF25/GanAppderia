@@ -6,17 +6,18 @@
         <LinkParameter id="mov2#opm2#icu2#oln29#par52" name="oid_KeyCondition2 [oid]" source="mov2#opm2#icu2#icp16" target="mov2#opm2#seu9#su12#kcond6.userOID"/>
       </OKLink>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="1060" gr:y="15" id="mov2#opm2#okcu4" name="OK Port4"/>
+    <OKCollectorUnit gr:x="1725" gr:y="15" id="mov2#opm2#okcu4" name="OK Port4"/>
     <CreateUnit id="mov2#opm2#cru4" name="Crear-Historico-Usuario" gr:x="320" gr:y="175" entity="ent7">
       <OKLink id="mov2#opm2#cru4#oln37" name="OKFlow27" to="mov2#opm2#seu8">
         <LinkParameter id="mov2#opm2#cru4#oln37#par56" name="oid_UsuarioAntiguo_AttCondition5" source="ent7#att74Array" target="mov2#opm2#seu8#su11#acond2"/>
       </OKLink>
+      <KOLink id="mov2#opm2#cru4#kln32" name="KOFlow31" to="mov2#opm2#okcu23" automaticCoupling="true" gr:bendpoints="827,-69,-597,-63"/>
     </CreateUnit>
     <LoopUnit id="mov2#opm2#lpu2" name="Bucle-Productos-Usuario" gr:x="810" gr:y="205">
       <OKLink id="mov2#opm2#lpu2#oln38" name="OKFlow17" to="mov2#opm2#miu7" code="next">
         <LinkParameter id="mov2#opm2#lpu2#oln38#par57" name="Next Element_oid_producto" source="next" target="mov2#opm2#miu7.mov3#opm4#icu4#icp1"/>
       </OKLink>
-      <OKLink id="mov2#opm2#lpu2#oln39" name="OKFlow21" to="mov2#opm2#dlu3" code="end" automaticCoupling="true"/>
+      <OKLink id="mov2#opm2#lpu2#oln156" name="OKFlow21" to="mov2#opm2#seu55" code="end" automaticCoupling="true"/>
     </LoopUnit>
     <SelectorUnit id="mov2#opm2#seu8" name="Seleccionar-Productos-Usuario" gr:x="505" gr:y="335" entity="ent4">
       <Selector id="mov2#opm2#seu8#su11" defaultPolicy="fill" booleanOperator="and">
@@ -48,12 +49,34 @@
       </Link>
       <Link id="mov2#opm2#seu9#ln24" name="Flow18" to="mov2#opm2#dlu3" type="transport" automaticCoupling="true" validate="true"/>
       <OKLink id="mov2#opm2#seu9#oln43" name="OKFlow25" to="mov2#opm2#tmu3" automaticCoupling="true"/>
+      <Link id="mov2#opm2#seu9#ln115" name="Flow109" to="mov2#opm2#seu55" type="transport" validate="true" gr:bendpoints="380,27,-440,-177">
+        <LinkParameter id="mov2#opm2#seu9#ln115#par278" name="oid_AttCondition32" source="userOIDArray" target="mov2#opm2#seu55#su61#acond32"/>
+      </Link>
     </SelectorUnit>
-    <DeleteUnit id="mov2#opm2#dlu3" name="Eliminar-Usuario" gr:x="845" gr:y="10" entity="User">
+    <DeleteUnit id="mov2#opm2#dlu3" name="Eliminar-Usuario" gr:x="1435" gr:y="15" entity="User">
       <Selector id="mov2#opm2#dlu3#su13" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov2#opm2#dlu3#su13#kcond7" name="KeyCondition5" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov2#opm2#dlu3#oln44" to="mov2#opm2#okcu4" name="OKFlow22"/>
+      <KOLink id="mov2#opm2#dlu3#kln33" name="KOFlow30" to="mov2#opm2#okcu23" automaticCoupling="true"/>
     </DeleteUnit>
+    <OKCollectorUnit id="mov2#opm2#okcu23" name="KO Port4" gr:x="1725" gr:y="170"/>
+    <LoopUnit id="mov2#opm2#lpu8" name="Bucle-Valoraciones-Usuario" gr:x="1160" gr:y="405">
+      <OKLink id="mov2#opm2#lpu8#oln151" name="OKFlow22" to="mov2#opm2#miu17" code="next">
+        <LinkParameter id="mov2#opm2#lpu8#oln151#par90" name="Next Element_KeyCondition13 [oid]" source="next" target="mov2#opm2#miu17.mov11#opm3#icu9#icp17"/>
+      </OKLink>
+      <OKLink id="mov2#opm2#lpu8#oln152" name="OKFlow122" to="mov2#opm2#dlu3" code="end" automaticCoupling="true" gr:bendpoints="174,-86,-131,239"/>
+    </LoopUnit>
+    <SelectorUnit id="mov2#opm2#seu55" name="Seleccionar-Valoraciones-Usuario" gr:x="1100" gr:y="215" entity="ent9">
+      <Selector id="mov2#opm2#seu55#su61" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov2#opm2#seu55#su61#acond32" name="AttCondition32" predicate="eq" booleanOperator="or" implied="false" attributes="rel4#role8.userOID"/>
+      </Selector>
+      <OKLink id="mov2#opm2#seu55#oln153" name="OKFlow19" to="mov2#opm2#lpu8">
+        <LinkParameter id="mov2#opm2#seu55#oln153#par277" name="oid_Input Array" source="ent9#att25Array" target="mov2#opm2#lpu8.array"/>
+      </OKLink>
+    </SelectorUnit>
+    <ModuleInstanceUnit id="mov2#opm2#miu17" name="Eliminar-Valoracion" gr:x="1470" gr:y="385" action="true" moduleId="mov11#opm3">
+      <OKLink id="mov2#opm2#miu17#oln155" name="OKFlow87" to="mov2#opm2#lpu8" automaticCoupling="true" gr:bendpoints="-160,56,160,56"/>
+    </ModuleInstanceUnit>
   </OperationUnits>
 </OperationModule>
