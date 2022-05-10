@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page3" name="Home-Admin" gr:x="140" gr:y="10">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv4#page3" name="Home-Admin" gr:x="140" gr:y="10" landmark="true">
   <ContentUnits>
     <MultiMessageUnit id="sv4#page3#mssu2" name="Mensaje" gr:x="60" gr:y="20">
       <Placeholder id="sv4#page3#mssu2#ph2" name="Placeholder1"/>
@@ -484,7 +484,7 @@
       <MultiMessageUnit gr:x="150" gr:y="20" id="sv4#page3#page22#mssu12" name="Aviso"/>
     </ContentUnits>
   </Page>
-  <Page id="sv4#page3#page18" name="Historico-Promociones" gr:x="170" gr:y="150">
+  <Page id="sv4#page3#page18" name="Historico-Promociones" gr:x="230" gr:y="155">
     <ContentUnits>
       <PowerIndexUnit id="sv4#page3#page18#pwu4" name="Historico-Promociones" gr:x="0" gr:y="0" sortable="true" checkable="false" useCountQuery="false" entity="ent1" displayAttributes="ent1#att49 ent1#att51" linkOrder="sv4#page3#page18#pwu4#ln26">
         <Link id="sv4#page3#page18#pwu4#ln26" name="M&#225;s informaci&#243;n" to="sv4#page21#dau4" type="normal" validate="true">

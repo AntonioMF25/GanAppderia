@@ -231,7 +231,9 @@
       <layout:Cell/>
     </layout:Row>
     <layout:Row>
-      <layout:Cell colspan="12"/>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page8#page9#mssu15"/>
+      </layout:Cell>
       <layout:Cell/>
       <layout:Cell/>
       <layout:Cell/>
@@ -273,6 +275,7 @@
       <GetUnit id="sv3#page8#page9#gtu2" name="Get-User-Oid" gr:x="145" gr:y="15" contextParameters="UserCtxParam">
         <Link id="sv3#page8#page9#gtu2#ln11" name="Flow11" to="sv3#page8#page9#dau2" automaticCoupling="true" type="transport" validate="true"/>
       </GetUnit>
+      <MultiMessageUnit id="sv3#page8#page9#mssu15" name="Avisos" gr:x="130" gr:y="110"/>
     </ContentUnits>
   </Page>
   <Page gr:x="110" gr:y="0" id="sv3#page8#page10" name="Productos-Usuario">
