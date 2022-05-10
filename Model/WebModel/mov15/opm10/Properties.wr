@@ -1,0 +1,50 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov15#opm10" name="Actualizar-Stock" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov15#opm10#icu15" gr:x="0" gr:y="80">
+      <OKLink id="mov15#opm10#icu15#oln166" name="OKFlow157" to="mov15#opm10#seu48">
+        <LinkParameter id="mov15#opm10#icu15#oln166#par221" name="Input Port Parameter OID Producto_KeyCondition2 [oid]" source="mov15#opm10#icu15#icp28" target="mov15#opm10#seu48#su73#kcond53.ent4#att2"/>
+      </OKLink>
+      <InputCollectorParameter id="mov15#opm10#icu15#icp28" name="Input Port Parameter OID Producto"/>
+      <InputCollectorParameter id="mov15#opm10#icu15#icp29" name="Input Port Parameter Cantidad Comprada"/>
+      <Link id="mov15#opm10#icu15#ln138" name="Flow105" to="mov15#opm10#mathu9" type="transport" validate="true">
+        <LinkParameter id="mov15#opm10#icu15#ln138#par222" name="Input Port Parameter Cantidad Comprada_CantidadComprada" source="mov15#opm10#icu15#icp29" target="mov15#opm10#mathu9#mathv12"/>
+      </Link>
+    </InputCollectorUnit>
+    <ModifyUnit id="mov15#opm10#mfu13" name="Nuevo stock" gr:x="1015" gr:y="305" entity="ent4">
+      <Selector id="mov15#opm10#mfu13#su72" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov15#opm10#mfu13#su72#kcond52" name="KeyCondition43" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov15#opm10#mfu13#oln170" name="OKFlow170" to="mov15#opm10#okcu18" automaticCoupling="true"/>
+    </ModifyUnit>
+    <SelectorUnit id="mov15#opm10#seu48" name="Productos" gr:x="580" gr:y="90" entity="ent4">
+      <Selector id="mov15#opm10#seu48#su73" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov15#opm10#seu48#su73#kcond53" name="KeyCondition2" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov15#opm10#seu48#oln168" name="OKFlow130" to="mov15#opm10#mathu9">
+        <LinkParameter id="mov15#opm10#seu48#oln168#par228" name="unidadesProducto_CantidadActual" source="ent4#att6Array" target="mov15#opm10#mathu9#mathv11"/>
+      </OKLink>
+      <Link id="mov15#opm10#seu48#ln144" name="Flow69" to="mov15#opm10#mfu13" type="transport" validate="true">
+        <LinkParameter id="mov15#opm10#seu48#ln144#par452" name="oid_KeyCondition43 [oid]" source="ent4#att2Array" target="mov15#opm10#mfu13#su72#kcond52.ent4#att2"/>
+      </Link>
+    </SelectorUnit>
+    <ModuleInstanceUnit id="mov15#opm10#miu15" gr:x="550" gr:y="560" action="true" moduleId="mov3#opm4">
+      <OKLink id="mov15#opm10#miu15#oln171" name="OKFlow171" to="mov15#opm10#okcu18" automaticCoupling="true" gr:bendpoints="531,-30,-355,204"/>
+    </ModuleInstanceUnit>
+    <MathUnit id="mov15#opm10#mathu9" name="Cantidad stock" gr:x="495" gr:y="250" resultType="integer" defaultExpression="CantidadActual - CantidadComprada">
+      <MathVariable id="mov15#opm10#mathu9#mathv11" name="CantidadActual"/>
+      <MathVariable id="mov15#opm10#mathu9#mathv12" name="CantidadComprada"/>
+      <OKLink id="mov15#opm10#mathu9#oln169" name="OKFlow131" to="mov15#opm10#switch4">
+        <LinkParameter id="mov15#opm10#mathu9#oln169#par451" name="Result_Switch" source="result" target="mov15#opm10#switch4.switch"/>
+      </OKLink>
+      <Link id="mov15#opm10#mathu9#ln145" name="Flow79" to="mov15#opm10#mfu13" type="transport" validate="true">
+        <LinkParameter id="mov15#opm10#mathu9#ln145#par358" name="Result_unidadesProducto" source="result" target="mov15#opm10#mfu13.ent4#att6"/>
+      </Link>
+    </MathUnit>
+    <OKCollectorUnit id="mov15#opm10#okcu18" name="To Factura" gr:x="1440" gr:y="315"/>
+    <SwitchUnit gr:x="555" gr:y="405" id="mov15#opm10#switch4" name="Queda stock?">
+      <OKLink id="mov15#opm10#switch4#oln210" name="OKFlow210" to="mov15#opm10#miu15" automaticCoupling="true" code="0"/>
+      <OKLink id="mov15#opm10#switch4#oln211" name="OKFlow211" to="mov15#opm10#mfu13" automaticCoupling="true"/>
+      <Case value="0"/>
+    </SwitchUnit>
+  </OperationUnits>
+</OperationModule>

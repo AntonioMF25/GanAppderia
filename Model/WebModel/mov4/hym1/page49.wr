@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov4#hym1#page49" name="Editar-Ubicaci&#243;n" linkOrder="mov4#hym1#page49#ln124" gr:x="1180" gr:y="285">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov4#hym1#page49" name="Editar-Ubicaci&#243;n" linkOrder="mov4#hym1#page49#ln124" gr:x="1210" gr:y="285">
   <ContentUnits>
     <EntryUnit id="mov4#hym1#page49#enu21" name="Editar-Ubicaci&#243;n" linkOrder="mov4#hym1#page49#enu21#ln122" gr:x="0" gr:y="0" entity="ent2">
       <Field id="mov4#hym1#page49#enu21#fld53" name="oidSeleccionado" type="integer" modifiable="true" hidden="true" attribute="ent2#att41"/>
@@ -16,7 +16,7 @@
       <Field id="mov4#hym1#page49#enu21#fld55" name="Descripci&#243;n" type="text" modifiable="true" attribute="ent2#att43"/>
       <Field id="mov4#hym1#page49#enu21#fld56" name="Coordenadas" type="string" modifiable="true" attribute="ent2#att44"/>
     </EntryUnit>
-    <MultiMessageUnit id="mov4#hym1#page49#mssu24" name="Mensaje-Editar" gr:x="175" gr:y="15"/>
+    <MultiMessageUnit id="mov4#hym1#page49#mssu24" name="Mensaje-Editar-Ubicaci&#243;n" gr:x="175" gr:y="15"/>
   </ContentUnits>
   <layout:Grid containerType="grid">
     <layout:Row>

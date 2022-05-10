@@ -1,0 +1,56 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="4270" gr:y="485" id="sv3#page27" name="Facturas" landmark="true">
+  <ContentUnits>
+    <PowerIndexUnit gr:x="0" gr:y="0" id="sv3#page27#pwu7" name="Facturas" sortable="true" checkable="false" useCountQuery="false" entity="ent10" displayAttributes="ent10#att29 ent10#att35 ent10#att36 ent10#att39 ent10#att93" linkOrder="sv3#page27#pwu7#ln188">
+      <Selector id="sv3#page27#pwu7#su85" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page27#pwu7#su85#acond42" name="AttCondition42" predicate="eq" booleanOperator="or" implied="false" attributes="rel7#role14.userOID"/>
+      </Selector>
+      <Link id="sv3#page27#pwu7#ln188" name="Detalles de la factura" to="sv3#page31#mdu1" type="normal" validate="true">
+        <LinkParameter id="sv3#page27#pwu7#ln188#par485" name="oid_AttCondition43" source="data[].ent10#att29" target="sv3#page31#mdu1#su88#acond43"/>
+      </Link>
+    </PowerIndexUnit>
+    <GetUnit gr:x="220" gr:y="10" id="sv3#page27#gtu11" name="Get-Oid-User" contextParameters="UserCtxParam">
+      <Link id="sv3#page27#gtu11#ln187" name="Flow187" to="sv3#page27#pwu7" type="transport" validate="true">
+        <LinkParameter id="sv3#page27#gtu11#ln187#par484" name="UserCtxParam.oid_AttCondition42" source="sv3#page27#gtu11.UserCtxParam" target="sv3#page27#pwu7#su85#acond42"/>
+      </Link>
+    </GetUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page27#pwu7">
+          <layout:Attribute attribute="ent10#att29"/>
+          <layout:Attribute attribute="ent10#att35"/>
+          <layout:Attribute attribute="ent10#att36"/>
+          <layout:Attribute attribute="ent10#att39"/>
+          <layout:Attribute attribute="ent10#att93"/>
+          <layout:Link link="sv3#page27#pwu7#ln188"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+    <layout:Row>
+      <layout:Cell colspan="12"/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+</Page>

@@ -1,6 +1,6 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Home-Admin" protected="true" localized="true" landmarks="sv4#lou2 sv4#page24 sv4#miu9" homePage="sv4#page3" linkVisibilityPolicy="hide">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Home-Admin" protected="true" localized="true" landmarks="sv4#lou2 sv4#page24 sv4#miu9 sv4#scju4 sv4#scju3 sv4#scju1" homePage="sv4#page3" linkVisibilityPolicy="hide">
   <OperationUnits>
-    <LogoutUnit id="sv4#lou2" name="Logout" landmark="true" gr:x="70" gr:y="60" siteView="sv2"/>
+    <LogoutUnit id="sv4#lou2" name="Logout" landmark="true" gr:x="20" gr:y="20" siteView="sv2"/>
     <SelectorUnit gr:x="870" gr:y="460" id="sv4#seu11" name="Template-Actual" entity="ent3">
       <OKLink id="sv4#seu11#oln27" name="OKFlow27" to="sv4#inn6">
         <LinkParameter id="sv4#seu11#oln27#par109" name="oid_Input" source="ent3#att53Array" target="sv4#inn6.isnotnull"/>
@@ -57,11 +57,29 @@
       </Selector>
       <OKLink id="sv4#seu16#oln6" name="OKFlow61" to="sv4#page16#enu9" automaticCoupling="true"/>
     </SelectorUnit>
-    <ScheduleJobUnit gr:x="1320" gr:y="460" id="sv4#scju1" name="Tarea-Fin-Promocion" schedulePolicy="everyDay" job="wsv1#job1" landmark="false"/>
-    <ModuleInstanceUnit gr:x="655" gr:y="755" id="sv4#miu9" moduleId="mov7#hym3" landmark="true">
+    <ScheduleJobUnit gr:x="735" gr:y="940" id="sv4#scju1" name="Tarea-Fin-Promocion" schedulePolicy="everyDay" job="wsv1#job1" landmark="true">
+      <OKLink id="sv4#scju1#oln75" name="OKFlow75" to="sv4#page3#mssu13">
+        <LinkParameter id="sv4#scju1#oln75#par170" name="Tarea &quot;TareaFinPromocion&quot; inicializada_Shown Messages" sourceValue="Tarea &quot;TareaFinPromocion&quot; inicializada" target="sv4#page3#mssu13.shownMessages"/>
+      </OKLink>
+    </ScheduleJobUnit>
+    <ModuleInstanceUnit gr:x="790" gr:y="775" id="sv4#miu9" moduleId="mov7#hym3" landmark="true">
       <OKLink id="sv4#miu9#oln103" to="sv4#page3" validate="true" name="Volver"/>
     </ModuleInstanceUnit>
-    <ScheduleJobUnit id="sv4#scju3" name="Tarea-Eliminar-Producto-Caducado" landmark="false" gr:x="1390" gr:y="640" schedulePolicy="everyDay" job="wsv2#job2"/>
-    <ScheduleJobUnit gr:x="1540" gr:y="505" id="sv4#scju4" name="Tarea-Promocion-Fin-Stock" schedulePolicy="everyDay" job="wsv3#job3" landmark="false"/>
+    <ScheduleJobUnit id="sv4#scju3" name="Tarea-Eliminar-Producto-Caducado" landmark="true" gr:x="310" gr:y="980" schedulePolicy="everyDay" job="wsv2#job2">
+      <OKLink id="sv4#scju3#oln74" name="OKFlow74" to="sv4#page3#mssu7">
+        <LinkParameter id="sv4#scju3#oln74#par169" name="Tarea &quot;TareaEliminarProductoCaducada&quot; inicializada_Shown Messages" sourceValue="Tarea &quot;TareaEliminarProductoCaducada&quot; inicializada" target="sv4#page3#mssu7.shownMessages"/>
+      </OKLink>
+    </ScheduleJobUnit>
+    <ScheduleJobUnit gr:x="-20" gr:y="965" id="sv4#scju4" name="Tarea-Promocion-Fin-Stock" schedulePolicy="everyDay" job="wsv3#job3" landmark="true">
+      <OKLink id="sv4#scju4#oln68" name="OKFlow68" to="sv4#page3#mssu1">
+        <LinkParameter id="sv4#scju4#oln68#par168" name="Tarea &quot;TareaPromocionFinStock&quot; inicializada_Shown Messages" sourceValue="Tarea &quot;TareaPromocionFinStock&quot; inicializada" target="sv4#page3#mssu1.shownMessages"/>
+      </OKLink>
+    </ScheduleJobUnit>
+    <SelectorUnit id="sv4#seu45" name="Categor&#237;as-B&#250;squeda" gr:x="-160" gr:y="715" entity="ent8" distinctAttributes="ent8#att23">
+      <Selector id="sv4#seu45#su41" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#seu45#su41#acond35" name="Contenga" predicate="contains" booleanOperator="or" implied="false" attributes="ent8#att23" ignoreCase="true"/>
+      </Selector>
+      <OKLink id="sv4#seu45#oln85" name="OKFlow85" to="sv4#page3#page36#rtu6" automaticCoupling="true"/>
+    </SelectorUnit>
   </OperationUnits>
 </SiteView>
