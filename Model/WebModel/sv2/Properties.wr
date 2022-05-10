@@ -1,13 +1,20 @@
 <SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Login" localized="true" homePage="sv2#page1">
   <OperationUnits>
-    <LoginUnit gr:x="315" gr:y="335" id="sv2#lgu1" name="Login"/>
+    <LoginUnit gr:x="315" gr:y="335" id="sv2#lgu1" name="Login">
+      <KOLink id="sv2#lgu1#kln36" name="KOFlow26" to="sv2#page1#mssu17">
+        <LinkParameter id="sv2#lgu1#kln36#par279" name="Nombre de usuario o contrase&#241;a incorrectos._Shown Messages" target="sv2#page1#mssu17.shownMessages" sourceValue="Nombre de usuario o contrase&#241;a incorrectos."/>
+      </KOLink>
+    </LoginUnit>
     <CreateUnit gr:x="1155" gr:y="280" id="sv2#cru1" name="Crear Usuario" entity="User">
       <OKLink id="sv2#cru1#oln4" name="Crear cuenta" to="sv2#lgu1" gr:bendpoints="117,220,967,175;-836,206,14,161">
         <LinkParameter id="sv2#cru1#oln4#par11" name="userName_Username" source="userNameArray" target="sv2#lgu1.username"/>
         <LinkParameter id="sv2#cru1#oln4#par12" name="password_Password" source="passwordArray" target="sv2#lgu1.password"/>
       </OKLink>
+      <KOLink id="sv2#cru1#kln37" name="KOFlow27" to="sv2#page4#mssu19" gr:bendpoints="-439,-121,75,-231">
+        <LinkParameter id="sv2#cru1#kln37#par280" name="Error a la hora de crear el usuario._Shown Messages" target="sv2#page4#mssu19.shownMessages" sourceValue="Error a la hora de crear el usuario."/>
+      </KOLink>
     </CreateUnit>
-    <SelectorUnit gr:x="775" gr:y="285" id="sv2#seu1" name="Existe-Usuario?" entity="User">
+    <SelectorUnit gr:x="765" gr:y="300" id="sv2#seu1" name="Existe-Usuario?" entity="User">
       <Selector id="sv2#seu1#su3" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="sv2#seu1#su3#acond3" name="AttCondition3" predicate="eq" booleanOperator="or" implied="false" attributes="userName" ignoreCase="false"/>
       </Selector>
@@ -16,10 +23,10 @@
       </OKLink>
     </SelectorUnit>
     <IsNotNullUnit gr:x="970" gr:y="350" id="sv2#inn1" name="Is Not Null1">
-      <OKLink id="sv2#inn1#oln2" name="OKFlow2" to="sv2#page4#mssu5">
-        <LinkParameter id="sv2#inn1#oln2#par6" name="Usuario existente_Shown Messages" sourceValue="Usuario existente" target="sv2#page4#mssu5.shownMessages"/>
-      </OKLink>
       <KOLink id="sv2#inn1#kln1" name="KOFlow1" to="sv2#tmu1" automaticCoupling="true"/>
+      <OKLink id="sv2#inn1#oln157" name="OKFlow157" to="sv2#page4#mssu19" gr:bendpoints="-159,57,217,17">
+        <LinkParameter id="sv2#inn1#oln157#par281" name="Usuario existente._Shown Messages" sourceValue="Usuario existente." target="sv2#page4#mssu19.shownMessages"/>
+      </OKLink>
     </IsNotNullUnit>
     <TimeUnit gr:x="1150" gr:y="405" id="sv2#tmu1" name="Time1">
       <OKLink id="sv2#tmu1#oln3" name="OKFlow3" to="sv2#cru1">

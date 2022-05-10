@@ -1,0 +1,34 @@
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" gr:x="4240" gr:y="725" id="sv3#page31" name="Detalle-Linea-Factura" linkOrder="sv3#page31#ln189">
+  <ContentUnits>
+    <MultiDataUnit gr:x="0" gr:y="0" id="sv3#page31#mdu1" name="Detalles-Linea-Factura" entity="ent11" displayAttributes="ent11#att31 ent11#att32 ent11#att33 ent11#att34 ent11#att38">
+      <Selector id="sv3#page31#mdu1#su88" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv3#page31#mdu1#su88#acond43" name="AttCondition43" predicate="eq" booleanOperator="or" implied="false" attributes="rel8#role16.ent10#att29"/>
+      </Selector>
+    </MultiDataUnit>
+  </ContentUnits>
+  <layout:Grid containerType="grid">
+    <layout:Row>
+      <layout:Cell colspan="12">
+        <layout:Unit unitId="sv3#page31#mdu1">
+          <layout:Attribute attribute="ent11#att31"/>
+          <layout:Attribute attribute="ent11#att32"/>
+          <layout:Attribute attribute="ent11#att33"/>
+          <layout:Attribute attribute="ent11#att34"/>
+          <layout:Attribute attribute="ent11#att38"/>
+        </layout:Unit>
+      </layout:Cell>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+      <layout:Cell/>
+    </layout:Row>
+  </layout:Grid>
+  <Link id="sv3#page31#ln189" name="Volver" to="sv3#page27" automaticCoupling="true" type="normal" validate="true"/>
+</Page>

@@ -21,7 +21,7 @@
         <LinkParameter id="mov4#hym1#seu32#oln94#par231" name="oid_Input" source="ent2#att41Array" target="mov4#hym1#inn13.isnotnull"/>
       </OKLink>
     </SelectorUnit>
-    <SelectorUnit id="mov4#hym1#seu33" name="Ubicaci&#243;n-B&#250;squeda" gr:x="1210" gr:y="0" entity="ent2">
+    <SelectorUnit id="mov4#hym1#seu33" name="Ubicaci&#243;n-B&#250;squeda" gr:x="505" gr:y="505" entity="ent2">
       <Selector id="mov4#hym1#seu33#su53" defaultPolicy="fill" booleanOperator="and">
         <AttributesCondition id="mov4#hym1#seu33#su53#acond26" name="Contenga" predicate="contains" booleanOperator="or" implied="false" ignoreCase="true" attributes="ent2#att42"/>
       </Selector>

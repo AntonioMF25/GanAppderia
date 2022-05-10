@@ -27,6 +27,7 @@
         <KeyCondition id="mov6#hym2#mfu1#su15#kcond5" name="KeyCondition11" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov6#hym2#mfu1#oln25" to="mov6#hym2#okcu6" name="OKFlow21"/>
+      <KOLink id="mov6#hym2#mfu1#kln30" name="KOFlow28" to="mov6#hym2#okcu22" automaticCoupling="true" gr:bendpoints="211,-81,-224,119"/>
     </ModifyUnit>
     <IsNotNullUnit id="mov6#hym2#inn2" name="Contrase&#241;a correcta?" gr:x="595" gr:y="215">
       <OKLink id="mov6#hym2#inn2#oln24" name="KOFlow2" to="mov6#hym2#mfu1" automaticCoupling="true"/>
@@ -34,5 +35,6 @@
         <LinkParameter id="mov6#hym2#inn2#kln5#par41" name="La contrase&#241;a vigente es incorrecta_Shown Messages" target="mov6#hym2#page11#mssu8.shownMessages" sourceValue="La contrase&#241;a vigente es incorrecta o has introducido dos veces la misma contrase&#241;a."/>
       </KOLink>
     </IsNotNullUnit>
+    <OKCollectorUnit id="mov6#hym2#okcu22" name="KO Port6" gr:x="1236" gr:y="329"/>
   </OperationUnits>
 </HybridModule>

@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Home-Admin" protected="true" localized="true" landmarks="sv4#lou2 sv4#page24 sv4#miu9 sv4#scju4 sv4#scju3 sv4#scju1" homePage="sv4#page3" linkVisibilityPolicy="hide">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv4" name="Home-Admin" protected="true" localized="true" landmarks="sv4#page3 sv4#miu9 sv4#page24 sv4#scju3 sv4#scju4 sv4#scju1 sv4#lou2" homePage="sv4#page3" linkVisibilityPolicy="hide">
   <OperationUnits>
     <LogoutUnit id="sv4#lou2" name="Logout" landmark="true" gr:x="20" gr:y="20" siteView="sv2"/>
     <SelectorUnit gr:x="870" gr:y="460" id="sv4#seu11" name="Template-Actual" entity="ent3">
@@ -40,16 +40,31 @@
       </OKLink>
     </CreateUnit>
     <CreateUnit gr:x="1760" gr:y="-15" id="sv4#cru2" name="Crear-Promocion" entity="ent5">
-      <OKLink id="sv4#cru2#oln46" name="OKFlow46" to="sv4#page24" automaticCoupling="true"/>
+      <OKLink id="sv4#cru2#oln46" name="OKFlow46" to="sv4#page24#mssu20" gr:bendpoints="-142,-12,78,48">
+        <LinkParameter id="sv4#cru2#oln46#par283" name="Promoci&#243;n creada correctamente._Shown Messages" sourceValue="Promoci&#243;n creada correctamente." target="sv4#page24#mssu20.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv4#cru2#kln38" name="KOFlow38" to="sv4#page24#mssu20">
+        <LinkParameter id="sv4#cru2#kln38#par282" name="Error a la hora de crear la promoci&#243;n._Shown Messages" sourceValue="Error creando la promoci&#243;n." target="sv4#page24#mssu20.shownMessages"/>
+      </KOLink>
     </CreateUnit>
     <ModuleInstanceUnit gr:x="1215" gr:y="250" id="sv4#miu10" moduleId="mov8#opm5">
-      <OKLink id="sv4#miu10#oln55" to="sv4#page24" name="OKFlow50"/>
+      <OKLink id="sv4#miu10#oln55" to="sv4#page24#mssu20" name="OKFlow50">
+        <LinkParameter id="sv4#miu10#oln55#par286" name="Promoci&#243;n borrada correctamente._Shown Messages" sourceValue="Promoci&#243;n borrada correctamente." target="sv4#page24#mssu20.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv4#miu10#kln41" name="KOFlow41" to="sv4#page24#mssu20" gr:bendpoints="59,-121,-31,124">
+        <LinkParameter id="sv4#miu10#kln41#par287" name="Error borrando la promoci&#243;n._Shown Messages" sourceValue="Error borrando la promoci&#243;n." target="sv4#page24#mssu20.shownMessages"/>
+      </KOLink>
     </ModuleInstanceUnit>
     <ModifyUnit gr:x="1700" gr:y="140" id="sv4#mfu6" name="Actualizar-Promocion" entity="ent5">
       <Selector id="sv4#mfu6#su24" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="sv4#mfu6#su24#kcond18" name="KeyCondition18" predicate="in" implied="false"/>
       </Selector>
-      <OKLink id="sv4#mfu6#oln62" name="OKFlow62" to="sv4#page24" automaticCoupling="true"/>
+      <OKLink id="sv4#mfu6#oln62" name="OKFlow62" to="sv4#page24#mssu20">
+        <LinkParameter id="sv4#mfu6#oln62#par284" name="Promoci&#243;n actualizada correctamente._Shown Messages" sourceValue="Promoci&#243;n actualizada correctamente." target="sv4#page24#mssu20.shownMessages"/>
+      </OKLink>
+      <KOLink id="sv4#mfu6#kln39" name="KOFlow39" to="sv4#page24#mssu20" gr:bendpoints="-108,-112,67,108">
+        <LinkParameter id="sv4#mfu6#kln39#par285" name="Error actualizando la promoci&#243;n._Shown Messages" sourceValue="Error actualizando la promoci&#243;n." target="sv4#page24#mssu20.shownMessages"/>
+      </KOLink>
     </ModifyUnit>
     <SelectorUnit gr:x="1445" gr:y="140" id="sv4#seu16" name="Seleccionar-Promocion" entity="ent5">
       <Selector id="sv4#seu16#su28" defaultPolicy="fill" booleanOperator="and">
@@ -62,7 +77,7 @@
         <LinkParameter id="sv4#scju1#oln75#par170" name="Tarea &quot;TareaFinPromocion&quot; inicializada_Shown Messages" sourceValue="Tarea &quot;TareaFinPromocion&quot; inicializada" target="sv4#page3#mssu13.shownMessages"/>
       </OKLink>
     </ScheduleJobUnit>
-    <ModuleInstanceUnit gr:x="655" gr:y="755" id="sv4#miu9" moduleId="mov7#hym3" landmark="true">
+    <ModuleInstanceUnit gr:x="790" gr:y="775" id="sv4#miu9" moduleId="mov7#hym3" landmark="true">
       <OKLink id="sv4#miu9#oln103" to="sv4#page3" validate="true" name="Volver"/>
     </ModuleInstanceUnit>
     <ScheduleJobUnit id="sv4#scju3" name="Tarea-Eliminar-Producto-Caducado" landmark="true" gr:x="310" gr:y="980" schedulePolicy="everyDay" job="wsv2#job2">
@@ -75,5 +90,11 @@
         <LinkParameter id="sv4#scju4#oln68#par168" name="Tarea &quot;TareaPromocionFinStock&quot; inicializada_Shown Messages" sourceValue="Tarea &quot;TareaPromocionFinStock&quot; inicializada" target="sv4#page3#mssu1.shownMessages"/>
       </OKLink>
     </ScheduleJobUnit>
+    <SelectorUnit id="sv4#seu45" name="Categor&#237;as-B&#250;squeda" gr:x="-160" gr:y="715" entity="ent8" distinctAttributes="ent8#att23">
+      <Selector id="sv4#seu45#su41" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="sv4#seu45#su41#acond35" name="Contenga" predicate="contains" booleanOperator="or" implied="false" attributes="ent8#att23" ignoreCase="true"/>
+      </Selector>
+      <OKLink id="sv4#seu45#oln85" name="OKFlow85" to="sv4#page3#page36#rtu6" automaticCoupling="true"/>
+    </SelectorUnit>
   </OperationUnits>
 </SiteView>

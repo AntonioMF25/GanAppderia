@@ -1,5 +1,5 @@
 <DataModel xmlns:db="http://www.webratio.com/2006/WebML/Database" xmlns:gr="http://www.webratio.com/2006/WebML/Graph">
-  <Entity id="User" name="User" duration="persistent" gr:x="10" gr:y="690" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att45 User#att46" db:database="db1" db:table="user">
+  <Entity id="User" name="User" duration="persistent" gr:x="225" gr:y="720" gr:hideAttributes="false" attributeOrder="userOID userName password email User#att45 User#att46" db:database="db1" db:table="user">
     <Attribute name="oid" id="userOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="userName" id="userName" type="string" db:column="username"/>
     <Attribute name="password" id="password" type="password" db:column="password"/>
@@ -7,11 +7,11 @@
     <Attribute id="User#att45" name="rol" type="string" derivationQuery="simpleImported::Self.User2DefaultGroup.groupName"/>
     <Attribute id="User#att46" name="fechaAlta" type="date" db:column="fechaalta"/>
   </Entity>
-  <Entity id="Group" name="Group" duration="persistent" gr:x="240" gr:y="730" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
+  <Entity id="Group" name="Group" duration="persistent" gr:x="560" gr:y="920" gr:hideAttributes="false" attributeOrder="groupOID groupName" db:database="db1" db:table="group">
     <Attribute name="oid" id="groupOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="groupName" id="groupName" type="string" db:column="groupname"/>
   </Entity>
-  <Entity id="Module" name="Module" duration="persistent" gr:x="460" gr:y="720" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
+  <Entity id="Module" name="Module" duration="persistent" gr:x="810" gr:y="625" gr:hideAttributes="false" attributeOrder="moduleOID moduleID moduleName" db:database="db1" db:table="module">
     <Attribute name="oid" id="moduleOID" type="integer" key="true" db:column="oid"/>
     <Attribute name="moduleID" id="moduleID" type="string" db:column="moduleid"/>
     <Attribute name="moduleName" id="moduleName" type="string" db:column="modulename"/>
@@ -48,7 +48,7 @@
       <db:JoinColumn attribute="moduleOID" name="module_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity id="ent4" name="Productos" duration="persistent" attributeOrder="ent4#att2 ent4#att3 ent4#att4 ent4#att5 ent4#att6 ent4#att7 ent4#att19 ent4#att24 ent4#att28 ent4#att40 ent4#att52" db:database="db1" db:table="productos" gr:x="95" gr:y="80">
+  <Entity id="ent4" name="Productos" duration="persistent" attributeOrder="ent4#att2 ent4#att3 ent4#att4 ent4#att5 ent4#att6 ent4#att7 ent4#att19 ent4#att24 ent4#att28 ent4#att40 ent4#att52 ent4#att92" db:database="db1" db:table="productos" gr:x="100" gr:y="40">
     <Attribute id="ent4#att2" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent4#att3" name="nombreProducto" type="string" db:column="nombreproducto"/>
     <Attribute id="ent4#att4" name="descripcionProducto" type="text" db:column="descripcionproducto"/>
@@ -64,8 +64,9 @@
     </Attribute>
     <Attribute id="ent4#att40" name="urlQR" type="url" db:column="urlqr"/>
     <Attribute id="ent4#att52" name="categoria" type="string" derivationQuery="simpleImported::Self.rel1#role1.ent8#att23"/>
+    <Attribute id="ent4#att92" name="imagenQR" type="blob" db:column="imagenqr" contentType="image"/>
   </Entity>
-  <Entity id="ent5" name="Promociones" duration="persistent" attributeOrder="ent5#att8 ent5#att9 ent5#att10 ent5#att11 ent5#att20 ent5#att55" db:database="db1" db:table="promociones" gr:x="370" gr:y="130">
+  <Entity id="ent5" name="Promociones" duration="persistent" attributeOrder="ent5#att8 ent5#att9 ent5#att10 ent5#att11 ent5#att20 ent5#att55" db:database="db1" db:table="promociones" gr:x="1080" gr:y="-215">
     <Attribute id="ent5#att8" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent5#att9" name="tiempoDias" type="integer" db:column="tiempodias"/>
     <Attribute id="ent5#att10" name="porcentaje" type="integer" db:column="porcentaje"/>
@@ -73,7 +74,7 @@
     <Attribute id="ent5#att20" name="descripcionPromocion" type="text" db:column="descripcionpromocion"/>
     <Attribute id="ent5#att55" name="tiempoDiasRestantes" type="integer" db:column="tiempodiasrestantes"/>
   </Entity>
-  <Entity id="ent6" name="Carrito" duration="volatile" attributeOrder="ent6#att12 ent6#att13 ent6#att14 ent6#att15 ent6#att16 ent6#att37" volatileStorage="database" gr:x="730" gr:y="120">
+  <Entity id="ent6" name="Carrito" duration="volatile" attributeOrder="ent6#att12 ent6#att13 ent6#att14 ent6#att15 ent6#att16 ent6#att37" volatileStorage="database" gr:x="845" gr:y="70">
     <Attribute id="ent6#att12" name="oid" key="true" type="integer"/>
     <Attribute id="ent6#att13" name="nombreProducto" type="string"/>
     <Attribute id="ent6#att14" name="precioUnidadProducto" type="float"/>
@@ -81,7 +82,7 @@
     <Attribute id="ent6#att16" name="oid_Producto" type="integer"/>
     <Attribute id="ent6#att37" name="ahorroUnidadProducto" type="float"/>
   </Entity>
-  <Entity gr:x="365" gr:y="295" id="ent8" name="Categoria" duration="persistent" attributeOrder="ent8#att22 ent8#att23" db:database="db1" db:table="categoria">
+  <Entity gr:x="515" gr:y="135" id="ent8" name="Categoria" duration="persistent" attributeOrder="ent8#att22 ent8#att23" db:database="db1" db:table="categoria">
     <Attribute id="ent8#att22" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent8#att23" name="nombreCategoria" type="string" db:column="nombrecategoria"/>
   </Entity>
@@ -101,7 +102,7 @@
       <db:JoinColumn attribute="ent5#att8" name="promociones_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="-50" gr:y="480" id="ent9" name="Valoracion" duration="persistent" attributeOrder="ent9#att25 ent9#att26 ent9#att27" db:database="db1" db:table="valoracion">
+  <Entity gr:x="-65" gr:y="560" id="ent9" name="Valoracion" duration="persistent" attributeOrder="ent9#att25 ent9#att26 ent9#att27" db:database="db1" db:table="valoracion">
     <Attribute id="ent9#att25" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent9#att26" name="comentario" type="text" db:column="comentario"/>
     <Attribute id="ent9#att27" name="puntuacion" type="integer" db:column="puntuacion"/>
@@ -130,11 +131,16 @@
       <db:JoinColumn attribute="ent4#att2" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="330" gr:y="545" id="ent10" name="Factura" duration="persistent" attributeOrder="ent10#att29 ent10#att35 ent10#att36 ent10#att39" db:database="db1" db:table="factura">
+  <Entity gr:x="1395" gr:y="665" id="ent10" name="Factura" duration="persistent" attributeOrder="ent10#att29 ent10#att35 ent10#att36 ent10#att39 ent10#att93" db:database="db1" db:table="factura">
     <Attribute id="ent10#att29" key="true" name="oid" type="integer" db:column="oid"/>
-    <Attribute id="ent10#att35" name="importeTotal" type="float" db:column="importetotal"/>
+    <Attribute id="ent10#att35" name="importeTotal" type="float" derivationQuery="calculated::sum(Self.rel8#role15(as Var1).ent11#att34)" db:table="factura_importetotal_view" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="ent10#att29" name="oid"/>
+    </Attribute>
     <Attribute id="ent10#att36" name="fechaCompra" type="timestamp" db:column="fechacompra"/>
-    <Attribute id="ent10#att39" name="ahorroTotal" type="float" db:column="ahorrototal"/>
+    <Attribute id="ent10#att39" name="ahorroTotal" type="float" derivationQuery="calculated::sum(Self.rel8#role15(as Var1).ent11#att38)" db:table="factura_ahorrototal_view" db:column="der_attr" storageType="file">
+      <db:JoinColumn attribute="ent10#att29" name="oid"/>
+    </Attribute>
+    <Attribute id="ent10#att93" name="excel" type="blob" db:column="excel"/>
   </Entity>
   <Relationship id="rel7" name="User_Factura" sourceEntity="User" targetEntity="ent10" db:database="db1" db:table="factura">
     <RelationshipRole1 id="rel7#role13" name="UserToFactura" maxCard="N">
@@ -144,7 +150,7 @@
       <db:JoinColumn attribute="ent10#att29" name="oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="655" gr:y="515" id="ent11" name="Lineas Factura" duration="persistent" attributeOrder="ent11#att30 ent11#att31 ent11#att32 ent11#att33 ent11#att34 ent11#att38 ent11#att1" db:database="db1" db:table="lineas_factura">
+  <Entity gr:x="1010" gr:y="940" id="ent11" name="Lineas Factura" duration="persistent" attributeOrder="ent11#att30 ent11#att31 ent11#att32 ent11#att33 ent11#att34 ent11#att38 ent11#att1" db:database="db1" db:table="lineas_factura">
     <Attribute id="ent11#att30" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent11#att31" name="nombreProducto" type="string" db:column="nombreproducto"/>
     <Attribute id="ent11#att32" name="precioProducto" type="float" db:column="precioproducto"/>
@@ -169,7 +175,7 @@
       <db:JoinColumn attribute="ent8#att22" name="categoria_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity gr:x="370" gr:y="-55" id="ent1" name="HistoricoPromociones" duration="persistent" attributeOrder="ent1#att21 ent1#att47 ent1#att48 ent1#att49 ent1#att50 ent1#att51" db:database="db1" db:table="historicopromociones">
+  <Entity gr:x="1055" gr:y="-425" id="ent1" name="HistoricoPromociones" duration="persistent" attributeOrder="ent1#att21 ent1#att47 ent1#att48 ent1#att49 ent1#att50 ent1#att51" db:database="db1" db:table="historicopromociones">
     <Attribute id="ent1#att21" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent1#att47" name="tiempoDias" type="integer" db:column="tiempodias"/>
     <Attribute id="ent1#att48" name="descripcionPromocion" type="text" db:column="descripcionpromocion"/>
@@ -177,7 +183,7 @@
     <Attribute id="ent1#att50" name="porcentaje" type="integer" db:column="porcentaje"/>
     <Attribute id="ent1#att51" name="fechaHistorico" type="date" db:column="fechahistorico"/>
   </Entity>
-  <Entity gr:x="265" gr:y="400" id="ent2" name="Ubicacion" duration="persistent" attributeOrder="ent2#att41 ent2#att42 ent2#att43 ent2#att44" db:database="db1" db:table="ubicacion">
+  <Entity gr:x="480" gr:y="465" id="ent2" name="Ubicacion" duration="persistent" attributeOrder="ent2#att41 ent2#att42 ent2#att43 ent2#att44" db:database="db1" db:table="ubicacion">
     <Attribute id="ent2#att41" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent2#att42" name="nombreUbicacion" type="string" db:column="nombreubicacion"/>
     <Attribute id="ent2#att43" name="descripcionUbicacion" type="text" db:column="descripcionubicacion"/>
@@ -191,7 +197,7 @@
       <db:JoinColumn attribute="ent2#att41" name="ubicacion_oid"/>
     </RelationshipRole2>
   </Relationship>
-  <Entity id="ent7" name="HistoricoUser" duration="persistent" attributeOrder="ent7#att65 ent7#att66 ent7#att67 ent7#att68 ent7#att69 ent7#att70 ent7#att71 ent7#att74" gr:hideAttributes="false" gr:x="-15" gr:y="875" db:database="db1" db:table="historicouser">
+  <Entity id="ent7" name="HistoricoUser" duration="persistent" attributeOrder="ent7#att65 ent7#att66 ent7#att67 ent7#att68 ent7#att69 ent7#att70 ent7#att71 ent7#att74" gr:hideAttributes="false" gr:x="-30" gr:y="1005" db:database="db1" db:table="historicouser">
     <Attribute id="ent7#att65" name="oid" key="true" type="integer" db:column="oid"/>
     <Attribute id="ent7#att66" name="userName" type="string" db:column="username"/>
     <Attribute id="ent7#att67" name="password" type="password" db:column="password"/>
@@ -201,9 +207,8 @@
     <Attribute id="ent7#att71" name="fechaHistorico" type="date" db:column="fechahistorico"/>
     <Attribute id="ent7#att74" name="oid_UsuarioAntiguo" type="integer" db:column="oid_usuarioantiguo"/>
   </Entity>
-  <db:Database id="db1" name="GanAppderiaDatabase" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/GanAppderiaDatabase" username="postgres" password="admin" schema="public">
-  </db:Database>
-  <Entity gr:x="85" gr:y="-215" id="ent12" name="HistoricoProductos" duration="persistent" attributeOrder="ent12#att17 ent12#att18 ent12#att62 ent12#att64 ent12#att72 ent12#att75 ent12#att76 ent12#att77 ent12#att78 ent12#att79 ent12#att80 ent12#att81" db:database="db1" db:table="historicoproductos">
+  <db:Database id="db1" name="GanAppderiaDatabase" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/GanAppderiaDatabase" username="postgres" password="admin" schema="public"/>
+  <Entity gr:x="40" gr:y="-440" id="ent12" name="HistoricoProductos" duration="persistent" attributeOrder="ent12#att17 ent12#att18 ent12#att62 ent12#att64 ent12#att72 ent12#att75 ent12#att76 ent12#att77 ent12#att78 ent12#att79 ent12#att80 ent12#att81" db:database="db1" db:table="historicoproductos">
     <Attribute id="ent12#att17" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent12#att18" name="nombreProducto" type="string" db:column="nombreproducto"/>
     <Attribute id="ent12#att62" name="descripcionProducto" type="text" db:column="descripcionproducto"/>
@@ -217,7 +222,7 @@
     <Attribute id="ent12#att80" name="fechaHistorico" type="date" db:column="fechahistorico"/>
     <Attribute id="ent12#att81" name="oid_ProductoAntiguo" type="integer" db:column="oid_productoantiguo"/>
   </Entity>
-  <Entity gr:x="965" gr:y="340" id="ent3" name="ExcelTemplate" duration="persistent" attributeOrder="ent3#att53 ent3#att54" db:database="db1" db:table="exceltemplate">
+  <Entity gr:x="550" gr:y="320" id="ent3" name="ExcelTemplate" duration="persistent" attributeOrder="ent3#att53 ent3#att54" db:database="db1" db:table="exceltemplate">
     <Attribute id="ent3#att53" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att54" name="template" type="blob" db:column="template"/>
   </Entity>

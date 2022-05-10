@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="Home-Usuario" protected="true" localized="true" landmarks="sv3#lou1 sv3#page14 sv3#page8" layout:style="WebRatio" homePage="sv3#page32">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3" name="Home-Usuario" protected="true" localized="true" landmarks="sv3#page32 sv3#page8 sv3#page14 sv3#page27 sv3#lou1" layout:style="WebRatio" homePage="sv3#page32">
   <OperationUnits>
     <LogoutUnit gr:x="55" gr:y="1575" id="sv3#lou1" name="Logout" siteView="sv2" landmark="true"/>
     <ModuleInstanceUnit gr:x="-180" gr:y="720" id="sv3#miu1" moduleId="mov3#opm4">
@@ -12,7 +12,7 @@
       </OKLink>
       <KOLink id="sv3#miu5#kln11" name="Flow56" to="sv3#page8" gr:bendpoints="-55,52,385,7" automaticCoupling="true" codeRef="mov5#hym4#kocu3"/>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="970" gr:y="385" id="sv3#miu2" moduleId="mov1#opm1">
+    <ModuleInstanceUnit gr:x="440" gr:y="355" id="sv3#miu2" moduleId="mov1#opm1">
       <OKLink id="sv3#miu2#oln10" to="sv3#page7#dau1" name="OKFlow6" codeRef="mov1#opm1#okcu2">
         <LinkParameter id="sv3#miu2#oln10#par53" source="mov1#opm1#okcu2#ocp2" name="oid_KeyCondition1 [oid]" target="sv3#page7#dau1#su1#kcond1.ent4#att2"/>
       </OKLink>
@@ -24,41 +24,58 @@
       </KOLink>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="-10" gr:y="1745" id="sv3#miu6" moduleId="mov2#opm2">
-      <OKLink id="sv3#miu6#oln31" to="sv3#lou1" name="OKFlow22"/>
+      <OKLink id="sv3#miu6#oln31" to="sv3#lou1" name="OKFlow22" codeRef="mov2#opm2#okcu4"/>
+      <KOLink id="sv3#miu6#kln27" name="KOFlow32" to="sv3#page8#page9#mssu15">
+        <LinkParameter id="sv3#miu6#kln27#par88" name="Error interno eliminando la cuenta. Int&#233;ntelo de nuevo m&#225;s tarde._Shown Messages" target="sv3#page8#page9#mssu15.shownMessages" sourceValue="Error interno eliminando la cuenta. Int&#233;ntelo de nuevo m&#225;s tarde."/>
+      </KOLink>
     </ModuleInstanceUnit>
-    <ModuleInstanceUnit gr:x="310" gr:y="1800" id="sv3#miu4" moduleId="mov6#hym2">
-      <OKLink id="sv3#miu4#oln12" to="sv3#page8" name="OKFlow21"/>
-    </ModuleInstanceUnit>
-    <ExcelUnit gr:x="-65" gr:y="140" id="sv3#exu2" name="Procesar-Excel" mode="read" format="xls" sourceType="blob">
-      <OKLink id="sv3#exu2#oln19" name="OKFlow19" to="sv3#lpu1">
-        <LinkParameter id="sv3#exu2#oln19#par43" name="oid_categoria_categorias" source="sv3#exu2#ci8Array" target="sv3#lpu1#lsa8"/>
-        <LinkParameter id="sv3#exu2#oln19#par44" name="descripcion_descripciones" source="sv3#exu2#ci2Array" target="sv3#lpu1#lsa1"/>
-        <LinkParameter id="sv3#exu2#oln19#par45" name="fech_caducidad_fechas_caducidad" source="sv3#exu2#ci6Array" target="sv3#lpu1#lsa5"/>
-        <LinkParameter id="sv3#exu2#oln19#par46" name="imagen_imagenes" source="sv3#exu2#ci7Array" target="sv3#lpu1#lsa7"/>
-        <LinkParameter id="sv3#exu2#oln19#par47" name="nombre_Input Array" source="sv3#exu2#ci1Array" target="sv3#lpu1.array"/>
-        <LinkParameter id="sv3#exu2#oln19#par84" name="precio_precios" source="sv3#exu2#ci3Array" target="sv3#lpu1#lsa2"/>
-        <LinkParameter id="sv3#exu2#oln19#par85" name="oid_promocion_promociones" source="sv3#exu2#ci5Array" target="sv3#lpu1#lsa4"/>
-        <LinkParameter id="sv3#exu2#oln19#par86" name="oid_ubicacion_ubicaciones" source="sv3#exu2#ci9Array" target="sv3#lpu1#lsa9"/>
-        <LinkParameter id="sv3#exu2#oln19#par88" name="unidades_unidades" source="sv3#exu2#ci4Array" target="sv3#lpu1#lsa3"/>
-        <LinkParameter id="sv3#exu2#oln19#par89" name="url_qr_urls_qr" source="sv3#exu2#ci10Array" target="sv3#lpu1#lsa6"/>
+    <ModuleInstanceUnit gr:x="310" gr:y="1850" id="sv3#miu4" moduleId="mov6#hym2">
+      <KOLink id="sv3#miu4#kln26" name="KOFlow29" to="sv3#page8#page9#mssu15" gr:bendpoints="99,-126,113,4">
+        <LinkParameter id="sv3#miu4#kln26#par86" name="Error interno cambiando contrase&#241;a. Int&#233;ntelo de nuevo m&#225;s tarde._Shown Messages" target="sv3#page8#page9#mssu15.shownMessages" sourceValue="Error interno cambiando contrase&#241;a. Int&#233;ntelo de nuevo m&#225;s tarde."/>
+      </KOLink>
+      <OKLink id="sv3#miu4#oln82" name="OKFlow21" to="sv3#page8#page9#mssu15">
+        <LinkParameter id="sv3#miu4#oln82#par89" name="Contrase&#241;a cambiada correctamente._Shown Messages" target="sv3#page8#page9#mssu15.shownMessages" sourceValue="Contrase&#241;a cambiada correctamente."/>
       </OKLink>
+    </ModuleInstanceUnit>
+    <ExcelUnit gr:x="-470" gr:y="-260" id="sv3#exu2" name="Procesar-Excel" mode="read" format="xls" sourceType="blob" cellInfoOrder="sv3#exu2#ci1 sv3#exu2#ci2 sv3#exu2#ci3 sv3#exu2#ci4 sv3#exu2#ci5 sv3#exu2#ci6 sv3#exu2#ci8 sv3#exu2#ci9 sv3#exu2#ci10">
       <CellInfo id="sv3#exu2#ci1" name="nombre" type="string" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="A" rows="2:"/>
       <CellInfo id="sv3#exu2#ci2" name="descripcion" type="string" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="B" rows="2:"/>
       <CellInfo id="sv3#exu2#ci3" name="precio" type="float" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="C" rows="2:"/>
       <CellInfo id="sv3#exu2#ci4" name="unidades" type="integer" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="D" rows="2:"/>
       <CellInfo id="sv3#exu2#ci5" name="oid_promocion" type="integer" preserveCellStyle="false" autoSizeColumn="true" rows="2:" column="E" sheet="1"/>
       <CellInfo id="sv3#exu2#ci6" name="fech_caducidad" type="date" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="F" rows="2:"/>
-      <CellInfo id="sv3#exu2#ci7" name="imagen" type="blob" preserveCellStyle="false" autoSizeColumn="true" contentType="image" sheet="1" column="G" rows="2:"/>
-      <CellInfo id="sv3#exu2#ci8" name="oid_categoria" type="integer" preserveCellStyle="false" autoSizeColumn="true" column="H" rows="2:" sheet="1"/>
-      <CellInfo id="sv3#exu2#ci9" name="oid_ubicacion" type="integer" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="I" rows="2:"/>
-      <CellInfo id="sv3#exu2#ci10" name="url_qr" type="string" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="J" rows="2:"/>
+      <CellInfo id="sv3#exu2#ci8" name="oid_categoria" type="integer" preserveCellStyle="false" autoSizeColumn="true" column="G" rows="2:" sheet="1"/>
+      <CellInfo id="sv3#exu2#ci9" name="oid_ubicacion" type="integer" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="H" rows="2:"/>
+      <CellInfo id="sv3#exu2#ci10" name="url_qr" type="string" preserveCellStyle="false" autoSizeColumn="true" sheet="1" column="I" rows="2:"/>
+      <OKLink id="sv3#exu2#oln89" name="OKFlow89" to="sv3#lpu6">
+        <LinkParameter id="sv3#exu2#oln89#par332" name="oid_categoria_categorias" source="sv3#exu2#ci8Array" target="sv3#lpu6#lsa19"/>
+        <LinkParameter id="sv3#exu2#oln89#par333" name="descripcion_descripciones" source="sv3#exu2#ci2Array" target="sv3#lpu6#lsa12"/>
+        <LinkParameter id="sv3#exu2#oln89#par334" name="fech_caducidad_fechas_caducidad" source="sv3#exu2#ci6Array" target="sv3#lpu6#lsa16"/>
+        <LinkParameter id="sv3#exu2#oln89#par335" name="nombre_Input Array" source="sv3#exu2#ci1Array" target="sv3#lpu6.array"/>
+        <LinkParameter id="sv3#exu2#oln89#par337" name="precio_precios" source="sv3#exu2#ci3Array" target="sv3#lpu6#lsa13"/>
+        <LinkParameter id="sv3#exu2#oln89#par339" name="oid_promocion_promociones" source="sv3#exu2#ci5Array" target="sv3#lpu6#lsa15"/>
+        <LinkParameter id="sv3#exu2#oln89#par340" name="oid_ubicacion_ubicaciones" source="sv3#exu2#ci9Array" target="sv3#lpu6#lsa20"/>
+        <LinkParameter id="sv3#exu2#oln89#par351" name="unidades_unidades" source="sv3#exu2#ci4Array" target="sv3#lpu6#lsa14"/>
+        <LinkParameter id="sv3#exu2#oln89#par352" name="url_qr_urls_qr" source="sv3#exu2#ci10Array" target="sv3#lpu6#lsa17"/>
+      </OKLink>
+      <Link id="sv3#exu2#ln95" name="Flow95" to="sv3#lpu1" type="transport" validate="true" gr:bendpoints="183,192,-382,-23">
+        <LinkParameter id="sv3#exu2#ln95#par257" name="oid_categoria_categorias" source="sv3#exu2#ci8Array" target="sv3#lpu1#lsa8"/>
+        <LinkParameter id="sv3#exu2#ln95#par258" name="descripcion_descripciones" source="sv3#exu2#ci2Array" target="sv3#lpu1#lsa1"/>
+        <LinkParameter id="sv3#exu2#ln95#par267" name="fech_caducidad_fechas_caducidad" source="sv3#exu2#ci6Array" target="sv3#lpu1#lsa5"/>
+        <LinkParameter id="sv3#exu2#ln95#par268" name="imagen_imagenes" source="sv3#exu2#ci7Array" target="sv3#lpu1#lsa7"/>
+        <LinkParameter id="sv3#exu2#ln95#par275" name="nombre_Input Array" source="sv3#exu2#ci1Array" target="sv3#lpu1.array"/>
+        <LinkParameter id="sv3#exu2#ln95#par276" name="precio_precios" source="sv3#exu2#ci3Array" target="sv3#lpu1#lsa2"/>
+        <LinkParameter id="sv3#exu2#ln95#par293" name="oid_promocion_promociones" source="sv3#exu2#ci5Array" target="sv3#lpu1#lsa4"/>
+        <LinkParameter id="sv3#exu2#ln95#par322" name="oid_ubicacion_ubicaciones" source="sv3#exu2#ci9Array" target="sv3#lpu1#lsa9"/>
+        <LinkParameter id="sv3#exu2#ln95#par324" name="unidades_unidades" source="sv3#exu2#ci4Array" target="sv3#lpu1#lsa3"/>
+        <LinkParameter id="sv3#exu2#ln95#par331" name="url_qr_urls_qr" source="sv3#exu2#ci10Array" target="sv3#lpu1#lsa6"/>
+      </Link>
     </ExcelUnit>
-    <LoopUnit gr:x="-60" gr:y="260" id="sv3#lpu1" name="Bucle-Carga">
+    <LoopUnit gr:x="50" gr:y="180" id="sv3#lpu1" name="Bucle-Carga">
       <OKLink id="sv3#lpu1#oln20" name="OKFlow20" to="sv3#miu8" code="next">
         <LinkParameter id="sv3#lpu1#oln20#par91" name="Next Element (categorias)_Categoria.oid(ProductosToCategoria)" source="sv3#lpu1#lsa8" target="sv3#miu8.mov1#opm1#icu1#icp15"/>
         <LinkParameter id="sv3#lpu1#oln20#par93" name="Next Element (descripciones)_descripcionProducto" source="sv3#lpu1#lsa1" target="sv3#miu8.mov1#opm1#icu1#icp9"/>
         <LinkParameter id="sv3#lpu1#oln20#par94" name="Next Element (fechas_caducidad)_fechaCaducidad" source="sv3#lpu1#lsa5" target="sv3#miu8.mov1#opm1#icu1#icp7"/>
-        <LinkParameter id="sv3#lpu1#oln20#par95" name="Next Element (imagenes)_imagenProducto" source="sv3#lpu1#lsa7" target="sv3#miu8.mov1#opm1#icu1#icp6"/>
         <LinkParameter id="sv3#lpu1#oln20#par96" name="Next Element_imagenProducto [file name]" source="next" target="sv3#miu8.mov1#opm1#icu1#icp10"/>
         <LinkParameter id="sv3#lpu1#oln20#par97" name="Next Element_nombreProducto" source="next" target="sv3#miu8.mov1#opm1#icu1#icp8"/>
         <LinkParameter id="sv3#lpu1#oln20#par98" name="Next Element (precios)_precioProducto" source="sv3#lpu1#lsa2" target="sv3#miu8.mov1#opm1#icu1#icp11"/>
@@ -67,6 +84,7 @@
         <LinkParameter id="sv3#lpu1#oln20#par101" name="Next Element (unidades)_unidadesProducto" source="sv3#lpu1#lsa3" target="sv3#miu8.mov1#opm1#icu1#icp13"/>
         <LinkParameter id="sv3#lpu1#oln20#par102" name="Next Element (urls_qr)_urlQR" source="sv3#lpu1#lsa6" target="sv3#miu8.mov1#opm1#icu1#icp12"/>
         <LinkParameter id="sv3#lpu1#oln20#par103" name="0_valoracionMedia" sourceValue="0" target="sv3#miu8.mov1#opm1#icu1#icp2"/>
+        <LinkParameter id="sv3#lpu1#oln20#par197" name="Next Element_AttCondition1" source="next" target="sv3#miu8.mov1#opm1#icu1#icp14"/>
       </OKLink>
       <SecondaryArray id="sv3#lpu1#lsa1" name="descripciones"/>
       <SecondaryArray id="sv3#lpu1#lsa2" name="precios"/>
@@ -74,18 +92,18 @@
       <SecondaryArray id="sv3#lpu1#lsa4" name="promociones"/>
       <SecondaryArray id="sv3#lpu1#lsa5" name="fechas_caducidad"/>
       <SecondaryArray id="sv3#lpu1#lsa6" name="urls_qr"/>
-      <SecondaryArray id="sv3#lpu1#lsa7" name="imagenes"/>
       <SecondaryArray id="sv3#lpu1#lsa8" name="categorias"/>
       <SecondaryArray id="sv3#lpu1#lsa9" name="ubicaciones"/>
+      <OKLink id="sv3#lpu1#oln119" name="OKFlow22" to="sv3#page14#page15#mssu9" gr:bendpoints="228,-40,-202,280" code="end">
+        <LinkParameter id="sv3#lpu1#oln119#par251" name="Inserciones mediante Excel correctas_Shown Messages" target="sv3#page14#page15#mssu9.shownMessages" sourceValue="Inserciones mediante Excel correctas"/>
+      </OKLink>
     </LoopUnit>
     <ModuleInstanceUnit id="sv3#miu8" gr:x="-105" gr:y="370" moduleId="mov1#opm1">
-      <OKLink id="sv3#miu8#oln21" name="OKFlow21" to="sv3#lpu1" automaticCoupling="true" gr:bendpoints="-97,-72,-92,43" codeRef="mov1#opm1#okcu2"/>
+      <OKLink id="sv3#miu8#oln21" name="OKFlow21" to="sv3#lpu1" gr:bendpoints="-97,-72,-92,43" codeRef="mov1#opm1#okcu2"/>
       <KOLink id="sv3#miu8#kln7" name="KOFlow7" to="sv3#page14#page15#mssu9" gr:bendpoints="359,-213,-176,302">
         <LinkParameter id="sv3#miu8#kln7#par105" name="Error en CSV_Shown Messages" sourceValue="Error en Excel" target="sv3#page14#page15#mssu9.shownMessages"/>
       </KOLink>
-      <OKLink id="sv3#miu8#oln22" name="OKFlow22" to="sv3#page14#page15#mssu9">
-        <LinkParameter id="sv3#miu8#oln22#par106" name="Inserciones mediante Excel correctas_Shown Messages" sourceValue="Inserciones mediante Excel correctas" target="sv3#page14#page15#mssu9.shownMessages"/>
-      </OKLink>
+      <OKLink id="sv3#miu8#oln147" name="OKFlow147" to="sv3#lpu1" automaticCoupling="true" gr:bendpoints="101,-87,-4,108" codeRef="mov1#opm1#okcu3"/>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="960" gr:y="1685" id="sv3#miu3" moduleId="mov4#hym1">
       <OKLink id="sv3#miu3#oln92" to="sv3#page8" validate="true" name="Volver" gr:bendpoints="138,-42,638,568"/>
@@ -122,6 +140,127 @@
       <OKLink id="sv3#miu14#oln136" to="sv3#page34#mssu18" name="OKFlow73" gr:bendpoints="168,-50,63,220" codeRef="mov9#opm6#okcu14">
         <LinkParameter id="sv3#miu14#oln136#par338" name="Un usuario no puede valorar un producto propio, prueba a valorar otro._Shown Messages" target="sv3#page34#mssu18.shownMessages" source="mov9#opm6#okcu14#ocp7"/>
       </OKLink>
+    </ModuleInstanceUnit>
+    <LoopUnit id="sv3#lpu6" name="Bucle-Carga-Comprobaci&#243;n" gr:x="-530" gr:y="-130" linkOrder="sv3#lpu6#ln102 sv3#lpu6#ln104 sv3#lpu6#ln105 sv3#lpu6#ln106 sv3#lpu6#ln107 sv3#lpu6#ln108">
+      <SecondaryArray id="sv3#lpu6#lsa12" name="descripciones"/>
+      <SecondaryArray id="sv3#lpu6#lsa13" name="precios"/>
+      <SecondaryArray id="sv3#lpu6#lsa14" name="unidades"/>
+      <SecondaryArray id="sv3#lpu6#lsa15" name="promociones"/>
+      <SecondaryArray id="sv3#lpu6#lsa16" name="fechas_caducidad"/>
+      <SecondaryArray id="sv3#lpu6#lsa17" name="urls_qr"/>
+      <SecondaryArray id="sv3#lpu6#lsa19" name="categorias"/>
+      <SecondaryArray id="sv3#lpu6#lsa20" name="ubicaciones"/>
+      <OKLink id="sv3#lpu6#oln120" name="OKFlow120" to="sv3#lpu1" automaticCoupling="true" code="end"/>
+      <OKLink id="sv3#lpu6#oln121" name="OKFlow121" to="sv3#inn7" code="next">
+        <LinkParameter id="sv3#lpu6#oln121#par353" name="Next Element_Input" source="next" target="sv3#inn7.isnotnull"/>
+      </OKLink>
+      <Link id="sv3#lpu6#ln102" name="Flow102" to="sv3#inn8" type="transport" validate="true" gr:bendpoints="-20,158,-84,-136">
+        <LinkParameter id="sv3#lpu6#ln102#par364" name="Next Element (categorias)_Input" source="sv3#lpu6#lsa19" target="sv3#inn8.isnotnull"/>
+      </Link>
+      <Link id="sv3#lpu6#ln104" name="Flow104" to="sv3#inn12" type="transport" validate="true" gr:bendpoints="-24,228,-98,-186">
+        <LinkParameter id="sv3#lpu6#ln104#par365" name="Next Element (descripciones)_Input" source="sv3#lpu6#lsa12" target="sv3#inn12.isnotnull"/>
+      </Link>
+      <Link id="sv3#lpu6#ln105" name="Flow105" to="sv3#inn17" type="transport" validate="true" gr:bendpoints="-28,290,-132,-224">
+        <LinkParameter id="sv3#lpu6#ln105#par366" name="Next Element (fechas_caducidad)_Input" source="sv3#lpu6#lsa16" target="sv3#inn17.isnotnull"/>
+      </Link>
+      <Link id="sv3#lpu6#ln106" name="Flow106" to="sv3#inn18" type="transport" validate="true" gr:bendpoints="-34,288,-118,-312">
+        <LinkParameter id="sv3#lpu6#ln106#par367" name="Next Element (precios)_Input" source="sv3#lpu6#lsa13" target="sv3#inn18.isnotnull"/>
+      </Link>
+      <Link id="sv3#lpu6#ln107" name="Flow107" to="sv3#inn19" type="transport" validate="true" gr:bendpoints="-36,350,-120,-350">
+        <LinkParameter id="sv3#lpu6#ln107#par368" name="Next Element (ubicaciones)_Input" source="sv3#lpu6#lsa20" target="sv3#inn19.isnotnull"/>
+      </Link>
+      <Link id="sv3#lpu6#ln108" name="Flow108" to="sv3#inn20" type="transport" validate="true" gr:bendpoints="-38,402,-128,-398">
+        <LinkParameter id="sv3#lpu6#ln108#par369" name="Next Element (unidades)_Input" source="sv3#lpu6#lsa14" target="sv3#inn20.isnotnull"/>
+      </Link>
+    </LoopUnit>
+    <IsNotNullUnit gr:x="-440" gr:y="55" id="sv3#inn7" name="Nombre-Nulo">
+      <KOLink id="sv3#inn7#kln2" name="KOFlow2" to="sv3#page19#mssu14">
+        <LinkParameter id="sv3#inn7#kln2#par354" name="El fichero Excel est&#225; mal formado_Shown Messages" target="sv3#page19#mssu14.shownMessages" sourceValue="Fichero Excel mal formado (Nombre)"/>
+      </KOLink>
+      <OKLink id="sv3#inn7#oln124" name="OKFlow124" to="sv3#inn8" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <IsNotNullUnit id="sv3#inn8" name="Categoria-Nulo" gr:x="-430" gr:y="165">
+      <KOLink id="sv3#inn8#kln10" name="KOFlow2" to="sv3#page19#mssu14">
+        <LinkParameter id="sv3#inn8#kln10#par355" name="El fichero Excel est&#225; mal formado_Shown Messages" target="sv3#page19#mssu14.shownMessages" sourceValue="El fichero Excel est&#225; mal formado (Categoria)"/>
+      </KOLink>
+      <OKLink id="sv3#inn8#oln130" name="OKFlow130" to="sv3#inn12" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <IsNotNullUnit id="sv3#inn12" name="Descripci&#243;n-Nulo" gr:x="-420" gr:y="285">
+      <KOLink id="sv3#inn12#kln20" name="KOFlow2" to="sv3#page19#mssu14">
+        <LinkParameter id="sv3#inn12#kln20#par359" name="El fichero Excel est&#225; mal formado_Shown Messages" target="sv3#page19#mssu14.shownMessages" sourceValue="El fichero Excel est&#225; mal formado (Descripcion)"/>
+      </KOLink>
+      <OKLink id="sv3#inn12#oln137" name="OKFlow137" to="sv3#inn17" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <IsNotNullUnit id="sv3#inn17" name="Fecha-Caducidad-Nulo" gr:x="-415" gr:y="385">
+      <KOLink id="sv3#inn17#kln21" name="KOFlow2" to="sv3#page19#mssu14">
+        <LinkParameter id="sv3#inn17#kln21#par360" name="El fichero Excel est&#225; mal formado_Shown Messages" target="sv3#page19#mssu14.shownMessages" sourceValue="El fichero Excel est&#225; mal formado (Fecha Caducidad)"/>
+      </KOLink>
+      <OKLink id="sv3#inn17#oln138" name="OKFlow138" to="sv3#inn18" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <IsNotNullUnit id="sv3#inn18" name="Precio-Nulo" gr:x="-390" gr:y="480" linkOrder="sv3#inn18#ln116">
+      <KOLink id="sv3#inn18#kln22" name="KOFlow2" to="sv3#page19#mssu14">
+        <LinkParameter id="sv3#inn18#kln22#par361" name="El fichero Excel est&#225; mal formado_Shown Messages" target="sv3#page19#mssu14.shownMessages" sourceValue="El fichero Excel est&#225; mal formado (Precio)"/>
+      </KOLink>
+      <OKLink id="sv3#inn18#oln139" name="OKFlow139" to="sv3#inn19" automaticCoupling="true"/>
+      <Link id="sv3#inn18#ln116" name="Flow116" to="sv3#mathu4" type="transport" validate="true">
+        <LinkParameter id="sv3#inn18#ln116#par106" name="Input Value_Operador" source="inputValue" target="sv3#mathu4#mathv5"/>
+      </Link>
+    </IsNotNullUnit>
+    <IsNotNullUnit id="sv3#inn19" name="Ubicacion-Nulo" gr:x="-535" gr:y="495">
+      <KOLink id="sv3#inn19#kln23" name="KOFlow2" to="sv3#page19#mssu14">
+        <LinkParameter id="sv3#inn19#kln23#par362" name="El fichero Excel est&#225; mal formado_Shown Messages" target="sv3#page19#mssu14.shownMessages" sourceValue="El fichero Excel est&#225; mal formado (Ubicacion)"/>
+      </KOLink>
+      <OKLink id="sv3#inn19#oln145" name="OKFlow145" to="sv3#inn20" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <IsNotNullUnit id="sv3#inn20" name="Unidades-Nulo" gr:x="-665" gr:y="405" linkOrder="sv3#inn20#ln117">
+      <KOLink id="sv3#inn20#kln24" name="KOFlow2" to="sv3#page19#mssu14">
+        <LinkParameter id="sv3#inn20#kln24#par363" name="El fichero Excel est&#225; mal formado_Shown Messages" target="sv3#page19#mssu14.shownMessages" sourceValue="El fichero Excel est&#225; mal formado (Cantidad)"/>
+      </KOLink>
+      <Link id="sv3#inn20#ln117" name="Flow117" to="sv3#mathu5" type="transport" validate="true" gr:bendpoints="-94,-294,-74,92">
+        <LinkParameter id="sv3#inn20#ln117#par149" name="Input Value_Operador" source="inputValue" target="sv3#mathu5#mathv6"/>
+      </Link>
+      <OKLink id="sv3#inn20#oln123" name="OKFlow123" to="sv3#mathu4" automaticCoupling="true" gr:bendpoints="-160,-250,95,240"/>
+    </IsNotNullUnit>
+    <MathUnit gr:x="-675" gr:y="170" id="sv3#mathu4" name="Comprobar-Mayor-0" resultType="boolean" defaultExpression="Operador &gt; 0">
+      <MathVariable id="sv3#mathu4#mathv5" name="Operador"/>
+      <OKLink id="sv3#mathu4#oln88" name="OKFlow88" to="sv3#mathu5" automaticCoupling="true"/>
+      <KOLink id="sv3#mathu4#kln25" name="KOFlow25" to="sv3#page19#mssu14">
+        <LinkParameter id="sv3#mathu4#kln25#par85" name="Fichero Excel mal formado (Precio &lt;= 0)_Shown Messages" sourceValue="Fichero Excel mal formado (Precio &lt;= 0)" target="sv3#page19#mssu14.shownMessages"/>
+      </KOLink>
+    </MathUnit>
+    <MathUnit id="sv3#mathu5" name="Comprobar-Mayor-0" gr:x="-700" gr:y="10" resultType="boolean" defaultExpression="Operador &gt; 0">
+      <MathVariable id="sv3#mathu5#mathv6" name="Operador"/>
+      <KOLink id="sv3#mathu5#kln19" name="KOFlow19" to="sv3#page19#mssu14">
+        <LinkParameter id="sv3#mathu5#kln19#par84" name="Fichero Excel mal formado (Cantidad &lt;= 0)_Shown Messages" sourceValue="Fichero Excel mal formado (Cantidad &lt;= 0)" target="sv3#page19#mssu14.shownMessages"/>
+      </KOLink>
+      <OKLink id="sv3#mathu5#oln146" name="OKFlow146" to="sv3#lpu6" automaticCoupling="true"/>
+    </MathUnit>
+    <ModuleInstanceUnit id="sv3#miu18" gr:x="4420" gr:y="260" action="true" moduleId="mov12#opm7">
+      <OKLink id="sv3#miu18#oln205" name="OKFlow194" to="sv3#page26#pwu6" automaticCoupling="true" gr:bendpoints="-171,121,244,51"/>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv3#miu21" gr:x="3260" gr:y="100" action="true" moduleId="mov17#opm12">
+      <OKLink id="sv3#miu21#oln206" name="OKFlow172" to="sv3#page26#pwu6" automaticCoupling="true" codeRef="mov17#opm12#okcu20" gr:bendpoints="347,88,-368,73"/>
+      <KOLink id="sv3#miu21#kln34" name="KOFlow13" to="sv3#page26#mssu28" gr:bendpoints="206,-94,-154,-39">
+        <LinkParameter id="sv3#miu21#kln34#par417" name="No hay stock suficiente para a&#241;adirlo al carrito._Shown Messages" target="sv3#page26#mssu28.shownMessages" sourceValue="No hay stock suficiente para agregarlo al carrito."/>
+      </KOLink>
+      <OKLink id="sv3#miu21#oln189" name="OKFlow155" to="sv3#page26#mssu28" codeRef="mov17#opm12#okcu16">
+        <LinkParameter id="sv3#miu21#oln189#par420" name="No hay stock suficiente para a&#241;adirlo al carrito._Shown Messages" target="sv3#page26#mssu28.shownMessages" sourceValue="No hay stock suficiente para agregarlo al carrito."/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <ModuleInstanceUnit id="sv3#miu22" gr:x="4435" gr:y="-100" action="true" moduleId="mov13#opm9">
+      <OKLink id="sv3#miu22#oln207" name="OKFlow189" to="sv3#page26#pwu6" automaticCoupling="true" gr:bendpoints="-220,95,190,-120" codeRef="mov13#opm9#okcu17"/>
+      <OKLink id="sv3#miu22#oln190" name="OKFlow190" to="sv3#page26#mssu28" gr:bendpoints="-605,0,135,-150" codeRef="mov13#opm9#okcu21">
+        <LinkParameter id="sv3#miu22#oln190#par421" name="No hay stock suficiente para a&#241;adirlo al carrito._Shown Messages" sourceValue="No hay stock suficiente para agregarlo al carrito." target="sv3#page26#mssu28.shownMessages"/>
+      </OKLink>
+    </ModuleInstanceUnit>
+    <DeleteUnit id="sv3#dlu14" name="Eliminar del carrito" gr:x="3435" gr:y="420" entity="ent6">
+      <Selector id="sv3#dlu14#su84" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="sv3#dlu14#su84#kcond59" name="KeyCondition26" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="sv3#dlu14#oln208" name="OKFlow68" to="sv3#page26#pwu6" automaticCoupling="true" gr:bendpoints="-262,33,198,63"/>
+    </DeleteUnit>
+    <ModuleInstanceUnit id="sv3#miu23" gr:x="3940" gr:y="525" action="true" moduleId="mov16#opm11">
+      <OKLink id="sv3#miu23#oln7" name="OKFlow158" to="sv3#page27" automaticCoupling="true"/>
     </ModuleInstanceUnit>
   </OperationUnits>
 </SiteView>

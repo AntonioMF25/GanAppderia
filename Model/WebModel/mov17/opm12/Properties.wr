@@ -1,0 +1,120 @@
+<OperationModule xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="mov17#opm12" name="A&#241;adir-Al-Carrito" gr:x="0" gr:y="0">
+  <OperationUnits>
+    <InputCollectorUnit id="mov17#opm12#icu17" gr:x="-210" gr:y="85">
+      <InputCollectorParameter id="mov17#opm12#icu17#icp30" name="Input Port Parameter OID Producto"/>
+      <OKLink id="mov17#opm12#icu17#oln186" name="OKFlow181" to="mov17#opm12#seu52">
+        <LinkParameter id="mov17#opm12#icu17#oln186#par403" name="Input Port Parameter OID Producto_KeyCondition25 [oid]" source="mov17#opm12#icu17#icp30" target="mov17#opm12#seu52#su78#kcond56.ent4#att2"/>
+      </OKLink>
+    </InputCollectorUnit>
+    <MathUnit id="mov17#opm12#mathu12" name="Descuento" gr:x="1290" gr:y="245" resultType="float" defaultExpression="Normal - Promocion" linkOrder="mov17#opm12#mathu12#ln182">
+      <MathVariable id="mov17#opm12#mathu12#mathv17" name="Normal"/>
+      <MathVariable id="mov17#opm12#mathu12#mathv18" name="Promocion"/>
+      <OKLink id="mov17#opm12#mathu12#oln188" name="OKFlow61" to="mov17#opm12#seu51"/>
+      <Link id="mov17#opm12#mathu12#ln182" name="Flow182" to="mov17#opm12#cru17" type="transport" validate="true" gr:bendpoints="145,-93,45,192">
+        <LinkParameter id="mov17#opm12#mathu12#ln182#par469" name="Result_ahorroUnidadProducto" source="result" target="mov17#opm12#cru17.ent6#att37"/>
+      </Link>
+    </MathUnit>
+    <SelectorUnit id="mov17#opm12#seu52" name="Selecciona producto" gr:x="575" gr:y="165" entity="ent4" linkOrder="mov17#opm12#seu52#ln173 mov17#opm12#seu52#ln181">
+      <Selector id="mov17#opm12#seu52#su78" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov17#opm12#seu52#su78#kcond56" name="KeyCondition25" predicate="in" implied="false"/>
+      </Selector>
+      <Link id="mov17#opm12#seu52#ln163" name="Flow55" to="mov17#opm12#cru17" type="transport" validate="true">
+        <LinkParameter id="mov17#opm12#seu52#ln163#par407" name="1_cantidad" target="mov17#opm12#cru17.ent6#att15" sourceValue="1"/>
+        <LinkParameter id="mov17#opm12#seu52#ln163#par408" name="nombreProducto_nombreProducto" source="ent4#att3Array" target="mov17#opm12#cru17.ent6#att13"/>
+        <LinkParameter id="mov17#opm12#seu52#ln163#par409" name="oid_oid_Producto" source="ent4#att2Array" target="mov17#opm12#cru17.ent6#att16"/>
+        <LinkParameter id="mov17#opm12#seu52#ln163#par410" name="precioProducto_precioUnidadProducto" source="ent4#att5Array" target="mov17#opm12#cru17.ent6#att14"/>
+      </Link>
+      <Link id="mov17#opm12#seu52#ln164" name="Flow17" to="mov17#opm12#mathu12" type="transport" validate="true">
+        <LinkParameter id="mov17#opm12#seu52#ln164#par411" name="precioProducto_Normal" source="ent4#att5Array" target="mov17#opm12#mathu12#mathv17"/>
+        <LinkParameter id="mov17#opm12#seu52#ln164#par412" name="precioTrasPromocion_Promocion" source="ent4#att7Array" target="mov17#opm12#mathu12#mathv18"/>
+      </Link>
+      <Link id="mov17#opm12#seu52#ln166" name="Flow63" to="mov17#opm12#seu54" type="transport" validate="true" gr:bendpoints="33,158,-62,-152">
+        <LinkParameter id="mov17#opm12#seu52#ln166#par418" name="ProductosToPromociones.oid_AttCondition16" source="rel3#role5_ent5#att8Array" target="mov17#opm12#seu54#su81#acond38"/>
+      </Link>
+      <Link id="mov17#opm12#seu52#ln167" name="Flow70" to="mov17#opm12#seu53" type="transport" validate="true">
+        <LinkParameter id="mov17#opm12#seu52#ln167#par419" name="oid_AttCondition12" source="ent4#att2Array" target="mov17#opm12#seu53#su80#acond37"/>
+      </Link>
+      <OKLink id="mov17#opm12#seu52#oln200" name="OKFlow200" to="mov17#opm12#inn25">
+        <LinkParameter id="mov17#opm12#seu52#oln200#par430" name="unidadesProducto_Input" source="ent4#att6Array" target="mov17#opm12#inn25.isnotnull"/>
+      </OKLink>
+      <Link id="mov17#opm12#seu52#ln173" name="Flow173" to="mov17#opm12#mathu15" type="transport" validate="true" gr:bendpoints="288,350,-747,0">
+        <LinkParameter id="mov17#opm12#seu52#ln173#par429" name="unidadesProducto_Stock" source="ent4#att6Array" target="mov17#opm12#mathu15#mathv21"/>
+      </Link>
+      <Link id="mov17#opm12#seu52#ln181" name="Flow181" to="mov17#opm12#seu51" type="transport" validate="true">
+        <LinkParameter id="mov17#opm12#seu52#ln181#par468" name="oid_AttCondition41" source="ent4#att2Array" target="mov17#opm12#seu51#su82#acond41"/>
+      </Link>
+    </SelectorUnit>
+    <IsNotNullUnit id="mov17#opm12#inn22" name="no es nulo?" gr:x="1755" gr:y="330" emptyStringAsNull="true">
+      <OKLink id="mov17#opm12#inn22#oln191" name="OKFlow127" to="mov17#opm12#mathu12" automaticCoupling="true"/>
+      <KOLink id="mov17#opm12#inn22#kln28" name="KOFlow14" to="mov17#opm12#cru17" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <ModifyUnit id="mov17#opm12#mfu15" name="A&#241;adir 1+" gr:x="1915" gr:y="635" entity="ent6">
+      <Selector id="mov17#opm12#mfu15#su79" defaultPolicy="fill" booleanOperator="and">
+        <KeyCondition id="mov17#opm12#mfu15#su79#kcond57" name="KeyCondition27" predicate="in" implied="false"/>
+      </Selector>
+      <OKLink id="mov17#opm12#mfu15#oln154" name="OKFlow154" to="mov17#opm12#okcu20" automaticCoupling="true"/>
+    </ModifyUnit>
+    <IsNotNullUnit id="mov17#opm12#inn23" name="no es nulo?" gr:x="1180" gr:y="840" emptyStringAsNull="true">
+      <OKLink id="mov17#opm12#inn23#oln192" name="OKFlow74" to="mov17#opm12#mathu14" automaticCoupling="true"/>
+      <KOLink id="mov17#opm12#inn23#kln29" name="KOFlow2" to="mov17#opm12#seu54" automaticCoupling="true"/>
+    </IsNotNullUnit>
+    <SelectorUnit id="mov17#opm12#seu53" name="Esta en carrito?" gr:x="640" gr:y="820" entity="ent6">
+      <Selector id="mov17#opm12#seu53#su80" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov17#opm12#seu53#su80#acond37" name="AttCondition12" predicate="eq" booleanOperator="or" implied="false" attributes="ent6#att16"/>
+      </Selector>
+      <OKLink id="mov17#opm12#seu53#oln193" name="OKFlow75" to="mov17#opm12#inn23">
+        <LinkParameter id="mov17#opm12#seu53#oln193#par422" name="oid_Input" source="ent6#att12Array" target="mov17#opm12#inn23.isnotnull"/>
+      </OKLink>
+      <Link id="mov17#opm12#seu53#ln169" name="Flow56" to="mov17#opm12#mathu14" type="transport" validate="true">
+        <LinkParameter id="mov17#opm12#seu53#ln169#par423" name="cantidad_Cantidad" source="ent6#att15Array" target="mov17#opm12#mathu14#mathv20"/>
+      </Link>
+      <Link id="mov17#opm12#seu53#ln170" name="Flow60" to="mov17#opm12#mfu15" type="transport" automaticCoupling="true" validate="true" gr:bendpoints="508,245,-732,430"/>
+    </SelectorUnit>
+    <MathUnit id="mov17#opm12#mathu14" name="+1 en carrito" gr:x="1310" gr:y="715" resultType="integer" defaultExpression="Cantidad + 1">
+      <MathVariable id="mov17#opm12#mathu14#mathv20" name="Cantidad"/>
+      <Link id="mov17#opm12#mathu14#ln172" name="Flow172" to="mov17#opm12#mfu15" type="transport" validate="true">
+        <LinkParameter id="mov17#opm12#mathu14#ln172#par427" name="Result_cantidad" source="result" target="mov17#opm12#mfu15.ent6#att15"/>
+      </Link>
+      <OKLink id="mov17#opm12#mathu14#oln201" name="OKFlow201" to="mov17#opm12#mathu15">
+        <LinkParameter id="mov17#opm12#mathu14#oln201#par428" name="Result_Compra" source="result" target="mov17#opm12#mathu15#mathv22"/>
+      </OKLink>
+    </MathUnit>
+    <SelectorUnit id="mov17#opm12#seu54" name="Tiene promocion?" gr:x="1045" gr:y="350" entity="ent5">
+      <Selector id="mov17#opm12#seu54#su81" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov17#opm12#seu54#su81#acond38" name="AttCondition16" predicate="eq" booleanOperator="or" implied="false" attributes="ent5#att8"/>
+      </Selector>
+      <OKLink id="mov17#opm12#seu54#oln197" name="OKFlow120" to="mov17#opm12#inn22">
+        <LinkParameter id="mov17#opm12#seu54#oln197#par426" name="oid_Input" source="ent5#att8Array" target="mov17#opm12#inn22.isnotnull"/>
+      </OKLink>
+    </SelectorUnit>
+    <CreateUnit id="mov17#opm12#cru17" name="Dar de alta en carrito" gr:x="1380" gr:y="-45" entity="ent6">
+      <OKLink id="mov17#opm12#cru17#oln198" name="OKFlow170" to="mov17#opm12#okcu20" automaticCoupling="true"/>
+    </CreateUnit>
+    <OKCollectorUnit id="mov17#opm12#okcu20" name="A Carrito" gr:x="2215" gr:y="280"/>
+    <IsNotNullUnit id="mov17#opm12#inn25" name="tiene stock?" gr:x="315" gr:y="575" emptyStringAsNull="true">
+      <OKLink id="mov17#opm12#inn25#oln199" name="OKFlow88" to="mov17#opm12#seu53" automaticCoupling="true"/>
+      <KOLink id="mov17#opm12#inn25#kln31" name="KOFlow2" to="mov17#opm12#okcu16" automaticCoupling="true" gr:bendpoints="202,540,-1768,655;1631,546,-339,661"/>
+    </IsNotNullUnit>
+    <MathUnit gr:x="1300" gr:y="540" id="mov17#opm12#mathu15" name="queda stock?" resultType="integer" defaultExpression="Stock - Compra">
+      <MathVariable id="mov17#opm12#mathu15#mathv21" name="Stock"/>
+      <MathVariable id="mov17#opm12#mathu15#mathv22" name="Compra"/>
+      <OKLink id="mov17#opm12#mathu15#oln202" name="OKFlow202" to="mov17#opm12#switch6">
+        <LinkParameter id="mov17#opm12#mathu15#oln202#par424" name="Result_Switch" source="result" target="mov17#opm12#switch6.switch"/>
+      </OKLink>
+    </MathUnit>
+    <SwitchUnit gr:x="1655" gr:y="530" id="mov17#opm12#switch6" name="stock">
+      <Case value="-1"/>
+      <OKLink id="mov17#opm12#switch6#oln203" name="OKFlow203" to="mov17#opm12#okcu16" automaticCoupling="true" code="-1"/>
+      <OKLink id="mov17#opm12#switch6#oln204" name="OKFlow204" to="mov17#opm12#mfu15" automaticCoupling="true"/>
+    </SwitchUnit>
+    <OKCollectorUnit id="mov17#opm12#okcu16" name="Error_Stock" gr:x="2215" gr:y="490"/>
+    <SelectorUnit gr:x="1200" gr:y="105" id="mov17#opm12#seu51" name="Seleccionar-PrecioTrasPromocion" entity="ent4">
+      <Selector id="mov17#opm12#seu51#su82" defaultPolicy="fill" booleanOperator="and">
+        <AttributesCondition id="mov17#opm12#seu51#su82#acond41" name="AttCondition41" predicate="eq" booleanOperator="or" implied="false" attributes="ent4#att2"/>
+      </Selector>
+      <OKLink id="mov17#opm12#seu51#oln214" name="OKFlow214" to="mov17#opm12#cru17">
+        <LinkParameter id="mov17#opm12#seu51#oln214#par470" name="precioTrasPromocion_precioUnidadProducto" source="ent4#att7Array" target="mov17#opm12#cru17.ent6#att14"/>
+      </OKLink>
+    </SelectorUnit>
+  </OperationUnits>
+</OperationModule>
