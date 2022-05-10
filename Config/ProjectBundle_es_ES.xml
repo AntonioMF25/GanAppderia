@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle>
+  <Entry key="+1">+1</Entry>
+  <Entry key="-1">-1</Entry>
   <Entry key="Actualizar">Actualizar</Entry>
   <Entry key="Actualizar Valoracion">Actualizar valoraci&#243;n</Entry>
   <Entry key="Actualizar-Producto">Actualizar producto</Entry>
@@ -12,6 +14,7 @@
   <Entry key="Aplicar filtros">Aplicar Filtros</Entry>
   <Entry key="Aviso">Aviso</Entry>
   <Entry key="Avisos">Avisos</Entry>
+  <Entry key="A&#241;adir al carrito">A&#241;adir al carrito</Entry>
   <Entry key="A&#241;adir categor&#237;a">A&#241;adir</Entry>
   <Entry key="A&#241;adir Valoracion">A&#241;adir valoraci&#243;n</Entry>
   <Entry key="Bienvenida">Bienvenido a tu perfil de usuario</Entry>
@@ -25,15 +28,18 @@
   <Entry key="Cancelar">Cancelar</Entry>
   <Entry key="cantidadUnidadesMinima">Cantidad de unidades m&#237;nima</Entry>
   <Entry key="Cargar Excel">Cargar Excel</Entry>
+  <Entry key="Carrito">Carrito</Entry>
   <Entry key="Categoria">Categor&#237;a</Entry>
   <Entry key="categoria">Categor&#237;a</Entry>
   <Entry key="Categor&#237;a">Categor&#237;a</Entry>
   <Entry key="Categor&#237;as">Categor&#237;as</Entry>
-  <Entry key="Comentario">Comentario</Entry>
   <Entry key="comentario">Comentario</Entry>
+  <Entry key="Comentario">Comentario</Entry>
+  <Entry key="Comfirmar Pedido">Confirmar pedido</Entry>
   <Entry key="Compare1">El precio ha de ser MAYOR que 0</Entry>
   <Entry key="Compare3">La fecha de caducidad ha de ser MAYOR al d&#237;a de HOY</Entry>
   <Entry key="Confirmar cambios">Confirmar cambios</Entry>
+  <Entry key="Confirmar pedido">Confirmar pedido</Entry>
   <Entry key="Coordenadas">Coordenadas</Entry>
   <Entry key="coordenadasUbicacion">Coordenadas</Entry>
   <Entry key="Crear">Crear</Entry>
@@ -43,15 +49,20 @@
   <Entry key="Crear-Categor&#237;a">Crear una categor&#237;a</Entry>
   <Entry key="Crear-Promocion">Nueva promoci&#243;n</Entry>
   <Entry key="Crear-Ubicaci&#243;n">Crear una ubicaci&#243;n</Entry>
+  <Entry key="Descargar-Plantilla">Descargar plantilla</Entry>
   <Entry key="descripcionProducto">Descripcion</Entry>
   <Entry key="descripcionPromocion">Descripci&#243;n</Entry>
   <Entry key="descripcionUbicacion">Descripci&#243;n</Entry>
   <Entry key="Descripci&#243;n">Descripci&#243;n</Entry>
   <Entry key="Detalle-Historico-Productos">M&#225;s informaci&#243;n</Entry>
   <Entry key="Detalle-Historico-Promociones">M&#225;s informaci&#243;n</Entry>
+  <Entry key="Detalle-Historico-User">Detalles de usuario hist&#243;rico</Entry>
+  <Entry key="Detalle-Linea-Factura">Detalles de una l&#237;nea de factura</Entry>
   <Entry key="Detalle-Producto">M&#225;s informaci&#243;n</Entry>
   <Entry key="Detalle-Ubicaci&#243;n">Detalles de la ubicaci&#243;n</Entry>
   <Entry key="Detalle-Usuario">Detalles del usuario</Entry>
+  <Entry key="Detalles de la factura">Detalles de la factura</Entry>
+  <Entry key="Detalles-Linea-Factura">Detalles de una l&#237;nea de factura</Entry>
   <Entry key="Editar">Editar</Entry>
   <Entry key="Editar categor&#237;a">Aplicar cambios</Entry>
   <Entry key="Editar promocion">Editar promoci&#243;n</Entry>
@@ -64,8 +75,10 @@
   <Entry key="Eliminar Valoracion">Eliminar valoraci&#243;n</Entry>
   <Entry key="email">Email</Entry>
   <Entry key="EMail1">Email inv&#225;lido</Entry>
+  <Entry key="Error-Login">Error en el login</Entry>
   <Entry key="Error-Usuario">Error en el registro</Entry>
   <Entry key="Evitar bucles">Evitar bucles</Entry>
+  <Entry key="Facturas">Facturas</Entry>
   <Entry key="Fecha de Caducidad">Fecha de caducidad</Entry>
   <Entry key="Fecha de caducidad">Fecha de caducidad</Entry>
   <Entry key="fechaAlta">Fecha de alta</Entry>
@@ -80,8 +93,10 @@
   <Entry key="Gesti&#243;n-Categor&#237;a">Gestionar categor&#237;as</Entry>
   <Entry key="Gesti&#243;n-Promociones">Gestionar promociones</Entry>
   <Entry key="Gesti&#243;n-Template-Excel">Gestionar plantilla Excel</Entry>
+  <Entry key="Gesti&#243;n-Ubicaci&#243;n">Gestionar ubicaciones</Entry>
   <Entry key="Historico-Productos">Registro de productos</Entry>
   <Entry key="Historico-Promociones">Registro de promociones</Entry>
+  <Entry key="Historico-Usuarios">Hist&#243;ricos de usuarios</Entry>
   <Entry key="HistoricoPromociones">Hist&#243;rico de promociones</Entry>
   <Entry key="Home-Admin">Inicio</Entry>
   <Entry key="Home-Usuario">Inicio</Entry>
@@ -90,7 +105,11 @@
   <Entry key="Imagen">Imagen</Entry>
   <Entry key="imagenProducto">Imagen</Entry>
   <Entry key="Importar-Productos">Importar productos</Entry>
+  <Entry key="Info-Tarea-Caducado">Informaci&#243;n sobre producto caducado</Entry>
+  <Entry key="Info-Tarea-Fin-Stock">Informaci&#243;n sobre producto sin stock</Entry>
+  <Entry key="Info-Tarea-Promocion">Informaci&#243;n sobre promoci&#243;n terminada</Entry>
   <Entry key="Informaci&#243;n">M&#225;s informaci&#243;n</Entry>
+  <Entry key="Informaci&#243;n-Importante">Informaci&#243;n importante</Entry>
   <Entry key="Informaci&#243;n-Usuario">Informaci&#243;n del usuario</Entry>
   <Entry key="Iniciar sesi&#243;n">Iniciar sesi&#243;n</Entry>
   <Entry key="Inicio">Inicio</Entry>
@@ -107,6 +126,7 @@
   <Entry key="Mandatory7">Este campo es obligatorio</Entry>
   <Entry key="Mandatory9">Este campo es obligatorio</Entry>
   <Entry key="Mensaje">Bienvenido al perfil de administrador</Entry>
+  <Entry key="Mensaje-Categor&#237;a">Bienvenido a la pantalla de gesti&#243;n de las categor&#237;as</Entry>
   <Entry key="Mensaje-Editar">Error (Nombre repetido)</Entry>
   <Entry key="Mensaje-Editar-Categor&#237;a">Edita la categor&#237;a</Entry>
   <Entry key="Mensaje-Editar-Ubicaci&#243;n">Edita la ubicaci&#243;n</Entry>
@@ -114,6 +134,7 @@
   <Entry key="Mensaje-Titulo">Gestiona tus ubicaciones</Entry>
   <Entry key="Mensaje-Titulo-Categor&#237;a">Gestiona las categor&#237;as</Entry>
   <Entry key="Mensaje-Titulo-Ubicaci&#243;n">Gestiona tus ubicaciones</Entry>
+  <Entry key="Mensaje-Ubicaci&#243;n">Bienvenido a la pantalla de gesti&#243;n de las ubicaciones</Entry>
   <Entry key="Modificar-Contrase&#241;a-Usuario">Modificar contrase&#241;a del usuario</Entry>
   <Entry key="Mostrar todas">Mostrar todo</Entry>
   <Entry key="Mostrar todo">Mostrar todo</Entry>
@@ -161,6 +182,9 @@
   <Entry key="Seleccionar-Excel">Seleccionar Excel</Entry>
   <Entry key="Seleccionar-Forma-Registro">Seleccionar c&#243;mo subir productos</Entry>
   <Entry key="Subcategor&#237;a de">Subcategor&#237;a de</Entry>
+  <Entry key="Tarea-Eliminar-Producto-Caducado">Eliminar producto caducado</Entry>
+  <Entry key="Tarea-Fin-Promocion">Promoci&#243;n terminada</Entry>
+  <Entry key="Tarea-Promocion-Fin-Stock">Promoci&#243;n terminada</Entry>
   <Entry key="template">Plantilla</Entry>
   <Entry key="Template-Actual">Plantilla actual</Entry>
   <Entry key="tiempoDias">Duraci&#243;n total (d&#237;as)</Entry>
@@ -185,6 +209,12 @@
   <Entry key="valoracionMediaMaxima">Valoraci&#243;n media m&#225;xima</Entry>
   <Entry key="valoracionMediaMinima">Valoraci&#243;n media m&#237;nima</Entry>
   <Entry key="Valorar">Valorar</Entry>
+  <Entry key="Value Length1">Este campo no puede superar los 25 caracteres</Entry>
+  <Entry key="Value Length2">Este campo no puede superar los 25 caracteres</Entry>
+  <Entry key="Value Length3">Este campo no puede superar los 500 caracteres</Entry>
+  <Entry key="Value Length4">Este campo no puede superar los 500 caracteres</Entry>
+  <Entry key="Value Length5">Este campo no puede superar los 25 caracteres</Entry>
+  <Entry key="Value Length6">Este campo no puede superar los 25 caracteres</Entry>
   <Entry key="Ver Detalle">Ver detalle</Entry>
   <Entry key="Volver">Volver</Entry>
 </Bundle>

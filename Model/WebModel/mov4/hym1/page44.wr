@@ -1,6 +1,6 @@
 <Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="mov4#hym1#page44" name="Gesti&#243;n-Ubicaci&#243;n" linkOrder="mov4#hym1#page44#ln125" landmark="false" gr:x="710" gr:y="-50">
   <ContentUnits>
-    <MultiMessageUnit id="mov4#hym1#page44#mssu22" name="Mensaje" gr:x="100" gr:y="0"/>
+    <MultiMessageUnit id="mov4#hym1#page44#mssu22" name="Mensaje-Ubicaci&#243;n" gr:x="35" gr:y="0"/>
     <MultiMessageUnit id="mov4#hym1#page44#mssu23" name="Mensaje-Titulo-Ubicaci&#243;n" gr:x="250" gr:y="0">
       <Message xml:space="preserve">Este es el portal de gesti&#243;n de tus ubicaciones.</Message>
     </MultiMessageUnit>
@@ -177,11 +177,13 @@
         <Field id="mov4#hym1#page44#page45#enu19#fld49" name="Nombre" type="string" modifiable="true">
           <VRules>
             <MandatoryValidationRule id="mov4#hym1#page44#page45#enu19#fld49#mnd21" name="Mandatory9" errorMessage="Este campo es obligatorio."/>
+            <ValueLengthValidationRule id="mov4#hym1#page44#page45#enu19#fld49#vl1" name="Value Length1" predicate="max" value="25" errorMessage="Este campo no puede superar los 25 caracteres"/>
           </VRules>
         </Field>
         <Field id="mov4#hym1#page44#page45#enu19#fld50" name="Descripci&#243;n" type="text" modifiable="true">
           <VRules>
             <MandatoryValidationRule id="mov4#hym1#page44#page45#enu19#fld50#mnd22" name="Mandatory10" errorMessage="Este campo es obligatorio."/>
+            <ValueLengthValidationRule id="mov4#hym1#page44#page45#enu19#fld50#vl3" name="Value Length3" predicate="max" errorMessage="This field can't surpass 500 characters" value="500"/>
           </VRules>
         </Field>
         <Field id="mov4#hym1#page44#page45#enu19#fld51" name="Coordenadas" type="string" modifiable="true">

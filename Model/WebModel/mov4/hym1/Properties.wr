@@ -11,6 +11,9 @@
       <OKLink id="mov4#hym1#dlu11#oln93" name="OKFlow90" to="mov4#hym1#page44#mssu22">
         <LinkParameter id="mov4#hym1#dlu11#oln93#par230" name="La ubicacion ha sido borrada._Shown Messages" target="mov4#hym1#page44#mssu22.shownMessages" sourceValue="La ubicacion ha sido borrada."/>
       </OKLink>
+      <KOLink id="mov4#hym1#dlu11#kln43" name="KOFlow43" to="mov4#hym1#page44#mssu22" gr:bendpoints="-224,-81,181,94">
+        <LinkParameter id="mov4#hym1#dlu11#kln43#par356" name="No se ha podido borrar la ubicaci&#243;n_Shown Messages" sourceValue="No se ha podido borrar la ubicaci&#243;n" target="mov4#hym1#page44#mssu22.shownMessages"/>
+      </KOLink>
     </DeleteUnit>
     <SelectorUnit id="mov4#hym1#seu32" name="Verificar-Existencia-Ubicaci&#243;n" gr:x="1105" gr:y="580" entity="ent2">
       <Selector id="mov4#hym1#seu32#su51" defaultPolicy="fill" booleanOperator="and">
@@ -33,12 +36,18 @@
       <OKLink id="mov4#hym1#cru12#oln96" name="OKFlow58" to="mov4#hym1#page44#mssu22">
         <LinkParameter id="mov4#hym1#cru12#oln96#par238" name="La ubicaci&#243;n ha sido creada._Shown Messages" target="mov4#hym1#page44#mssu22.shownMessages" sourceValue="La ubicacion ha sido creada."/>
       </OKLink>
+      <KOLink id="mov4#hym1#cru12#kln42" name="KOFlow42" to="mov4#hym1#page44#mssu22" gr:bendpoints="235,-7,-210,33">
+        <LinkParameter id="mov4#hym1#cru12#kln42#par6" name="No se ha podido crear la ubicaci&#243;n_Shown Messages" sourceValue="No se ha podido crear la ubicaci&#243;n" target="mov4#hym1#page44#mssu22.shownMessages"/>
+      </KOLink>
     </CreateUnit>
     <ModifyUnit id="mov4#hym1#mfu9" name="Editar-Ubicaci&#243;n" gr:x="1380" gr:y="475" entity="ent2">
       <Selector id="mov4#hym1#mfu9#su54" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov4#hym1#mfu9#su54#kcond33" name="KeyCondition10" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov4#hym1#mfu9#oln97" name="OKFlow47" to="mov4#hym1#page44" gr:bendpoints="0,-20"/>
+      <KOLink id="mov4#hym1#mfu9#kln44" name="KOFlow44" to="mov4#hym1#page49#mssu24">
+        <LinkParameter id="mov4#hym1#mfu9#kln44#par357" name="No se ha podido editar la ubicaci&#243;n_Shown Messages" sourceValue="No se ha podido editar la ubicaci&#243;n" target="mov4#hym1#page49#mssu24.shownMessages"/>
+      </KOLink>
     </ModifyUnit>
     <IsNotNullUnit id="mov4#hym1#inn13" name="Is Not Null8" gr:x="1260" gr:y="490">
       <KOLink id="mov4#hym1#inn13#kln15" name="KOFlow12" to="mov4#hym1#mfu9" automaticCoupling="true"/>

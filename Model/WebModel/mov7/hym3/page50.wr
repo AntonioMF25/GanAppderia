@@ -4,6 +4,7 @@
       <Field id="mov7#hym3#page50#enu22#fld57" name="Nombre" type="string" modifiable="true" attribute="ent8#att23">
         <VRules>
           <MandatoryValidationRule id="mov7#hym3#page50#enu22#fld57#mnd24" name="Mandatory7" errorMessage="Este campo es obligatorio."/>
+          <ValueLengthValidationRule id="mov7#hym3#page50#enu22#fld57#vl6" name="Value Length6" predicate="max" errorMessage="Este campo no puede superar los 25 caracteres" value="25"/>
         </VRules>
       </Field>
       <Field id="mov7#hym3#page50#enu22#fld58" name="oidSeleccionado" type="integer" modifiable="true" attribute="ent8#att22" hidden="true"/>

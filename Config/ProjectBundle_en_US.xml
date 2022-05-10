@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <Bundle>
+  <Entry key="+1">+1</Entry>
+  <Entry key="-1">-1</Entry>
   <Entry key="Actualizar">Update</Entry>
   <Entry key="Actualizar Valoracion">Update valoration</Entry>
   <Entry key="Actualizar-Producto">Update the product</Entry>
@@ -12,6 +14,7 @@
   <Entry key="Aplicar filtros">Apply filters</Entry>
   <Entry key="Aviso">Advertisement</Entry>
   <Entry key="Avisos">Alerts</Entry>
+  <Entry key="A&#241;adir al carrito">Add to cart</Entry>
   <Entry key="A&#241;adir categor&#237;a">Add</Entry>
   <Entry key="A&#241;adir Valoracion">Add valoration</Entry>
   <Entry key="Bienvenida">Welcome to your user's profile</Entry>
@@ -25,15 +28,18 @@
   <Entry key="Cancelar">Cancel</Entry>
   <Entry key="cantidadUnidadesMinima">Minumun number of units</Entry>
   <Entry key="Cargar Excel">Process Excel</Entry>
+  <Entry key="Carrito">Cart</Entry>
   <Entry key="Categoria">Category</Entry>
   <Entry key="categoria">Category</Entry>
   <Entry key="Categor&#237;a">Category</Entry>
   <Entry key="Categor&#237;as">Categories</Entry>
-  <Entry key="Comentario">Comment</Entry>
   <Entry key="comentario">Commentary</Entry>
+  <Entry key="Comentario">Comment</Entry>
+  <Entry key="Comfirmar Pedido">Confirm order</Entry>
   <Entry key="Compare1">The value MUST be GREATER than 0</Entry>
   <Entry key="Compare3">The expiration date MUST be GREATER than TODAY</Entry>
   <Entry key="Confirmar cambios">Confirm changes</Entry>
+  <Entry key="Confirmar pedido">Confirm order</Entry>
   <Entry key="Coordenadas">Coordenates</Entry>
   <Entry key="coordenadasUbicacion">Coordenates</Entry>
   <Entry key="Crear">Create</Entry>
@@ -51,9 +57,12 @@
   <Entry key="Detalle-Historico-Productos">More information</Entry>
   <Entry key="Detalle-Historico-Promociones">More information</Entry>
   <Entry key="Detalle-Historico-User">Information about Users' registry</Entry>
+  <Entry key="Detalle-Linea-Factura">Receipt's details</Entry>
   <Entry key="Detalle-Producto">More information</Entry>
   <Entry key="Detalle-Ubicaci&#243;n">Location's details</Entry>
   <Entry key="Detalle-Usuario">User details</Entry>
+  <Entry key="Detalles de la factura">Receipt's details</Entry>
+  <Entry key="Detalles-Linea-Factura">Details of an receiptline</Entry>
   <Entry key="Editar">Edit</Entry>
   <Entry key="Editar categor&#237;a">Apply changes</Entry>
   <Entry key="Editar promocion">Edit promotion</Entry>
@@ -66,10 +75,12 @@
   <Entry key="Eliminar Valoracion">Delete valoration</Entry>
   <Entry key="email">Email</Entry>
   <Entry key="EMail1">Invalid email</Entry>
+  <Entry key="Error-Login">Login error</Entry>
   <Entry key="Error-Usuario">Registry error</Entry>
   <Entry key="Evitar bucles">Avoid loops</Entry>
   <Entry key="ExcelTemplate">Template</Entry>
   <Entry key="Factura">Bill</Entry>
+  <Entry key="Facturas">Receipts</Entry>
   <Entry key="Fecha de Caducidad">Expiration date</Entry>
   <Entry key="Fecha de caducidad">Expiration date</Entry>
   <Entry key="fechaAlta">Registration date</Entry>
@@ -101,6 +112,8 @@
   <Entry key="Importar-Productos">Load products</Entry>
   <Entry key="importeTotal">Total amount</Entry>
   <Entry key="Info-Tarea-Caducado">Information about expired product</Entry>
+  <Entry key="Info-Tarea-Fin-Stock">Information about stock's end</Entry>
+  <Entry key="Info-Tarea-Promocion">Information about promotion</Entry>
   <Entry key="Informaci&#243;n">Information</Entry>
   <Entry key="Informaci&#243;n-Importante">Important information</Entry>
   <Entry key="Informaci&#243;n-Usuario">User information</Entry>
@@ -118,6 +131,7 @@
   <Entry key="Mandatory7">This field is mandatory</Entry>
   <Entry key="Mandatory9">This field is mandatory</Entry>
   <Entry key="Mensaje">Welcome to the admin profile</Entry>
+  <Entry key="Mensaje-Categor&#237;a">Welcome to the category management page</Entry>
   <Entry key="Mensaje-Editar">Edit the location</Entry>
   <Entry key="Mensaje-Editar-Categor&#237;a">Edit the category</Entry>
   <Entry key="Mensaje-Editar-Ubicaci&#243;n">Edit the location</Entry>
@@ -125,6 +139,7 @@
   <Entry key="Mensaje-Titulo">Manage your locations</Entry>
   <Entry key="Mensaje-Titulo-Categor&#237;a">Manage the categories</Entry>
   <Entry key="Mensaje-Titulo-Ubicaci&#243;n">Manage your locations</Entry>
+  <Entry key="Mensaje-Ubicaci&#243;n">Welcome to the location management page</Entry>
   <Entry key="Modificar-Contrase&#241;a-Usuario">Change user's password</Entry>
   <Entry key="Mostrar todas">Show all</Entry>
   <Entry key="Mostrar todo">Show all</Entry>
@@ -172,6 +187,9 @@
   <Entry key="Seleccionar-Excel">Choose Excel file</Entry>
   <Entry key="Seleccionar-Forma-Registro">Choose how to upload your product</Entry>
   <Entry key="Subcategor&#237;a de">Subcategory of</Entry>
+  <Entry key="Tarea-Eliminar-Producto-Caducado">Delete expired product</Entry>
+  <Entry key="Tarea-Fin-Promocion">End of promotion</Entry>
+  <Entry key="Tarea-Promocion-Fin-Stock">End of promotion</Entry>
   <Entry key="template">Excel template</Entry>
   <Entry key="Template-Actual">Current excel</Entry>
   <Entry key="tiempoDias">Total duration (days)</Entry>
@@ -196,6 +214,12 @@
   <Entry key="valoracionMediaMaxima">Maximum average valoration</Entry>
   <Entry key="valoracionMediaMinima">Minimum average valoration</Entry>
   <Entry key="Valorar">Valorate</Entry>
+  <Entry key="Value Length1">This field can't surpass 25 characters</Entry>
+  <Entry key="Value Length2">This field can't surpass 25 characters</Entry>
+  <Entry key="Value Length3">This field can't surpass 500 characters</Entry>
+  <Entry key="Value Length4">This field can't surpass 500 characters</Entry>
+  <Entry key="Value Length5">This field can't surpass 25 characters</Entry>
+  <Entry key="Value Length6">This field can't surpass 25 characters</Entry>
   <Entry key="Ver Detalle">Show detail</Entry>
   <Entry key="Volver">Return</Entry>
 </Bundle>
