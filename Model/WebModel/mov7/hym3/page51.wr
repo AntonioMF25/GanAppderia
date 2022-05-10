@@ -9,7 +9,7 @@
         <LinkParameter id="mov7#hym3#page51#seu39#ln133#par263" name="oid_Subcategor&#237;a de: [output]" source="ent8#att22Array" target="mov7#hym3#page51#page52#enu23#sfld9_output"/>
       </Link>
     </SelectorUnit>
-    <MultiMessageUnit id="mov7#hym3#page51#mssu27" name="Mensaje" gr:x="300" gr:y="0"/>
+    <MultiMessageUnit id="mov7#hym3#page51#mssu27" name="Mensaje-Categor&#237;a" gr:x="265" gr:y="0"/>
     <SelectorUnit gr:x="25" gr:y="400" id="mov7#hym3#page51#seu42" name="Categor&#237;as-Lista" entity="ent8">
       <Link id="mov7#hym3#page51#seu42#ln98" name="Flow98" to="mov7#hym3#page51#page54#rtu8" automaticCoupling="true" type="transport" validate="true"/>
     </SelectorUnit>
@@ -293,6 +293,7 @@
         <Field id="mov7#hym3#page51#page52#enu23#fld59" name="Nombre" type="string" modifiable="true">
           <VRules>
             <MandatoryValidationRule id="mov7#hym3#page51#page52#enu23#fld59#mnd25" name="Mandatory6" errorMessage="Este campo es obligatorio."/>
+            <ValueLengthValidationRule id="mov7#hym3#page51#page52#enu23#fld59#vl5" name="Value Length5" predicate="max" value="25" errorMessage="Este campo no puede superar los 25 caracteres"/>
           </VRules>
         </Field>
         <Link id="mov7#hym3#page51#page52#enu23#ln134" name="A&#241;adir categor&#237;a" to="mov7#hym3#seu37" type="normal" validate="true">

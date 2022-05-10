@@ -74,7 +74,7 @@
     <Attribute id="ent5#att20" name="descripcionPromocion" type="text" db:column="descripcionpromocion"/>
     <Attribute id="ent5#att55" name="tiempoDiasRestantes" type="integer" db:column="tiempodiasrestantes"/>
   </Entity>
-  <Entity id="ent6" name="Carrito" duration="volatile" attributeOrder="ent6#att12 ent6#att13 ent6#att14 ent6#att15 ent6#att16 ent6#att37" volatileStorage="database" gr:x="845" gr:y="70">
+  <Entity id="ent6" name="Carrito" duration="volatile" attributeOrder="ent6#att12 ent6#att13 ent6#att14 ent6#att15 ent6#att16 ent6#att37" volatileStorage="database" gr:x="1925" gr:y="-25">
     <Attribute id="ent6#att12" name="oid" key="true" type="integer"/>
     <Attribute id="ent6#att13" name="nombreProducto" type="string"/>
     <Attribute id="ent6#att14" name="precioUnidadProducto" type="float"/>
@@ -207,7 +207,8 @@
     <Attribute id="ent7#att71" name="fechaHistorico" type="date" db:column="fechahistorico"/>
     <Attribute id="ent7#att74" name="oid_UsuarioAntiguo" type="integer" db:column="oid_usuarioantiguo"/>
   </Entity>
-  <db:Database id="db1" name="GanAppderiaDatabase" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/GanAppderiaDatabase" username="postgres" password="admin" schema="public"/>
+  <db:Database id="db1" name="GanAppderiaDatabase" type="PostgreSQL 9" url="jdbc:postgresql://localhost:5432/GanAppderiaDatabase" username="postgres" password="admin" schema="public">
+  </db:Database>
   <Entity gr:x="40" gr:y="-440" id="ent12" name="HistoricoProductos" duration="persistent" attributeOrder="ent12#att17 ent12#att18 ent12#att62 ent12#att64 ent12#att72 ent12#att75 ent12#att76 ent12#att77 ent12#att78 ent12#att79 ent12#att80 ent12#att81" db:database="db1" db:table="historicoproductos">
     <Attribute id="ent12#att17" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent12#att18" name="nombreProducto" type="string" db:column="nombreproducto"/>
@@ -226,7 +227,7 @@
     <Attribute id="ent3#att53" key="true" name="oid" type="integer" db:column="oid"/>
     <Attribute id="ent3#att54" name="template" type="blob" db:column="template"/>
   </Entity>
-  <Entity id="ent14" name="Producto-Tmp" duration="volatile" attributeOrder="ent14#att57 ent14#att58 ent14#att59 ent14#att60 ent14#att61 ent14#att63 ent14#att73 ent14#att82 ent14#att83 ent14#att84 ent14#att85 ent14#att86 ent14#att87 ent14#att88 ent14#att89" gr:x="1180" gr:y="100" volatileStorage="database">
+  <Entity id="ent14" name="Producto-Tmp" duration="volatile" attributeOrder="ent14#att57 ent14#att58 ent14#att59 ent14#att60 ent14#att61 ent14#att63 ent14#att73 ent14#att82 ent14#att83 ent14#att84 ent14#att85 ent14#att86 ent14#att87 ent14#att88 ent14#att89" gr:x="2260" gr:y="5" volatileStorage="database">
     <Attribute id="ent14#att57" name="oid" key="true" type="integer"/>
     <Attribute id="ent14#att58" name="nombreProducto" type="string"/>
     <Attribute id="ent14#att59" name="descripcionProducto" type="text"/>

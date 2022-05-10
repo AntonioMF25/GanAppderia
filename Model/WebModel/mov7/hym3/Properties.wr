@@ -26,6 +26,9 @@
       <OKLink id="mov7#hym3#dlu12#oln106" name="OKFlow87" to="mov7#hym3#page51#mssu27">
         <LinkParameter id="mov7#hym3#dlu12#oln106#par249" name="La categor&#237;a ha sido borrada._Shown Messages" target="mov7#hym3#page51#mssu27.shownMessages" sourceValue="La categoria ha sido borrada."/>
       </OKLink>
+      <KOLink id="mov7#hym3#dlu12#kln46" name="KOFlow46" to="mov7#hym3#page51#mssu27" gr:bendpoints="-121,83,104,-42">
+        <LinkParameter id="mov7#hym3#dlu12#kln46#par371" name="No se ha podido borrar la categor&#237;a_Shown Messages" sourceValue="No se ha podido borrar la categor&#237;a" target="mov7#hym3#page51#mssu27.shownMessages"/>
+      </KOLink>
     </DeleteUnit>
     <SelectorUnit id="mov7#hym3#seu37" name="Verificar-Existencia-Categor&#237;a" gr:x="300" gr:y="335" entity="ent8">
       <Selector id="mov7#hym3#seu37#su60" defaultPolicy="fill" booleanOperator="and">
@@ -49,17 +52,26 @@
         <LinkParameter id="mov7#hym3#dlu13#oln109#par260" name="La categor&#237;a y sus subcategor&#237;as han sido borradas._Shown Messages" target="mov7#hym3#page51#mssu27.shownMessages" sourceValue="La categoria y sus subcategorias han sido borradas."/>
       </OKLink>
       <CascadeDeleteRole id="mov7#hym3#dlu13#cdr3" name="Cascade Delete Role1" role="rel2#role4"/>
+      <KOLink id="mov7#hym3#dlu13#kln47" name="KOFlow47" to="mov7#hym3#page51#mssu27" gr:bendpoints="-187,2,123,22">
+        <LinkParameter id="mov7#hym3#dlu13#kln47#par372" name="No se ha podido borrar la categor&#237;a_Shown Messages" sourceValue="No se ha podido borrar la categor&#237;a" target="mov7#hym3#page51#mssu27.shownMessages"/>
+      </KOLink>
     </DeleteUnit>
     <ModifyUnit id="mov7#hym3#mfu10" name="Editar-Categor&#237;a" gr:x="1555" gr:y="685" entity="ent8">
       <Selector id="mov7#hym3#mfu10#su63" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov7#hym3#mfu10#su63#kcond37" name="KeyCondition10" predicate="in" implied="false"/>
       </Selector>
       <OKLink id="mov7#hym3#mfu10#oln110" name="OKFlow47" to="mov7#hym3#page51"/>
+      <KOLink id="mov7#hym3#mfu10#kln48" name="KOFlow48" to="mov7#hym3#page50#mssu25">
+        <LinkParameter id="mov7#hym3#mfu10#kln48#par373" name="No se ha podido editar la categor&#237;a_Shown Messages" sourceValue="No se ha podido editar la categor&#237;a" target="mov7#hym3#page50#mssu25.shownMessages"/>
+      </KOLink>
     </ModifyUnit>
     <CreateUnit id="mov7#hym3#cru13" name="Crear-Categor&#237;a" gr:x="355" gr:y="85" entity="ent8">
       <OKLink id="mov7#hym3#cru13#oln111" name="OKFlow51" to="mov7#hym3#page51#mssu27">
         <LinkParameter id="mov7#hym3#cru13#oln111#par261" name="La categor&#237;a ha sido creada._Shown Messages" target="mov7#hym3#page51#mssu27.shownMessages" sourceValue="La categoria ha sido creada."/>
       </OKLink>
+      <KOLink id="mov7#hym3#cru13#kln45" name="KOFlow45" to="mov7#hym3#page51#mssu27" gr:bendpoints="316,38,-294,-7">
+        <LinkParameter id="mov7#hym3#cru13#kln45#par370" name="No se ha podido crear la categor&#237;a_Shown Messages" sourceValue="No se ha podido crear la categor&#237;a" target="mov7#hym3#page51#mssu27.shownMessages"/>
+      </KOLink>
     </CreateUnit>
     <IsNotNullUnit id="mov7#hym3#inn16" name="Is Not Null7" gr:x="370" gr:y="240">
       <KOLink id="mov7#hym3#inn16#kln18" name="KOFlow11" to="mov7#hym3#cru13"/>

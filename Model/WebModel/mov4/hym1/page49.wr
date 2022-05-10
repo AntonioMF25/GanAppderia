@@ -12,8 +12,16 @@
         <LinkParameter id="mov4#hym1#page49#enu21#ln123#par246" name="oidSeleccionado_KeyCondition10 [oid]" source="mov4#hym1#page49#enu21#fld53" target="mov4#hym1#mfu9#su54#kcond33.ent2#att41"/>
         <LinkParameter id="mov4#hym1#page49#enu21#ln123#par247" name="Nombre_nombreUbicacion" source="mov4#hym1#page49#enu21#fld54" target="mov4#hym1#mfu9.ent2#att42"/>
       </Link>
-      <Field id="mov4#hym1#page49#enu21#fld54" name="Nombre" type="string" modifiable="true" attribute="ent2#att42"/>
-      <Field id="mov4#hym1#page49#enu21#fld55" name="Descripci&#243;n" type="text" modifiable="true" attribute="ent2#att43"/>
+      <Field id="mov4#hym1#page49#enu21#fld54" name="Nombre" type="string" modifiable="true" attribute="ent2#att42">
+        <VRules>
+          <ValueLengthValidationRule id="mov4#hym1#page49#enu21#fld54#vl2" name="Value Length2" predicate="max" value="25" errorMessage="Este campo no puede superar los 25 caracteres"/>
+        </VRules>
+      </Field>
+      <Field id="mov4#hym1#page49#enu21#fld55" name="Descripci&#243;n" type="text" modifiable="true" attribute="ent2#att43">
+        <VRules>
+          <ValueLengthValidationRule id="mov4#hym1#page49#enu21#fld55#vl4" name="Value Length4" predicate="max" errorMessage="Este campo no puede superar los 500 caracteres" value="500"/>
+        </VRules>
+      </Field>
       <Field id="mov4#hym1#page49#enu21#fld56" name="Coordenadas" type="string" modifiable="true" attribute="ent2#att44"/>
     </EntryUnit>
     <MultiMessageUnit id="mov4#hym1#page49#mssu24" name="Mensaje-Editar-Ubicaci&#243;n" gr:x="175" gr:y="15"/>
