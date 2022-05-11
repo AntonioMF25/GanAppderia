@@ -1,4 +1,4 @@
-<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page26" name="Carrito" gr:x="3705" gr:y="20">
+<Page xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv3#page26" name="Carrito" gr:x="3705" gr:y="20" landmark="true">
   <ContentUnits>
     <PowerIndexUnit id="sv3#page26#pwu6" name="Carrito" linkOrder="sv3#page26#pwu6#ln174 sv3#page26#pwu6#ln175 sv3#page26#pwu6#ln176" gr:x="325" gr:y="50" sortable="true" checkable="false" useCountQuery="false" entity="ent6" displayAttributes="ent6#att13 ent6#att14 ent6#att15 ent6#att37">
       <Link id="sv3#page26#pwu6#ln174" name="Eliminar" to="sv3#dlu14" type="normal" automaticCoupling="true" validate="true" gr:bendpoints="-249,74,236,-176"/>

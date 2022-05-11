@@ -11,7 +11,7 @@
     </EntryUnit>
     <MultiMessageUnit id="sv2#page1#mssu17" name="Error-Login" gr:x="0" gr:y="20"/>
   </ContentUnits>
-  <layout:Grid containerType="grid">
+  <layout:Grid containerType="grid" layout:style="AdminLTE">
     <layout:Row>
       <layout:Cell colspan="12">
         <layout:Unit unitId="sv2#page1#enu1">

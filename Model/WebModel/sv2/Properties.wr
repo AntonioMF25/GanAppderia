@@ -1,4 +1,4 @@
-<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" id="sv2" name="Login" localized="true" homePage="sv2#page1">
+<SiteView xmlns:gr="http://www.webratio.com/2006/WebML/Graph" xmlns:layout="http://www.webratio.com/2006/WebML/Layout" id="sv2" name="Login" localized="true" homePage="sv2#page1" layout:style="AdminLTE">
   <OperationUnits>
     <LoginUnit gr:x="315" gr:y="335" id="sv2#lgu1" name="Login">
       <KOLink id="sv2#lgu1#kln36" name="KOFlow26" to="sv2#page1#mssu17">
