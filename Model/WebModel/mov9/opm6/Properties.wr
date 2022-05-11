@@ -18,11 +18,11 @@
         <LinkParameter id="mov9#opm6#icu11#oln133#par330" name="oid_PASSING_productoOID" target="mov9#opm6#seu24#su40#acond34" source="mov9#opm6#icu11#icp21"/>
       </OKLink>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="1190" gr:y="300" id="mov9#opm6#okcu13" name="OK Port13">
+    <OKCollectorUnit gr:x="1195" gr:y="300" id="mov9#opm6#okcu13" name="OK Port13">
       <OutputCollectorParameter id="mov9#opm6#okcu13#ocp6" name="Un mismo usuario solo puede asignar una valoracion a un mismo producto, prueba a valorar otro._Shown Messages"/>
     </OKCollectorUnit>
-    <OKCollectorUnit gr:x="1190" gr:y="0" id="mov9#opm6#okcu12" name="OK Port12"/>
-    <OKCollectorUnit gr:x="1190" gr:y="600" id="mov9#opm6#okcu14" name="OK Port14">
+    <OKCollectorUnit gr:x="1195" gr:y="0" id="mov9#opm6#okcu12" name="OK Port12"/>
+    <OKCollectorUnit gr:x="1195" gr:y="600" id="mov9#opm6#okcu14" name="OK Port14">
       <OutputCollectorParameter id="mov9#opm6#okcu14#ocp7" name="Un usuario no puede valorar un producto propio, prueba a valorar otro._Shown Messages"/>
     </OKCollectorUnit>
     <SelectorUnit id="mov9#opm6#seu23" name="Verificar-NoEs-Producto-Propio" gr:x="390" gr:y="355" entity="ent4">
@@ -60,6 +60,9 @@
     </SelectorUnit>
     <CreateUnit id="mov9#opm6#cru14" name="Crear Valoracion" gr:x="440" gr:y="665" entity="ent9">
       <OKLink id="mov9#opm6#cru14#oln143" to="mov9#opm6#okcu12" name="OKFlow123"/>
+      <KOLink id="mov9#opm6#cru14#kln53" name="KOFlow53" to="mov9#opm6#kocu5">
+        <LinkParameter id="mov9#opm6#cru14#kln53#par378" name="Se ha producido un error al crear la valoracion_ErrorCrearValoracion" sourceValue="Se ha producido un error al crear la valoracion" target="mov9#opm6#kocu5#ocp10"/>
+      </KOLink>
     </CreateUnit>
     <IsNotNullUnit id="mov9#opm6#inn10" name="Is Not Null" gr:x="460" gr:y="200">
       <KOLink id="mov9#opm6#inn10#kln14" name="KOFlow10" to="mov9#opm6#seu23" automaticCoupling="true"/>
@@ -67,5 +70,8 @@
         <LinkParameter id="mov9#opm6#inn10#oln144#par350" sourceValue="Un mismo usuario solo puede asignar una valoracion a un mismo producto, prueba a valorar otro." name="Un mismo usuario solo puede asignar una valoracion a un mismo producto, prueba a valorar otro._Shown Messages" target="mov9#opm6#okcu13#ocp6"/>
       </OKLink>
     </IsNotNullUnit>
+    <KOCollectorUnit gr:x="1195" gr:y="770" id="mov9#opm6#kocu5" name="KO Port5">
+      <OutputCollectorParameter id="mov9#opm6#kocu5#ocp10" name="ErrorCrearValoracion"/>
+    </KOCollectorUnit>
   </OperationUnits>
 </OperationModule>

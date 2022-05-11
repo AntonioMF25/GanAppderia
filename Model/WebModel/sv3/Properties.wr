@@ -125,12 +125,18 @@
       <OKLink id="sv3#miu12#oln83" to="sv3#page8#page28#mssu16" name="OKFlow88">
         <LinkParameter id="sv3#miu12#oln83#par196" name="Valoracion eliminada correctamente_Shown Messages" target="sv3#page8#page28#mssu16.shownMessages" source="mov11#opm3#okcu1#ocp4"/>
       </OKLink>
+      <KOLink id="sv3#miu12#kln50" name="KOFlow50" to="sv3#page8#page28#mssu16" gr:bendpoints="347,51,-268,-14">
+        <LinkParameter id="sv3#miu12#kln50#par375" name="errorEliminarValoracion_Shown Messages" source="mov11#opm3#kocu2#ocp8" target="sv3#page8#page28#mssu16.shownMessages"/>
+      </KOLink>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="995" gr:y="1170" id="sv3#miu13" moduleId="mov10#hym5">
       <OKLink id="sv3#miu13#oln128" to="sv3#page8" validate="true" name="Cancelar" gr:bendpoints="133,-98,683,-3"/>
       <OKLink id="sv3#miu13#oln129" to="sv3#page8#page28#mssu16" name="OKFlow89" gr:bendpoints="135,95,600,0">
         <LinkParameter id="sv3#miu13#oln129#par323" name="Valoracion actualizada correctamente_Shown Messages" target="sv3#page8#page28#mssu16.shownMessages" source="mov10#hym5#okcu11#ocp5"/>
       </OKLink>
+      <KOLink id="sv3#miu13#kln52" name="KOFlow52" to="sv3#page8#page28#mssu16" gr:bendpoints="115,81,580,-14">
+        <LinkParameter id="sv3#miu13#kln52#par377" name="ErrorActualizarValoracion_Shown Messages" source="mov10#hym5#kocu4#ocp9" target="sv3#page8#page28#mssu16.shownMessages"/>
+      </KOLink>
     </ModuleInstanceUnit>
     <ModuleInstanceUnit gr:x="2130" gr:y="1440" id="sv3#miu14" moduleId="mov9#opm6">
       <OKLink id="sv3#miu14#oln135" to="sv3#page34#mssu18" name="OKFlow72" codeRef="mov9#opm6#okcu13" gr:bendpoints="90,-117,-15,153">
@@ -140,6 +146,9 @@
       <OKLink id="sv3#miu14#oln136" to="sv3#page34#mssu18" name="OKFlow73" gr:bendpoints="168,-50,63,220" codeRef="mov9#opm6#okcu14">
         <LinkParameter id="sv3#miu14#oln136#par338" name="Un usuario no puede valorar un producto propio, prueba a valorar otro._Shown Messages" target="sv3#page34#mssu18.shownMessages" source="mov9#opm6#okcu14#ocp7"/>
       </OKLink>
+      <KOLink id="sv3#miu14#kln54" name="KOFlow54" to="sv3#page34#mssu18" gr:bendpoints="136,-84,31,186">
+        <LinkParameter id="sv3#miu14#kln54#par379" name="ErrorCrearValoracion_Shown Messages" source="mov9#opm6#kocu5#ocp10" target="sv3#page34#mssu18.shownMessages"/>
+      </KOLink>
     </ModuleInstanceUnit>
     <LoopUnit id="sv3#lpu6" name="Bucle-Carga-Comprobaci&#243;n" gr:x="-530" gr:y="-130" linkOrder="sv3#lpu6#ln102 sv3#lpu6#ln104 sv3#lpu6#ln105 sv3#lpu6#ln106 sv3#lpu6#ln107 sv3#lpu6#ln108">
       <SecondaryArray id="sv3#lpu6#lsa12" name="descripciones"/>

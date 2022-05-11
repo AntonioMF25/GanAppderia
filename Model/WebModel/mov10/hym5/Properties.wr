@@ -6,10 +6,10 @@
         <LinkParameter id="mov10#hym5#icu10#oln127#par321" name="oid_KeyCondition14 [oid]" source="mov10#hym5#icu10#icp18" target="mov10#hym5#seu22#su37#kcond28.ent9#att25"/>
       </OKLink>
     </InputCollectorUnit>
-    <OKCollectorUnit gr:x="945" gr:y="300" id="mov10#hym5#okcu11" name="OK Port11">
+    <OKCollectorUnit gr:x="970" gr:y="300" id="mov10#hym5#okcu11" name="OK Port11">
       <OutputCollectorParameter id="mov10#hym5#okcu11#ocp5" name="Valoracion actualizada correctamente_Shown Messages"/>
     </OKCollectorUnit>
-    <OKCollectorUnit gr:x="945" gr:y="0" id="mov10#hym5#okcu10" name="OK Port10"/>
+    <OKCollectorUnit gr:x="970" gr:y="0" id="mov10#hym5#okcu10" name="OK Port10"/>
     <ModifyUnit id="mov10#hym5#mfu2" name="Actualizar-Valoracion" gr:x="300" gr:y="285" entity="ent9">
       <Selector id="mov10#hym5#mfu2#su21" defaultPolicy="fill" booleanOperator="and">
         <KeyCondition id="mov10#hym5#mfu2#su21#kcond27" name="KeyCondition18" predicate="in" implied="false"/>
@@ -17,6 +17,9 @@
       <OKLink id="mov10#hym5#mfu2#oln132" to="mov10#hym5#okcu11" name="OKFlow89">
         <LinkParameter id="mov10#hym5#mfu2#oln132#par329" sourceValue="Valoracion actualizada correctamente" name="Valoracion actualizada correctamente_Shown Messages" target="mov10#hym5#okcu11#ocp5"/>
       </OKLink>
+      <KOLink id="mov10#hym5#mfu2#kln51" name="KOFlow51" to="mov10#hym5#kocu4">
+        <LinkParameter id="mov10#hym5#mfu2#kln51#par376" name="Se ha producido un error al actualizar la valoracion_ErrorActualizarValoracion" sourceValue="Se ha producido un error al actualizar la valoracion" target="mov10#hym5#kocu4#ocp9"/>
+      </KOLink>
     </ModifyUnit>
     <SelectorUnit id="mov10#hym5#seu22" name="SeleccionarValoracion" gr:x="355" gr:y="0" entity="ent9">
       <Selector id="mov10#hym5#seu22#su37" defaultPolicy="fill" booleanOperator="and">
@@ -24,5 +27,8 @@
       </Selector>
       <OKLink id="mov10#hym5#seu22#oln131" name="OKFlow61" to="mov10#hym5#page2#enu10" automaticCoupling="true"/>
     </SelectorUnit>
+    <KOCollectorUnit gr:x="970" gr:y="490" id="mov10#hym5#kocu4" name="KO Port4">
+      <OutputCollectorParameter id="mov10#hym5#kocu4#ocp9" name="ErrorActualizarValoracion"/>
+    </KOCollectorUnit>
   </OperationUnits>
 </HybridModule>

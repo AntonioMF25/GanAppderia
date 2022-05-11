@@ -16,6 +16,9 @@
       <OKLink id="mov11#opm3#dlu8#oln126" to="mov11#opm3#okcu1" name="OKFlow88">
         <LinkParameter id="mov11#opm3#dlu8#oln126#par313" sourceValue="Valoracion eliminada correctamente" name="Valoracion eliminada correctamente_Shown Messages" target="mov11#opm3#okcu1#ocp4"/>
       </OKLink>
+      <KOLink id="mov11#opm3#dlu8#kln49" name="KOFlow49" to="mov11#opm3#kocu2">
+        <LinkParameter id="mov11#opm3#dlu8#kln49#par374" name="Se ha producido un error al eliminar la valoraci&#243;n_errorEliminarValoracion" sourceValue="Se ha producido un error al eliminar la valoraci&#243;n" target="mov11#opm3#kocu2#ocp8"/>
+      </KOLink>
     </DeleteUnit>
     <SelectorUnit id="mov11#opm3#seu19" name="SeleccionarValoracion" gr:x="300" gr:y="0" entity="ent9">
       <Selector id="mov11#opm3#seu19#su18" defaultPolicy="fill" booleanOperator="and">
@@ -23,5 +26,8 @@
       </Selector>
       <OKLink id="mov11#opm3#seu19#oln125" name="OKFlow59" to="mov11#opm3#dlu8" automaticCoupling="true"/>
     </SelectorUnit>
+    <KOCollectorUnit gr:x="745" gr:y="205" id="mov11#opm3#kocu2" name="KO Port2">
+      <OutputCollectorParameter id="mov11#opm3#kocu2#ocp8" name="errorEliminarValoracion"/>
+    </KOCollectorUnit>
   </OperationUnits>
 </OperationModule>

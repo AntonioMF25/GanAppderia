@@ -6,4 +6,6 @@
   <ReferencedProject name="StoreComponents" natureId="com.webratio.ide.units.wrunitsnature"/>
   <ReferencedProject name="WebRatio" natureId="com.webratio.ide.styles.wrstylenature"/>
   <ReferencedProject name="AdminLTE" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="Multiflex" natureId="com.webratio.ide.styles.wrstylenature"/>
+  <ReferencedProject name="StoreTemplates" natureId="com.webratio.ide.styles.wrstylenature"/>
 </WebProject>
