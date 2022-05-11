@@ -54,7 +54,7 @@
       </Link>
     </SelectorUnit>
   </ContentUnits>
-  <layout:Grid containerType="grid">
+  <layout:Grid containerType="grid" layout:style="AdminLTE">
     <layout:Row>
       <layout:Cell colspan="12"/>
       <layout:Cell/>
