@@ -9,22 +9,22 @@
     <EntryUnit gr:x="255" gr:y="0" id="sv4#page24#enu7" name="Crear-Promocion" entity="ent5" linkOrder="sv4#page24#enu7#ln33" fieldOrder="sv4#page24#enu7#fld17 sv4#page24#enu7#fld18 sv4#page24#enu7#fld19 sv4#page24#enu7#fld20">
       <Field id="sv4#page24#enu7#fld17" name="nombrePromocion" type="string" modifiable="true" attribute="ent5#att11">
         <VRules>
-          <MandatoryValidationRule id="sv4#page24#enu7#fld17#mnd7" name="Mandatory7" companionField="sv4#page24#enu7#fld17"/>
+          <MandatoryValidationRule id="sv4#page24#enu7#fld17#mnd7" name="Mandatory7"/>
         </VRules>
       </Field>
       <Field id="sv4#page24#enu7#fld18" name="descripcionPromocion" type="text" modifiable="true" attribute="ent5#att20">
         <VRules>
-          <MandatoryValidationRule id="sv4#page24#enu7#fld18#mnd6" name="Mandatory6" companionField="sv4#page24#enu7#fld18"/>
+          <MandatoryValidationRule id="sv4#page24#enu7#fld18#mnd6" name="Mandatory6"/>
         </VRules>
       </Field>
       <Field id="sv4#page24#enu7#fld19" name="porcentaje" type="integer" modifiable="true" attribute="ent5#att10">
         <VRules>
-          <MandatoryValidationRule id="sv4#page24#enu7#fld19#mnd8" name="Mandatory8" companionField="sv4#page24#enu7#fld19"/>
+          <MandatoryValidationRule id="sv4#page24#enu7#fld19#mnd8" name="Mandatory8"/>
         </VRules>
       </Field>
       <Field id="sv4#page24#enu7#fld20" name="tiempoDias" type="integer" modifiable="true" attribute="ent5#att9">
         <VRules>
-          <MandatoryValidationRule id="sv4#page24#enu7#fld20#mnd9" name="Mandatory9" companionField="sv4#page24#enu7#fld20"/>
+          <MandatoryValidationRule id="sv4#page24#enu7#fld20#mnd9" name="Mandatory9"/>
         </VRules>
       </Field>
       <Link id="sv4#page24#enu7#ln33" name="Crear promoci&#243;n" to="sv4#cru2" type="normal" validate="true">
